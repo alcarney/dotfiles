@@ -25,7 +25,7 @@ set lazyredraw
 
 syntax enable                          " Turn on syntax highlighting
 
-colorscheme slate                     
+colorscheme slate                                           
 
 " ----------------------------------- Tab Settings ----------------------------
 
@@ -60,6 +60,11 @@ set tm=500
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
+" Statusline
+set laststatus=2
+set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
+
 " ----------------------------------- Leader shortcut commands  ---------------
 nmap <leader>w :w<CR>                  " Quicksave
 nmap <leader>r :so %<CR>               " Reload file 
+map <silent> <leader><CR> :noh<CR>     " Clear search match highlights
