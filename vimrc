@@ -9,6 +9,7 @@
 
 " Automatically reload a file if it has been modified externally
 set autoread 
+set nocompatible
 
 " Enable filetype plugins 
 filetype plugin on 
@@ -70,6 +71,8 @@ nmap <leader>r :so %<CR>               " Reload file
 map <silent> <leader><CR> :noh<CR>     " Clear search match highlights
 
 " --------------------------------- Vundle ----------------------------
+"filetype off 
+
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -77,4 +80,8 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Plugins
-Bundle 'scrooloose/nerdtree'            " Filetree browser 
+
+" Filetree browser 
+Bundle 'scrooloose/nerdtree'            
+
+
