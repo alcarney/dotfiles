@@ -84,6 +84,24 @@ Bundle 'gmarik/vundle'
 " Filetree browser 
 Bundle 'scrooloose/nerdtree'            
 
+" Git Integration
+Bundle 'tpope/vim-fugitive'
+
+" C++ Completion
+Bundle 'omnicppcomplete'
+
+" Project explorer
+Bundle 'project'
+
+" Surround
+Bundle 'tpope/vim-surround'
+
+" Taglist - Source Code Browser
+Bundle 'taglist'
+
+" Snippets 
+Bundle 'SerVer/ultisnips'
+
 " ------------------------------- Plugin Config -----------------------
 
 " ------------------------------ NERDTree File Browser ----------------
