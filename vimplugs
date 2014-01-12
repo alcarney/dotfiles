@@ -1,0 +1,9 @@
+Plugins to install:
+	fugitive - git integration
+	latexsuite - self explanatory
+	nerdtree - file explorer
+	omnicppcomplete - c++ completion
+	project - ide like project explorer
+	surround - quick and easy surround making
+	taglist - browse source code
+	ultisnips - snippet creation
