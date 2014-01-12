@@ -33,6 +33,8 @@ set expandtab                          " Insert spaces instead of tab characters
 set tabstop=4                          " Tabs are equal to 4 spaces
 set softtabstop=4                      " Allows navigation as if the tab characters are there
 set autoindent                         " Automatically match indentation of previous line
+set smartindent                        " Automatically indent new code blocks
+set wrap                               " Wrap long lines
 
 " This let's you indent/unindent blocks of code using the </> keys repectively
 " while in visual mode
@@ -50,6 +52,9 @@ set incsearch                          " Cycle through matches in a loop
 set ruler                              " Show cursor position
 set showmatch                          " Highlight matching brackets
 set noerrorbells                       " Disable annoying beeps
+set novisualbell
+set t_vb=
+set tm=500
 
 " Make backspace behave
 set backspace=eol,start,indent
@@ -57,4 +62,4 @@ set whichwrap+=<,>,h,l
 
 " ----------------------------------- Leader shortcut commands  ---------------
 nmap <leader>w :w<CR>                  " Quicksave
-
+nmap <leader>r :so %<CR>               " Reload file 
