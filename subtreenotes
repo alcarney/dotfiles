@@ -1,5 +1,0 @@
-To add a subtree (from root of repo)
-
-git subtree add --prefix path/to/repo https://url/of/repo.git branch --squash
-
-To update a subtree same as above just swap add with fetch 
