@@ -68,3 +68,13 @@ set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
 nmap <leader>w :w<CR>                  " Quicksave
 nmap <leader>r :so %<CR>               " Reload file 
 map <silent> <leader><CR> :noh<CR>     " Clear search match highlights
+
+" --------------------------------- Vundle ----------------------------
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" Auto update yourself
+Bundle 'gmarik/vundle'
+
+" Plugins
+Bundle 'scrooloose/nerdtree'            " Filetree browser 
