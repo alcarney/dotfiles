@@ -17,6 +17,12 @@ filetype indent on
 
 " Set the leader character to ,
 let mapleader = ','
+set tm=500
+
+" Make backspace behave
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
+
 let g:mapleader = ','
 
 " Don't redraw while executing macros (should boost performance)
@@ -50,6 +56,8 @@ set incsearch                          " Cycle through matches in a loop
 
 " ----------------------------------- Interface -------------------------------
 
+set number                             " Enable line numbers
+set mouse=a                            " Enable mouse support 
 set ruler                              " Show cursor position
 set showmatch                          " Highlight matching brackets
 set noerrorbells                       " Disable annoying beeps
