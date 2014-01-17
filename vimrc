@@ -75,7 +75,7 @@ set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
 
 " ----------------------------------- Leader shortcut commands  ---------------
 nmap <leader>w :w<CR>                  " Quicksave
-nmap <leader>r :so %<CR>               " Reload file 
+nmap <leader>r :so /home/alex/.vimrc<CR> " Reload vimrc 
 map <silent> <leader><CR> :noh<CR>     " Clear search match highlights
 
 " --------------------------------- Vundle ----------------------------
