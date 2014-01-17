@@ -65,13 +65,17 @@ set novisualbell
 set t_vb=
 set tm=500
 
+" Highlight a column when I go over a certain width
+highlight ColorColumn ctermbg=cyan
+call matchadd('ColorColumn', '\%101v', 100)
+
 " Make backspace behave
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
 " Statusline
 set laststatus=2
-set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
+set statusline=\ %t%m%r%h\ %w\ \ \ Line:\ %l\ Col:\ %c
 
 " ----------------------------------- Leader shortcut commands  ---------------
 nmap <leader>w :w<CR>                  " Quicksave
