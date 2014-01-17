@@ -67,7 +67,7 @@ set tm=500
 
 " Highlight a column when I go over a certain width
 highlight ColorColumn ctermbg=cyan
-call matchadd('ColorColumn', '\%101v', 100)
+call matchadd('ColorColumn', '\%126v', 100)
 
 " Make backspace behave
 set backspace=eol,start,indent
