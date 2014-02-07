@@ -60,7 +60,7 @@ net_test () { # Checks if internet is connected if not tells me to sort it
 
 function precmd()  # Prints an extra newline between commands which i think looks nicer
 { 
-	net_test
+#net_test
 	echo
 }
 
