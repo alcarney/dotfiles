@@ -15,6 +15,7 @@ alias compress="atool -a"
 alias vba="VisualBoyAdvance"
 alias t="/home/alex/.todo-txt-cli/todo.sh"
 #}}}
+
 #{{{ Pacman Shortcuts
 alias pacup="sudo pacman -Syu"         # Update packages
 alias pacin="sudo pacman -S"           # Install packages
@@ -26,16 +27,20 @@ alias paclook="sudo pacman -Ss"        # Search repositories for a package
 alias paclinfo="sudo pacman -Si"       # Search repositiories for info about a package 
 alias pacfoster="sudo pacman -Rns $(pacman -Qtdq)" # Remove orphaned packages
 #}}}
+
 alias updatelocal="repo-add ./local.db.tar.gz ./*.pkg.tar.xz"
+
 #---------------- TMUX Session Shortcuts-------------------
 alias editconfigs="tmuxinator start editconfigs"
 alias usexfce="tmuxinator start xfcesession"
 alias tmuxns="tmux new -s"
 alias tmuxls="tmux ls"
+
 #------------------Wine Shortcuts---------------------------
 alias KSP="wine ~/Games/KSP_win/KSP.exe"
 
 connectdesktop="ssh -p 22 alex@192.168.0.103"
+
 #----------------Config File Shortcuts_____________________
 alias vimrc="vim /home/alex/.vimrc"
 alias zshrc="vim /home/alex/.zshrc"
