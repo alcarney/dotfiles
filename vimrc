@@ -1,7 +1,7 @@
 " -----------------------------------------------------------------------------
 "      Filename: vimrc
 "      Author: Alex Carney
-"      
+"
 "      Created: 12/01/14
 "      Last Modified: 07/02/14
 "
@@ -85,10 +85,14 @@ set laststatus=2
 set statusline=\ %t%m%r%h\ %w\ \ \ Line:\ %l\ Col:\ %c
 hi statusline ctermfg=16 ctermbg=231
 
+" Highlight current line
+hi CursorLine ctermbg=16 cterm=NONE
+
 " ----------------------------------- Leader shortcut commands  ---------------
-nmap <leader>w ;w<CR>                  " Quicksave
-nmap <leader>r ;so /home/alex/.vimrc<CR> " Reload vimrc 
-map <silent> <leader><CR> :noh<CR>     " Clear search match highlights
+nmap <leader>w ;w<CR>                       " Quicksave
+nmap <leader>r ;so /home/alex/.vimrc<CR>    " Reload vimrc 
+map <silent> <leader><CR> ;noh<CR>          " Clear search match highlights
+nnoremap <leader>c :set cursorline! <CR>    " Toggle highlighting of the current line
 
 " ----------------------------------- Functions -------------------------------
 
