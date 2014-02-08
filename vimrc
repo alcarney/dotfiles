@@ -124,7 +124,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'vim-scripts/OmniCppComplete'
 
 " Project explorer
-Bundle 'vim-scripts/project.vim'
+"Bundle 'vim-scripts/project.vim'
 
 " Surround
 Bundle 'tpope/vim-surround'
@@ -141,7 +141,10 @@ Bundle 'SirVer/ultisnips'
 map <F2> ;NERDTreeToggle<CR>                       " Ctrl-n Toggle file browser
 
 " Automatically start NERDTree if no file is specified
-autocmd vimenter * if !argc() | NERDTree | endif
+"autocmd vimenter * if !argc() | NERDTree | endif
 
 " Close vim if the only window left open is NERDTRee
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" Markdown syntax
+au BufRead,BufNewFile *.md set filetype=markdown
