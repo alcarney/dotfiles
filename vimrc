@@ -83,12 +83,26 @@ set whichwrap+=<,>,h,l
 " Statusline
 set laststatus=2
 set statusline=\ %t%m%r%h\ %w\ \ \ Line:\ %l\ Col:\ %c
+hi statusline ctermfg=16 ctermbg=231
 
 " ----------------------------------- Leader shortcut commands  ---------------
 nmap <leader>w ;w<CR>                  " Quicksave
 nmap <leader>r ;so /home/alex/.vimrc<CR> " Reload vimrc 
 map <silent> <leader><CR> :noh<CR>     " Clear search match highlights
 
+" ----------------------------------- Functions -------------------------------
+
+" Change colour of the statusline based on what mode we are in
+function! StatusLineColour(mode)
+    if a:mode == 'i'
+        hi statusline ctermfg=16 ctermbg=46
+    else
+        hi statusline ctermfg=16 ctermbg=223
+    endif
+endfunction
+
+au InsertEnter * call StatusLineColour(v:insertmode)
+au InsertLeave * hi statusline ctermfg=16 ctermbg=231
 " --------------------------------- Vundle ----------------------------
 "filetype off
 
@@ -107,27 +121,27 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
 
 " C++ Completion
-Bundle 'omnicppcomplete'
+Bundle 'vim-scripts/OmniCppComplete'
 
 " Project explorer
-Bundle 'project'
+Bundle 'vim-scripts/project.vim'
 
 " Surround
 Bundle 'tpope/vim-surround'
 
 " Taglist - Source Code Browser
-Bundle 'taglist'
+Bundle 'vim-scripts/taglist.vim'
 
 " Snippets
-Bundle 'SerVer/ultisnips'
+Bundle 'SirVer/ultisnips'
 
 " ------------------------------- Plugin Config -----------------------
 
 " ------------------------------ NERDTree File Browser ----------------
-map <C-n> :NERDTreeToggle<CR>                       " Ctrl-n Toggle file browser
+map <F2> ;NERDTreeToggle<CR>                       " Ctrl-n Toggle file browser
 
 " Automatically start NERDTree if no file is specified
-"autocmd vimenter * if !argc() | NERDTree | endif
+autocmd vimenter * if !argc() | NERDTree | endif
 
 " Close vim if the only window left open is NERDTRee
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
