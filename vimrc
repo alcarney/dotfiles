@@ -94,7 +94,11 @@ nmap <leader>r ;so /home/alex/.vimrc<CR>    " Reload vimrc
 map <silent> <leader><CR> ;noh<CR>          " Clear search match highlights
 nnoremap <leader>c :set cursorline! <CR>    " Toggle highlighting of the current line
 
-" ----------------------------------- Functions -------------------------------
+" Fugitive leader commands
+nmap ;gst ;Gstatus<CR>               " View the current status of the working tree
+nmap ;gcom ;Gcommit<CR>              " Commit the current changes
+
+"----------------------------------- Functions -------------------------------
 
 " Change colour of the statusline based on what mode we are in
 function! StatusLineColour(mode)
