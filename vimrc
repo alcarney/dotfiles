@@ -87,6 +87,7 @@ hi statusline ctermfg=16 ctermbg=231
 
 " Highlight current line
 hi CursorLine ctermbg=16 cterm=NONE
+set cursorline
 
 " ----------------------------------- Leader shortcut commands  ---------------
 nmap <leader>w ;w<CR>                       " Quicksave
