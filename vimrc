@@ -146,6 +146,16 @@ Bundle 'vim-scripts/taglist.vim'
 
 " ------------------------------- Plugin Config -----------------------
 
+" ------------------------------- OmniCppComplete ---------------------
+set tags+=/home/alex/.vim/tags/libpng.tags
+
+" To generate new tag files run the following, provided that Exuberant Ctags
+" is installed:
+" ctags -R --c++-kinds=+p --fields=+iaS --extra=+q /usr/include/xxx
+
+" A mapping to generate a tag file for the current project
+map <C-F6> :ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+
 " ------------------------------ NERDTree File Browser ----------------
 map <F2> ;NERDTreeToggle<CR>                       " Ctrl-n Toggle file browser
 
