@@ -1,0 +1,1286 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CHECK	/usr/include/libpng12/pngconf.h	1613;"	d
+CVT_PTR	/usr/include/libpng12/pngconf.h	1615;"	d
+CVT_PTR	/usr/include/libpng12/pngconf.h	1623;"	d
+CVT_PTR_NOCHECK	/usr/include/libpng12/pngconf.h	1616;"	d
+CVT_PTR_NOCHECK	/usr/include/libpng12/pngconf.h	1624;"	d
+FAR	/usr/include/libpng12/pngconf.h	1273;"	d
+FAR	/usr/include/libpng12/pngconf.h	1302;"	d
+FARDATA	/usr/include/libpng12/pngconf.h	1295;"	d
+FARDATA	/usr/include/libpng12/pngconf.h	1307;"	d
+LDATA	/usr/include/libpng12/pngconf.h	1264;"	d
+LDATA	/usr/include/libpng12/pngconf.h	1266;"	d
+MACOS	/usr/include/libpng12/pngconf.h	337;"	d
+NOCHECK	/usr/include/libpng12/pngconf.h	1614;"	d
+PNGAPI	/usr/include/libpng12/pngconf.h	1424;"	d
+PNGAPI	/usr/include/libpng12/pngconf.h	1425;"	d
+PNGAPI	/usr/include/libpng12/pngconf.h	1453;"	d
+PNGAPI	/usr/include/libpng12/pngconf.h	1455;"	d
+PNGAPI	/usr/include/libpng12/pngconf.h	1496;"	d
+PNGAPI	/usr/include/libpng12/pngconf.h	1505;"	d
+PNGARG	/usr/include/libpng12/pngconf.h	313;"	d
+PNGARG	/usr/include/libpng12/pngconf.h	317;"	d
+PNGARG	/usr/include/libpng12/pngconf.h	322;"	d
+PNGCONF_H	/usr/include/libpng12/pngconf.h	21;"	d
+PNG_16_TO_8	/usr/include/libpng12/png.h	2955;"	d
+PNG_1_2_X	/usr/include/libpng12/pngconf.h	23;"	d
+PNG_ABORT	/usr/include/libpng12/pngconf.h	1601;"	d
+PNG_ABORT	/usr/include/libpng12/pngconf.h	269;"	d
+PNG_ADD_ALPHA	/usr/include/libpng12/png.h	2970;"	d
+PNG_AFTER_IDAT	/usr/include/libpng12/png.h	2926;"	d
+PNG_ALLOCATED	/usr/include/libpng12/pngconf.h	1552;"	d
+PNG_ALLOCATED	/usr/include/libpng12/pngconf.h	1587;"	d
+PNG_ALL_FILTERS	/usr/include/libpng12/png.h	1960;"	d
+PNG_ALL_MNG_FEATURES	/usr/include/libpng12/png.h	1244;"	d
+PNG_ALWAYS_EXTERN	/usr/include/libpng12/pngconf.h	436;"	d
+PNG_ASM_FLAGS_INITIALIZED	/usr/include/libpng12/png.h	2756;"	d
+PNG_ASM_FLAG_MMX_READ_COMBINE_ROW	/usr/include/libpng12/png.h	2750;"	d
+PNG_ASM_FLAG_MMX_READ_FILTER_AVG	/usr/include/libpng12/png.h	2754;"	d
+PNG_ASM_FLAG_MMX_READ_FILTER_PAETH	/usr/include/libpng12/png.h	2755;"	d
+PNG_ASM_FLAG_MMX_READ_FILTER_SUB	/usr/include/libpng12/png.h	2752;"	d
+PNG_ASM_FLAG_MMX_READ_FILTER_UP	/usr/include/libpng12/png.h	2753;"	d
+PNG_ASM_FLAG_MMX_READ_INTERLACE	/usr/include/libpng12/png.h	2751;"	d
+PNG_ASM_FLAG_MMX_SUPPORT_COMPILED	/usr/include/libpng12/png.h	2748;"	d
+PNG_ASM_FLAG_MMX_SUPPORT_IN_CPU	/usr/include/libpng12/png.h	2749;"	d
+PNG_ASSEMBLER_CODE_SUPPORTED	/usr/include/libpng12/pngconf.h	805;"	d
+PNG_BACKGROUND	/usr/include/libpng12/png.h	2952;"	d
+PNG_BACKGROUND_EXPAND	/usr/include/libpng12/png.h	2953;"	d
+PNG_BACKGROUND_GAMMA_FILE	/usr/include/libpng12/png.h	1805;"	d
+PNG_BACKGROUND_GAMMA_SCREEN	/usr/include/libpng12/png.h	1804;"	d
+PNG_BACKGROUND_GAMMA_UNIQUE	/usr/include/libpng12/png.h	1806;"	d
+PNG_BACKGROUND_GAMMA_UNKNOWN	/usr/include/libpng12/png.h	1803;"	d
+PNG_BACKGROUND_IS_GRAY	/usr/include/libpng12/png.h	2940;"	d
+PNG_BGR	/usr/include/libpng12/png.h	2945;"	d
+PNG_BUILD_DLL	/usr/include/libpng12/pngconf.h	205;"	d
+PNG_CHECK_cHRM_SUPPORTED	/usr/include/libpng12/pngconf.h	139;"	d
+PNG_CHUNK_NAME_LENGTH	/usr/include/libpng12/png.h	773;"	d
+PNG_COLOR_DIST	/usr/include/libpng12/png.h	3033;"	d
+PNG_COLOR_MASK_ALPHA	/usr/include/libpng12/png.h	1082;"	d
+PNG_COLOR_MASK_COLOR	/usr/include/libpng12/png.h	1081;"	d
+PNG_COLOR_MASK_PALETTE	/usr/include/libpng12/png.h	1080;"	d
+PNG_COLOR_TYPE_GA	/usr/include/libpng12/png.h	1092;"	d
+PNG_COLOR_TYPE_GRAY	/usr/include/libpng12/png.h	1085;"	d
+PNG_COLOR_TYPE_GRAY_ALPHA	/usr/include/libpng12/png.h	1089;"	d
+PNG_COLOR_TYPE_PALETTE	/usr/include/libpng12/png.h	1086;"	d
+PNG_COLOR_TYPE_RGB	/usr/include/libpng12/png.h	1087;"	d
+PNG_COLOR_TYPE_RGBA	/usr/include/libpng12/png.h	1091;"	d
+PNG_COLOR_TYPE_RGB_ALPHA	/usr/include/libpng12/png.h	1088;"	d
+PNG_COMPRESSION_TYPE_BASE	/usr/include/libpng12/png.h	1095;"	d
+PNG_COMPRESSION_TYPE_DEFAULT	/usr/include/libpng12/png.h	1096;"	d
+PNG_CONSOLE_IO_SUPPORTED	/usr/include/libpng12/pngconf.h	300;"	d
+PNG_CONST	/usr/include/libpng12/pngconf.h	491;"	d
+PNG_CONST	/usr/include/libpng12/pngconf.h	493;"	d
+PNG_CONVERT_tIME_SUPPORTED	/usr/include/libpng12/pngconf.h	1186;"	d
+PNG_COST_FACTOR	/usr/include/libpng12/png.h	2987;"	d
+PNG_COST_SHIFT	/usr/include/libpng12/png.h	2986;"	d
+PNG_CRC_DEFAULT	/usr/include/libpng12/png.h	1928;"	d
+PNG_CRC_ERROR_QUIT	/usr/include/libpng12/png.h	1929;"	d
+PNG_CRC_NO_CHANGE	/usr/include/libpng12/png.h	1933;"	d
+PNG_CRC_QUIET_USE	/usr/include/libpng12/png.h	1932;"	d
+PNG_CRC_WARN_DISCARD	/usr/include/libpng12/png.h	1930;"	d
+PNG_CRC_WARN_USE	/usr/include/libpng12/png.h	1931;"	d
+PNG_DEBUG	/usr/include/libpng12/pngconf.h	271;"	d
+PNG_DEBUG_FILE	/usr/include/libpng12/png.h	2647;"	d
+PNG_DEPRECATED	/usr/include/libpng12/pngconf.h	1560;"	d
+PNG_DEPRECATED	/usr/include/libpng12/pngconf.h	1578;"	d
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^     png_charp current_text PNG_DEPSTRUCT;         \/* current text chunk buffer *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^     png_charp current_text_ptr PNG_DEPSTRUCT;     \/* current location in current_text *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^     png_size_t current_text_left PNG_DEPSTRUCT;   \/* how much text left to read in input *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^     png_size_t current_text_size PNG_DEPSTRUCT;   \/* current size of text input data *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   double scal_pixel_height PNG_DEPSTRUCT;   \/* height of one pixel *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   double scal_pixel_width PNG_DEPSTRUCT;    \/* width of one pixel *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   float background_gamma PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   float gamma PNG_DEPSTRUCT;          \/* file gamma value *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   float gamma PNG_DEPSTRUCT; \/* gamma value of image, if (valid & PNG_INFO_gAMA) *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   float screen_gamma PNG_DEPSTRUCT;   \/* screen gamma value (display_exponent) *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   float x_blue PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   float x_green PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   float x_red PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   float x_white PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   float y_blue PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   float y_green PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   float y_red PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   float y_white PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   int cur_palette PNG_DEPSTRUCT;                  \/* current push library palette index *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   int gamma_shift PNG_DEPSTRUCT;      \/* number of "insignificant" bits 16-bit gamma *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   int max_text PNG_DEPSTRUCT; \/* current size of text array *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   int num_chunk_list PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   int num_text PNG_DEPSTRUCT; \/* number of comments read\/to write *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   int process_mode PNG_DEPSTRUCT;                 \/* what push library is currently doing *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   int zlib_level PNG_DEPSTRUCT;            \/* holds zlib compression level *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   int zlib_mem_level PNG_DEPSTRUCT;        \/* holds zlib compression memory level *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   int zlib_method PNG_DEPSTRUCT;           \/* holds zlib compression method *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   int zlib_strategy PNG_DEPSTRUCT;         \/* holds zlib compression strategy *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   int zlib_window_bits PNG_DEPSTRUCT;      \/* holds zlib compression window bits *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte     mmx_bitdepth_threshold PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte background_gamma_type PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte bit_depth PNG_DEPSTRUCT;        \/* bit depth of file *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte bit_depth PNG_DEPSTRUCT;      \/* 1, 2, 4, 8, or 16 bits\/channel (from IHDR) *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte channels PNG_DEPSTRUCT;         \/* number of channels in file *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte channels PNG_DEPSTRUCT;       \/* number of data channels per pixel (1, 2, 3, 4) *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte chunk_name[5] PNG_DEPSTRUCT;    \/* null-terminated name of current chunk *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte color_type PNG_DEPSTRUCT;       \/* color type of file *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte color_type PNG_DEPSTRUCT;     \/* see PNG_COLOR_TYPE_ below (from IHDR) *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte compression PNG_DEPSTRUCT;      \/* file compression type (always 0) *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte compression_type PNG_DEPSTRUCT; \/* must be PNG_COMPRESSION_TYPE_BASE (IHDR) *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte compression_type PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte do_filter PNG_DEPSTRUCT;        \/* row filter flags (see PNG_FILTER_ below ) *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte filler PNG_DEPSTRUCT;           \/* filler byte for pixel expansion *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte filter PNG_DEPSTRUCT;           \/* file filter type (always 0) *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte filter_type PNG_DEPSTRUCT;    \/* must be PNG_FILTER_TYPE_BASE (from IHDR) *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte filter_type PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte heuristic_method PNG_DEPSTRUCT;        \/* heuristic for row filter selection *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte iccp_compression PNG_DEPSTRUCT; \/* Always zero *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte interlace_type PNG_DEPSTRUCT; \/* One of PNG_INTERLACE_NONE, PNG_INTERLACE_ADAM7 *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte interlaced PNG_DEPSTRUCT;       \/* PNG_INTERLACE_NONE, PNG_INTERLACE_ADAM7 *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte mng_features_permitted PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte num_prev_filters PNG_DEPSTRUCT;        \/* number of weights for previous rows *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte offset_unit_type PNG_DEPSTRUCT; \/* offset units type *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte pass PNG_DEPSTRUCT;             \/* current interlace pass (0 - 6) *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte pcal_nparams PNG_DEPSTRUCT;   \/* number of parameters given in pcal_params *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte pcal_type PNG_DEPSTRUCT;      \/* equation type (see PNG_EQUATION_ below) *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte phys_unit_type PNG_DEPSTRUCT; \/* resolution type (see PNG_RESOLUTION_ below) *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte pixel_depth PNG_DEPSTRUCT;      \/* number of bits per pixel *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte pixel_depth PNG_DEPSTRUCT;    \/* number of bits per pixel *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte rgb_to_gray_status PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte scal_unit PNG_DEPSTRUCT;         \/* unit of physical scale *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte sig_bytes PNG_DEPSTRUCT;        \/* magic bytes read\/written from start of file *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte signature[8] PNG_DEPSTRUCT;   \/* magic bytes read by libpng from start of file *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte spare_byte PNG_DEPSTRUCT;     \/* to align the data, and for future use *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte srgb_intent PNG_DEPSTRUCT; \/* sRGB rendering intent [0, 1, 2, or 3] *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte user_transform_channels PNG_DEPSTRUCT; \/* channels in user transformed pixels *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte user_transform_depth PNG_DEPSTRUCT;    \/* bit depth of user transformed pixels *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte usr_bit_depth PNG_DEPSTRUCT;    \/* bit depth of users row *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte usr_channels PNG_DEPSTRUCT;     \/* channels at start of write *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep avg_row PNG_DEPSTRUCT;         \/* buffer to save "avg" row when filtering *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep big_row_buf PNG_DEPSTRUCT;        \/* buffer to save current (unfiltered) row *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep chunk_list PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep current_buffer PNG_DEPSTRUCT;         \/* buffer for recently used data *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep current_buffer_ptr PNG_DEPSTRUCT;     \/* current location in current_buffer *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep dither_index PNG_DEPSTRUCT;           \/* index translation for palette files *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep dither_sort PNG_DEPSTRUCT;        \/* working sort array *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep gamma_from_1 PNG_DEPSTRUCT;    \/* converts from 1.0 to screen *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep gamma_table PNG_DEPSTRUCT;     \/* gamma table for 8-bit depth files *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep gamma_to_1 PNG_DEPSTRUCT;      \/* converts from file to 1.0 *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep index_to_palette PNG_DEPSTRUCT;   \/* where the original index currently is *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep offset_table PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep paeth_row PNG_DEPSTRUCT;       \/* buffer to save "Paeth" row when filtering *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep palette_lookup PNG_DEPSTRUCT;         \/* lookup table for dithering *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep palette_to_index PNG_DEPSTRUCT;   \/* which original index points to this *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep prev_filters PNG_DEPSTRUCT;           \/* filter type(s) of previous row(s) *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep prev_row PNG_DEPSTRUCT;        \/* buffer to save previous (unfiltered) row *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep row_buf PNG_DEPSTRUCT;         \/* buffer to save current (unfiltered) row *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep save_buffer PNG_DEPSTRUCT;            \/* buffer for previously read data *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep save_buffer_ptr PNG_DEPSTRUCT;        \/* current location in save_buffer *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep sub_row PNG_DEPSTRUCT;         \/* buffer to save "sub" row when filtering *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep trans PNG_DEPSTRUCT;           \/* transparency values for paletted files *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep trans PNG_DEPSTRUCT; \/* transparent values for paletted image *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep up_row PNG_DEPSTRUCT;          \/* buffer to save "up" row when filtering *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep zbuf PNG_DEPSTRUCT;            \/* buffer for zlib *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytepp offset_table_ptr PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytepp row_pointers PNG_DEPSTRUCT;        \/* the image bits *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_charp iccp_name PNG_DEPSTRUCT;     \/* profile name *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_charp iccp_profile PNG_DEPSTRUCT;  \/* International Color Consortium profile data *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_charp pcal_purpose PNG_DEPSTRUCT;  \/* pCAL chunk description string *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_charp pcal_units PNG_DEPSTRUCT;    \/* Latin-1 string giving physical units *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_charp scal_s_height PNG_DEPSTRUCT;    \/* string containing width *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_charp scal_s_width PNG_DEPSTRUCT;     \/* string containing height *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_charp time_buffer PNG_DEPSTRUCT;            \/* String to hold RFC 1123 time text *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_charpp pcal_params PNG_DEPSTRUCT;  \/* ASCII strings containing parameter values *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_color_16 background PNG_DEPSTRUCT;   \/* background color in screen gamma space *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_color_16 background PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_color_16 background_1 PNG_DEPSTRUCT; \/* background normalized to gamma 1.0 *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_color_16 trans_values PNG_DEPSTRUCT; \/* transparency values for non-paletted files *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_color_16 trans_values PNG_DEPSTRUCT; \/* transparent color for non-palette image *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_color_8 shift PNG_DEPSTRUCT;         \/* shift for significant bit tranformation *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_color_8 sig_bit PNG_DEPSTRUCT;       \/* significant bits in each available channel *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_color_8 sig_bit PNG_DEPSTRUCT; \/* significant bits in color channels *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_colorp palette PNG_DEPSTRUCT;        \/* palette from the input file *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_colorp palette PNG_DEPSTRUCT;      \/* array of color values (valid & PNG_INFO_PLTE) *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_error_ptr error_fn PNG_DEPSTRUCT;    \/* function for printing errors and aborting *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_error_ptr warning_fn PNG_DEPSTRUCT;  \/* function for printing warnings *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_fixed_point int_gamma PNG_DEPSTRUCT; \/* gamma of image, if (valid & PNG_INFO_gAMA) *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_fixed_point int_gamma PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_fixed_point int_x_blue PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_fixed_point int_x_green PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_fixed_point int_x_red PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_fixed_point int_x_white PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_fixed_point int_y_blue PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_fixed_point int_y_green PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_fixed_point int_y_red PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_fixed_point int_y_white PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_flush_ptr output_flush_fn PNG_DEPSTRUCT; \/* Function for flushing output *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_free_ptr free_fn PNG_DEPSTRUCT;         \/* function for freeing memory *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_int_32 pcal_X0 PNG_DEPSTRUCT;      \/* minimum value *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_int_32 pcal_X1 PNG_DEPSTRUCT;      \/* maximum value *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_int_32 x_offset PNG_DEPSTRUCT; \/* x offset on page *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_int_32 y_offset PNG_DEPSTRUCT; \/* y offset on page *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_malloc_ptr malloc_fn PNG_DEPSTRUCT;     \/* function for allocating memory *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_progressive_end_ptr end_fn PNG_DEPSTRUCT;   \/* called after image is complete *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_progressive_info_ptr info_fn PNG_DEPSTRUCT; \/* called after header data fully read *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_progressive_row_ptr row_fn PNG_DEPSTRUCT;   \/* called after each prog. row is decoded *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_read_status_ptr read_row_fn PNG_DEPSTRUCT;   \/* called after each row is decoded *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_row_info row_info PNG_DEPSTRUCT;     \/* used for transformation routines *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_rw_ptr read_data_fn PNG_DEPSTRUCT;   \/* function for reading input data *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_rw_ptr write_data_fn PNG_DEPSTRUCT;  \/* function for writing output data *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_sPLT_tp splt_palettes PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_size_t buffer_size PNG_DEPSTRUCT;           \/* total amount of available input data *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_size_t current_buffer_size PNG_DEPSTRUCT;   \/* amount of data now in current_buffer *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_size_t save_buffer_max PNG_DEPSTRUCT;       \/* total size of save_buffer *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_size_t save_buffer_size PNG_DEPSTRUCT;      \/* amount of data now in save_buffer *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_size_t unknown_chunks_num PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_size_t zbuf_size PNG_DEPSTRUCT;      \/* size of zbuf *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_textp text PNG_DEPSTRUCT; \/* array of comments read\/to write *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_time mod_time PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16 filler PNG_DEPSTRUCT;           \/* filler bytes for pixel expansion *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16 num_palette PNG_DEPSTRUCT;   \/* number of color entries in palette *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16 num_palette PNG_DEPSTRUCT; \/* number of color entries in "palette" (PLTE) *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16 num_trans PNG_DEPSTRUCT;     \/* number of transparency values *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16 num_trans PNG_DEPSTRUCT;   \/* number of transparent palette color (tRNS) *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16 offset_table_count PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16 offset_table_count_free PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16 offset_table_number PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16 rgb_to_gray_blue_coeff PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16 rgb_to_gray_green_coeff PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16 rgb_to_gray_red_coeff PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16p filter_costs PNG_DEPSTRUCT;        \/* relative filter calculation cost *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16p filter_weights PNG_DEPSTRUCT;      \/* weight(s) for previous line(s) *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16p hist PNG_DEPSTRUCT;                \/* histogram *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16p hist PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16p inv_filter_costs PNG_DEPSTRUCT;    \/* 1\/relative filter calculation cost *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16p inv_filter_weights PNG_DEPSTRUCT;  \/* 1\/weight(s) for previous line(s) *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16pp gamma_16_from_1 PNG_DEPSTRUCT; \/* converts from 1.0 to screen *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16pp gamma_16_table PNG_DEPSTRUCT; \/* gamma table for 16-bit depth files *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16pp gamma_16_to_1 PNG_DEPSTRUCT; \/* converts from file to 1.0 *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32  asm_flags PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32  mmx_rowbytes_threshold PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 crc PNG_DEPSTRUCT;           \/* current chunk CRC value *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 flags PNG_DEPSTRUCT;         \/* flags indicating various things to libpng *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 flush_dist PNG_DEPSTRUCT;    \/* how many rows apart to flush, 0 - no flush *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 flush_rows PNG_DEPSTRUCT;    \/* number of rows written since last flush *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 free_me PNG_DEPSTRUCT;     \/* flags items libpng is responsible for freeing *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 free_me PNG_DEPSTRUCT;   \/* flags items libpng is responsible for freeing *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 height PNG_DEPSTRUCT;        \/* height of image in pixels *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 height PNG_DEPSTRUCT;      \/* height of image in pixels (from IHDR) *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 iccp_proflen PNG_DEPSTRUCT;  \/* ICC profile data length *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 idat_size PNG_DEPSTRUCT;     \/* current IDAT size for read *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 iwidth PNG_DEPSTRUCT;        \/* width of current interlaced row in pixels *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 mng_features_permitted PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 mode PNG_DEPSTRUCT;          \/* tells us where we are in the PNG file *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 num_rows PNG_DEPSTRUCT;      \/* number of rows in current pass *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 push_length PNG_DEPSTRUCT;          \/* size of current input chunk *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 row_buf_size PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 row_number PNG_DEPSTRUCT;    \/* current row in interlace pass *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 rowbytes PNG_DEPSTRUCT;      \/* size of row in bytes *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 rowbytes PNG_DEPSTRUCT;    \/* bytes needed to hold an untransformed row *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 skip_length PNG_DEPSTRUCT;          \/* bytes to skip in input data *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 splt_palettes_num PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 transformations PNG_DEPSTRUCT; \/* which transformations to perform *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 user_chunk_cache_max PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 user_height_max PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 user_width_max PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 usr_width PNG_DEPSTRUCT;     \/* width of row at start of write *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 valid PNG_DEPSTRUCT;       \/* valid chunk data (see PNG_INFO_ below) *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 width PNG_DEPSTRUCT;         \/* width of image in pixels *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 width PNG_DEPSTRUCT;       \/* width of image in pixels (from IHDR) *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 x_pixels_per_unit PNG_DEPSTRUCT; \/* horizontal pixel density *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 y_pixels_per_unit PNG_DEPSTRUCT; \/* vertical pixel density *\/$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_unknown_chunk unknown_chunk PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_unknown_chunkp unknown_chunks PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_user_chunk_ptr read_user_chunk_fn PNG_DEPSTRUCT; \/* user read chunk handler *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_user_transform_ptr read_user_transform_fn PNG_DEPSTRUCT; \/* user read transform *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_user_transform_ptr write_user_transform_fn PNG_DEPSTRUCT; \/* user write transform *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_voidp error_ptr PNG_DEPSTRUCT;       \/* user supplied struct for error functions *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_voidp io_ptr PNG_DEPSTRUCT;          \/* ptr to application struct for I\/O functions *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_voidp mem_ptr PNG_DEPSTRUCT;            \/* user supplied struct for mem functions *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_voidp user_chunk_ptr PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_voidp user_transform_ptr PNG_DEPSTRUCT; \/* user supplied struct for user transform *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_write_status_ptr write_row_fn PNG_DEPSTRUCT; \/* called after each row is encoded *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   z_stream zstream PNG_DEPSTRUCT;          \/* pointer to decompression structure (below) *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^  png_charp chunkdata PNG_DEPSTRUCT;  \/* buffer for reading chunk data *\/$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^  png_uint_32 old_big_row_buf_size PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^  png_uint_32 old_prev_row_size PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+PNG_DEPSTRUCT	/usr/include/libpng12/pngconf.h	1563;"	d
+PNG_DEPSTRUCT	/usr/include/libpng12/pngconf.h	1590;"	d
+PNG_DESTROY_WILL_FREE_DATA	/usr/include/libpng12/png.h	2189;"	d
+PNG_DITHER	/usr/include/libpng12/png.h	2951;"	d
+PNG_DITHER_BLUE_BITS	/usr/include/libpng12/pngconf.h	462;"	d
+PNG_DITHER_GREEN_BITS	/usr/include/libpng12/pngconf.h	459;"	d
+PNG_DITHER_RED_BITS	/usr/include/libpng12/pngconf.h	456;"	d
+PNG_DLL	/usr/include/libpng12/pngconf.h	1384;"	d
+PNG_DLL	/usr/include/libpng12/pngconf.h	211;"	d
+PNG_DLL	/usr/include/libpng12/pngconf.h	225;"	d
+PNG_DLL	/usr/include/libpng12/pngconf.h	233;"	d
+PNG_DLL	/usr/include/libpng12/pngconf.h	240;"	d
+PNG_EASY_ACCESS_SUPPORTED	/usr/include/libpng12/pngconf.h	789;"	d
+PNG_EQUATION_ARBITRARY	/usr/include/libpng12/png.h	1116;"	d
+PNG_EQUATION_BASE_E	/usr/include/libpng12/png.h	1115;"	d
+PNG_EQUATION_HYPERBOLIC	/usr/include/libpng12/png.h	1117;"	d
+PNG_EQUATION_LAST	/usr/include/libpng12/png.h	1118;"	d
+PNG_EQUATION_LINEAR	/usr/include/libpng12/png.h	1114;"	d
+PNG_ERROR_NUMBERS_SUPPORTED	/usr/include/libpng12/pngconf.h	757;"	d
+PNG_ERROR_TEXT_SUPPORTED	/usr/include/libpng12/pngconf.h	135;"	d
+PNG_EXPAND	/usr/include/libpng12/png.h	2957;"	d
+PNG_EXPAND_tRNS	/usr/include/libpng12/png.h	2971;"	d
+PNG_EXPORT	/usr/include/libpng12/pngconf.h	1472;"	d
+PNG_EXPORT	/usr/include/libpng12/pngconf.h	1474;"	d
+PNG_EXPORT	/usr/include/libpng12/pngconf.h	1513;"	d
+PNG_EXPORT	/usr/include/libpng12/pngconf.h	1523;"	d
+PNG_EXPORT_TYPE1	/usr/include/libpng12/pngconf.h	1466;"	d
+PNG_EXPORT_TYPE2	/usr/include/libpng12/pngconf.h	1467;"	d
+PNG_EXPORT_VAR	/usr/include/libpng12/pngconf.h	1517;"	d
+PNG_EXPORT_VAR	/usr/include/libpng12/pngconf.h	1528;"	d
+PNG_EXTERN	/usr/include/libpng12/pngconf.h	408;"	d
+PNG_FILLER	/usr/include/libpng12/png.h	2960;"	d
+PNG_FILLER_AFTER	/usr/include/libpng12/png.h	1756;"	d
+PNG_FILLER_BEFORE	/usr/include/libpng12/png.h	1755;"	d
+PNG_FILTER_AVG	/usr/include/libpng12/png.h	1958;"	d
+PNG_FILTER_HEURISTIC_DEFAULT	/usr/include/libpng12/png.h	2012;"	d
+PNG_FILTER_HEURISTIC_LAST	/usr/include/libpng12/png.h	2015;"	d
+PNG_FILTER_HEURISTIC_UNWEIGHTED	/usr/include/libpng12/png.h	2013;"	d
+PNG_FILTER_HEURISTIC_WEIGHTED	/usr/include/libpng12/png.h	2014;"	d
+PNG_FILTER_NONE	/usr/include/libpng12/png.h	1955;"	d
+PNG_FILTER_PAETH	/usr/include/libpng12/png.h	1959;"	d
+PNG_FILTER_SUB	/usr/include/libpng12/png.h	1956;"	d
+PNG_FILTER_TYPE_BASE	/usr/include/libpng12/png.h	1099;"	d
+PNG_FILTER_TYPE_DEFAULT	/usr/include/libpng12/png.h	1101;"	d
+PNG_FILTER_UP	/usr/include/libpng12/png.h	1957;"	d
+PNG_FILTER_VALUE_AVG	/usr/include/libpng12/png.h	1969;"	d
+PNG_FILTER_VALUE_LAST	/usr/include/libpng12/png.h	1971;"	d
+PNG_FILTER_VALUE_NONE	/usr/include/libpng12/png.h	1966;"	d
+PNG_FILTER_VALUE_PAETH	/usr/include/libpng12/png.h	1970;"	d
+PNG_FILTER_VALUE_SUB	/usr/include/libpng12/png.h	1967;"	d
+PNG_FILTER_VALUE_UP	/usr/include/libpng12/png.h	1968;"	d
+PNG_FIXED_POINT_SUPPORTED	/usr/include/libpng12/pngconf.h	583;"	d
+PNG_FLAG_ADD_ALPHA	/usr/include/libpng12/png.h	3011;"	d
+PNG_FLAG_CRC_ANCILLARY_MASK	/usr/include/libpng12/png.h	3022;"	d
+PNG_FLAG_CRC_ANCILLARY_NOWARN	/usr/include/libpng12/png.h	2999;"	d
+PNG_FLAG_CRC_ANCILLARY_USE	/usr/include/libpng12/png.h	2998;"	d
+PNG_FLAG_CRC_CRITICAL_IGNORE	/usr/include/libpng12/png.h	3001;"	d
+PNG_FLAG_CRC_CRITICAL_MASK	/usr/include/libpng12/png.h	3025;"	d
+PNG_FLAG_CRC_CRITICAL_USE	/usr/include/libpng12/png.h	3000;"	d
+PNG_FLAG_CRC_MASK	/usr/include/libpng12/png.h	3028;"	d
+PNG_FLAG_FILLER_AFTER	/usr/include/libpng12/png.h	2997;"	d
+PNG_FLAG_FREE_HIST	/usr/include/libpng12/png.h	3004;"	d
+PNG_FLAG_FREE_PLTE	/usr/include/libpng12/png.h	3002;"	d
+PNG_FLAG_FREE_TRNS	/usr/include/libpng12/png.h	3003;"	d
+PNG_FLAG_KEEP_UNKNOWN_CHUNKS	/usr/include/libpng12/png.h	3005;"	d
+PNG_FLAG_KEEP_UNSAFE_CHUNKS	/usr/include/libpng12/png.h	3006;"	d
+PNG_FLAG_LIBRARY_MISMATCH	/usr/include/libpng12/png.h	3007;"	d
+PNG_FLAG_MALLOC_NULL_MEM_OK	/usr/include/libpng12/png.h	3010;"	d
+PNG_FLAG_MNG_EMPTY_PLTE	/usr/include/libpng12/png.h	1242;"	d
+PNG_FLAG_MNG_FILTER_64	/usr/include/libpng12/png.h	1243;"	d
+PNG_FLAG_ROW_INIT	/usr/include/libpng12/png.h	2996;"	d
+PNG_FLAG_STRIP_ALPHA	/usr/include/libpng12/png.h	3012;"	d
+PNG_FLAG_STRIP_ERROR_NUMBERS	/usr/include/libpng12/png.h	3008;"	d
+PNG_FLAG_STRIP_ERROR_TEXT	/usr/include/libpng12/png.h	3009;"	d
+PNG_FLAG_ZLIB_CUSTOM_LEVEL	/usr/include/libpng12/png.h	2991;"	d
+PNG_FLAG_ZLIB_CUSTOM_MEM_LEVEL	/usr/include/libpng12/png.h	2992;"	d
+PNG_FLAG_ZLIB_CUSTOM_METHOD	/usr/include/libpng12/png.h	2994;"	d
+PNG_FLAG_ZLIB_CUSTOM_STRATEGY	/usr/include/libpng12/png.h	2990;"	d
+PNG_FLAG_ZLIB_CUSTOM_WINDOW_BITS	/usr/include/libpng12/png.h	2993;"	d
+PNG_FLAG_ZLIB_FINISHED	/usr/include/libpng12/png.h	2995;"	d
+PNG_FLOATING_POINT_SUPPORTED	/usr/include/libpng12/pngconf.h	153;"	d
+PNG_FREE_ALL	/usr/include/libpng12/png.h	2204;"	d
+PNG_FREE_HIST	/usr/include/libpng12/png.h	2193;"	d
+PNG_FREE_ICCP	/usr/include/libpng12/png.h	2194;"	d
+PNG_FREE_LIST	/usr/include/libpng12/png.h	2200;"	d
+PNG_FREE_ME_SUPPORTED	/usr/include/libpng12/pngconf.h	587;"	d
+PNG_FREE_MUL	/usr/include/libpng12/png.h	2205;"	d
+PNG_FREE_PCAL	/usr/include/libpng12/png.h	2197;"	d
+PNG_FREE_PLTE	/usr/include/libpng12/png.h	2201;"	d
+PNG_FREE_ROWS	/usr/include/libpng12/png.h	2196;"	d
+PNG_FREE_SCAL	/usr/include/libpng12/png.h	2198;"	d
+PNG_FREE_SPLT	/usr/include/libpng12/png.h	2195;"	d
+PNG_FREE_TEXT	/usr/include/libpng12/png.h	2203;"	d
+PNG_FREE_TRNS	/usr/include/libpng12/png.h	2202;"	d
+PNG_FREE_UNKN	/usr/include/libpng12/png.h	2199;"	d
+PNG_GAMMA	/usr/include/libpng12/png.h	2958;"	d
+PNG_GAMMA_THRESHOLD	/usr/include/libpng12/pngconf.h	480;"	d
+PNG_GRAY_TO_RGB	/usr/include/libpng12/png.h	2959;"	d
+PNG_H	/usr/include/libpng12/png.h	481;"	d
+PNG_HANDLE_AS_UNKNOWN_SUPPORTED	/usr/include/libpng12/pngconf.h	1057;"	d
+PNG_HANDLE_AS_UNKNOWN_SUPPORTED	/usr/include/libpng12/pngconf.h	1207;"	d
+PNG_HANDLE_CHUNK_ALWAYS	/usr/include/libpng12/png.h	2743;"	d
+PNG_HANDLE_CHUNK_AS_DEFAULT	/usr/include/libpng12/png.h	2740;"	d
+PNG_HANDLE_CHUNK_IF_SAFE	/usr/include/libpng12/png.h	2742;"	d
+PNG_HANDLE_CHUNK_NEVER	/usr/include/libpng12/png.h	2741;"	d
+PNG_HAVE_CHUNK_AFTER_IDAT	/usr/include/libpng12/png.h	2942;"	d
+PNG_HAVE_CHUNK_HEADER	/usr/include/libpng12/png.h	2937;"	d
+PNG_HAVE_IDAT	/usr/include/libpng12/png.h	2925;"	d
+PNG_HAVE_IEND	/usr/include/libpng12/png.h	2927;"	d
+PNG_HAVE_IHDR	/usr/include/libpng12/png.h	2923;"	d
+PNG_HAVE_PLTE	/usr/include/libpng12/png.h	2924;"	d
+PNG_HAVE_PNG_SIGNATURE	/usr/include/libpng12/png.h	2941;"	d
+PNG_HAVE_cHRM	/usr/include/libpng12/png.h	2935;"	d
+PNG_HAVE_gAMA	/usr/include/libpng12/png.h	2934;"	d
+PNG_HAVE_sRGB	/usr/include/libpng12/png.h	2936;"	d
+PNG_HEADER_VERSION_STRING	/usr/include/libpng12/png.h	491;"	d
+PNG_IDAT	/usr/include/libpng12/png.h	3065;"	d
+PNG_IEND	/usr/include/libpng12/png.h	3066;"	d
+PNG_IHDR	/usr/include/libpng12/png.h	3064;"	d
+PNG_IMPEXP	/usr/include/libpng12/pngconf.h	1426;"	d
+PNG_IMPEXP	/usr/include/libpng12/pngconf.h	1427;"	d
+PNG_IMPEXP	/usr/include/libpng12/pngconf.h	1444;"	d
+PNG_IMPEXP	/usr/include/libpng12/pngconf.h	1461;"	d
+PNG_IMPEXP	/usr/include/libpng12/pngconf.h	1476;"	d
+PNG_IMPEXP	/usr/include/libpng12/pngconf.h	1478;"	d
+PNG_IMPEXP	/usr/include/libpng12/pngconf.h	1487;"	d
+PNG_IMPEXP	/usr/include/libpng12/pngconf.h	1489;"	d
+PNG_IMPEXP	/usr/include/libpng12/pngconf.h	1508;"	d
+PNG_INFO_IDAT	/usr/include/libpng12/png.h	1164;"	d
+PNG_INFO_IMAGE_SUPPORTED	/usr/include/libpng12/pngconf.h	1217;"	d
+PNG_INFO_PLTE	/usr/include/libpng12/png.h	1152;"	d
+PNG_INFO_bKGD	/usr/include/libpng12/png.h	1154;"	d
+PNG_INFO_cHRM	/usr/include/libpng12/png.h	1151;"	d
+PNG_INFO_gAMA	/usr/include/libpng12/png.h	1149;"	d
+PNG_INFO_hIST	/usr/include/libpng12/png.h	1155;"	d
+PNG_INFO_iCCP	/usr/include/libpng12/png.h	1161;"	d
+PNG_INFO_oFFs	/usr/include/libpng12/png.h	1157;"	d
+PNG_INFO_pCAL	/usr/include/libpng12/png.h	1159;"	d
+PNG_INFO_pHYs	/usr/include/libpng12/png.h	1156;"	d
+PNG_INFO_sBIT	/usr/include/libpng12/png.h	1150;"	d
+PNG_INFO_sCAL	/usr/include/libpng12/png.h	1163;"	d
+PNG_INFO_sPLT	/usr/include/libpng12/png.h	1162;"	d
+PNG_INFO_sRGB	/usr/include/libpng12/png.h	1160;"	d
+PNG_INFO_tIME	/usr/include/libpng12/png.h	1158;"	d
+PNG_INFO_tRNS	/usr/include/libpng12/png.h	1153;"	d
+PNG_INTERLACE	/usr/include/libpng12/png.h	2946;"	d
+PNG_INTERLACE_ADAM7	/usr/include/libpng12/png.h	1105;"	d
+PNG_INTERLACE_LAST	/usr/include/libpng12/png.h	1106;"	d
+PNG_INTERLACE_NONE	/usr/include/libpng12/png.h	1104;"	d
+PNG_INTRAPIXEL_DIFFERENCING	/usr/include/libpng12/png.h	1100;"	d
+PNG_INVERT_ALPHA	/usr/include/libpng12/png.h	2964;"	d
+PNG_INVERT_MONO	/usr/include/libpng12/png.h	2950;"	d
+PNG_ITXT_COMPRESSION_NONE	/usr/include/libpng12/png.h	744;"	d
+PNG_ITXT_COMPRESSION_zTXt	/usr/include/libpng12/png.h	745;"	d
+PNG_KEYWORD_MAX_LENGTH	/usr/include/libpng12/png.h	1139;"	d
+PNG_LIBPNG_BUILD_ALPHA	/usr/include/libpng12/png.h	508;"	d
+PNG_LIBPNG_BUILD_BASE_TYPE	/usr/include/libpng12/png.h	522;"	d
+PNG_LIBPNG_BUILD_BETA	/usr/include/libpng12/png.h	509;"	d
+PNG_LIBPNG_BUILD_PATCH	/usr/include/libpng12/png.h	515;"	d
+PNG_LIBPNG_BUILD_PRIVATE	/usr/include/libpng12/png.h	517;"	d
+PNG_LIBPNG_BUILD_RC	/usr/include/libpng12/png.h	510;"	d
+PNG_LIBPNG_BUILD_RELEASE_STATUS_MASK	/usr/include/libpng12/png.h	512;"	d
+PNG_LIBPNG_BUILD_SPECIAL	/usr/include/libpng12/png.h	519;"	d
+PNG_LIBPNG_BUILD_STABLE	/usr/include/libpng12/png.h	511;"	d
+PNG_LIBPNG_BUILD_TYPE	/usr/include/libpng12/png.h	554;"	d
+PNG_LIBPNG_BUILD_TYPE	/usr/include/libpng12/png.h	558;"	d
+PNG_LIBPNG_BUILD_TYPE	/usr/include/libpng12/png.h	561;"	d
+PNG_LIBPNG_VER	/usr/include/libpng12/png.h	530;"	d
+PNG_LIBPNG_VER_BUILD	/usr/include/libpng12/png.h	505;"	d
+PNG_LIBPNG_VER_DLLNUM	/usr/include/libpng12/png.h	495;"	d
+PNG_LIBPNG_VER_MAJOR	/usr/include/libpng12/png.h	498;"	d
+PNG_LIBPNG_VER_MINOR	/usr/include/libpng12/png.h	499;"	d
+PNG_LIBPNG_VER_RELEASE	/usr/include/libpng12/png.h	500;"	d
+PNG_LIBPNG_VER_SONUM	/usr/include/libpng12/png.h	494;"	d
+PNG_LIBPNG_VER_STRING	/usr/include/libpng12/png.h	490;"	d
+PNG_LITERAL_LEFT_SQUARE_BRACKET	/usr/include/libpng12/pngconf.h	883;"	d
+PNG_LITERAL_RIGHT_SQUARE_BRACKET	/usr/include/libpng12/pngconf.h	886;"	d
+PNG_LITERAL_SHARP	/usr/include/libpng12/pngconf.h	880;"	d
+PNG_MAX_GAMMA_8	/usr/include/libpng12/pngconf.h	473;"	d
+PNG_MAX_MALLOC_64K	/usr/include/libpng12/pngconf.h	1270;"	d
+PNG_MAX_MALLOC_64K	/usr/include/libpng12/pngconf.h	166;"	d
+PNG_MAX_PALETTE_LENGTH	/usr/include/libpng12/png.h	1142;"	d
+PNG_MAX_UINT	/usr/include/libpng12/png.h	1075;"	d
+PNG_MMX_CODE_SUPPORTED	/usr/include/libpng12/pngconf.h	828;"	d
+PNG_MMX_FLAGS	/usr/include/libpng12/png.h	2766;"	d
+PNG_MMX_READ_FLAGS	/usr/include/libpng12/png.h	2758;"	d
+PNG_MMX_WRITE_FLAGS	/usr/include/libpng12/png.h	2764;"	d
+PNG_MNG_FEATURES_SUPPORTED	/usr/include/libpng12/pngconf.h	147;"	d
+PNG_NORETURN	/usr/include/libpng12/pngconf.h	1549;"	d
+PNG_NORETURN	/usr/include/libpng12/pngconf.h	1584;"	d
+PNG_NO_CONSOLE_IO	/usr/include/libpng12/pngconf.h	267;"	d
+PNG_NO_CONSOLE_IO	/usr/include/libpng12/pngconf.h	278;"	d
+PNG_NO_CONSOLE_IO	/usr/include/libpng12/pngconf.h	285;"	d
+PNG_NO_FILTERS	/usr/include/libpng12/png.h	1954;"	d
+PNG_NO_FIXED_POINT_SUPPORTED	/usr/include/libpng12/pngconf.h	577;"	d
+PNG_NO_FREE_ME	/usr/include/libpng12/pngconf.h	557;"	d
+PNG_NO_HANDLE_AS_UNKNOWN	/usr/include/libpng12/pngconf.h	1051;"	d
+PNG_NO_HANDLE_AS_UNKNOWN	/usr/include/libpng12/pngconf.h	560;"	d
+PNG_NO_INFO_IMAGE	/usr/include/libpng12/pngconf.h	570;"	d
+PNG_NO_MMX_CODE	/usr/include/libpng12/pngconf.h	811;"	d
+PNG_NO_MMX_CODE	/usr/include/libpng12/pngconf.h	817;"	d
+PNG_NO_MMX_CODE	/usr/include/libpng12/pngconf.h	823;"	d
+PNG_NO_MNG_FEATURES	/usr/include/libpng12/pngconf.h	576;"	d
+PNG_NO_MODULEDEF	/usr/include/libpng12/pngconf.h	1439;"	d
+PNG_NO_READ_EMPTY_PLTE	/usr/include/libpng12/pngconf.h	575;"	d
+PNG_NO_READ_RGB_TO_GRAY	/usr/include/libpng12/pngconf.h	571;"	d
+PNG_NO_READ_UNKNOWN_CHUNKS	/usr/include/libpng12/pngconf.h	1048;"	d
+PNG_NO_READ_UNKNOWN_CHUNKS	/usr/include/libpng12/pngconf.h	558;"	d
+PNG_NO_READ_USER_CHUNKS	/usr/include/libpng12/pngconf.h	561;"	d
+PNG_NO_READ_USER_TRANSFORM	/usr/include/libpng12/pngconf.h	572;"	d
+PNG_NO_READ_iCCP	/usr/include/libpng12/pngconf.h	562;"	d
+PNG_NO_READ_iTXt	/usr/include/libpng12/pngconf.h	534;"	d
+PNG_NO_READ_iTXt	/usr/include/libpng12/pngconf.h	564;"	d
+PNG_NO_READ_iTXt	/usr/include/libpng12/pngconf.h	950;"	d
+PNG_NO_READ_sCAL	/usr/include/libpng12/pngconf.h	566;"	d
+PNG_NO_READ_sPLT	/usr/include/libpng12/pngconf.h	568;"	d
+PNG_NO_READ_tEXt	/usr/include/libpng12/pngconf.h	951;"	d
+PNG_NO_READ_zTXt	/usr/include/libpng12/pngconf.h	952;"	d
+PNG_NO_USER_MEM	/usr/include/libpng12/pngconf.h	574;"	d
+PNG_NO_WRITE_UNKNOWN_CHUNKS	/usr/include/libpng12/pngconf.h	559;"	d
+PNG_NO_WRITE_USER_TRANSFORM	/usr/include/libpng12/pngconf.h	573;"	d
+PNG_NO_WRITE_iCCP	/usr/include/libpng12/pngconf.h	563;"	d
+PNG_NO_WRITE_iTXt	/usr/include/libpng12/pngconf.h	1065;"	d
+PNG_NO_WRITE_iTXt	/usr/include/libpng12/pngconf.h	537;"	d
+PNG_NO_WRITE_iTXt	/usr/include/libpng12/pngconf.h	565;"	d
+PNG_NO_WRITE_sCAL	/usr/include/libpng12/pngconf.h	567;"	d
+PNG_NO_WRITE_sPLT	/usr/include/libpng12/pngconf.h	569;"	d
+PNG_NO_WRITE_tEXt	/usr/include/libpng12/pngconf.h	1066;"	d
+PNG_NO_WRITE_zTXt	/usr/include/libpng12/pngconf.h	1067;"	d
+PNG_NO_iTXt_SUPPORTED	/usr/include/libpng12/pngconf.h	531;"	d
+PNG_OFFSET_LAST	/usr/include/libpng12/png.h	1111;"	d
+PNG_OFFSET_MICROMETER	/usr/include/libpng12/png.h	1110;"	d
+PNG_OFFSET_PIXEL	/usr/include/libpng12/png.h	1109;"	d
+PNG_OPTIMIZED_CODE_SUPPORTED	/usr/include/libpng12/pngconf.h	799;"	d
+PNG_OUT_OF_RANGE	/usr/include/libpng12/png.h	3048;"	d
+PNG_PACK	/usr/include/libpng12/png.h	2947;"	d
+PNG_PACKSWAP	/usr/include/libpng12/png.h	2961;"	d
+PNG_PEDANTIC_WARNINGS_SUPPORTED	/usr/include/libpng12/pngconf.h	1534;"	d
+PNG_PLTE	/usr/include/libpng12/png.h	3067;"	d
+PNG_POINTER_INDEXING_SUPPORTED	/usr/include/libpng12/pngconf.h	920;"	d
+PNG_PREMULTIPLY_ALPHA	/usr/include/libpng12/png.h	2972;"	d
+PNG_PRIVATE	/usr/include/libpng12/pngconf.h	1570;"	d
+PNG_PRIVATE	/usr/include/libpng12/pngconf.h	1593;"	d
+PNG_PROGRESSIVE_READ_SUPPORTED	/usr/include/libpng12/pngconf.h	657;"	d
+PNG_READ_16_TO_8_SUPPORTED	/usr/include/libpng12/pngconf.h	626;"	d
+PNG_READ_ANCILLARY_CHUNKS_SUPPORTED	/usr/include/libpng12/pngconf.h	938;"	d
+PNG_READ_BACKGROUND_SUPPORTED	/usr/include/libpng12/pngconf.h	623;"	d
+PNG_READ_BGR_SUPPORTED	/usr/include/libpng12/pngconf.h	608;"	d
+PNG_READ_COMPOSITE_NODIV_SUPPORTED	/usr/include/libpng12/pngconf.h	673;"	d
+PNG_READ_DITHER_SUPPORTED	/usr/include/libpng12/pngconf.h	620;"	d
+PNG_READ_EMPTY_PLTE_SUPPORTED	/usr/include/libpng12/pngconf.h	681;"	d
+PNG_READ_EXPAND_SUPPORTED	/usr/include/libpng12/pngconf.h	599;"	d
+PNG_READ_FILLER_SUPPORTED	/usr/include/libpng12/pngconf.h	629;"	d
+PNG_READ_GAMMA_SUPPORTED	/usr/include/libpng12/pngconf.h	632;"	d
+PNG_READ_GRAY_TO_RGB_SUPPORTED	/usr/include/libpng12/pngconf.h	635;"	d
+PNG_READ_INTERLACING_SUPPORTED	/usr/include/libpng12/pngconf.h	660;"	d
+PNG_READ_INTERLACING_SUPPORTED	/usr/include/libpng12/pngconf.h	669;"	d
+PNG_READ_INVERT_ALPHA_SUPPORTED	/usr/include/libpng12/pngconf.h	641;"	d
+PNG_READ_INVERT_SUPPORTED	/usr/include/libpng12/pngconf.h	617;"	d
+PNG_READ_OPT_PLTE_SUPPORTED	/usr/include/libpng12/pngconf.h	1027;"	d
+PNG_READ_PACKSWAP_SUPPORTED	/usr/include/libpng12/pngconf.h	614;"	d
+PNG_READ_PACK_SUPPORTED	/usr/include/libpng12/pngconf.h	605;"	d
+PNG_READ_RGB_TO_GRAY_SUPPORTED	/usr/include/libpng12/pngconf.h	650;"	d
+PNG_READ_SHIFT_SUPPORTED	/usr/include/libpng12/pngconf.h	602;"	d
+PNG_READ_STRIP_ALPHA_SUPPORTED	/usr/include/libpng12/pngconf.h	644;"	d
+PNG_READ_SUPPORTED	/usr/include/libpng12/pngconf.h	109;"	d
+PNG_READ_SWAP_ALPHA_SUPPORTED	/usr/include/libpng12/pngconf.h	638;"	d
+PNG_READ_SWAP_SUPPORTED	/usr/include/libpng12/pngconf.h	611;"	d
+PNG_READ_TEXT_SUPPORTED	/usr/include/libpng12/pngconf.h	1031;"	d
+PNG_READ_TRANSFORMS_SUPPORTED	/usr/include/libpng12/pngconf.h	594;"	d
+PNG_READ_UNKNOWN_CHUNKS_SUPPORTED	/usr/include/libpng12/pngconf.h	1038;"	d
+PNG_READ_USER_CHUNKS_SUPPORTED	/usr/include/libpng12/pngconf.h	1045;"	d
+PNG_READ_USER_TRANSFORM_SUPPORTED	/usr/include/libpng12/pngconf.h	647;"	d
+PNG_READ_bKGD_SUPPORTED	/usr/include/libpng12/pngconf.h	955;"	d
+PNG_READ_cHRM_SUPPORTED	/usr/include/libpng12/pngconf.h	959;"	d
+PNG_READ_gAMA_SUPPORTED	/usr/include/libpng12/pngconf.h	963;"	d
+PNG_READ_hIST_SUPPORTED	/usr/include/libpng12/pngconf.h	967;"	d
+PNG_READ_iCCP_SUPPORTED	/usr/include/libpng12/pngconf.h	971;"	d
+PNG_READ_iTXt	/usr/include/libpng12/pngconf.h	543;"	d
+PNG_READ_iTXt_SUPPORTED	/usr/include/libpng12/pngconf.h	976;"	d
+PNG_READ_oFFs_SUPPORTED	/usr/include/libpng12/pngconf.h	983;"	d
+PNG_READ_pCAL_SUPPORTED	/usr/include/libpng12/pngconf.h	987;"	d
+PNG_READ_pHYs_SUPPORTED	/usr/include/libpng12/pngconf.h	995;"	d
+PNG_READ_sBIT_SUPPORTED	/usr/include/libpng12/pngconf.h	999;"	d
+PNG_READ_sCAL_SUPPORTED	/usr/include/libpng12/pngconf.h	991;"	d
+PNG_READ_sPLT_SUPPORTED	/usr/include/libpng12/pngconf.h	1003;"	d
+PNG_READ_sRGB_SUPPORTED	/usr/include/libpng12/pngconf.h	1007;"	d
+PNG_READ_tEXt_SUPPORTED	/usr/include/libpng12/pngconf.h	1011;"	d
+PNG_READ_tIME_SUPPORTED	/usr/include/libpng12/pngconf.h	1015;"	d
+PNG_READ_tRNS_SUPPORTED	/usr/include/libpng12/pngconf.h	1019;"	d
+PNG_READ_zTXt_SUPPORTED	/usr/include/libpng12/pngconf.h	1023;"	d
+PNG_RESOLUTION_LAST	/usr/include/libpng12/png.h	1129;"	d
+PNG_RESOLUTION_METER	/usr/include/libpng12/png.h	1128;"	d
+PNG_RESOLUTION_UNKNOWN	/usr/include/libpng12/png.h	1127;"	d
+PNG_RGBA	/usr/include/libpng12/png.h	2956;"	d
+PNG_RGB_TO_GRAY	/usr/include/libpng12/png.h	2968;"	d
+PNG_RGB_TO_GRAY_ERR	/usr/include/libpng12/png.h	2966;"	d
+PNG_RGB_TO_GRAY_WARN	/usr/include/libpng12/png.h	2967;"	d
+PNG_ROWBYTES	/usr/include/libpng12/png.h	3038;"	d
+PNG_SAVE_BSD_SOURCE	/usr/include/libpng12/pngconf.h	364;"	d
+PNG_SAVE_BSD_SOURCE	/usr/include/libpng12/pngconf.h	385;"	d
+PNG_SCALE_LAST	/usr/include/libpng12/png.h	1124;"	d
+PNG_SCALE_METER	/usr/include/libpng12/png.h	1122;"	d
+PNG_SCALE_RADIAN	/usr/include/libpng12/png.h	1123;"	d
+PNG_SCALE_UNKNOWN	/usr/include/libpng12/png.h	1121;"	d
+PNG_SELECT_READ	/usr/include/libpng12/png.h	2771;"	d
+PNG_SELECT_WRITE	/usr/include/libpng12/png.h	2772;"	d
+PNG_SEQUENTIAL_READ_SUPPORTED	/usr/include/libpng12/pngconf.h	666;"	d
+PNG_SETJMP_SUPPORTED	/usr/include/libpng12/pngconf.h	347;"	d
+PNG_SET_USER_LIMITS_SUPPORTED	/usr/include/libpng12/pngconf.h	845;"	d
+PNG_SET_WILL_FREE_DATA	/usr/include/libpng12/png.h	2190;"	d
+PNG_SHIFT	/usr/include/libpng12/png.h	2948;"	d
+PNG_SIZE_MAX	/usr/include/libpng12/png.h	1072;"	d
+PNG_STATIC	/usr/include/libpng12/pngconf.h	214;"	d
+PNG_STATIC	/usr/include/libpng12/pngconf.h	219;"	d
+PNG_STDIO_SUPPORTED	/usr/include/libpng12/pngconf.h	261;"	d
+PNG_STRING_NEWLINE	/usr/include/libpng12/pngconf.h	891;"	d
+PNG_STRIP_ALPHA	/usr/include/libpng12/png.h	2963;"	d
+PNG_STRUCT_INFO	/usr/include/libpng12/png.h	2981;"	d
+PNG_STRUCT_PNG	/usr/include/libpng12/png.h	2980;"	d
+PNG_SWAP_ALPHA	/usr/include/libpng12/png.h	2962;"	d
+PNG_SWAP_BYTES	/usr/include/libpng12/png.h	2949;"	d
+PNG_TEXT_COMPRESSION_LAST	/usr/include/libpng12/png.h	746;"	d
+PNG_TEXT_COMPRESSION_NONE	/usr/include/libpng12/png.h	742;"	d
+PNG_TEXT_COMPRESSION_NONE_WR	/usr/include/libpng12/png.h	740;"	d
+PNG_TEXT_COMPRESSION_zTXt	/usr/include/libpng12/png.h	743;"	d
+PNG_TEXT_COMPRESSION_zTXt_WR	/usr/include/libpng12/png.h	741;"	d
+PNG_TEXT_SUPPORTED	/usr/include/libpng12/pngconf.h	1032;"	d
+PNG_TEXT_SUPPORTED	/usr/include/libpng12/pngconf.h	1177;"	d
+PNG_TIME_RFC1123_SUPPORTED	/usr/include/libpng12/pngconf.h	769;"	d
+PNG_TRANSFORM_BGR	/usr/include/libpng12/png.h	1230;"	d
+PNG_TRANSFORM_EXPAND	/usr/include/libpng12/png.h	1227;"	d
+PNG_TRANSFORM_GRAY_TO_RGB	/usr/include/libpng12/png.h	1239;"	d
+PNG_TRANSFORM_IDENTITY	/usr/include/libpng12/png.h	1222;"	d
+PNG_TRANSFORM_INVERT_ALPHA	/usr/include/libpng12/png.h	1233;"	d
+PNG_TRANSFORM_INVERT_MONO	/usr/include/libpng12/png.h	1228;"	d
+PNG_TRANSFORM_PACKING	/usr/include/libpng12/png.h	1225;"	d
+PNG_TRANSFORM_PACKSWAP	/usr/include/libpng12/png.h	1226;"	d
+PNG_TRANSFORM_SHIFT	/usr/include/libpng12/png.h	1229;"	d
+PNG_TRANSFORM_STRIP_16	/usr/include/libpng12/png.h	1223;"	d
+PNG_TRANSFORM_STRIP_ALPHA	/usr/include/libpng12/png.h	1224;"	d
+PNG_TRANSFORM_STRIP_FILLER	/usr/include/libpng12/png.h	1234;"	d
+PNG_TRANSFORM_STRIP_FILLER_AFTER	/usr/include/libpng12/png.h	1237;"	d
+PNG_TRANSFORM_STRIP_FILLER_BEFORE	/usr/include/libpng12/png.h	1236;"	d
+PNG_TRANSFORM_SWAP_ALPHA	/usr/include/libpng12/png.h	1231;"	d
+PNG_TRANSFORM_SWAP_ENDIAN	/usr/include/libpng12/png.h	1232;"	d
+PNG_TYPECAST_NULL	/usr/include/libpng12/pngconf.h	319;"	d
+PNG_UINT_31_MAX	/usr/include/libpng12/png.h	1070;"	d
+PNG_UINT_32_MAX	/usr/include/libpng12/png.h	1071;"	d
+PNG_UNKNOWN_CHUNKS_SUPPORTED	/usr/include/libpng12/pngconf.h	1040;"	d
+PNG_UNKNOWN_CHUNKS_SUPPORTED	/usr/include/libpng12/pngconf.h	1201;"	d
+PNG_USER_CHUNKS_SUPPORTED	/usr/include/libpng12/pngconf.h	1046;"	d
+PNG_USER_CHUNK_CACHE_MAX	/usr/include/libpng12/pngconf.h	871;"	d
+PNG_USER_CHUNK_MALLOC_MAX	/usr/include/libpng12/pngconf.h	876;"	d
+PNG_USER_HEIGHT_MAX	/usr/include/libpng12/pngconf.h	864;"	d
+PNG_USER_LIMITS_SUPPORTED	/usr/include/libpng12/pngconf.h	853;"	d
+PNG_USER_MEM_SUPPORTED	/usr/include/libpng12/pngconf.h	837;"	d
+PNG_USER_PRIVATEBUILD	/usr/include/libpng12/pngconf.h	31;"	d
+PNG_USER_PRIVATEBUILD	/usr/include/libpng12/pngconf.h	73;"	d
+PNG_USER_TRANSFORM	/usr/include/libpng12/png.h	2965;"	d
+PNG_USER_TRANSFORM_PTR_SUPPORTED	/usr/include/libpng12/pngconf.h	764;"	d
+PNG_USER_WIDTH_MAX	/usr/include/libpng12/pngconf.h	861;"	d
+PNG_USER_WILL_FREE_DATA	/usr/include/libpng12/png.h	2191;"	d
+PNG_USE_DLL	/usr/include/libpng12/pngconf.h	208;"	d
+PNG_USE_DLL	/usr/include/libpng12/pngconf.h	222;"	d
+PNG_USE_DLL	/usr/include/libpng12/pngconf.h	230;"	d
+PNG_USE_DLL	/usr/include/libpng12/pngconf.h	237;"	d
+PNG_USE_GLOBAL_ARRAYS	/usr/include/libpng12/pngconf.h	1393;"	d
+PNG_USE_GLOBAL_ARRAYS	/usr/include/libpng12/pngconf.h	1401;"	d
+PNG_USE_GLOBAL_ARRAYS	/usr/include/libpng12/pngconf.h	1419;"	d
+PNG_USE_LOCAL_ARRAYS	/usr/include/libpng12/pngconf.h	1396;"	d
+PNG_USE_LOCAL_ARRAYS	/usr/include/libpng12/pngconf.h	1406;"	d
+PNG_USE_LOCAL_ARRAYS	/usr/include/libpng12/pngconf.h	1417;"	d
+PNG_USE_RESULT	/usr/include/libpng12/pngconf.h	1546;"	d
+PNG_USE_RESULT	/usr/include/libpng12/pngconf.h	1581;"	d
+PNG_WARNINGS_SUPPORTED	/usr/include/libpng12/pngconf.h	131;"	d
+PNG_WARN_UNINITIALIZED_ROW	/usr/include/libpng12/pngconf.h	85;"	d
+PNG_WEIGHT_FACTOR	/usr/include/libpng12/png.h	2985;"	d
+PNG_WEIGHT_SHIFT	/usr/include/libpng12/png.h	2984;"	d
+PNG_WRITE_ANCILLARY_CHUNKS_SUPPORTED	/usr/include/libpng12/pngconf.h	944;"	d
+PNG_WRITE_BGR_SUPPORTED	/usr/include/libpng12/pngconf.h	702;"	d
+PNG_WRITE_EMPTY_PLTE_SUPPORTED	/usr/include/libpng12/pngconf.h	749;"	d
+PNG_WRITE_FILLER_SUPPORTED	/usr/include/libpng12/pngconf.h	714;"	d
+PNG_WRITE_FILTER_SUPPORTED	/usr/include/libpng12/pngconf.h	1195;"	d
+PNG_WRITE_FLUSH_SUPPORTED	/usr/include/libpng12/pngconf.h	743;"	d
+PNG_WRITE_INTERLACING_SUPPORTED	/usr/include/libpng12/pngconf.h	731;"	d
+PNG_WRITE_INVERT_ALPHA_SUPPORTED	/usr/include/libpng12/pngconf.h	721;"	d
+PNG_WRITE_INVERT_SUPPORTED	/usr/include/libpng12/pngconf.h	711;"	d
+PNG_WRITE_PACKSWAP_SUPPORTED	/usr/include/libpng12/pngconf.h	708;"	d
+PNG_WRITE_PACK_SUPPORTED	/usr/include/libpng12/pngconf.h	699;"	d
+PNG_WRITE_SHIFT_SUPPORTED	/usr/include/libpng12/pngconf.h	696;"	d
+PNG_WRITE_SUPPORTED	/usr/include/libpng12/pngconf.h	115;"	d
+PNG_WRITE_SWAP_ALPHA_SUPPORTED	/usr/include/libpng12/pngconf.h	717;"	d
+PNG_WRITE_SWAP_SUPPORTED	/usr/include/libpng12/pngconf.h	705;"	d
+PNG_WRITE_TEXT_SUPPORTED	/usr/include/libpng12/pngconf.h	1175;"	d
+PNG_WRITE_TRANSFORMS_SUPPORTED	/usr/include/libpng12/pngconf.h	691;"	d
+PNG_WRITE_UNKNOWN_CHUNKS_SUPPORTED	/usr/include/libpng12/pngconf.h	1199;"	d
+PNG_WRITE_USER_TRANSFORM_SUPPORTED	/usr/include/libpng12/pngconf.h	725;"	d
+PNG_WRITE_WEIGHTED_FILTER_SUPPORTED	/usr/include/libpng12/pngconf.h	739;"	d
+PNG_WRITE_bKGD_SUPPORTED	/usr/include/libpng12/pngconf.h	1070;"	d
+PNG_WRITE_cHRM_SUPPORTED	/usr/include/libpng12/pngconf.h	1076;"	d
+PNG_WRITE_gAMA_SUPPORTED	/usr/include/libpng12/pngconf.h	1082;"	d
+PNG_WRITE_hIST_SUPPORTED	/usr/include/libpng12/pngconf.h	1088;"	d
+PNG_WRITE_iCCP_SUPPORTED	/usr/include/libpng12/pngconf.h	1094;"	d
+PNG_WRITE_iTXt	/usr/include/libpng12/pngconf.h	546;"	d
+PNG_WRITE_iTXt_SUPPORTED	/usr/include/libpng12/pngconf.h	1101;"	d
+PNG_WRITE_oFFs_SUPPORTED	/usr/include/libpng12/pngconf.h	1108;"	d
+PNG_WRITE_pCAL_SUPPORTED	/usr/include/libpng12/pngconf.h	1114;"	d
+PNG_WRITE_pHYs_SUPPORTED	/usr/include/libpng12/pngconf.h	1126;"	d
+PNG_WRITE_sBIT_SUPPORTED	/usr/include/libpng12/pngconf.h	1132;"	d
+PNG_WRITE_sCAL_SUPPORTED	/usr/include/libpng12/pngconf.h	1120;"	d
+PNG_WRITE_sPLT_SUPPORTED	/usr/include/libpng12/pngconf.h	1138;"	d
+PNG_WRITE_sRGB_SUPPORTED	/usr/include/libpng12/pngconf.h	1144;"	d
+PNG_WRITE_tEXt_SUPPORTED	/usr/include/libpng12/pngconf.h	1150;"	d
+PNG_WRITE_tIME_SUPPORTED	/usr/include/libpng12/pngconf.h	1156;"	d
+PNG_WRITE_tRNS_SUPPORTED	/usr/include/libpng12/pngconf.h	1162;"	d
+PNG_WRITE_zTXt_SUPPORTED	/usr/include/libpng12/pngconf.h	1168;"	d
+PNG_WROTE_INFO_BEFORE_PLTE	/usr/include/libpng12/png.h	2939;"	d
+PNG_WROTE_tIME	/usr/include/libpng12/png.h	2938;"	d
+PNG_ZBUF_SIZE	/usr/include/libpng12/pngconf.h	103;"	d
+PNG_ZBUF_SIZE	/usr/include/libpng12/pngconf.h	1658;"	d
+PNG_ZBUF_SIZE	/usr/include/libpng12/pngconf.h	1659;"	d
+PNG_bKGD	/usr/include/libpng12/png.h	3068;"	d
+PNG_bKGD_SUPPORTED	/usr/include/libpng12/pngconf.h	1072;"	d
+PNG_bKGD_SUPPORTED	/usr/include/libpng12/pngconf.h	956;"	d
+PNG_cHRM	/usr/include/libpng12/png.h	3069;"	d
+PNG_cHRM_SUPPORTED	/usr/include/libpng12/pngconf.h	1078;"	d
+PNG_cHRM_SUPPORTED	/usr/include/libpng12/pngconf.h	960;"	d
+PNG_gAMA	/usr/include/libpng12/png.h	3070;"	d
+PNG_gAMA_SUPPORTED	/usr/include/libpng12/pngconf.h	1084;"	d
+PNG_gAMA_SUPPORTED	/usr/include/libpng12/pngconf.h	964;"	d
+PNG_hIST	/usr/include/libpng12/png.h	3071;"	d
+PNG_hIST_SUPPORTED	/usr/include/libpng12/pngconf.h	1090;"	d
+PNG_hIST_SUPPORTED	/usr/include/libpng12/pngconf.h	968;"	d
+PNG_iCCP	/usr/include/libpng12/png.h	3072;"	d
+PNG_iCCP_SUPPORTED	/usr/include/libpng12/pngconf.h	1096;"	d
+PNG_iCCP_SUPPORTED	/usr/include/libpng12/pngconf.h	972;"	d
+PNG_iTXt	/usr/include/libpng12/png.h	3073;"	d
+PNG_iTXt_SUPPORTED	/usr/include/libpng12/pngconf.h	1104;"	d
+PNG_iTXt_SUPPORTED	/usr/include/libpng12/pngconf.h	979;"	d
+PNG_oFFs	/usr/include/libpng12/png.h	3074;"	d
+PNG_oFFs_SUPPORTED	/usr/include/libpng12/pngconf.h	1110;"	d
+PNG_oFFs_SUPPORTED	/usr/include/libpng12/pngconf.h	984;"	d
+PNG_pCAL	/usr/include/libpng12/png.h	3075;"	d
+PNG_pCAL_SUPPORTED	/usr/include/libpng12/pngconf.h	1116;"	d
+PNG_pCAL_SUPPORTED	/usr/include/libpng12/pngconf.h	988;"	d
+PNG_pHYs	/usr/include/libpng12/png.h	3077;"	d
+PNG_pHYs_SUPPORTED	/usr/include/libpng12/pngconf.h	1128;"	d
+PNG_pHYs_SUPPORTED	/usr/include/libpng12/pngconf.h	996;"	d
+PNG_sBIT	/usr/include/libpng12/png.h	3078;"	d
+PNG_sBIT_SUPPORTED	/usr/include/libpng12/pngconf.h	1000;"	d
+PNG_sBIT_SUPPORTED	/usr/include/libpng12/pngconf.h	1134;"	d
+PNG_sCAL	/usr/include/libpng12/png.h	3076;"	d
+PNG_sCAL_SUPPORTED	/usr/include/libpng12/pngconf.h	1122;"	d
+PNG_sCAL_SUPPORTED	/usr/include/libpng12/pngconf.h	992;"	d
+PNG_sPLT	/usr/include/libpng12/png.h	3079;"	d
+PNG_sPLT_SUPPORTED	/usr/include/libpng12/pngconf.h	1004;"	d
+PNG_sPLT_SUPPORTED	/usr/include/libpng12/pngconf.h	1140;"	d
+PNG_sRGB	/usr/include/libpng12/png.h	3080;"	d
+PNG_sRGB_INTENT_ABSOLUTE	/usr/include/libpng12/png.h	1135;"	d
+PNG_sRGB_INTENT_LAST	/usr/include/libpng12/png.h	1136;"	d
+PNG_sRGB_INTENT_PERCEPTUAL	/usr/include/libpng12/png.h	1132;"	d
+PNG_sRGB_INTENT_RELATIVE	/usr/include/libpng12/png.h	1133;"	d
+PNG_sRGB_INTENT_SATURATION	/usr/include/libpng12/png.h	1134;"	d
+PNG_sRGB_SUPPORTED	/usr/include/libpng12/pngconf.h	1008;"	d
+PNG_sRGB_SUPPORTED	/usr/include/libpng12/pngconf.h	1146;"	d
+PNG_tEXt	/usr/include/libpng12/png.h	3081;"	d
+PNG_tEXt_SUPPORTED	/usr/include/libpng12/pngconf.h	1012;"	d
+PNG_tEXt_SUPPORTED	/usr/include/libpng12/pngconf.h	1152;"	d
+PNG_tIME	/usr/include/libpng12/png.h	3082;"	d
+PNG_tIME_SUPPORTED	/usr/include/libpng12/pngconf.h	1016;"	d
+PNG_tIME_SUPPORTED	/usr/include/libpng12/pngconf.h	1158;"	d
+PNG_tRNS	/usr/include/libpng12/png.h	3083;"	d
+PNG_tRNS_SUPPORTED	/usr/include/libpng12/pngconf.h	1020;"	d
+PNG_tRNS_SUPPORTED	/usr/include/libpng12/pngconf.h	1164;"	d
+PNG_zTXt	/usr/include/libpng12/png.h	3084;"	d
+PNG_zTXt_SUPPORTED	/usr/include/libpng12/pngconf.h	1024;"	d
+PNG_zTXt_SUPPORTED	/usr/include/libpng12/pngconf.h	1170;"	d
+USE_FAR_KEYWORD	/usr/include/libpng12/pngconf.h	1275;"	d
+USE_FAR_KEYWORD	/usr/include/libpng12/pngconf.h	1294;"	d
+_BSD_SOURCE	/usr/include/libpng12/pngconf.h	365;"	d
+_BSD_SOURCE	/usr/include/libpng12/pngconf.h	383;"	d
+_DEBUG	/usr/include/libpng12/png.h	2633;"	d
+alpha	/usr/include/libpng12/png.h	/^   png_byte alpha; \/* for alpha channel files *\/$/;"	m	struct:png_color_8_struct	access:public
+alpha	/usr/include/libpng12/png.h	/^   png_uint_16 alpha;$/;"	m	struct:png_sPLT_entry_struct	access:public
+bit_depth	/usr/include/libpng12/png.h	/^   png_byte bit_depth; \/* bit depth of row *\/$/;"	m	struct:png_row_info_struct	access:public
+blue	/usr/include/libpng12/png.h	/^   png_byte blue;$/;"	m	struct:png_color_8_struct	access:public
+blue	/usr/include/libpng12/png.h	/^   png_byte blue;$/;"	m	struct:png_color_struct	access:public
+blue	/usr/include/libpng12/png.h	/^   png_uint_16 blue;$/;"	m	struct:png_color_16_struct	access:public
+blue	/usr/include/libpng12/png.h	/^   png_uint_16 blue;$/;"	m	struct:png_sPLT_entry_struct	access:public
+channels	/usr/include/libpng12/png.h	/^   png_byte channels; \/* number of channels (1, 2, 3, or 4) *\/$/;"	m	struct:png_row_info_struct	access:public
+color_type	/usr/include/libpng12/png.h	/^   png_byte color_type; \/* color type of row *\/$/;"	m	struct:png_row_info_struct	access:public
+compression	/usr/include/libpng12/png.h	/^   int  compression;       \/* compression value:$/;"	m	struct:png_text_struct	access:public
+data	/usr/include/libpng12/png.h	/^    png_byte *data;$/;"	m	struct:png_unknown_chunk_t	access:public
+day	/usr/include/libpng12/png.h	/^   png_byte day;     \/* day of month, 1 - 31 *\/$/;"	m	struct:png_time_struct	access:public
+depth	/usr/include/libpng12/png.h	/^   png_byte depth;           \/* depth of palette samples *\/$/;"	m	struct:png_sPLT_struct	access:public
+entries	/usr/include/libpng12/png.h	/^   png_sPLT_entryp entries;  \/* palette entries *\/$/;"	m	struct:png_sPLT_struct	access:public
+frequency	/usr/include/libpng12/png.h	/^   png_uint_16 frequency;$/;"	m	struct:png_sPLT_entry_struct	access:public
+gray	/usr/include/libpng12/png.h	/^   png_byte gray;  \/* for use in grayscale files *\/$/;"	m	struct:png_color_8_struct	access:public
+gray	/usr/include/libpng12/png.h	/^   png_uint_16 gray;  \/* for use in grayscale files *\/$/;"	m	struct:png_color_16_struct	access:public
+green	/usr/include/libpng12/png.h	/^   png_byte green;$/;"	m	struct:png_color_8_struct	access:public
+green	/usr/include/libpng12/png.h	/^   png_byte green;$/;"	m	struct:png_color_struct	access:public
+green	/usr/include/libpng12/png.h	/^   png_uint_16 green;$/;"	m	struct:png_color_16_struct	access:public
+green	/usr/include/libpng12/png.h	/^   png_uint_16 green;$/;"	m	struct:png_sPLT_entry_struct	access:public
+hour	/usr/include/libpng12/png.h	/^   png_byte hour;    \/* hour of day, 0 - 23 *\/$/;"	m	struct:png_time_struct	access:public
+index	/usr/include/libpng12/png.h	/^   png_byte index;    \/* used for palette files *\/$/;"	m	struct:png_color_16_struct	access:public
+int_p_NULL	/usr/include/libpng12/png.h	579;"	d
+int_p_NULL	/usr/include/libpng12/png.h	595;"	d
+itxt_length	/usr/include/libpng12/png.h	/^   png_size_t itxt_length; \/* length of the itxt string *\/$/;"	m	struct:png_text_struct	access:public
+jmpbuf	/usr/include/libpng12/png.h	/^   jmp_buf jmpbuf;            \/* used in png_error *\/$/;"	m	struct:png_struct_def	access:public
+key	/usr/include/libpng12/png.h	/^   png_charp key;          \/* keyword, 1-79 character description of "text" *\/$/;"	m	struct:png_text_struct	access:public
+lang	/usr/include/libpng12/png.h	/^   png_charp lang;         \/* language code, 0-79 characters$/;"	m	struct:png_text_struct	access:public
+lang_key	/usr/include/libpng12/png.h	/^   png_charp lang_key;     \/* keyword translated UTF-8 string, 0 or more$/;"	m	struct:png_text_struct	access:public
+location	/usr/include/libpng12/png.h	/^    png_byte location; \/* mode of operation at read time *\/$/;"	m	struct:png_unknown_chunk_t	access:public
+minute	/usr/include/libpng12/png.h	/^   png_byte minute;  \/* minute of hour, 0 - 59 *\/$/;"	m	struct:png_time_struct	access:public
+month	/usr/include/libpng12/png.h	/^   png_byte month;   \/* month of year, 1 - 12 *\/$/;"	m	struct:png_time_struct	access:public
+name	/usr/include/libpng12/png.h	/^    png_byte name[PNG_CHUNK_NAME_LENGTH];$/;"	m	struct:png_unknown_chunk_t	access:public
+name	/usr/include/libpng12/png.h	/^   png_charp name;           \/* palette name *\/$/;"	m	struct:png_sPLT_struct	access:public
+nentries	/usr/include/libpng12/png.h	/^   png_int_32 nentries;      \/* number of palette entries *\/$/;"	m	struct:png_sPLT_struct	access:public
+pixel_depth	/usr/include/libpng12/png.h	/^   png_byte pixel_depth; \/* bits per pixel (depth * channels) *\/$/;"	m	struct:png_row_info_struct	access:public
+png_FILE_p	/usr/include/libpng12/pngconf.h	/^typedef FILE                * png_FILE_p;$/;"	t
+png_FILE_p	/usr/include/libpng12/pngconf.h	/^typedef HANDLE                png_FILE_p;$/;"	t
+png_benign_error	/usr/include/libpng12/pngconf.h	120;"	d
+png_benign_error	/usr/include/libpng12/pngconf.h	124;"	d
+png_byte	/usr/include/libpng12/pngconf.h	/^typedef unsigned char png_byte;$/;"	t
+png_bytep	/usr/include/libpng12/pngconf.h	/^typedef png_byte        FAR * png_bytep;$/;"	t
+png_bytep_NULL	/usr/include/libpng12/png.h	580;"	d
+png_bytep_NULL	/usr/include/libpng12/png.h	596;"	d
+png_bytepp	/usr/include/libpng12/pngconf.h	/^typedef png_byte        FAR * FAR * png_bytepp;$/;"	t
+png_bytepp_NULL	/usr/include/libpng12/png.h	581;"	d
+png_bytepp_NULL	/usr/include/libpng12/png.h	597;"	d
+png_calloc	/usr/include/libpng12/png.h	/^PNG_EXTERN png_voidp png_calloc PNGARG((png_structp png_ptr,$/;"	p	signature:(png_structp png_ptr, png_uint_32 size)
+png_charp	/usr/include/libpng12/pngconf.h	/^typedef char            FAR * png_charp;$/;"	t
+png_charpp	/usr/include/libpng12/pngconf.h	/^typedef char            FAR * FAR * png_charpp;$/;"	t
+png_charppp	/usr/include/libpng12/pngconf.h	/^typedef char            FAR * FAR * FAR * png_charppp;$/;"	t
+png_chunk_benign_error	/usr/include/libpng12/pngconf.h	121;"	d
+png_chunk_benign_error	/usr/include/libpng12/pngconf.h	125;"	d
+png_color	/usr/include/libpng12/png.h	/^} png_color;$/;"	t	typeref:struct:png_color_struct
+png_color_16	/usr/include/libpng12/png.h	/^} png_color_16;$/;"	t	typeref:struct:png_color_16_struct
+png_color_16_struct	/usr/include/libpng12/png.h	/^typedef struct png_color_16_struct$/;"	s
+png_color_16_struct::blue	/usr/include/libpng12/png.h	/^   png_uint_16 blue;$/;"	m	struct:png_color_16_struct	access:public
+png_color_16_struct::gray	/usr/include/libpng12/png.h	/^   png_uint_16 gray;  \/* for use in grayscale files *\/$/;"	m	struct:png_color_16_struct	access:public
+png_color_16_struct::green	/usr/include/libpng12/png.h	/^   png_uint_16 green;$/;"	m	struct:png_color_16_struct	access:public
+png_color_16_struct::index	/usr/include/libpng12/png.h	/^   png_byte index;    \/* used for palette files *\/$/;"	m	struct:png_color_16_struct	access:public
+png_color_16_struct::red	/usr/include/libpng12/png.h	/^   png_uint_16 red;   \/* for use in red green blue files *\/$/;"	m	struct:png_color_16_struct	access:public
+png_color_16p	/usr/include/libpng12/png.h	/^typedef png_color_16 FAR * png_color_16p;$/;"	t
+png_color_16pp	/usr/include/libpng12/png.h	/^typedef png_color_16 FAR * FAR * png_color_16pp;$/;"	t
+png_color_8	/usr/include/libpng12/png.h	/^} png_color_8;$/;"	t	typeref:struct:png_color_8_struct
+png_color_8_struct	/usr/include/libpng12/png.h	/^typedef struct png_color_8_struct$/;"	s
+png_color_8_struct::alpha	/usr/include/libpng12/png.h	/^   png_byte alpha; \/* for alpha channel files *\/$/;"	m	struct:png_color_8_struct	access:public
+png_color_8_struct::blue	/usr/include/libpng12/png.h	/^   png_byte blue;$/;"	m	struct:png_color_8_struct	access:public
+png_color_8_struct::gray	/usr/include/libpng12/png.h	/^   png_byte gray;  \/* for use in grayscale files *\/$/;"	m	struct:png_color_8_struct	access:public
+png_color_8_struct::green	/usr/include/libpng12/png.h	/^   png_byte green;$/;"	m	struct:png_color_8_struct	access:public
+png_color_8_struct::red	/usr/include/libpng12/png.h	/^   png_byte red;   \/* for use in red green blue files *\/$/;"	m	struct:png_color_8_struct	access:public
+png_color_8p	/usr/include/libpng12/png.h	/^typedef png_color_8 FAR * png_color_8p;$/;"	t
+png_color_8pp	/usr/include/libpng12/png.h	/^typedef png_color_8 FAR * FAR * png_color_8pp;$/;"	t
+png_color_struct	/usr/include/libpng12/png.h	/^typedef struct png_color_struct$/;"	s
+png_color_struct::blue	/usr/include/libpng12/png.h	/^   png_byte blue;$/;"	m	struct:png_color_struct	access:public
+png_color_struct::green	/usr/include/libpng12/png.h	/^   png_byte green;$/;"	m	struct:png_color_struct	access:public
+png_color_struct::red	/usr/include/libpng12/png.h	/^   png_byte red;$/;"	m	struct:png_color_struct	access:public
+png_colorp	/usr/include/libpng12/png.h	/^typedef png_color FAR * png_colorp;$/;"	t
+png_colorpp	/usr/include/libpng12/png.h	/^typedef png_color FAR * FAR * png_colorpp;$/;"	t
+png_composite	/usr/include/libpng12/png.h	2849;"	d
+png_composite	/usr/include/libpng12/png.h	2863;"	d
+png_composite_16	/usr/include/libpng12/png.h	2855;"	d
+png_composite_16	/usr/include/libpng12/png.h	2868;"	d
+png_const_charp	/usr/include/libpng12/pngconf.h	/^typedef PNG_CONST char  FAR * png_const_charp;$/;"	t
+png_const_charpp	/usr/include/libpng12/pngconf.h	/^typedef PNG_CONST char  FAR * FAR * png_const_charpp;$/;"	t
+png_crc_finish	/usr/include/libpng12/png.h	/^PNG_EXTERN int png_crc_finish PNGARG((png_structp png_ptr, png_uint_32 skip)$/;"	p	signature:(png_structp png_ptr, png_uint_32 skip) PNG_PRIVATE
+png_debug	/usr/include/libpng12/png.h	2636;"	d
+png_debug	/usr/include/libpng12/png.h	2656;"	d
+png_debug	/usr/include/libpng12/png.h	2681;"	d
+png_debug	/usr/include/libpng12/png.h	2720;"	d
+png_debug1	/usr/include/libpng12/png.h	2639;"	d
+png_debug1	/usr/include/libpng12/png.h	2664;"	d
+png_debug1	/usr/include/libpng12/png.h	2692;"	d
+png_debug1	/usr/include/libpng12/png.h	2723;"	d
+png_debug2	/usr/include/libpng12/png.h	2642;"	d
+png_debug2	/usr/include/libpng12/png.h	2672;"	d
+png_debug2	/usr/include/libpng12/png.h	2703;"	d
+png_debug2	/usr/include/libpng12/png.h	2726;"	d
+png_doublep	/usr/include/libpng12/pngconf.h	/^typedef double          FAR * png_doublep;$/;"	t
+png_doublep_NULL	/usr/include/libpng12/png.h	582;"	d
+png_doublep_NULL	/usr/include/libpng12/png.h	598;"	d
+png_doublepp	/usr/include/libpng12/pngconf.h	/^typedef double          FAR * FAR * png_doublepp;$/;"	t
+png_error_ptr	/usr/include/libpng12/png.h	/^typedef void (PNGAPI *png_error_ptr) PNGARG((png_structp, png_const_charp));$/;"	t
+png_error_ptr_NULL	/usr/include/libpng12/png.h	583;"	d
+png_error_ptr_NULL	/usr/include/libpng12/png.h	599;"	d
+png_far_to_near	/usr/include/libpng12/png.h	/^extern void *png_far_to_near PNGARG((png_structp png_ptr,png_voidp ptr,$/;"	p	signature:(png_structp png_ptr,png_voidp ptr, int check)
+png_fixed_point	/usr/include/libpng12/pngconf.h	/^typedef png_int_32 png_fixed_point;$/;"	t
+png_fixed_point_p	/usr/include/libpng12/pngconf.h	/^typedef png_fixed_point FAR * png_fixed_point_p;$/;"	t
+png_fixed_point_pp	/usr/include/libpng12/pngconf.h	/^typedef png_fixed_point FAR * FAR * png_fixed_point_pp;$/;"	t
+png_flush_ptr	/usr/include/libpng12/png.h	/^typedef void (PNGAPI *png_flush_ptr) PNGARG((png_structp));$/;"	t
+png_flush_ptr_NULL	/usr/include/libpng12/png.h	584;"	d
+png_flush_ptr_NULL	/usr/include/libpng12/png.h	600;"	d
+png_free_ptr	/usr/include/libpng12/png.h	/^typedef void (*png_free_ptr) PNGARG((png_structp, png_voidp));$/;"	t
+png_free_ptr_NULL	/usr/include/libpng12/png.h	585;"	d
+png_free_ptr_NULL	/usr/include/libpng12/png.h	601;"	d
+png_get_int_32	/usr/include/libpng12/png.h	2886;"	d
+png_get_pHYs_dpi	/usr/include/libpng12/png.h	/^PNG_EXTERN png_uint_32 png_get_pHYs_dpi PNGARG((png_structp png_ptr,$/;"	p	signature:(png_structp png_ptr, png_infop info_ptr, png_uint_32 *res_x, png_uint_32 *res_y, int *unit_type)
+png_get_pixels_per_inch	/usr/include/libpng12/png.h	/^PNG_EXTERN png_uint_32 png_get_pixels_per_inch PNGARG((png_structp png_ptr,$/;"	p	signature:(png_structp png_ptr, png_infop info_ptr)
+png_get_uint_16	/usr/include/libpng12/png.h	2885;"	d
+png_get_uint_32	/usr/include/libpng12/png.h	2884;"	d
+png_get_x_offset_inches	/usr/include/libpng12/png.h	/^PNG_EXTERN float png_get_x_offset_inches PNGARG((png_structp png_ptr,$/;"	p	signature:(png_structp png_ptr, png_infop info_ptr)
+png_get_x_pixels_per_inch	/usr/include/libpng12/png.h	/^PNG_EXTERN png_uint_32 png_get_x_pixels_per_inch PNGARG((png_structp png_ptr,$/;"	p	signature:(png_structp png_ptr, png_infop info_ptr)
+png_get_y_offset_inches	/usr/include/libpng12/png.h	/^PNG_EXTERN float png_get_y_offset_inches PNGARG((png_structp png_ptr,$/;"	p	signature:(png_structp png_ptr, png_infop info_ptr)
+png_get_y_pixels_per_inch	/usr/include/libpng12/png.h	/^PNG_EXTERN png_uint_32 png_get_y_pixels_per_inch PNGARG((png_structp png_ptr,$/;"	p	signature:(png_structp png_ptr, png_infop info_ptr)
+png_handle_IEND	/usr/include/libpng12/png.h	/^PNG_EXTERN void png_handle_IEND PNGARG((png_structp png_ptr, png_infop info_ptr,$/;"	p	signature:(png_structp png_ptr, png_infop info_ptr, png_uint_32 length)
+png_handle_PLTE	/usr/include/libpng12/png.h	/^PNG_EXTERN void png_handle_PLTE PNGARG((png_structp png_ptr, png_infop info_ptr,$/;"	p	signature:(png_structp png_ptr, png_infop info_ptr, png_uint_32 length)
+png_handle_iCCP	/usr/include/libpng12/png.h	/^extern void png_handle_iCCP PNGARG((png_structp png_ptr, png_infop info_ptr,$/;"	p	signature:(png_structp png_ptr, png_infop info_ptr, png_uint_32 length)
+png_info	/usr/include/libpng12/png.h	/^} png_info;$/;"	t	typeref:struct:png_info_struct
+png_info_init	/usr/include/libpng12/png.h	1660;"	d
+png_info_init	/usr/include/libpng12/png.h	1661;"	d
+png_info_struct	/usr/include/libpng12/png.h	/^typedef struct png_info_struct$/;"	s
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   double scal_pixel_height PNG_DEPSTRUCT;   \/* height of one pixel *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   double scal_pixel_width PNG_DEPSTRUCT;    \/* width of one pixel *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   float gamma PNG_DEPSTRUCT; \/* gamma value of image, if (valid & PNG_INFO_gAMA) *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   float x_blue PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   float x_green PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   float x_red PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   float x_white PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   float y_blue PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   float y_green PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   float y_red PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   float y_white PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   int max_text PNG_DEPSTRUCT; \/* current size of text array *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   int num_text PNG_DEPSTRUCT; \/* number of comments read\/to write *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte bit_depth PNG_DEPSTRUCT;      \/* 1, 2, 4, 8, or 16 bits\/channel (from IHDR) *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte channels PNG_DEPSTRUCT;       \/* number of data channels per pixel (1, 2, 3, 4) *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte color_type PNG_DEPSTRUCT;     \/* see PNG_COLOR_TYPE_ below (from IHDR) *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte compression_type PNG_DEPSTRUCT; \/* must be PNG_COMPRESSION_TYPE_BASE (IHDR) *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte filter_type PNG_DEPSTRUCT;    \/* must be PNG_FILTER_TYPE_BASE (from IHDR) *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte iccp_compression PNG_DEPSTRUCT; \/* Always zero *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte interlace_type PNG_DEPSTRUCT; \/* One of PNG_INTERLACE_NONE, PNG_INTERLACE_ADAM7 *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte offset_unit_type PNG_DEPSTRUCT; \/* offset units type *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte pcal_nparams PNG_DEPSTRUCT;   \/* number of parameters given in pcal_params *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte pcal_type PNG_DEPSTRUCT;      \/* equation type (see PNG_EQUATION_ below) *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte phys_unit_type PNG_DEPSTRUCT; \/* resolution type (see PNG_RESOLUTION_ below) *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte pixel_depth PNG_DEPSTRUCT;    \/* number of bits per pixel *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte scal_unit PNG_DEPSTRUCT;         \/* unit of physical scale *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte signature[8] PNG_DEPSTRUCT;   \/* magic bytes read by libpng from start of file *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte spare_byte PNG_DEPSTRUCT;     \/* to align the data, and for future use *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte srgb_intent PNG_DEPSTRUCT; \/* sRGB rendering intent [0, 1, 2, or 3] *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep trans PNG_DEPSTRUCT; \/* transparent values for paletted image *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytepp row_pointers PNG_DEPSTRUCT;        \/* the image bits *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_charp iccp_name PNG_DEPSTRUCT;     \/* profile name *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_charp iccp_profile PNG_DEPSTRUCT;  \/* International Color Consortium profile data *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_charp pcal_purpose PNG_DEPSTRUCT;  \/* pCAL chunk description string *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_charp pcal_units PNG_DEPSTRUCT;    \/* Latin-1 string giving physical units *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_charp scal_s_height PNG_DEPSTRUCT;    \/* string containing width *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_charp scal_s_width PNG_DEPSTRUCT;     \/* string containing height *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_charpp pcal_params PNG_DEPSTRUCT;  \/* ASCII strings containing parameter values *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_color_16 background PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_color_16 trans_values PNG_DEPSTRUCT; \/* transparent color for non-palette image *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_color_8 sig_bit PNG_DEPSTRUCT; \/* significant bits in color channels *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_colorp palette PNG_DEPSTRUCT;      \/* array of color values (valid & PNG_INFO_PLTE) *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_fixed_point int_gamma PNG_DEPSTRUCT; \/* gamma of image, if (valid & PNG_INFO_gAMA) *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_fixed_point int_x_blue PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_fixed_point int_x_green PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_fixed_point int_x_red PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_fixed_point int_x_white PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_fixed_point int_y_blue PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_fixed_point int_y_green PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_fixed_point int_y_red PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_fixed_point int_y_white PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_int_32 pcal_X0 PNG_DEPSTRUCT;      \/* minimum value *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_int_32 pcal_X1 PNG_DEPSTRUCT;      \/* maximum value *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_int_32 x_offset PNG_DEPSTRUCT; \/* x offset on page *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_int_32 y_offset PNG_DEPSTRUCT; \/* y offset on page *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_sPLT_tp splt_palettes PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_size_t unknown_chunks_num PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_textp text PNG_DEPSTRUCT; \/* array of comments read\/to write *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_time mod_time PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16 num_palette PNG_DEPSTRUCT; \/* number of color entries in "palette" (PLTE) *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16 num_trans PNG_DEPSTRUCT;   \/* number of transparent palette color (tRNS) *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16p hist PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 free_me PNG_DEPSTRUCT;     \/* flags items libpng is responsible for freeing *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 height PNG_DEPSTRUCT;      \/* height of image in pixels (from IHDR) *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 iccp_proflen PNG_DEPSTRUCT;  \/* ICC profile data length *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 rowbytes PNG_DEPSTRUCT;    \/* bytes needed to hold an untransformed row *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 splt_palettes_num PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 valid PNG_DEPSTRUCT;       \/* valid chunk data (see PNG_INFO_ below) *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 width PNG_DEPSTRUCT;       \/* width of image in pixels (from IHDR) *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 x_pixels_per_unit PNG_DEPSTRUCT; \/* horizontal pixel density *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 y_pixels_per_unit PNG_DEPSTRUCT; \/* vertical pixel density *\/$/;"	m	struct:png_info_struct	access:public
+png_info_struct::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_unknown_chunkp unknown_chunks PNG_DEPSTRUCT;$/;"	m	struct:png_info_struct	access:public
+png_infop	/usr/include/libpng12/png.h	/^typedef png_info FAR * png_infop;$/;"	t
+png_infopp	/usr/include/libpng12/png.h	/^typedef png_info FAR * FAR * png_infopp;$/;"	t
+png_infopp_NULL	/usr/include/libpng12/png.h	586;"	d
+png_infopp_NULL	/usr/include/libpng12/png.h	602;"	d
+png_int_16	/usr/include/libpng12/pngconf.h	/^typedef short png_int_16;$/;"	t
+png_int_16p	/usr/include/libpng12/pngconf.h	/^typedef png_int_16      FAR * png_int_16p;$/;"	t
+png_int_16pp	/usr/include/libpng12/pngconf.h	/^typedef png_int_16      FAR * FAR * png_int_16pp;$/;"	t
+png_int_32	/usr/include/libpng12/pngconf.h	/^typedef long png_int_32;$/;"	t
+png_int_32p	/usr/include/libpng12/pngconf.h	/^typedef png_int_32      FAR * png_int_32p;$/;"	t
+png_int_32pp	/usr/include/libpng12/pngconf.h	/^typedef png_int_32      FAR * FAR * png_int_32pp;$/;"	t
+png_jmpbuf	/usr/include/libpng12/pngconf.h	1605;"	d
+png_jmpbuf	/usr/include/libpng12/pngconf.h	1607;"	d
+png_libpng_ver	/usr/include/libpng12/png.h	621;"	d
+png_malloc_ptr	/usr/include/libpng12/png.h	/^typedef png_voidp (*png_malloc_ptr) PNGARG((png_structp, png_size_t));$/;"	t
+png_malloc_ptr_NULL	/usr/include/libpng12/png.h	587;"	d
+png_malloc_ptr_NULL	/usr/include/libpng12/png.h	603;"	d
+png_malloc_warn	/usr/include/libpng12/png.h	2159;"	d
+png_memcmp	/usr/include/libpng12/pngconf.h	1619;"	d
+png_memcmp	/usr/include/libpng12/pngconf.h	1648;"	d
+png_memcpy	/usr/include/libpng12/pngconf.h	1620;"	d
+png_memcpy	/usr/include/libpng12/pngconf.h	1649;"	d
+png_memset	/usr/include/libpng12/pngconf.h	1621;"	d
+png_memset	/usr/include/libpng12/pngconf.h	1650;"	d
+png_progressive_end_ptr	/usr/include/libpng12/png.h	/^typedef void (PNGAPI *png_progressive_end_ptr) PNGARG((png_structp, png_infop));$/;"	t
+png_progressive_info_ptr	/usr/include/libpng12/png.h	/^typedef void (PNGAPI *png_progressive_info_ptr) PNGARG((png_structp, png_infop));$/;"	t
+png_progressive_row_ptr	/usr/include/libpng12/png.h	/^typedef void (PNGAPI *png_progressive_row_ptr) PNGARG((png_structp, png_bytep,$/;"	t
+png_read_finish_row	/usr/include/libpng12/png.h	/^PNG_EXTERN void png_read_finish_row PNGARG((png_structp png_ptr));$/;"	p	signature:(png_structp png_ptr)
+png_read_init	/usr/include/libpng12/png.h	3116;"	d
+png_read_init	/usr/include/libpng12/png.h	3117;"	d
+png_read_status_ptr	/usr/include/libpng12/png.h	/^typedef void (PNGAPI *png_read_status_ptr) PNGARG((png_structp, png_uint_32,$/;"	t
+png_read_status_ptr_NULL	/usr/include/libpng12/png.h	588;"	d
+png_read_status_ptr_NULL	/usr/include/libpng12/png.h	604;"	d
+png_row_info	/usr/include/libpng12/png.h	/^} png_row_info;$/;"	t	typeref:struct:png_row_info_struct
+png_row_info_struct	/usr/include/libpng12/png.h	/^typedef struct png_row_info_struct$/;"	s
+png_row_info_struct::bit_depth	/usr/include/libpng12/png.h	/^   png_byte bit_depth; \/* bit depth of row *\/$/;"	m	struct:png_row_info_struct	access:public
+png_row_info_struct::channels	/usr/include/libpng12/png.h	/^   png_byte channels; \/* number of channels (1, 2, 3, or 4) *\/$/;"	m	struct:png_row_info_struct	access:public
+png_row_info_struct::color_type	/usr/include/libpng12/png.h	/^   png_byte color_type; \/* color type of row *\/$/;"	m	struct:png_row_info_struct	access:public
+png_row_info_struct::pixel_depth	/usr/include/libpng12/png.h	/^   png_byte pixel_depth; \/* bits per pixel (depth * channels) *\/$/;"	m	struct:png_row_info_struct	access:public
+png_row_info_struct::rowbytes	/usr/include/libpng12/png.h	/^   png_uint_32 rowbytes; \/* number of bytes in row *\/$/;"	m	struct:png_row_info_struct	access:public
+png_row_info_struct::width	/usr/include/libpng12/png.h	/^   png_uint_32 width; \/* width of row *\/$/;"	m	struct:png_row_info_struct	access:public
+png_row_infop	/usr/include/libpng12/png.h	/^typedef png_row_info FAR * png_row_infop;$/;"	t
+png_row_infopp	/usr/include/libpng12/png.h	/^typedef png_row_info FAR * FAR * png_row_infopp;$/;"	t
+png_rw_ptr	/usr/include/libpng12/png.h	/^typedef void (PNGAPI *png_rw_ptr) PNGARG((png_structp, png_bytep, png_size_t));$/;"	t
+png_rw_ptr_NULL	/usr/include/libpng12/png.h	589;"	d
+png_rw_ptr_NULL	/usr/include/libpng12/png.h	605;"	d
+png_sPLT_entry	/usr/include/libpng12/png.h	/^} png_sPLT_entry;$/;"	t	typeref:struct:png_sPLT_entry_struct
+png_sPLT_entry_struct	/usr/include/libpng12/png.h	/^typedef struct png_sPLT_entry_struct$/;"	s
+png_sPLT_entry_struct::alpha	/usr/include/libpng12/png.h	/^   png_uint_16 alpha;$/;"	m	struct:png_sPLT_entry_struct	access:public
+png_sPLT_entry_struct::blue	/usr/include/libpng12/png.h	/^   png_uint_16 blue;$/;"	m	struct:png_sPLT_entry_struct	access:public
+png_sPLT_entry_struct::frequency	/usr/include/libpng12/png.h	/^   png_uint_16 frequency;$/;"	m	struct:png_sPLT_entry_struct	access:public
+png_sPLT_entry_struct::green	/usr/include/libpng12/png.h	/^   png_uint_16 green;$/;"	m	struct:png_sPLT_entry_struct	access:public
+png_sPLT_entry_struct::red	/usr/include/libpng12/png.h	/^   png_uint_16 red;$/;"	m	struct:png_sPLT_entry_struct	access:public
+png_sPLT_entryp	/usr/include/libpng12/png.h	/^typedef png_sPLT_entry FAR * png_sPLT_entryp;$/;"	t
+png_sPLT_entrypp	/usr/include/libpng12/png.h	/^typedef png_sPLT_entry FAR * FAR * png_sPLT_entrypp;$/;"	t
+png_sPLT_struct	/usr/include/libpng12/png.h	/^typedef struct png_sPLT_struct$/;"	s
+png_sPLT_struct::depth	/usr/include/libpng12/png.h	/^   png_byte depth;           \/* depth of palette samples *\/$/;"	m	struct:png_sPLT_struct	access:public
+png_sPLT_struct::entries	/usr/include/libpng12/png.h	/^   png_sPLT_entryp entries;  \/* palette entries *\/$/;"	m	struct:png_sPLT_struct	access:public
+png_sPLT_struct::name	/usr/include/libpng12/png.h	/^   png_charp name;           \/* palette name *\/$/;"	m	struct:png_sPLT_struct	access:public
+png_sPLT_struct::nentries	/usr/include/libpng12/png.h	/^   png_int_32 nentries;      \/* number of palette entries *\/$/;"	m	struct:png_sPLT_struct	access:public
+png_sPLT_t	/usr/include/libpng12/png.h	/^} png_sPLT_t;$/;"	t	typeref:struct:png_sPLT_struct
+png_sPLT_tp	/usr/include/libpng12/png.h	/^typedef png_sPLT_t FAR * png_sPLT_tp;$/;"	t
+png_sPLT_tpp	/usr/include/libpng12/png.h	/^typedef png_sPLT_t FAR * FAR * png_sPLT_tpp;$/;"	t
+png_size_t	/usr/include/libpng12/pngconf.h	/^   typedef PNG_SIZE_T png_size_t;$/;"	t
+png_size_t	/usr/include/libpng12/pngconf.h	/^   typedef size_t png_size_t;$/;"	t
+png_sizeof	/usr/include/libpng12/pngconf.h	1245;"	d
+png_sizeof	/usr/include/libpng12/pngconf.h	1248;"	d
+png_snprintf	/usr/include/libpng12/pngconf.h	1617;"	d
+png_snprintf	/usr/include/libpng12/pngconf.h	1627;"	d
+png_snprintf	/usr/include/libpng12/pngconf.h	1631;"	d
+png_snprintf	/usr/include/libpng12/pngconf.h	1642;"	d
+png_snprintf2	/usr/include/libpng12/pngconf.h	1628;"	d
+png_snprintf2	/usr/include/libpng12/pngconf.h	1632;"	d
+png_snprintf2	/usr/include/libpng12/pngconf.h	1643;"	d
+png_snprintf6	/usr/include/libpng12/pngconf.h	1629;"	d
+png_snprintf6	/usr/include/libpng12/pngconf.h	1633;"	d
+png_snprintf6	/usr/include/libpng12/pngconf.h	1644;"	d
+png_strlen	/usr/include/libpng12/pngconf.h	1618;"	d
+png_strlen	/usr/include/libpng12/pngconf.h	1647;"	d
+png_struct	/usr/include/libpng12/png.h	/^typedef struct png_struct_def png_struct;$/;"	t	typeref:struct:png_struct_def
+png_struct_def	/usr/include/libpng12/png.h	/^struct png_struct_def$/;"	s
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^     png_charp current_text PNG_DEPSTRUCT;         \/* current text chunk buffer *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^     png_charp current_text_ptr PNG_DEPSTRUCT;     \/* current location in current_text *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^     png_size_t current_text_left PNG_DEPSTRUCT;   \/* how much text left to read in input *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^     png_size_t current_text_size PNG_DEPSTRUCT;   \/* current size of text input data *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   float background_gamma PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   float gamma PNG_DEPSTRUCT;          \/* file gamma value *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   float screen_gamma PNG_DEPSTRUCT;   \/* screen gamma value (display_exponent) *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   int cur_palette PNG_DEPSTRUCT;                  \/* current push library palette index *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   int gamma_shift PNG_DEPSTRUCT;      \/* number of "insignificant" bits 16-bit gamma *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   int num_chunk_list PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   int process_mode PNG_DEPSTRUCT;                 \/* what push library is currently doing *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   int zlib_level PNG_DEPSTRUCT;            \/* holds zlib compression level *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   int zlib_mem_level PNG_DEPSTRUCT;        \/* holds zlib compression memory level *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   int zlib_method PNG_DEPSTRUCT;           \/* holds zlib compression method *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   int zlib_strategy PNG_DEPSTRUCT;         \/* holds zlib compression strategy *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   int zlib_window_bits PNG_DEPSTRUCT;      \/* holds zlib compression window bits *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte     mmx_bitdepth_threshold PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte background_gamma_type PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte bit_depth PNG_DEPSTRUCT;        \/* bit depth of file *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte channels PNG_DEPSTRUCT;         \/* number of channels in file *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte chunk_name[5] PNG_DEPSTRUCT;    \/* null-terminated name of current chunk *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte color_type PNG_DEPSTRUCT;       \/* color type of file *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte compression PNG_DEPSTRUCT;      \/* file compression type (always 0) *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte compression_type PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte do_filter PNG_DEPSTRUCT;        \/* row filter flags (see PNG_FILTER_ below ) *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte filler PNG_DEPSTRUCT;           \/* filler byte for pixel expansion *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte filter PNG_DEPSTRUCT;           \/* file filter type (always 0) *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte filter_type PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte heuristic_method PNG_DEPSTRUCT;        \/* heuristic for row filter selection *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte interlaced PNG_DEPSTRUCT;       \/* PNG_INTERLACE_NONE, PNG_INTERLACE_ADAM7 *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte mng_features_permitted PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte num_prev_filters PNG_DEPSTRUCT;        \/* number of weights for previous rows *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte pass PNG_DEPSTRUCT;             \/* current interlace pass (0 - 6) *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte pixel_depth PNG_DEPSTRUCT;      \/* number of bits per pixel *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte rgb_to_gray_status PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte sig_bytes PNG_DEPSTRUCT;        \/* magic bytes read\/written from start of file *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte user_transform_channels PNG_DEPSTRUCT; \/* channels in user transformed pixels *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte user_transform_depth PNG_DEPSTRUCT;    \/* bit depth of user transformed pixels *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte usr_bit_depth PNG_DEPSTRUCT;    \/* bit depth of users row *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_byte usr_channels PNG_DEPSTRUCT;     \/* channels at start of write *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep avg_row PNG_DEPSTRUCT;         \/* buffer to save "avg" row when filtering *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep big_row_buf PNG_DEPSTRUCT;        \/* buffer to save current (unfiltered) row *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep chunk_list PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep current_buffer PNG_DEPSTRUCT;         \/* buffer for recently used data *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep current_buffer_ptr PNG_DEPSTRUCT;     \/* current location in current_buffer *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep dither_index PNG_DEPSTRUCT;           \/* index translation for palette files *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep dither_sort PNG_DEPSTRUCT;        \/* working sort array *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep gamma_from_1 PNG_DEPSTRUCT;    \/* converts from 1.0 to screen *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep gamma_table PNG_DEPSTRUCT;     \/* gamma table for 8-bit depth files *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep gamma_to_1 PNG_DEPSTRUCT;      \/* converts from file to 1.0 *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep index_to_palette PNG_DEPSTRUCT;   \/* where the original index currently is *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep offset_table PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep paeth_row PNG_DEPSTRUCT;       \/* buffer to save "Paeth" row when filtering *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep palette_lookup PNG_DEPSTRUCT;         \/* lookup table for dithering *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep palette_to_index PNG_DEPSTRUCT;   \/* which original index points to this *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep prev_filters PNG_DEPSTRUCT;           \/* filter type(s) of previous row(s) *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep prev_row PNG_DEPSTRUCT;        \/* buffer to save previous (unfiltered) row *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep row_buf PNG_DEPSTRUCT;         \/* buffer to save current (unfiltered) row *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep save_buffer PNG_DEPSTRUCT;            \/* buffer for previously read data *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep save_buffer_ptr PNG_DEPSTRUCT;        \/* current location in save_buffer *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep sub_row PNG_DEPSTRUCT;         \/* buffer to save "sub" row when filtering *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep trans PNG_DEPSTRUCT;           \/* transparency values for paletted files *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep up_row PNG_DEPSTRUCT;          \/* buffer to save "up" row when filtering *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytep zbuf PNG_DEPSTRUCT;            \/* buffer for zlib *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_bytepp offset_table_ptr PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_charp time_buffer PNG_DEPSTRUCT;            \/* String to hold RFC 1123 time text *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_color_16 background PNG_DEPSTRUCT;   \/* background color in screen gamma space *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_color_16 background_1 PNG_DEPSTRUCT; \/* background normalized to gamma 1.0 *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_color_16 trans_values PNG_DEPSTRUCT; \/* transparency values for non-paletted files *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_color_8 shift PNG_DEPSTRUCT;         \/* shift for significant bit tranformation *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_color_8 sig_bit PNG_DEPSTRUCT;       \/* significant bits in each available channel *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_colorp palette PNG_DEPSTRUCT;        \/* palette from the input file *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_error_ptr error_fn PNG_DEPSTRUCT;    \/* function for printing errors and aborting *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_error_ptr warning_fn PNG_DEPSTRUCT;  \/* function for printing warnings *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_fixed_point int_gamma PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_flush_ptr output_flush_fn PNG_DEPSTRUCT; \/* Function for flushing output *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_free_ptr free_fn PNG_DEPSTRUCT;         \/* function for freeing memory *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_malloc_ptr malloc_fn PNG_DEPSTRUCT;     \/* function for allocating memory *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_progressive_end_ptr end_fn PNG_DEPSTRUCT;   \/* called after image is complete *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_progressive_info_ptr info_fn PNG_DEPSTRUCT; \/* called after header data fully read *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_progressive_row_ptr row_fn PNG_DEPSTRUCT;   \/* called after each prog. row is decoded *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_read_status_ptr read_row_fn PNG_DEPSTRUCT;   \/* called after each row is decoded *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_row_info row_info PNG_DEPSTRUCT;     \/* used for transformation routines *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_rw_ptr read_data_fn PNG_DEPSTRUCT;   \/* function for reading input data *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_rw_ptr write_data_fn PNG_DEPSTRUCT;  \/* function for writing output data *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_size_t buffer_size PNG_DEPSTRUCT;           \/* total amount of available input data *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_size_t current_buffer_size PNG_DEPSTRUCT;   \/* amount of data now in current_buffer *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_size_t save_buffer_max PNG_DEPSTRUCT;       \/* total size of save_buffer *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_size_t save_buffer_size PNG_DEPSTRUCT;      \/* amount of data now in save_buffer *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_size_t zbuf_size PNG_DEPSTRUCT;      \/* size of zbuf *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16 filler PNG_DEPSTRUCT;           \/* filler bytes for pixel expansion *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16 num_palette PNG_DEPSTRUCT;   \/* number of color entries in palette *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16 num_trans PNG_DEPSTRUCT;     \/* number of transparency values *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16 offset_table_count PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16 offset_table_count_free PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16 offset_table_number PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16 rgb_to_gray_blue_coeff PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16 rgb_to_gray_green_coeff PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16 rgb_to_gray_red_coeff PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16p filter_costs PNG_DEPSTRUCT;        \/* relative filter calculation cost *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16p filter_weights PNG_DEPSTRUCT;      \/* weight(s) for previous line(s) *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16p hist PNG_DEPSTRUCT;                \/* histogram *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16p inv_filter_costs PNG_DEPSTRUCT;    \/* 1\/relative filter calculation cost *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16p inv_filter_weights PNG_DEPSTRUCT;  \/* 1\/weight(s) for previous line(s) *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16pp gamma_16_from_1 PNG_DEPSTRUCT; \/* converts from 1.0 to screen *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16pp gamma_16_table PNG_DEPSTRUCT; \/* gamma table for 16-bit depth files *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_16pp gamma_16_to_1 PNG_DEPSTRUCT; \/* converts from file to 1.0 *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32  asm_flags PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32  mmx_rowbytes_threshold PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 crc PNG_DEPSTRUCT;           \/* current chunk CRC value *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 flags PNG_DEPSTRUCT;         \/* flags indicating various things to libpng *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 flush_dist PNG_DEPSTRUCT;    \/* how many rows apart to flush, 0 - no flush *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 flush_rows PNG_DEPSTRUCT;    \/* number of rows written since last flush *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 free_me PNG_DEPSTRUCT;   \/* flags items libpng is responsible for freeing *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 height PNG_DEPSTRUCT;        \/* height of image in pixels *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 idat_size PNG_DEPSTRUCT;     \/* current IDAT size for read *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 iwidth PNG_DEPSTRUCT;        \/* width of current interlaced row in pixels *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 mng_features_permitted PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 mode PNG_DEPSTRUCT;          \/* tells us where we are in the PNG file *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 num_rows PNG_DEPSTRUCT;      \/* number of rows in current pass *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 push_length PNG_DEPSTRUCT;          \/* size of current input chunk *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 row_buf_size PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 row_number PNG_DEPSTRUCT;    \/* current row in interlace pass *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 rowbytes PNG_DEPSTRUCT;      \/* size of row in bytes *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 skip_length PNG_DEPSTRUCT;          \/* bytes to skip in input data *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 transformations PNG_DEPSTRUCT; \/* which transformations to perform *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 user_chunk_cache_max PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 user_height_max PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 user_width_max PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 usr_width PNG_DEPSTRUCT;     \/* width of row at start of write *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_uint_32 width PNG_DEPSTRUCT;         \/* width of image in pixels *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_unknown_chunk unknown_chunk PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_user_chunk_ptr read_user_chunk_fn PNG_DEPSTRUCT; \/* user read chunk handler *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_user_transform_ptr read_user_transform_fn PNG_DEPSTRUCT; \/* user read transform *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_user_transform_ptr write_user_transform_fn PNG_DEPSTRUCT; \/* user write transform *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_voidp error_ptr PNG_DEPSTRUCT;       \/* user supplied struct for error functions *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_voidp io_ptr PNG_DEPSTRUCT;          \/* ptr to application struct for I\/O functions *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_voidp mem_ptr PNG_DEPSTRUCT;            \/* user supplied struct for mem functions *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_voidp user_chunk_ptr PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_voidp user_transform_ptr PNG_DEPSTRUCT; \/* user supplied struct for user transform *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   png_write_status_ptr write_row_fn PNG_DEPSTRUCT; \/* called after each row is encoded *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^   z_stream zstream PNG_DEPSTRUCT;          \/* pointer to decompression structure (below) *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^  png_charp chunkdata PNG_DEPSTRUCT;  \/* buffer for reading chunk data *\/$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^  png_uint_32 old_big_row_buf_size PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+png_struct_def::PNG_DEPSTRUCT	/usr/include/libpng12/png.h	/^  png_uint_32 old_prev_row_size PNG_DEPSTRUCT;$/;"	m	struct:png_struct_def	access:public
+png_struct_def::jmpbuf	/usr/include/libpng12/png.h	/^   jmp_buf jmpbuf;            \/* used in png_error *\/$/;"	m	struct:png_struct_def	access:public
+png_structp	/usr/include/libpng12/png.h	/^typedef png_struct FAR * png_structp;$/;"	t
+png_structp_NULL	/usr/include/libpng12/png.h	590;"	d
+png_structp_NULL	/usr/include/libpng12/png.h	606;"	d
+png_structpp	/usr/include/libpng12/png.h	/^typedef png_struct FAR * FAR * png_structpp;$/;"	t
+png_text	/usr/include/libpng12/png.h	/^} png_text;$/;"	t	typeref:struct:png_text_struct
+png_text_struct	/usr/include/libpng12/png.h	/^typedef struct png_text_struct$/;"	s
+png_text_struct::compression	/usr/include/libpng12/png.h	/^   int  compression;       \/* compression value:$/;"	m	struct:png_text_struct	access:public
+png_text_struct::itxt_length	/usr/include/libpng12/png.h	/^   png_size_t itxt_length; \/* length of the itxt string *\/$/;"	m	struct:png_text_struct	access:public
+png_text_struct::key	/usr/include/libpng12/png.h	/^   png_charp key;          \/* keyword, 1-79 character description of "text" *\/$/;"	m	struct:png_text_struct	access:public
+png_text_struct::lang	/usr/include/libpng12/png.h	/^   png_charp lang;         \/* language code, 0-79 characters$/;"	m	struct:png_text_struct	access:public
+png_text_struct::lang_key	/usr/include/libpng12/png.h	/^   png_charp lang_key;     \/* keyword translated UTF-8 string, 0 or more$/;"	m	struct:png_text_struct	access:public
+png_text_struct::text	/usr/include/libpng12/png.h	/^   png_charp text;         \/* comment, may be an empty string (ie "")$/;"	m	struct:png_text_struct	access:public
+png_text_struct::text_length	/usr/include/libpng12/png.h	/^   png_size_t text_length; \/* length of the text string *\/$/;"	m	struct:png_text_struct	access:public
+png_textp	/usr/include/libpng12/png.h	/^typedef png_text FAR * png_textp;$/;"	t
+png_textpp	/usr/include/libpng12/png.h	/^typedef png_text FAR * FAR * png_textpp;$/;"	t
+png_time	/usr/include/libpng12/png.h	/^} png_time;$/;"	t	typeref:struct:png_time_struct
+png_time_struct	/usr/include/libpng12/png.h	/^typedef struct png_time_struct$/;"	s
+png_time_struct::day	/usr/include/libpng12/png.h	/^   png_byte day;     \/* day of month, 1 - 31 *\/$/;"	m	struct:png_time_struct	access:public
+png_time_struct::hour	/usr/include/libpng12/png.h	/^   png_byte hour;    \/* hour of day, 0 - 23 *\/$/;"	m	struct:png_time_struct	access:public
+png_time_struct::minute	/usr/include/libpng12/png.h	/^   png_byte minute;  \/* minute of hour, 0 - 59 *\/$/;"	m	struct:png_time_struct	access:public
+png_time_struct::month	/usr/include/libpng12/png.h	/^   png_byte month;   \/* month of year, 1 - 12 *\/$/;"	m	struct:png_time_struct	access:public
+png_time_struct::second	/usr/include/libpng12/png.h	/^   png_byte second;  \/* second of minute, 0 - 60 (for leap seconds) *\/$/;"	m	struct:png_time_struct	access:public
+png_time_struct::year	/usr/include/libpng12/png.h	/^   png_uint_16 year; \/* full year, as in, 1995 *\/$/;"	m	struct:png_time_struct	access:public
+png_timep	/usr/include/libpng12/png.h	/^typedef png_time FAR * png_timep;$/;"	t
+png_timepp	/usr/include/libpng12/png.h	/^typedef png_time FAR * FAR * png_timepp;$/;"	t
+png_uint_16	/usr/include/libpng12/pngconf.h	/^typedef unsigned short png_uint_16;$/;"	t
+png_uint_16p	/usr/include/libpng12/pngconf.h	/^typedef png_uint_16     FAR * png_uint_16p;$/;"	t
+png_uint_16p_NULL	/usr/include/libpng12/png.h	591;"	d
+png_uint_16p_NULL	/usr/include/libpng12/png.h	607;"	d
+png_uint_16pp	/usr/include/libpng12/pngconf.h	/^typedef png_uint_16     FAR * FAR * png_uint_16pp;$/;"	t
+png_uint_32	/usr/include/libpng12/pngconf.h	/^typedef unsigned long png_uint_32;$/;"	t
+png_uint_32p	/usr/include/libpng12/pngconf.h	/^typedef png_uint_32     FAR * png_uint_32p;$/;"	t
+png_uint_32pp	/usr/include/libpng12/pngconf.h	/^typedef png_uint_32     FAR * FAR * png_uint_32pp;$/;"	t
+png_unknown_chunk	/usr/include/libpng12/png.h	/^png_unknown_chunk;$/;"	t	typeref:struct:png_unknown_chunk_t
+png_unknown_chunk_ptr	/usr/include/libpng12/png.h	/^typedef void (PNGAPI *png_unknown_chunk_ptr) PNGARG((png_structp));$/;"	t
+png_unknown_chunk_t	/usr/include/libpng12/png.h	/^typedef struct png_unknown_chunk_t$/;"	s
+png_unknown_chunk_t::data	/usr/include/libpng12/png.h	/^    png_byte *data;$/;"	m	struct:png_unknown_chunk_t	access:public
+png_unknown_chunk_t::location	/usr/include/libpng12/png.h	/^    png_byte location; \/* mode of operation at read time *\/$/;"	m	struct:png_unknown_chunk_t	access:public
+png_unknown_chunk_t::name	/usr/include/libpng12/png.h	/^    png_byte name[PNG_CHUNK_NAME_LENGTH];$/;"	m	struct:png_unknown_chunk_t	access:public
+png_unknown_chunk_t::size	/usr/include/libpng12/png.h	/^    png_size_t size;$/;"	m	struct:png_unknown_chunk_t	access:public
+png_unknown_chunkp	/usr/include/libpng12/png.h	/^typedef png_unknown_chunk FAR * png_unknown_chunkp;$/;"	t
+png_unknown_chunkpp	/usr/include/libpng12/png.h	/^typedef png_unknown_chunk FAR * FAR * png_unknown_chunkpp;$/;"	t
+png_user_chunk_ptr	/usr/include/libpng12/png.h	/^typedef int (PNGAPI *png_user_chunk_ptr) PNGARG((png_structp, png_unknown_chunkp));$/;"	t
+png_user_transform_ptr	/usr/include/libpng12/png.h	/^typedef void (PNGAPI *png_user_transform_ptr) PNGARG((png_structp,$/;"	t
+png_voidp	/usr/include/libpng12/pngconf.h	/^typedef void            FAR * png_voidp;$/;"	t
+png_voidp_NULL	/usr/include/libpng12/png.h	592;"	d
+png_voidp_NULL	/usr/include/libpng12/png.h	608;"	d
+png_write_init	/usr/include/libpng12/png.h	3135;"	d
+png_write_init	/usr/include/libpng12/png.h	3136;"	d
+png_write_status_ptr	/usr/include/libpng12/png.h	/^typedef void (PNGAPI *png_write_status_ptr) PNGARG((png_structp, png_uint_32,$/;"	t
+png_write_status_ptr_NULL	/usr/include/libpng12/png.h	593;"	d
+png_write_status_ptr_NULL	/usr/include/libpng12/png.h	609;"	d
+png_zcharp	/usr/include/libpng12/pngconf.h	/^typedef charf *         png_zcharp;$/;"	t
+png_zcharpp	/usr/include/libpng12/pngconf.h	/^typedef charf * FAR *   png_zcharpp;$/;"	t
+png_zstreamp	/usr/include/libpng12/pngconf.h	/^typedef z_stream FAR *  png_zstreamp;$/;"	t
+red	/usr/include/libpng12/png.h	/^   png_byte red;   \/* for use in red green blue files *\/$/;"	m	struct:png_color_8_struct	access:public
+red	/usr/include/libpng12/png.h	/^   png_byte red;$/;"	m	struct:png_color_struct	access:public
+red	/usr/include/libpng12/png.h	/^   png_uint_16 red;   \/* for use in red green blue files *\/$/;"	m	struct:png_color_16_struct	access:public
+red	/usr/include/libpng12/png.h	/^   png_uint_16 red;$/;"	m	struct:png_sPLT_entry_struct	access:public
+rowbytes	/usr/include/libpng12/png.h	/^   png_uint_32 rowbytes; \/* number of bytes in row *\/$/;"	m	struct:png_row_info_struct	access:public
+second	/usr/include/libpng12/png.h	/^   png_byte second;  \/* second of minute, 0 - 60 (for leap seconds) *\/$/;"	m	struct:png_time_struct	access:public
+size	/usr/include/libpng12/png.h	/^    png_size_t size;$/;"	m	struct:png_unknown_chunk_t	access:public
+text	/usr/include/libpng12/png.h	/^   png_charp text;         \/* comment, may be an empty string (ie "")$/;"	m	struct:png_text_struct	access:public
+text_length	/usr/include/libpng12/png.h	/^   png_size_t text_length; \/* length of the text string *\/$/;"	m	struct:png_text_struct	access:public
+version_1_2_49	/usr/include/libpng12/png.h	/^typedef png_structp version_1_2_49;$/;"	t
+width	/usr/include/libpng12/png.h	/^   png_uint_32 width; \/* width of row *\/$/;"	m	struct:png_row_info_struct	access:public
+year	/usr/include/libpng12/png.h	/^   png_uint_16 year; \/* full year, as in, 1995 *\/$/;"	m	struct:png_time_struct	access:public
