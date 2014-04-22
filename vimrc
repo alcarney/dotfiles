@@ -142,7 +142,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'vim-scripts/taglist.vim'
 
 " Snippets
-Bundle 'SirVer/ultisnips'
+"Bundle 'SirVer/ultisnips'
 
 " ------------------------------- Plugin Config -----------------------
 
