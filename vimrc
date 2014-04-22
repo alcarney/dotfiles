@@ -63,6 +63,8 @@ set showmatch                          " Highlight matching brackets
 set noerrorbells                       " Disable annoying beeps
 set novisualbell
 
+" Markdown syntax
+au BufRead,BufNewFile *.md set filetype=markdown
 
 " Show trailing whitespace chars
 set listchars=nbsp:_,trail:.
@@ -110,6 +112,21 @@ function! StatusLineColour(mode)
     endif
 endfunction
 
+function! CleverTab()
+    if strpart(getline('.'), 0, col('.') -1) =~ '^\s*$'
+        return "\<Tab>"
+    else
+        if &omnifunc != ''
+            return "\<C-X>\<C-O>"
+        elseif &dictionary != ''
+            return "\<C-K>"
+        else
+            return "\<C-N>"
+        endif
+    endif
+endfunction
+
+inoremap <Tab> <C-R>=CleverTab()<cr>
 au InsertEnter * call StatusLineColour(v:insertmode)
 au InsertLeave * hi statusline ctermfg=16 ctermbg=231
 " --------------------------------- Vundle ----------------------------
@@ -165,5 +182,5 @@ map <F2> ;NERDTreeToggle<CR>                       " Ctrl-n Toggle file browser
 " Close vim if the only window left open is NERDTRee
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
-" Markdown syntax
-au BufRead,BufNewFile *.md set filetype=markdown
+
+
