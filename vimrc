@@ -165,6 +165,9 @@ Bundle 'vim-scripts/taglist.vim'
 
 " ------------------------------- OmniCppComplete ---------------------
 set tags+=/home/alex/.vim/tags/libpng.tags
+set tags+=/home/alex/.vim/tags/x11.tags
+set tags+=/home/alex/.vim/tags/gl.tags
+
 
 " To generate new tag files run the following, provided that Exuberant Ctags
 " is installed:
