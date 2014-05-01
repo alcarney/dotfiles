@@ -119,6 +119,10 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- Create a textclock widget
 mytextclock = awful.widget.textclock()
 
+-- Separator makes things look nice
+separator = wibox.widget.textbox()
+separator:set_text(" | ")
+
 -- Battery Widget
 battery_widget = wibox.widget.textbox()
 battery_widget:set_align("right")
@@ -134,7 +138,7 @@ function batteryInfo(adapter)
     local battery = math.floor(cur * 100 / cap)
     if sta:match("Charing") then
         dir = "⇮"
-        battery = "A/C ("..battery..")"
+        battery = "⚠ ("..battery..")"
     elseif sta:match("Discharging") then
         dir = "⇩"
         if tonumber(battery) > 25 and tonumber(battery) < 75 then
@@ -155,9 +159,9 @@ function batteryInfo(adapter)
         end
     else
         dir = "="
-        battery = "A/C"
+        battery = "⚠"
     end
-    battery_widget:set_markup(spacer.."Bat:"..spacer..battery.."%"..spacer..dir..spacer)
+    battery_widget:set_markup(spacer.."⚡:"..spacer..battery.."%"..spacer..dir..spacer)
     fcur:close()
     fcap:close()
     fsta:close()
@@ -245,8 +249,11 @@ for s = 1, screen.count() do
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
     if s == 1 then right_layout:add(wibox.widget.systray()) end
+    right_layout:add(separator)
     right_layout:add(battery_widget)
+    right_layout:add(separator)
     right_layout:add(mytextclock)
+    right_layout:add(separator)
     right_layout:add(mylayoutbox[s])
 
     -- Now bring it all together (with the tasklist in the middle)
