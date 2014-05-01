@@ -40,8 +40,12 @@ end
 -- }}}
 
 -- {{{ Variable definitions
+
+-- Set the filepath for the config dir on this machine
+config_location = "/home/alex/.config/awesome/"
+
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init("/usr/share/awesome/themes/default/theme.lua")
+beautiful.init(config_location  .."theme/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "xterm"
@@ -76,7 +80,7 @@ local layouts =
 -- {{{ Wallpaper
 if beautiful.wallpaper then
     for s = 1, screen.count() do
-        gears.wallpaper.maximized(beautiful.wallpaper, s, true)
+        gears.fit.maximized(beautiful.wallpaper, s, true)
     end
 end
 -- }}}
