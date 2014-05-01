@@ -119,6 +119,53 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- Create a textclock widget
 mytextclock = awful.widget.textclock()
 
+-- Battery Widget
+battery_widget = wibox.widget.textbox()
+battery_widget:set_align("right")
+
+function batteryInfo(adapter)
+    spacer = " "
+    local fcur = io.open("/sys/class/power_supply/"..adapter.."/energy_now")
+    local fcap = io.open("/sys/class/power_supply/"..adapter.."/energy_full")
+    local fsta = io.open("/sys/class/power_supply/"..adapter.."status")
+    local cur = fcur:read()
+    local cap = fcap:read()
+    local sta = fsta:read()
+    local battery = math.floor(cur * 100 / cap)
+    if sta:match("Charing") then
+        dir = "⇮"
+        battery = "A/C ("..battery..")"
+    elseif sta:match("Discharging") then
+        dir = "⇩"
+        if tonumber(battery) > 25 and tonumber(battery) < 75 then
+            battery = battery
+        elseif tonumber(battery) < 25 then
+            if tonumber(battery) < 10 then
+                naughty.notify({ title = "Battery Warning",
+                                 text = "Battery Low!"..spacer..battery.."%"..spacer.."left!",
+                                 timeout = 5,
+                                 position = "top_right",
+                                 fg = beautiful.fg_focus,
+                                 bg = beautifyl.bg_focus
+                             })
+            end
+            battery = battery
+        else
+            battery = battery
+        end
+    else
+        dir = "="
+        battery = "A/C"
+    end
+    battery_widget:set_markup(spacer.."Bat:"..spacer..battery.."%"..spacer..dir..spacer)
+    fcur:close()
+    fcap:close()
+    fsta:close()
+end
+
+battery_timer = timer({timeout = 20})
+battery_timer:connect_signal("timeout", function() batteryInfo("BAT0") end)
+battery_timer:start()
 -- Create a wibox for each screen and add it
 mywibox = {}
 mypromptbox = {}
@@ -198,6 +245,7 @@ for s = 1, screen.count() do
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
     if s == 1 then right_layout:add(wibox.widget.systray()) end
+    right_layout:add(battery_widget)
     right_layout:add(mytextclock)
     right_layout:add(mylayoutbox[s])
 
