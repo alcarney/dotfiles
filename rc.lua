@@ -80,7 +80,7 @@ local layouts =
 -- {{{ Wallpaper
 if beautiful.wallpaper then
     for s = 1, screen.count() do
-        gears.wallpaper.fit(beautiful.wallpaper, s)
+        gears.wallpaper.maximized(beautiful.wallpaper, s, true)
     end
 end
 -- }}}
@@ -90,7 +90,7 @@ end
 tags = {}
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
-    tags[s] = awful.tag({ 1, 2, 3, 4, 5, 6, 7, 8, 9 }, s, layouts[1])
+    tags[s] = awful.tag({ "α", "β", "γ", "δ", "π", "ϕ", "ω", "λ", "ψ" }, s, layouts[2])
 end
 -- }}}
 
@@ -219,6 +219,9 @@ root.buttons(awful.util.table.join(
 ))
 -- }}}
 
+
+-- }}}
+
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
@@ -250,6 +253,7 @@ globalkeys = awful.util.table.join(
                 client.focus:raise()
             end
         end),
+
 
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.util.spawn(terminal) end),
