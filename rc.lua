@@ -80,7 +80,7 @@ local layouts =
 -- {{{ Wallpaper
 if beautiful.wallpaper then
     for s = 1, screen.count() do
-        gears.fit.maximized(beautiful.wallpaper, s, true)
+        gears.wallpaper.fit(beautiful.wallpaper, s, true)
     end
 end
 -- }}}
