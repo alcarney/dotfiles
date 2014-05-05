@@ -48,14 +48,8 @@ cdl () {  # Clears the screen and list the contents of the directory just entere
 
 }
 
-net_test () { # Checks if internet is connected if not tells me to sort it
-	ping -c 1 www.google.com  2> /dev/null > /dev/null
-
-	if [[ $? != 0 ]];then
-		echo "Internet not connected"
-	else
-		;
-	fi
+testnet () { # Checks if internet is connected if not tells me to sort it
+    ping -c 1 www.google.com
 }
 
 function precmd()  # Prints an extra newline between commands which i think looks nicer
