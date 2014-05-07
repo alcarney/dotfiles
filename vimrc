@@ -158,6 +158,9 @@ Bundle 'tpope/vim-surround'
 " Taglist - Source Code Browser
 Bundle 'vim-scripts/taglist.vim'
 
+" Vim AutoClose
+Bundle 'Townk/vim-autoclose'
+
 " Snippets
 "Bundle 'SirVer/ultisnips'
 
