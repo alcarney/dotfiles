@@ -170,6 +170,28 @@ end
 battery_timer = timer({timeout = 20})
 battery_timer:connect_signal("timeout", function() batteryInfo("BAT0") end)
 battery_timer:start()
+
+-- Create a net status widget
+-- Widget contains info on :
+--      - Average connection delay e.g. 350ms
+net_widget = wibox.widget.textbox()
+net_widget:set_align("right")
+
+function netInfo()
+
+    -- Get the current average packet round trip speed
+    local fnet_speed = io.open(config_location.."widget_info/net_connection_speed")
+    local net_speed = fnet_speed:read()
+
+    net_widget:set_markup(net_speed.."ms")
+
+    fnet_speed:close()
+end
+
+net_timer = timer({timeout = 30})
+net_timer:connect_signal("timeout",function () netInfo() end)
+net_timer:start()
+
 -- Create a wibox for each screen and add it
 mywibox = {}
 mypromptbox = {}
@@ -249,6 +271,8 @@ for s = 1, screen.count() do
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
     if s == 1 then right_layout:add(wibox.widget.systray()) end
+    right_layout:add(separator)
+    right_layout:add(net_widget)
     right_layout:add(separator)
     right_layout:add(battery_widget)
     right_layout:add(separator)
