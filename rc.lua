@@ -136,9 +136,9 @@ function batteryInfo(adapter)
     local cap = fcap:read()
     local sta = fsta:read()
     local battery = math.floor(cur * 100 / cap)
-    if sta:match("Charing") then
+    if sta:match("Charging") then
         dir = "⇮"
-        battery = "⚠ ("..battery..")"
+        battery = " ("..battery..")"
     elseif sta:match("Discharging") then
         dir = "⇩"
         if tonumber(battery) > 25 and tonumber(battery) < 75 then
@@ -150,7 +150,7 @@ function batteryInfo(adapter)
                                  timeout = 5,
                                  position = "top_right",
                                  fg = beautiful.fg_focus,
-                                 bg = beautifyl.bg_focus
+                                 bg = beautiful.bg_focus
                              })
             end
             battery = battery
@@ -159,7 +159,7 @@ function batteryInfo(adapter)
         end
     else
         dir = "="
-        battery = "⚠"
+        battery = ""
     end
     battery_widget:set_markup(spacer.."⚡:"..spacer..battery.."%"..spacer..dir..spacer)
     fcur:close()
@@ -189,7 +189,7 @@ function netInfo()
 end
 
 net_timer = timer({timeout = 30})
-net_timer:connect_signal("timeout",function () netInfo() end)
+--net_timer:connect_signal("timeout",function () netInfo() end)
 net_timer:start()
 
 -- Create a wibox for each screen and add it
