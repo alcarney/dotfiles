@@ -129,9 +129,20 @@ battery_widget:set_align("right")
 
 function batteryInfo(adapter)
     spacer = " "
+    local fsta = io.open("/sys/class/power_supply/"..adapter.."/status")
     local fcur = io.open("/sys/class/power_supply/"..adapter.."/charge_now")
     local fcap = io.open("/sys/class/power_supply/"..adapter.."/charge_full")
-    local fsta = io.open("/sys/class/power_supply/"..adapter.."/status")
+
+    -- Since the names of the above files seem to flit between energy and charge 
+    -- we need to try both
+    if fcur == nil then
+        fcur = io.open("/sys/class/power_supply/"..adapter.."/energy_now")
+    end
+
+    if fcap == nil then
+        fcap = io.open("/sys/class/power_supply/"..adapter.."/energy_full")
+    end
+
     local cur = fcur:read()
     local cap = fcap:read()
     local sta = fsta:read()
