@@ -64,7 +64,7 @@ local layouts =
 {
     awful.layout.suit.floating,
     awful.layout.suit.tile,
---    awful.layout.suit.tile.left,
+--    awful.layout.suit.tile.left
     awful.layout.suit.tile.bottom,
 --    awful.layout.suit.tile.top,
 --    awful.layout.suit.fair,
@@ -78,11 +78,48 @@ local layouts =
 -- }}}
 
 -- {{{ Wallpaper
-if beautiful.wallpaper then
-    for s = 1, screen.count() do
-        gears.wallpaper.maximized(beautiful.wallpaper, s, true)
+--if beautiful.wallpaper then
+--    for s = 1, screen.count() do
+--        gears.wallpaper.maximized(beautiful.wallpaper, s, true)
+--    end
+--end
+-- }}}
+
+-- {{{ Random Wallpaper
+
+-- Get the list of files from a directory, all files must be images or folders and non-empty
+function scanDir(directory)
+    local i, fileList, popen = 0, {}, io.popen
+    for filename in popen([[find "]]..directory..[[" -type f]]):lines() do
+        i = i+1
+        fileList[i] = filename
     end
+    return fileList
 end
+
+wallpaperList = scanDir(config_location.."theme/wallpapers")
+
+-- Apply a random wallpaper on startup
+gears.wallpaper.maximized(wallpaperList[math.random(1, #wallpaperList)], s, true)
+
+-- Apply a random wallpaper every "changTime" seconds
+changeTime = 60
+wallpaperTimer = timer ({timeout = changeTime})
+wallpaperTimer:connect_signal("timeout", function()
+    gears.wallpaper.maximized(wallpaperList[math.random(1, #wallpaperList)], s ,true)
+    
+    -- Stop the timer
+    wallpaperTime:stop()
+    
+    -- Restart the timer
+    wallpaper.timeout = changeTime
+    wallpaper:start()
+    
+    end)
+
+-- Initial start for when rc.lua is initially loaded
+wallpaperTimer:start()
+
 -- }}}
 
 -- {{{ Tags
