@@ -40,7 +40,7 @@ autoload -U colors && colors
 lst () { # Lists the contents of the dir in a single column unless there's too much in the dir
          # then it lists it in multiple columns
 
-    if [[$(ls -1 | wc -l) -gt 25]]; then 
+    if [[ $(ls -1 | wc -l) -gt 25 ]]; then 
         ls -CFXLsh
     else
         ls -CFXLsh1
