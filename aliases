@@ -50,7 +50,7 @@ alias conkyrc="vim /home/alex/.conkyrc"
 alias tmux.conf="vim /home/alex/.tmux.conf"
 
 #--------------Improvements on the ls command---------------
-alias lst="ls -C -F -X  -L -1 -s -h "
+#alias lst="ls -C -F -X  -L -1 -s -h "
 alias lsta="ls -C -A -F -X -L -1 -s -h"
 alias lstr="ls -C -F -X -R -L -1 -s -h "
 alias lstra="ls -C -A -F -X -R -L -1 -s -h"
