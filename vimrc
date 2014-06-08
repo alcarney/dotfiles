@@ -32,7 +32,7 @@ set lazyredraw
 
 syntax enable                          " Turn on syntax highlighting
 
-colorscheme slate
+colorscheme darkblue
 
 " ----------------------------------- Tab Settings ----------------------------
 
