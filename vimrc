@@ -3,7 +3,7 @@
 "      Author: Alex Carney
 "
 "      Created: 12/01/14
-"      Last Modified: 07/02/14
+"      Last Modified: 19/05/14
 "
 " -----------------------------------------------------------------------------
 
@@ -32,7 +32,7 @@ set lazyredraw
 
 syntax enable                          " Turn on syntax highlighting
 
-colorscheme slate
+colorscheme darkblue
 
 " ----------------------------------- Tab Settings ----------------------------
 
@@ -61,14 +61,15 @@ set mouse=a                            " Enable mouse support
 set ruler                              " Show cursor position
 set showmatch                          " Highlight matching brackets
 set noerrorbells                       " Disable annoying beeps
-set novisualbell
+set visualbell
+set scrolloff=5                        " Keep more of the file visible while scrolling
 
 " Markdown syntax
 au BufRead,BufNewFile *.md set filetype=markdown
 
 " Show trailing whitespace chars
-set listchars=nbsp:_,trail:.
-set list
+set listchars=tab:>-,trail:.,eol:$
+nmap <silent> <leader>t ;set list! <CR>
 
 " Highlight a column when I go over a certain width
 highlight ColorColumn ctermbg=cyan
@@ -100,6 +101,15 @@ nnoremap <leader>c :set cursorline! <CR>    " Toggle highlighting of the current
 " Fugitive leader commands
 nmap ;gst ;Gstatus<CR>               " View the current status of the working tree
 nmap ;gcom ;Gcommit<CR>              " Commit the current changes
+
+" Spell Checking
+map <leader>ss ;setlocal spell!<CR>  " Toggle spell checking
+map <leader>s? z=                    " Give spelling suggestions
+map <leader>sn ]s                    " Search for the next wrong word
+map <leader>sp [s                    " Search for the previous bad word
+
+" Automagically compile and show errors
+map <leader>m ;silent make\|redraw!\|cw<CR>
 
 "----------------------------------- Functions -------------------------------
 
