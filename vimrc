@@ -146,57 +146,20 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " Auto update yourself
-Bundle 'gmarik/vundle'
+"Bundle 'gmarik/vundle'
 
 " Plugins
 
-" Filetree browser
-Bundle 'scrooloose/nerdtree'
+" Syntax checker
+Bundle 'scrooloose/syntastic'
 
 " Git Integration
 Bundle 'tpope/vim-fugitive'
 
-" C++ Completion
-Bundle 'vim-scripts/OmniCppComplete'
-
-" Project explorer
-"Bundle 'vim-scripts/project.vim'
-
 " Surround
 Bundle 'tpope/vim-surround'
-
-" Taglist - Source Code Browser
-Bundle 'vim-scripts/taglist.vim'
 
 " Vim AutoClose
 Bundle 'Townk/vim-autoclose'
 
-" Snippets
-"Bundle 'SirVer/ultisnips'
-
 " ------------------------------- Plugin Config -----------------------
-
-" ------------------------------- OmniCppComplete ---------------------
-set tags+=/home/alex/.vim/tags/libpng.tags
-set tags+=/home/alex/.vim/tags/x11.tags
-set tags+=/home/alex/.vim/tags/gl.tags
-
-
-" To generate new tag files run the following, provided that Exuberant Ctags
-" is installed:
-" ctags -R --c++-kinds=+p --fields=+iaS --extra=+q /usr/include/xxx
-
-" A mapping to generate a tag file for the current project
-map <C-F6> :ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
-
-" ------------------------------ NERDTree File Browser ----------------
-map <F2> ;NERDTreeToggle<CR>                       " Ctrl-n Toggle file browser
-
-" Automatically start NERDTree if no file is specified
-"autocmd vimenter * if !argc() | NERDTree | endif
-
-" Close vim if the only window left open is NERDTRee
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
-
-
