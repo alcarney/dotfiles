@@ -1,19 +1,13 @@
 # {{{Application Shortcuts
 
 alias py="python2"
-alias v="vim"
 
-alias yb="yubnub"
-alias surf="surfraw"
-alias evernote="wine .wine/drive_c/Program\ Files\ \(x86\)/Evernote/Evernote/Evernote.exe"
 alias mplayer="mplayer -msgcolor"
 alias playdvd="mplayer -msgcolor dvdnav:// -dvd-device /dev/sr0"
 
 alias pse="ps -e | grep $1"
 alias extract="atool -x"
 alias compress="atool -a"
-alias vba="VisualBoyAdvance"
-alias t="/home/alex/.todo-txt-cli/todo.sh"
 #}}}
 
 #{{{ Pacman Shortcuts
@@ -23,40 +17,21 @@ alias pacout="sudo pacman -R"          # Remove packages
 alias paclean="sudo pacman -Sc"        # Clear cache of uninstalled packages
 alias pacis="pacman -Q"                # Check if package is installed
 alias pacinfo="pacman -Qi"             # Display info about installed package
-alias paclook="sudo pacman -Ss"        # Search repositories for a package
-alias paclinfo="sudo pacman -Si"       # Search repositiories for info about a package 
-alias pacfoster="sudo pacman -Rns $(pacman -Qtdq)" # Remove orphaned packages
+alias paclook="pacman -Ss"             # Search repositories for a package
+alias paclinfo="pacman -Si"            # Search repositiories for info about a package 
 #}}}
-
-alias updatelocal="repo-add ./local.db.tar.gz ./*.pkg.tar.xz"
-
-#---------------- TMUX Session Shortcuts-------------------
-alias editconfigs="tmuxinator start editconfigs"
-alias usexfce="tmuxinator start xfcesession"
-alias tmuxns="tmux new -s"
-alias tmuxls="tmux ls"
-
-#------------------Wine Shortcuts---------------------------
-alias KSP="wine ~/Games/KSP_win/KSP.exe"
-
-connectdesktop="ssh -p 22 alex@192.168.0.103"
 
 #----------------Config File Shortcuts_____________________
 alias vimrc="vim /home/alex/.vimrc"
 alias zshrc="vim /home/alex/.zshrc"
 alias awesomerc="vim /home/alex/.config/awesome/rc.lua"
 alias conkyrc="vim /home/alex/.conkyrc"
-alias tmux.conf="vim /home/alex/.tmux.conf"
 
 #--------------Improvements on the ls command---------------
 #alias lst="ls -C -F -X  -L -1 -s -h "
 alias lsta="ls -C -A -F -X -L -1 -s -h"
 alias lstr="ls -C -F -X -R -L -1 -s -h "
 alias lstra="ls -C -A -F -X -R -L -1 -s -h"
-
-#-------------- Google Translate commands ------------------
-alias trsfe="trs {fr=en}"
-alias trsef="trs {en=fr}"
 
 #-----------------Making commands safer---------------------
 alias rm="rm -i"           # Prompt user to check each file that is removed 
@@ -68,8 +43,6 @@ alias iplayer="get_iplayer"
 alias db="dropbox"
 alias cls="clear"
 alias maxpower="sudo cpupower frequency-set -g performance"
-alias shutdown="sudo systemctl poweroff"
-alias restart="sudo reboot" 
 
 #---------------- Second Monitor Commands -----------------
 alias onsecond="xrandr --output VGA1 --mode 1280x1024 --right-of LVDS1"
