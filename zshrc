@@ -41,9 +41,9 @@ lst () { # Lists the contents of the dir in a single column unless there's too m
          # then it lists it in multiple columns
 
     if [[ $(ls -1 | wc -l) -gt 25 ]]; then 
-        ls -CFXLsh
+        ls -CFLsh --group-directories-first
     else
-        ls -CFXLsh1
+        ls -CFLsh1 --group-directories-first
     fi
 }
 
