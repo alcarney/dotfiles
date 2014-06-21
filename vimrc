@@ -79,6 +79,11 @@ call matchadd('ColorColumn', '\%126v', 100)
 nnoremap ; :
 nnoremap : ;
 
+" Easier split navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 " Make backspace behave
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
