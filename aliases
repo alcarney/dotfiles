@@ -43,6 +43,7 @@ alias iplayer="get_iplayer"
 alias db="dropbox"
 alias cls="clear"
 alias maxpower="sudo cpupower frequency-set -g performance"
+alias minpower="sudo cpupower frequency-set -g powersave"
 
 #---------------- Second Monitor Commands -----------------
 alias onsecond="xrandr --output VGA1 --mode 1280x1024 --right-of LVDS1"
