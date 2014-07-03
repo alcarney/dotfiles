@@ -3,7 +3,7 @@
 "      Author: Alex Carney
 "
 "      Created: 12/01/14
-"      Last Modified: 19/05/14
+"      Last Modified: 03/07/14
 "
 " -----------------------------------------------------------------------------
 
@@ -41,7 +41,7 @@ set tabstop=4                          " Tabs are equal to 4 spaces
 set softtabstop=4                      " Allows navigation as if the tab characters are there
 set autoindent                         " Automatically match indentation of previous line
 set smartindent                        " Automatically indent new code blocks
-set wrap                               " Wrap long lines
+set nowrap                             " Don't wrap long lines
 
 " This let's you indent/unindent blocks of code using the </> keys repectively
 " while in visual mode
@@ -164,7 +164,29 @@ Bundle 'tpope/vim-fugitive'
 " Surround
 Bundle 'tpope/vim-surround'
 
+" Tagbar
+Bundle 'majutsushi/tagbar'
+
 " Vim AutoClose
 Bundle 'Townk/vim-autoclose'
 
+" Easier commenting of lines
+Bundle 'tpope/vim-commentary'
+
+" Easier file browsing
+Bundle 'tpope/vim-vinegar'
+
+" Rainbow parenthesis
+Bundle 'kein/rainbow_parenthesis'
+
 " ------------------------------- Plugin Config -----------------------
+
+" Toggle the tagbar
+nmap <F8> ;TagbarToggle<CR>
+
+" Automagically enable rainbow parenthesis
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound 
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces 
+au Syntax * RainbowParenthesesLoadChevrons
