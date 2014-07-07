@@ -8,8 +8,8 @@
 " -----------------------------------------------------------------------------
 
 " Automatically reload a file if it has been modified externally
-set autoread
 set nocompatible
+set autoread
 
 " Enable filetype plugins
 filetype plugin on
@@ -78,6 +78,12 @@ call matchadd('ColorColumn', '\%126v', 100)
 " Make the command key ; instead of :
 nnoremap ; :
 nnoremap : ;
+
+" Be mean and force myself to use hjkl
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
 
 " Easier split navigation
 nnoremap <C-J> <C-W><C-J>
