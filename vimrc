@@ -103,10 +103,6 @@ nmap <leader>r ;so /home/alex/.vimrc<CR>    " Reload vimrc
 map <silent> <leader><CR> ;noh<CR>          " Clear search match highlights
 nnoremap <leader>c :set cursorline! <CR>    " Toggle highlighting of the current line
 
-" Fugitive leader commands
-nmap ;gst ;Gstatus<CR>               " View the current status of the working tree
-nmap ;gcom ;Gcommit<CR>              " Commit the current changes
-
 " Spell Checking
 map <leader>ss ;setlocal spell!<CR>  " Toggle spell checking
 map <leader>s? z=                    " Give spelling suggestions
@@ -127,21 +123,6 @@ function! StatusLineColour(mode)
     endif
 endfunction
 
-function! CleverTab()
-    if strpart(getline('.'), 0, col('.') -1) =~ '^\s*$'
-        return "\<Tab>"
-    else
-        if &omnifunc != ''
-            return "\<C-X>\<C-O>"
-        elseif &dictionary != ''
-            return "\<C-K>"
-        else
-            return "\<C-N>"
-        endif
-    endif
-endfunction
-
-inoremap <Tab> <C-R>=CleverTab()<cr>
 au InsertEnter * call StatusLineColour(v:insertmode)
 au InsertLeave * hi statusline ctermfg=16 ctermbg=231
 " --------------------------------- Vundle ----------------------------
@@ -185,8 +166,8 @@ Bundle 'kein/rainbow_parenthesis'
 nmap <F8> ;TagbarToggle<CR>
 
 " Automagically enable rainbow parenthesis
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound 
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces 
-au Syntax * RainbowParenthesesLoadChevrons
+" au VimEnter * RainbowParenthesesToggle
+" au Syntax * RainbowParenthesesLoadRound 
+" au Syntax * RainbowParenthesesLoadSquare
+" au Syntax * RainbowParenthesesLoadBraces 
+"au Syntax * RainbowParenthesesLoadChevrons
