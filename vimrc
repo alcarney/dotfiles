@@ -157,17 +157,10 @@ Bundle 'tpope/vim-commentary'
 " Easier file browsing
 Bundle 'tpope/vim-vinegar'
 
-" Rainbow parenthesis
-Bundle 'kein/rainbow_parenthesis'
+" Snippets
+Bundle 'msanders/snipmate.vim'
 
 " ------------------------------- Plugin Config -----------------------
 
 " Toggle the tagbar
 nmap <F8> ;TagbarToggle<CR>
-
-" Automagically enable rainbow parenthesis
-" au VimEnter * RainbowParenthesesToggle
-" au Syntax * RainbowParenthesesLoadRound 
-" au Syntax * RainbowParenthesesLoadSquare
-" au Syntax * RainbowParenthesesLoadBraces 
-"au Syntax * RainbowParenthesesLoadChevrons
