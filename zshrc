@@ -37,6 +37,15 @@ export MANPAGER="/bin/sh -c \"col -b | vim -c 'set ft=man ts=8 nomod nolist nonu
 autoload -U colors && colors
 
 # {{{ Functions 
+lst () { # Lists the contents of the dir in a single column unless there's too much in the dir
+         # then it lists it in multiple columns
+
+    if [[ $(ls -1 | wc -l) -gt 25 ]]; then 
+        ls -CFLsh --group-directories-first
+    else
+        ls -CFLsh1 --group-directories-first
+    fi
+}
 
 cdl () {  # Clears the screen and list the contents of the directory just entered into 
 	
@@ -48,19 +57,12 @@ cdl () {  # Clears the screen and list the contents of the directory just entere
 
 }
 
-net_test () { # Checks if internet is connected if not tells me to sort it
-	ping -c 1 www.google.com  2> /dev/null > /dev/null
-
-#	if [[ $? != 0 ]];then
-#		echo "Internet not connected"
-#	else
-#		;
-#	fi
+testnet () { # Checks if internet is connected if not tells me to sort it
+    ping -c 1 www.google.com
 }
 
 function precmd()  # Prints an extra newline between commands which i think looks nicer
 { 
-#	net_test
 	echo
 }
 
