@@ -16,7 +16,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Load syntax highlighting rules
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh  
+source $HOME/.zsh-syntax/zsh-syntax-highlighting.zsh
 
 # Some setting for syntax highlighting
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main pattern root brackets cursor)
@@ -51,16 +51,16 @@ cdl () {  # Clears the screen and list the contents of the directory just entere
 net_test () { # Checks if internet is connected if not tells me to sort it
 	ping -c 1 www.google.com  2> /dev/null > /dev/null
 
-	if [[ $? != 0 ]];then
-		echo "Internet not connected"
-	else
-		;
-	fi
+#	if [[ $? != 0 ]];then
+#		echo "Internet not connected"
+#	else
+#		;
+#	fi
 }
 
 function precmd()  # Prints an extra newline between commands which i think looks nicer
 { 
-	net_test
+#	net_test
 	echo
 }
 
