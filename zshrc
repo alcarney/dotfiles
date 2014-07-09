@@ -31,7 +31,7 @@ TZ='Europe/London' ; export TZ
 # Set a number of environment variables 
 export EDITOR='vim'
 export PATH=$PATH:$HOME/bin
-export LD_LIBRARY_PATH="/opt/java/jre/lib/amd64"
+export LD_LIBRARY_PATH="/opt/java/jre/lib/amd64:/home/alex/.mylibs"
 export MANPAGER="/bin/sh -c \"col -b | vim -c 'set ft=man ts=8 nomod nolist nonu noma fdm=indent' -\""
 
 autoload -U colors && colors
