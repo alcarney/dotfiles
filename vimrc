@@ -25,9 +25,6 @@ Plugin 'gmarik/vundle'
 " Syntax checker
 Plugin 'scrooloose/syntastic'
 
-" Auto Completion
-Plugin 'Valloric/YouCompleteMe'
-
 " Git Integration
 Plugin 'tpope/vim-fugitive'
 
