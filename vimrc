@@ -3,7 +3,7 @@
 "      Author: Alex Carney
 "
 "      Created: 12/01/14
-"      Last Modified: 03/07/14
+"      Last Modified: 10/07/14
 "
 " -----------------------------------------------------------------------------
 
@@ -90,6 +90,10 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" Easier tab navigation
+noremap <S-l> gt
+noremap <S-h> gT
 
 " Make backspace behave
 set backspace=eol,start,indent
