@@ -25,6 +25,9 @@ Plugin 'gmarik/vundle'
 " Syntax checker
 Plugin 'scrooloose/syntastic'
 
+" Auto Completion
+Plugin 'Valloric/YouCompleteMe'
+
 " Git Integration
 Plugin 'tpope/vim-fugitive'
 
@@ -47,6 +50,15 @@ Plugin 'tpope/vim-vinegar'
 Plugin 'tomtom/tlib_vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'garbas/vim-snipmate'
+
+" Plugins to install /investigate
+" vim-airline => a much lighter version of pwerline
+" YouCompleteME => autocomplete 
+" ultisnips => snippets (better than snipmate)
+" vim-signify => highlight changes to a file based on VCS info
+" vim-scripts/a.vim => quickly and easily switch between/open header + source
+" files
+
 
 call vundle#end()
 
