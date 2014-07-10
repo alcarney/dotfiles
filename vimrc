@@ -11,9 +11,47 @@
 set nocompatible
 set autoread
 
-" Enable filetype plugins
-filetype plugin on
-filetype indent on
+" --------------------------------- Vundle ----------------------------
+"filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" Auto update yourself
+Plugin 'gmarik/vundle'
+
+" Plugins
+
+" Syntax checker
+Plugin 'scrooloose/syntastic'
+
+" Git Integration
+Plugin 'tpope/vim-fugitive'
+
+" Surround
+Plugin 'tpope/vim-surround'
+
+" Tagbar
+Plugin 'majutsushi/tagbar'
+
+" Vim AutoClose
+Plugin 'Townk/vim-autoclose'
+
+" Easier commenting of lines
+Plugin 'tpope/vim-commentary'
+
+" Easier file browsing
+Plugin 'tpope/vim-vinegar'
+
+" Snippets
+Plugin 'tomtom/tlib_vim'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'garbas/vim-snipmate'
+
+call vundle#end()
+
+" Enable filetype plugins"
+filetype plugin indent on
 
 " Set the leader character to ,
 let mapleader = ','
@@ -136,43 +174,6 @@ endfunction
 
 au InsertEnter * call StatusLineColour(v:insertmode)
 au InsertLeave * hi statusline ctermfg=16 ctermbg=231
-" --------------------------------- Vundle ----------------------------
-"filetype off
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" Auto update yourself
-"Bundle 'gmarik/vundle'
-
-" Plugins
-
-" Syntax checker
-Bundle 'scrooloose/syntastic'
-
-" Git Integration
-Bundle 'tpope/vim-fugitive'
-
-" Surround
-Bundle 'tpope/vim-surround'
-
-" Tagbar
-Bundle 'majutsushi/tagbar'
-
-" Vim AutoClose
-Bundle 'Townk/vim-autoclose'
-
-" Easier commenting of lines
-Bundle 'tpope/vim-commentary'
-
-" Easier file browsing
-Bundle 'tpope/vim-vinegar'
-
-" Snippets
-Bundle 'tomtom/tlib_vim'
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'garbas/vim-snipmate'
-
 " ------------------------------- Plugin Config -----------------------
 
 " Toggle the tagbar
