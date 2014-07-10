@@ -97,7 +97,7 @@ set whichwrap+=<,>,h,l
 
 " Statusline
 set laststatus=2
-set statusline=\ %t%m%r%h\ %w\ \ \ Line:\ %l\ Col:\ %c
+set statusline=\ %t%m%y%r%h\ %w\ \ \ Line:\ %l\ Col:\ %c
 hi statusline ctermfg=16 ctermbg=231
 
 " Highlight current line
