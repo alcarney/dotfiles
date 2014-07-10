@@ -28,6 +28,9 @@ Plugin 'scrooloose/syntastic'
 " Git Integration
 Plugin 'tpope/vim-fugitive'
 
+" Better Snippets
+Plugin 'SirVer/ultisnips'
+
 " Surround
 Plugin 'tpope/vim-surround'
 
@@ -42,11 +45,6 @@ Plugin 'tpope/vim-commentary'
 
 " Easier file browsing
 Plugin 'tpope/vim-vinegar'
-
-" Snippets
-Plugin 'tomtom/tlib_vim'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'garbas/vim-snipmate'
 
 " Plugins to install /investigate
 " vim-airline => a much lighter version of pwerline
