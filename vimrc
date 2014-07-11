@@ -46,10 +46,12 @@ Plugin 'tpope/vim-commentary'
 " Easier file browsing
 Plugin 'tpope/vim-vinegar'
 
+" Display VCS info
+Plugin 'mhinz/vim-signify'
+
+" Airline
+Plugin 'bling/vim-airline'
 " Plugins to install /investigate
-" vim-airline => a much lighter version of pwerline
-" YouCompleteME => autocomplete 
-" ultisnips => snippets (better than snipmate)
 " vim-signify => highlight changes to a file based on VCS info
 " vim-scripts/a.vim => quickly and easily switch between/open header + source
 " files
