@@ -49,13 +49,11 @@ Plugin 'tpope/vim-vinegar'
 " Display VCS info
 Plugin 'mhinz/vim-signify'
 
-" Airline
-Plugin 'bling/vim-airline'
-" Plugins to install /investigate
-" vim-signify => highlight changes to a file based on VCS info
-" vim-scripts/a.vim => quickly and easily switch between/open header + source
-" files
+" Nice colorscheme
+Plugin 'chriskempson/base16-vim'
 
+" Easily switch between header files
+Plugin 'vim-scripts/a.vim' 
 
 call vundle#end()
 
@@ -73,13 +71,14 @@ set whichwrap+=<,>,h,l
 let g:mapleader = ','
 
 " Don't redraw while executing macros (should boost performance)
-set lazyredraw
+"set lazyredraw
 
 " ----------------------------------- Colours ---------------------------------
 
 syntax enable                          " Turn on syntax highlighting
 
-colorscheme darkblue
+set background=dark
+colorscheme base16-londontube
 
 " ----------------------------------- Tab Settings ----------------------------
 
