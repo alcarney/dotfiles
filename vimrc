@@ -78,7 +78,7 @@ let g:mapleader = ','
 syntax enable                          " Turn on syntax highlighting
 
 set background=dark
-colorscheme base16-londontube
+colorscheme peachpuff
 
 " ----------------------------------- Tab Settings ----------------------------
 
