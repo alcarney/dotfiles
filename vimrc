@@ -55,6 +55,9 @@ Plugin 'chriskempson/base16-vim'
 " Easily switch between header files
 Plugin 'vim-scripts/a.vim' 
 
+" Smarter substitutions
+Plugin 'tpope/vim-abolish'
+
 call vundle#end()
 
 " Enable filetype plugins"
