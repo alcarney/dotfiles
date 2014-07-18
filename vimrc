@@ -74,7 +74,7 @@ set whichwrap+=<,>,h,l
 let g:mapleader = ','
 
 " Don't redraw while executing macros (should boost performance)
-"set lazyredraw
+set lazyredraw
 
 " ----------------------------------- Colours ---------------------------------
 
@@ -185,7 +185,12 @@ endfunction
 
 au InsertEnter * call StatusLineColour(v:insertmode)
 au InsertLeave * hi statusline ctermfg=16 ctermbg=231
+
 " ------------------------------- Plugin Config -----------------------
 
 " Toggle the tagbar
 nmap <F8> ;TagbarToggle<CR>
+
+" Fugitive commands (Git integration)
+nmap <F2> ;Gstatus<CR>
+nmap <F3> ;Gcommit<CR>
