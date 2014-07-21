@@ -197,3 +197,6 @@ nmap <F3> ;Gcommit<CR>
 
 " Syntastic automatically display erorr box
 let g:syntastic_auto_loc_list = 1
+
+" Ultisnips settings
+let g:snips_author = "Alex Carney"
