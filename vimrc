@@ -194,3 +194,6 @@ nmap <F8> ;TagbarToggle<CR>
 " Fugitive commands (Git integration)
 nmap <F2> ;Gstatus<CR>
 nmap <F3> ;Gcommit<CR>
+
+" Syntastic automatically display erorr box
+let g:syntastic_auto_loc_list = 1
