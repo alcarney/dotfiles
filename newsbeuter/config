@@ -1,5 +1,5 @@
 
 # Podbeuter config
 download-path       "~/Downloads/podbeuter/%n"
-max-downlods        2
+max-downloads        2
 player              "mplayer"
