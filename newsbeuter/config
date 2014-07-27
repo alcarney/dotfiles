@@ -10,7 +10,7 @@ reload-time 60 # (minutes)
 
 # Reloading
 reload-threads 2
-relaod-only-visible-feeds no
+reload-only-visible-feeds no
 download-retries 4
 
 # Keybindings
