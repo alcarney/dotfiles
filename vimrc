@@ -58,6 +58,9 @@ Plugin 'vim-scripts/a.vim'
 " Smarter substitutions
 Plugin 'tpope/vim-abolish'
 
+" Autocompletion
+"Plugin 'Valloric/YouCompleteMe'
+
 call vundle#end()
 
 " Enable filetype plugins"
