@@ -61,6 +61,9 @@ Plugin 'tpope/vim-abolish'
 " Autocompletion
 "Plugin 'Valloric/YouCompleteMe'
 
+" Lightweight powerline
+Plugin 'bling/vim-airline'
+
 call vundle#end()
 
 " Enable filetype plugins"
