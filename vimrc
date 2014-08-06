@@ -207,3 +207,7 @@ let g:syntastic_auto_loc_list = 1
 
 " Ultisnips settings
 let g:snips_author = "Alex Carney"
+
+" Airline
+set noshowmode " Since airline shows the mode for us we no longer need vim to show it as well
+
