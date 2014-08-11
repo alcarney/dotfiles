@@ -59,7 +59,7 @@ Plugin 'vim-scripts/a.vim'
 Plugin 'tpope/vim-abolish'
 
 " Autocompletion
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 
 " Lightweight powerline
 Plugin 'bling/vim-airline'
