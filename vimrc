@@ -208,6 +208,11 @@ let g:syntastic_auto_loc_list = 1
 " Ultisnips settings
 let g:snips_author = "Alex Carney"
 
+" Since UltiSnips and YouCompleteMe fight over tab lets change that
+let g:UltiSnipsExpandTrigger="<c-tab>"
+let g:UltiSnipsListSnippets="<c-s-tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-tab>"
+
 " Airline
 set noshowmode " Since airline shows the mode for us we no longer need vim to show it as well
 
