@@ -21,48 +21,20 @@ call vundle#begin()
 Plugin 'gmarik/vundle'
 
 " Plugins
-
-" Syntax checker
 Plugin 'scrooloose/syntastic'
-
-" Git Integration
 Plugin 'tpope/vim-fugitive'
-
-" Better Snippets
 Plugin 'SirVer/ultisnips'
-
-" Surround
 Plugin 'tpope/vim-surround'
-
-" Tagbar
 Plugin 'majutsushi/tagbar'
-
-" Vim AutoClose
 Plugin 'Townk/vim-autoclose'
-
-" Easier commenting of lines
 Plugin 'tpope/vim-commentary'
-
-" Easier file browsing
 Plugin 'tpope/vim-vinegar'
-
-" Display VCS info
 Plugin 'mhinz/vim-signify'
-
-" Nice colorscheme
-Plugin 'chriskempson/base16-vim'
-
-" Easily switch between header files
 Plugin 'vim-scripts/a.vim' 
-
-" Smarter substitutions
 Plugin 'tpope/vim-abolish'
-
-" Autocompletion
 Plugin 'Valloric/YouCompleteMe'
-
-" Lightweight powerline
 Plugin 'bling/vim-airline'
+Plugin 'ervandew/supertab'
 
 call vundle#end()
 
@@ -208,10 +180,15 @@ let g:syntastic_auto_loc_list = 1
 " Ultisnips settings
 let g:snips_author = "Alex Carney"
 
+let g:ycm_key_list_select_completion=['<C-n>']
+let g:ycm_key_list_previous_completion=['<C-p>']
+let g:SuperTabDefaultCompletionType='<C-n>'
+
 " Since UltiSnips and YouCompleteMe fight over tab lets change that
-let g:UltiSnipsExpandTrigger="<c-tab>"
-let g:UltiSnipsListSnippets="<c-s-tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-tab>"
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsListSnippets="<c-tab>"
 
 " Airline
 set noshowmode " Since airline shows the mode for us we no longer need vim to show it as well
