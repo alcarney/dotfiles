@@ -1,0 +1,16 @@
+# General settings
+*foreground: white
+*background: black
+
+# Font Settings
+Xft.dpi:	    96
+Xft.antialias:	true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hintstyle:	hintslight
+
+# urxvt settings
+URxvt.depth: 32
+URxvt.background: [95]#000000
+URxvt.scrollBar: false
+
