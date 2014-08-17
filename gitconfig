@@ -1,3 +1,9 @@
 [user]
 	email = alex.rugby101@gmail.com
 	name = Alex Carney
+
+[core]
+    editor=vim
+
+[web]
+    browser=dwb
