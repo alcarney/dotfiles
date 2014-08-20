@@ -1,34 +1,175 @@
-# Read File Into Vector
-snippet readfile
-	std::vector<char> v;
-	if (FILE *${2:fp} = fopen(${1:"filename"}, "r")) {
-		char buf[1024];
-		while (size_t len = fread(buf, 1, sizeof(buf), $2))
-			v.insert(v.end(), buf, buf + len);
-		fclose($2);
-	}${3}
-# std::map
-snippet map
-	std::map<${1:key}, ${2:value}> map${3};
-# std::vector
-snippet vector
-	std::vector<${1:char}> v${2};
-# Namespace
-snippet ns
-	namespace ${1:`Filename('', 'my')`} {
-		${2}
-	} /* $1 */
-# Class
-snippet cl
-	class ${1:`Filename('$1_t', 'name')`} {
-	public:
-		$1 (${2:arguments});
-		virtual ~$1 ();
+# variable shortcuts 
+snippet uint
+unsigned int $1;
+endsnippet
 
-	private:
-		${3:/* data */}
-	};
-snippet fori
-	for (int ${2:i} = 0; $2 < ${1:count}; $2${3:++}) {
-		${4:/* code */}
-	}
+# main()
+snippet main
+int main(int argc, const char *argv[])
+{
+	$1
+	return 0;
+}
+endsnippet
+
+snippet mainn
+int main(void)
+{
+	$0
+	return 0;
+}
+endsnippet
+
+# #include <...>
+snippet inc
+#include <${1:stdio}.h>$0
+endsnippet
+
+# #include "..."
+snippet Inc
+#include "${1:`Filename("$1.h")`}"$0
+endsnippet
+
+# #ifndef ... #define ... #endif
+snippet Def
+#ifndef ${1}
+#define ${2:SYMBOL} ${3:value}
+#endif${4}
+endsnippet
+
+snippet def
+#define
+endsnippet
+
+snippet ifdef
+#ifdef ${1:FOO}
+	${2:#define }
+#endif
+endsnippet
+
+snippet #if
+#if ${1:FOO}
+	${2}
+#endif
+endsnippet
+
+# Header Include-Guard
+snippet once
+#ifndef ${1}
+#define $1
+
+$0
+
+#endif
+endsnippet
+
+# If Condition
+snippet if
+if (${1:/* condition */}) {
+	${2:/* code */}
+}
+endsnippet
+
+snippet el
+else {
+	${1}
+}
+endsnippet
+
+# Ternary conditional
+snippet t
+${1:/* condition */} ? ${2:a} : ${3:b}
+endsnippet
+
+# Do While Loop
+snippet do
+do {
+	${2:/* code */}
+} while (${1:/* condition */});
+endsnippet
+
+# While Loop
+snippet wh
+while (${1:/* condition */}) {
+	${2:/* code */}
+}
+endsnippet
+
+# For Loop
+snippet for
+for (${2:i} = 0; $2 < ${1:count}; $2++) {
+	${3:/* code */}
+}
+endsnippet
+# Custom For Loop
+snippet forr
+for (${1:i} = ${2:0}; ${3:}; ${4:++}) {
+	${5:/* code */}
+}
+endsnippet
+
+# Function
+snippet fun
+${1:void} ${2:function_name}(${3})
+{
+	${4:/* code */}
+}
+endsnippet
+
+# Function Declaration
+snippet fund
+${1:void} ${2:function_name}(${3});$0
+endsnippet
+
+# Typedef
+snippet td
+typedef ${1:int} ${2:MyCustomType};$0
+endsnippet
+
+# Struct
+snippet st
+struct ${1:`Filename('$1_t', 'name')`} {
+	${2:/* data */}
+}${3};${4}
+endsnippet
+
+# Typedef struct
+snippet tds
+typedef struct $1
+{
+	${2:/* data */}
+} ${1:MyDataType};
+endsnippet
+
+# Typdef enum
+snippet tde
+typedef enum {
+	${1:/* data */}
+} ${2:foo};
+endsnippet
+
+# printf
+# unfortunately version this isn't as nice as TextMates's, given the lack of a
+# dynamic `...`
+snippet pr
+printf("${1:%s}\n"${2});${3}
+endsnippet
+
+# fprintf (again, this isn't as nice as TextMate's version, but it works)
+snippet fpr
+fprintf(${1:stderr}, "${2:%s}\n"${3});${4}
+endsnippet
+# This is kind of convenient
+snippet .
+[${1}]${2}
+endsnippet
+# Dynamic memory allocation
+snippet mem
+${1:type_t}* ${2:var} = malloc(${3:num} * sizeof ($1));
+
+if (!$2)
+{
+	fprintf(stderr, "Unable to allocate memory\n");
+	return $0;
+}
+endsnippet
