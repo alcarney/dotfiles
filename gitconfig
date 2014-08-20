@@ -1,0 +1,10 @@
+[user]
+	email = alex.rugby101@gmail.com
+	name = Alex Carney
+
+[core]
+    editor=vim
+    excludesfile= ~/.gitignore_global
+
+[web]
+    browser=dwb

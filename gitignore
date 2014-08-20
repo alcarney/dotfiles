@@ -1,0 +1,14 @@
+## Editor generated files
+*.swp
+
+## C files
+*.o
+*.out
+
+## Binary Files
+
+# Images
+*.png
+*.jpg
+*.gif
+
