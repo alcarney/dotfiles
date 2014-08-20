@@ -186,3 +186,6 @@ au InsertLeave * hi statusline ctermfg=16 ctermbg=231
 
 " Toggle the tagbar
 nmap <F8> ;TagbarToggle<CR>
+
+" Make syntastic automatically open the error box when errors are detected
+let g:syntastic_auto_loc_list = 1
