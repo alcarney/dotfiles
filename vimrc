@@ -35,6 +35,7 @@ Plugin 'tpope/vim-abolish'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'bling/vim-airline'
 Plugin 'ervandew/supertab'
+Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()
 
@@ -58,8 +59,10 @@ set lazyredraw
 
 syntax enable                          " Turn on syntax highlighting
 
+let g:solarized_termtrans = 1
+
 set background=dark
-colorscheme peachpuff
+colorscheme solarized
 
 " ----------------------------------- Tab Settings ----------------------------
 
