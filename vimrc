@@ -21,39 +21,20 @@ call vundle#begin()
 Plugin 'gmarik/vundle'
 
 " Plugins
-
-" Syntax checker
 Plugin 'scrooloose/syntastic'
-
-" Git Integration
 Plugin 'tpope/vim-fugitive'
-
-" Better Snippets
 Plugin 'SirVer/ultisnips'
-
-" Surround
 Plugin 'tpope/vim-surround'
-
-" Tagbar
 Plugin 'majutsushi/tagbar'
-
-" Vim AutoClose
 Plugin 'Townk/vim-autoclose'
-
-" Easier commenting of lines
 Plugin 'tpope/vim-commentary'
-
-" Easier file browsing
 Plugin 'tpope/vim-vinegar'
-
-" Display VCS info
 Plugin 'mhinz/vim-signify'
-
-" Nice colorscheme
-Plugin 'chriskempson/base16-vim'
-
-" Easily switch between header files
 Plugin 'vim-scripts/a.vim' 
+Plugin 'tpope/vim-abolish'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'bling/vim-airline'
+Plugin 'ervandew/supertab'
 
 call vundle#end()
 
@@ -71,7 +52,7 @@ set whichwrap+=<,>,h,l
 let g:mapleader = ','
 
 " Don't redraw while executing macros (should boost performance)
-"set lazyredraw
+set lazyredraw
 
 " ----------------------------------- Colours ---------------------------------
 
@@ -110,8 +91,9 @@ set noerrorbells                       " Disable annoying beeps
 set visualbell
 set scrolloff=5                        " Keep more of the file visible while scrolling
 
-" Markdown syntax
+" A few filetypes should be recognised
 au BufRead,BufNewFile *.md set filetype=markdown
+au BufRead,BufNewFile *.h set filetype=c
 
 " Show trailing whitespace chars
 set listchars=tab:>-,trail:.,eol:$
@@ -182,10 +164,31 @@ endfunction
 
 au InsertEnter * call StatusLineColour(v:insertmode)
 au InsertLeave * hi statusline ctermfg=16 ctermbg=231
+
 " ------------------------------- Plugin Config -----------------------
 
 " Toggle the tagbar
 nmap <F8> ;TagbarToggle<CR>
 
+" Fugitive commands (Git integration)
+nmap <F2> ;Gstatus<CR>
+nmap <F3> ;Gcommit<CR>
+
 " Make syntastic automatically open the error box when errors are detected
 let g:syntastic_auto_loc_list = 1
+
+" Ultisnips settings
+let g:snips_author = "Alex Carney"
+
+let g:ycm_key_list_select_completion=['<C-n>']
+let g:ycm_key_list_previous_completion=['<C-p>']
+let g:SuperTabDefaultCompletionType='<C-n>'
+
+" Since UltiSnips and YouCompleteMe fight over tab lets change that
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsListSnippets="<c-tab>"
+
+" Airline
+set noshowmode " Since airline shows the mode for us we no longer need vim to show it as well
