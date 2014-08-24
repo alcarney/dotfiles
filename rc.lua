@@ -290,6 +290,11 @@ for s = 1, screen.count() do
     -- Create the wibox
     mywibox[s] = awful.wibox({ position = "top", screen = s })
 
+    -- Create an empty wibox for the bottom of the screen to reserve space for 
+    -- conky
+    conky_box = awful.wibox({ position = "bottom", screen = s, ontop = false,
+                                width = 1, height = 16})
+
     -- Widgets that are aligned to the left
     local left_layout = wibox.layout.fixed.horizontal()
     left_layout:add(mylauncher)
