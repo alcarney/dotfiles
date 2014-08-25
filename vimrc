@@ -60,7 +60,6 @@ set lazyredraw
 syntax enable                          " Turn on syntax highlighting
 
 let g:solarized_termtrans = 1
-
 set background=dark
 colorscheme solarized
 
