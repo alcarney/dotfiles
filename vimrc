@@ -96,6 +96,7 @@ set scrolloff=5                        " Keep more of the file visible while scr
 " A few filetypes should be recognised
 au BufRead,BufNewFile *.md set filetype=markdown
 au BufRead,BufNewFile *.h set filetype=c
+au BufRead,BufNewFile *.tex set filetype=tex
 
 " Show trailing whitespace chars
 set listchars=tab:>-,trail:.,eol:$
