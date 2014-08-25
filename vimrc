@@ -195,3 +195,8 @@ let g:UltiSnipsListSnippets="<c-tab>"
 
 " Airline
 set noshowmode " Since airline shows the mode for us we no longer need vim to show it as well
+
+
+let g:airline#extensions#tabline#enabled = 1 " Display buffers for us when we are only using one tab, or all the tabs in a nice pretty format
+let g:airline_theme='badwolf'
+"let g:airline_powerline_fonts = 1
