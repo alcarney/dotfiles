@@ -218,7 +218,7 @@ end
 
 battery_timer = timer({timeout = 20})
 battery_timer:connect_signal("timeout", function() batteryInfo("BAT0") end)
-battery_timer:start()
+--battery_timer:start()
 
 -- Create a wibox for each screen and add it
 mywibox = {}
