@@ -11,18 +11,36 @@ wallpaper_dir = "/home/alex/Media/Pictures/Wallpapers/"
 -- {{{ Main
 theme = {}
 theme.wallpaper = wallpaper_dir .. "/wallpaper.png"
+theme.colors = {}
+theme.colors.base3   = "#002b36ff"
+theme.colors.base2   = "#073642ff"
+theme.colors.base1   = "#586e75ff"
+theme.colors.base0   = "#657b83ff"
+theme.colors.base00  = "#839496ff"
+theme.colors.base01  = "#93a1a1ff"
+theme.colors.base02  = "#eee8d5ff"
+theme.colors.base03  = "#fdf6e3ff"
+theme.colors.yellow  = "#b58900ff"
+theme.colors.orange  = "#cb4b16ff"
+theme.colors.red     = "#dc322fff"
+theme.colors.magenta = "#d33682ff"
+theme.colors.violet  = "#6c71c4ff"
+theme.colors.blue    = "#268bd2ff"
+theme.colors.cyan    = "#2aa198ff"
+theme.colors.green   = "#859900ff"
 -- }}}
 
 -- {{{ Styles
 theme.font      = "sans 8"
 
 -- {{{ Colors
-theme.fg_normal  = "#DCDCCC"
-theme.fg_focus   = "#F0DFAF"
-theme.fg_urgent  = "#CC9393"
-theme.bg_normal  = "#3F3F3F"
-theme.bg_focus   = "#1E2320"
-theme.bg_urgent  = "#3F3F3F"
+theme.fg_normal  = theme.colors.base02
+theme.fg_focus   = theme.colors.base03
+theme.fg_urgent  = theme.colors.base3
+
+theme.bg_normal  = theme.colors.base3
+theme.bg_focus   = theme.colors.base1
+theme.bg_urgent  = theme.colors.red
 theme.bg_systray = theme.bg_normal
 -- }}}
 
@@ -34,33 +52,12 @@ theme.border_marked = "#CC9393"
 -- }}}
 
 -- {{{ Titlebars
-theme.titlebar_bg_focus  = "#3F3F3F"
-theme.titlebar_bg_normal = "#3F3F3F"
--- }}}
-
--- There are other variable sets
--- overriding the default one when
--- defined, the sets are:
--- [taglist|tasklist]_[bg|fg]_[focus|urgent]
--- titlebar_[normal|focus]
--- tooltip_[font|opacity|fg_color|bg_color|border_width|border_color]
--- Example:
---theme.taglist_bg_focus = "#CC9393"
--- }}}
-
--- {{{ Widgets
--- You can add as many variables as
--- you wish and access them by using
--- beautiful.variable in your rc.lua
---theme.fg_widget        = "#AECF96"
---theme.fg_center_widget = "#88A175"
---theme.fg_end_widget    = "#FF5656"
---theme.bg_widget        = "#494B4F"
---theme.border_widget    = "#3F3F3F"
+theme.titlebar_bg_focus  = theme.bg_focus
+theme.titlebar_bg_normal = theme.bg_normal
 -- }}}
 
 -- {{{ Mouse finder
-theme.mouse_finder_color = "#CC9393"
+theme.mouse_finder_color = theme.colors.green
 -- mouse_finder_[timeout|animate_timeout|radius|factor]
 -- }}}
 
