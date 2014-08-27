@@ -36,6 +36,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'bling/vim-airline'
 Plugin 'ervandew/supertab'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'kien/ctrlp.vim'
 
 call vundle#end()
 
