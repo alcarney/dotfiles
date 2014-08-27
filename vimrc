@@ -54,7 +54,7 @@ let g:mapleader = ','
 
 " Don't redraw while executing macros (should boost performance)
 set lazyredraw
-}}}
+" }}}
 
 " ----------------------------------- Colours -------------------------- {{{
 
@@ -64,7 +64,7 @@ let g:solarized_termtrans = 1
 set background=dark
 colorscheme solarized
 
-}}}
+" }}}
 
 " ----------------------------------- Tab Settings --------------------- {{{
 
@@ -79,7 +79,7 @@ set shiftround                         " I think this should help making indents
 " This let's you indent/unindent blocks of code using the </> keys repectively
 " while in visual mode
 set shiftwidth=4
-}}}
+" }}}
 
 " ----------------------------------- Editing -------------------------- {{{
 
@@ -92,7 +92,7 @@ nnoremap <leader>V V`]
 
 " The opposite of J Splits the line
 nnoremap S i<CR><esc><right>
-}}}
+" }}}
 
 " ----------------------------------- Searching ------------------------ {{{
 
@@ -108,7 +108,7 @@ nnoremap N Nzzzv
 
 " Open a quickfix window for the last search
 nnoremap <silent> <leader>/ :execute 'vimgrep /'.@/.'/g %'<CR>:copen<CR>
-}}}
+" }}}
 
 " ----------------------------------- Interface ------------------------ {{{
 
@@ -126,7 +126,7 @@ set autoread
 set title                              " Set the title of the window to the current file being edited
 set noswapfile                         " Disable those pescky *.swp files
 
-}}}
+" }}}
 
 " ------------------------------------ Folding --------------------------- {{{
 
@@ -143,7 +143,7 @@ vnoremap <Space> za
 " Close all other folds except for the current one
 nnoremap <leader>z zMzvzz
 
-}}}
+" }}}
 
 " ------------------------------------ Auto Commands --------------------- {{{
 
@@ -158,7 +158,7 @@ au BufRead,BufNewFile *.md set filetype=markdown
 au BufRead,BufNewFile *.h set filetype=c
 au BufRead,BufNewFile *.tex set filetype=tex
 
-}}}
+" }}}
 
 " ------------------------------------ Misc ------------------------------- {{{
 
@@ -202,7 +202,7 @@ hi statusline ctermfg=16 ctermbg=231
 " Highlight current line
 hi CursorLine ctermbg=16 cterm=NONE
 set cursorline
-}}}
+" }}}
 
 " ----------------------------------- Leader shortcut commands  ----------- {{{
 nmap <leader>w ;w<CR>                       " Quicksave
@@ -218,7 +218,7 @@ map <leader>sp [s                    " Search for the previous bad word
 
 " Automagically compile and show errors
 map <leader>m ;silent make\|redraw!\|cw<CR>
-}}}
+" }}}
 
 "----------------------------------- Functions -------------------------- {{{
 
@@ -236,7 +236,7 @@ endfunction
 hi def IndentGuides guibg=#303030 ctermbg=234
 nnoremap <leader>I :call IndentGuides()<cr>
 
-}}}
+" }}}
 
 " ------------------------------- Plugin Config -------------------- {{{
 
@@ -275,4 +275,4 @@ let g:airline#extensions#tabline#enabled = 1 " Display buffers for us when we ar
 let g:airline_theme='badwolf'
 "let g:airline_powerline_fonts = 1
 
-}}}
+" }}}
