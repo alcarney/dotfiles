@@ -1,9 +1,9 @@
 " -----------------------------------------------------------------------------
 "      Filename: vimrc
-"      Author: Alex Carney
+"      Author: Alex Carney - with a lot of help from the internet
 "
 "      Created: 12/01/14
-"      Last Modified: 10/07/14
+"      Last Modified: 27/08/14
 "
 " -----------------------------------------------------------------------------
 
