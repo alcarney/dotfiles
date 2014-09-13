@@ -1,5 +1,5 @@
 snippet newdoc
-\documentclass{$1:article}
+\documentclass{$1}
 
 $0
 
@@ -9,7 +9,13 @@ $0
 endsnippet
 
 snippet begin
-\begin{$1:enumerate}
+\begin{$1}
 	$0
 \end{$1}
+endsnippet
+
+snippet mathpackages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
 endsnippet
