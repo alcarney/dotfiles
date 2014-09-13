@@ -7,7 +7,6 @@
 "
 " -----------------------------------------------------------------------------
 
-" Automatically reload a file if it has been modified externally
 set nocompatible
 
 " --------------------------------- Vundle ----------------------- {{{
