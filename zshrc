@@ -32,7 +32,7 @@ TZ='Europe/London' ; export TZ
 export EDITOR='vim'
 export PATH=$PATH:$HOME/bin
 export LD_LIBRARY_PATH="/opt/java/jre/lib/amd64:/home/alex/.mylibs"
-export MANPAGER="/bin/sh -c \"col -b | vim -u NONE -c 'set ft=man ts=8 nomod nolist nonu noma fdm=indent' -\""
+export MANPAGER="/bin/sh -c \"col -b | vim -u '~/.vim/vimrc_man' -c 'set ft=man ts=8 nomod nolist nonu noma fdm=indent' -\""
 
 autoload -U colors && colors
 
