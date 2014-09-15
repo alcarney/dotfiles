@@ -98,16 +98,29 @@ function scanDir(directory)
     return fileList
 end
 
+-- Function to get the next wallpaper image
+function nextWallpaper(wallpaperList)
+    return wallpaperList[math.random(1, #wallpaperList)]
+end
+
+-- The function that sets the wallpaper
+function setWallpaper(filepath)
+    gears.wallpaper.fit(filepath, s)
+end
+
+-- Load the wallpapers from the folder
 wallpaperList = scanDir(wallpaper_dir)
 
 -- Apply a random wallpaper on startup
-gears.wallpaper.fit(wallpaperList[math.random(1, #wallpaperList)], s)
+currentWallpaper = nextWallpaper(wallpaperList)
+setWallpaper(currentWallpaper)
 
 -- Apply a random wallpaper every "changTime" seconds
 changeTime = 60
 wallpaperTimer = timer ({timeout = changeTime})
 wallpaperTimer:connect_signal("timeout", function()
-    gears.wallpaper.fit(wallpaperList[math.random(1, #wallpaperList)], s)
+    currentWallpaper = nextWallpaper(wallpaperList)
+    setWallpaper(currentWallpaper)
     
     -- Stop the timer
     wallpaperTimer:stop()
