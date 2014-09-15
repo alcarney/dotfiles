@@ -14,6 +14,9 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 
+-- My libs
+local utils = require("utils")
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -108,6 +111,11 @@ function setWallpaper(filepath)
     gears.wallpaper.fit(filepath, s)
 end
 
+function cycleWallpaper(wallpaperList)
+    new_paper = nextWallpaper(wallpaperList)
+    setWallpaper(new_paper)
+end
+
 -- Load the wallpapers from the folder
 wallpaperList = scanDir(wallpaper_dir)
 
@@ -119,8 +127,7 @@ setWallpaper(currentWallpaper)
 changeTime = 60
 wallpaperTimer = timer ({timeout = changeTime})
 wallpaperTimer:connect_signal("timeout", function()
-    currentWallpaper = nextWallpaper(wallpaperList)
-    setWallpaper(currentWallpaper)
+    cycleWallpaper(wallpaperList)
     
     -- Stop the timer
     wallpaperTimer:stop()
@@ -233,6 +240,14 @@ battery_timer = timer({timeout = 20})
 battery_timer:connect_signal("timeout", function() batteryInfo("BAT0") end)
 --battery_timer:start()
 
+ -- Random Wallpaper Widget
+ 
+wallpaper_widget = wibox.widget.imagebox()
+wallpaper_widget:set_image(config_location.."theme/wallpaper-icon.png")
+wallpaper_widget:connect_signal("button::press", function() cycleWallpaper(wallpaperList) 
+                                                            wallpaperTimer:again()
+                                                            end)
+
 -- Create a wibox for each screen and add it
 mywibox = {}
 mypromptbox = {}
@@ -317,6 +332,8 @@ for s = 1, screen.count() do
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
     if s == 1 then right_layout:add(wibox.widget.systray()) end
+    right_layout:add(separator)
+    right_layout:add(wallpaper_widget)
     right_layout:add(separator)
     right_layout:add(mytextclock)
     right_layout:add(separator)
