@@ -38,6 +38,6 @@ color2 888888
 color3 444444
 
 TEXT 
-[${color1}${addr enp0s26u1u2}$color]${color green} ⇩$color:${color1}${downspeed enp0s26u1u2}${color red} ⇪$color: ${color1}${upspeed enp0s26u1u2}$color \
+${color green} ⇩⇩$color:${color1}${totaldown enp1s0}${color red} ⇪⇪$color: ${color1}${totalup enp1s0}$color [${color1}${addr enp1s0}$color]${color green} ⇩$color:${color1}${downspeed enp1s0}${color red} ⇪$color: ${color1}${upspeed enp1s0}$color \
 |$alignc ${color1}RAM:$color${mem}/${memmax} ${color1}${membar 5,50} |${color1}/home:$color${fs_used /home}/${fs_size /home}${color1} ${fs_bar 5,50 /home} \
 ${alignr}${color1}⚡: [${color3}${acpiacadapter}${color1}] ${color}${battery_percent }% ${battery_bar 5,50 } | \
