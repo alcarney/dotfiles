@@ -1,0 +1,6 @@
+project_name: organiser
+project_root: ~/
+tabs:
+    - mail: mutt
+    - cal: calcurse
+    - news: newsbeuter
