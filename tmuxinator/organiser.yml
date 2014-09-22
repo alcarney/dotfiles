@@ -1,6 +1,6 @@
-project_name: organiser
+project_name: org
 project_root: ~/
 tabs:
-    - mail: mutt
-    - cal: calcurse
-    - news: newsbeuter
+    - mail:  mutt
+    - cal:   wyrd
+    - news:  newsbeuter
