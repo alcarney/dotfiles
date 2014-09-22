@@ -1,0 +1,22 @@
+include "/etc/wyrdrc"
+
+# Try and emulate the solarized theme
+color help               green default
+color timed_default      white default
+color timed_current      white red
+color timed_reminder1    yellow default
+color timed_reminder2    white red
+color timed_reminder3    white green
+color timed_reminder4    yellow magenta
+color untimed_reminder   white default
+color timed_date         cyan default
+color selection_info     green default
+color description        white default
+color status             green default
+color calendar_labels    white default
+color calendar_level1    white default
+color calendar_level2    default default
+color calendar_level3    magenta default
+color calendar_today     white red
+color left_divider       cyan default
+color right_divider      cyan default
