@@ -15,7 +15,9 @@ URxvt.background: [75]#000000
 URxvt.scrollBar: false
 URxvt.cursorUnderline: true
 URxvt.cursorBlink: true
-URxvt.font: 6x13
+#URxvt.font: 6x13
+URxvt.font: xft:DejaVu Sans Mono Oblique:pixelsize=10
+URxvt.letterSpace:-3
 
 # urxvt colors (Solarized)
 !! drop in Solarized colorscheme for Xresources/Xdefaults
