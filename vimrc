@@ -162,8 +162,10 @@ au BufRead,BufNewFile *.tex set filetype=tex
 
 " ------------------------------------ Misc ------------------------------- {{{
 
-" Show trailing whitespace chars
-set listchars=tab:>-,trail:.,eol:$
+" Show trailing whitespace characters
+set listchars=tab:>-,trail:.,eol:$,extends:→,precedes:←
+
+set list
 nmap <silent> <leader>t ;set list! <CR>
 
 " Highlight a column when I go over a certain width
