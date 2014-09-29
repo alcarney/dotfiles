@@ -163,7 +163,7 @@ au BufRead,BufNewFile *.tex set filetype=tex
 " ------------------------------------ Misc ------------------------------- {{{
 
 " Show trailing whitespace characters
-set listchars=tab:>-,trail:.,eol:$,extends:→,precedes:←
+set listchars=tab:>-,trail:.,extends:→,precedes:←
 
 set list
 nmap <silent> <leader>t ;set list! <CR>
