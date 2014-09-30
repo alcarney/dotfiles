@@ -520,6 +520,10 @@ awful.rules.rules = {
       properties = { floating = true } },
     { rule = { class = "gimp" },
       properties = { floating = true } },
+    { rule = { class = "Tilda" },
+        properties = { border_width = 0,
+                       floating = true,
+                       sticky = true    }},
     -- Set Firefox to always map on tags number 2 of screen 1.
     -- { rule = { class = "Firefox" },
     --   properties = { tag = tags[1][2] } },
@@ -602,3 +606,4 @@ awful.util.spawn_with_shell("compton -b --config ~/.config/compton.conf")
 awful.util.spawn_with_shell("conky")
 awful.util.spawn_with_shell("pulseaudio --start")
 awful.util.spawn_with_shell("dropbox start")
+awful.util.spawn_with_shell("tilda")
