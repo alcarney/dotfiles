@@ -1,10 +1,13 @@
 snippet newmake
 WARN= -Wall -Wextra -Werror
-#HEAD_PATH=-I/home/alex/.myheaders
-#LIB_PATH=/home/alex/.mylibs
-.PHONY: clean
 
-$0
+#HEAD_PATH=/home/alex/.myheaders
+#LIB_PATH=/home/alex/.mylibs
+
+#HEADERS=
+#LIB_COMPONENTS=
+
+.PHONY: clean
 
 clean:
 	rm *.o
