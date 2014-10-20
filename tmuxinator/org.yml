@@ -1,6 +1,6 @@
 project_name: org
 project_root: ~/
-tabs:
+windows:
     - mail:  mutt
     - cal:   wyrd
     - news:  newsbeuter
