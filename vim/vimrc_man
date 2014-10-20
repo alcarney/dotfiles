@@ -27,6 +27,9 @@ set scrolloff=5
 nnoremap <Space> za
 vnoremap <Space> za
 
+" Start with all folds open
+set foldlevelstart=99
+
 " Close all other folds except for the current one
 nnoremap <leader>z zMzvzz
 
