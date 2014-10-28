@@ -63,6 +63,9 @@ let g:solarized_termtrans = 1
 set background=dark
 colorscheme solarized
 
+" Overriding vim's comment highlighting defintion to make it italic
+hi Comment term=italic cterm=italic
+
 " }}}
 
 " ----------------------------------- Tab Settings --------------------- {{{
