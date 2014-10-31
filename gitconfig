@@ -1,10 +1,15 @@
 [user]
-	email = alex.rugby101@gmail.com
-	name = Alex Carney
+    email = alex.rugby101@gmail.com
+    name = Alex Carney
 
 [core]
-    editor=vim
-    excludesfile= ~/.gitignore_global
+    editor = vim
+    excludesfile = ~/.gitignore_global
 
 [web]
-    browser=dwb
+    browser = dwb
+
+[merge]
+    tool = vimdiff
+    conflictstyle = diff3
+    prompt = false
