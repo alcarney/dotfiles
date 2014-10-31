@@ -8,6 +8,7 @@ antigen use oh-my-zsh
 
 # Add bundles (from oh-my-zsh)
 antigen bundle git
+antigen bundle vi-mode
 
 # Add bundles (from other sources)
 antigen bundle zsh-users/zsh-syntax-highlighting
@@ -20,6 +21,10 @@ antigen apply
 
 # Load my list of aliases
 source $HOME/.zsh/aliases
+
+# Enable vi mode line editing
+bindkey -v
+export KEYTIMEOUT=1
 
 # Setting the timezone
 TZ='Europe/London' ; export TZ
@@ -56,6 +61,7 @@ cdl () {  # Clears the screen and list the contents of the directory just entere
 testnet () { # Checks if internet is connected if not tells me to sort it
     ping -c 1 www.google.com
 }
+
 
 function precmd()  # Prints an extra newline between commands which i think looks nicer
 { 
