@@ -184,6 +184,9 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 
+" Alter vim's buffer switching behavoir
+set switchbuf = "useopen,usetab"
+
 " Easier split navigation
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
