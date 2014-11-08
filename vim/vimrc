@@ -225,6 +225,8 @@ map <leader>s? z=                    " Give spelling suggestions
 map <leader>sn ]s                    " Search for the next wrong word
 map <leader>sp [s                    " Search for the previous bad word
 
+map <leader>m ;call Toggle_task_status()<CR>
+
 " }}}
 
 "----------------------------------- Functions -------------------------- {{{
