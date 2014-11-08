@@ -225,8 +225,6 @@ map <leader>s? z=                    " Give spelling suggestions
 map <leader>sn ]s                    " Search for the next wrong word
 map <leader>sp [s                    " Search for the previous bad word
 
-" Automagically compile and show errors
-map <leader>m ;silent make\|redraw!\|cw<CR>
 " }}}
 
 "----------------------------------- Functions -------------------------- {{{
@@ -282,4 +280,9 @@ let g:airline#extensions#tabline#enabled = 1 " Display buffers for us when we ar
 let g:airline_theme='badwolf'
 "let g:airline_powerline_fonts = 1
 
+" Vimwiki Settings
+let wiki = {}
+let wiki.path = '~/Documents/Wikis/'
+
+let g:vimwiki_list = [wiki]
 " }}}
