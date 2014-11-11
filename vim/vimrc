@@ -152,7 +152,7 @@ nnoremap <leader>z zMzvzz
 " ------------------------------------ Auto Commands --------------------- {{{
 
 " Automatically save when vim loses focus
-au FocusLost * :wa 
+au FocusLost * :wa  " Apparently this doesnt work in terminal vim?
 
 " Resize splits when vim is resiszed
 au VimResized * exe "normal! \<c-w>="
