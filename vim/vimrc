@@ -15,30 +15,39 @@ set nocompatible
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" Auto update yourself
-Plugin 'gmarik/Vundle.vim'
+" Wrap these in an if statement so we dont complain when Vundle isnt installed
+if exists(':Plugin')
 
-" Plugins
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'bling/vim-airline'
-Plugin 'ervandew/supertab'
-Plugin 'godlygeek/tabular'
-Plugin 'majutsushi/tagbar'
-Plugin 'mhinz/vim-signify'
-Plugin 'samsonw/vim-task'
-Plugin 'scrooloose/syntastic'
-Plugin 'SirVer/ultisnips'
-Plugin 'Townk/vim-autoclose'
-Plugin 'tpope/vim-abolish'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-vinegar'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'vim-scripts/a.vim'
-Plugin 'vimwiki/vimwiki'
+    " Auto update yourself
+    Plugin 'gmarik/Vundle.vim'
 
-call vundle#end()
+    " Plugins
+    Plugin 'altercation/vim-colors-solarized'
+    Plugin 'bling/vim-airline'
+    Plugin 'ervandew/supertab'
+    Plugin 'godlygeek/tabular'
+    Plugin 'jeetsukumaran/vim-buffergator'
+    Plugin 'majutsushi/tagbar'
+    Plugin 'mhinz/vim-signify'
+    Plugin 'nathanaelkane/vim-indent-guides'
+    Plugin 'samsonw/vim-task'
+    Plugin 'scrooloose/syntastic'
+    Plugin 'SirVer/ultisnips'
+    Plugin 'Townk/vim-autoclose'
+    Plugin 'tpope/vim-abolish'
+    Plugin 'tpope/vim-commentary'
+    Plugin 'tpope/vim-fugitive'
+    Plugin 'tpope/vim-surround'
+    Plugin 'tpope/vim-vinegar'
+    Plugin 'Valloric/YouCompleteMe'
+    Plugin 'vim-scripts/a.vim'
+    Plugin 'vimwiki/vimwiki'
+
+    " Plugins to Consider
+    " Plugin 'wellle/targets.vim' - provide extra text objects for quotes etc.
+
+    call vundle#end()
+endif
 
 " Enable filetype plugins"
 filetype plugin indent on
