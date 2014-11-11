@@ -162,6 +162,9 @@ au BufRead,BufNewFile *.md set filetype=markdown
 au BufRead,BufNewFile *.h set filetype=c
 au BufRead,BufNewFile *.tex set filetype=tex
 
+" Automatically enable spelling for certain files
+au BufRead,BufNewFile *.md, *.wiki set spell
+
 " }}}
 
 " ------------------------------------ Misc ------------------------------- {{{
