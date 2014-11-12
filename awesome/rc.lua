@@ -524,6 +524,16 @@ awful.rules.rules = {
         properties = { border_width = 0,
                        floating = true,
                        sticky = true    }},
+
+    -- This little bit of magic allows me to "set" a terminal as part of my desktop background
+    { rule = { name = "sh", class = "URxvt"},
+        properties = { sticky = true,
+                       floating = true,
+                       maximized = true;
+                       below = true,
+                       border_width = 0,
+                       skip_taskbar = true}},
+
     -- Set Firefox to always map on tags number 2 of screen 1.
     -- { rule = { class = "Firefox" },
     --   properties = { tag = tags[1][2] } },
