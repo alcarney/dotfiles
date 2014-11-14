@@ -7,6 +7,7 @@ source ~/.zsh-antigen/antigen.zsh
 antigen use oh-my-zsh
 
 # Add bundles (from oh-my-zsh)
+antigen bundle autoenv
 antigen bundle git
 antigen bundle vi-mode
 
