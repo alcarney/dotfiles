@@ -253,7 +253,7 @@ let g:netrw_banner=0
 let g:netrw_altv=1              "Open files on the right please
 let g:netrw_preview=1
 let g:netrw_list_hide='^\..*$'  " Dont show hidden files
-let g:netrw_browse_split=4      " Open files in the previous window
+let g:netrw_browse_split=0      " Open files in the same window
 
 " Toggle the tagbar
 nmap <F8> ;TagbarToggle<CR>
