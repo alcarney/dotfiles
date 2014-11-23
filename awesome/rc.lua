@@ -148,7 +148,7 @@ wallpaperTimer:start()
 tags = {}
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
-    tags[s] = awful.tag({ "α", "β", "γ", "δ", "π", "ϕ", "ω", "λ", "ψ" }, s, layouts[2])
+    tags[s] = awful.tag({ "α", "β", "γ", "δ", "π", "ϕ", "ω", "λ", "ψ" }, s, layouts[1])
 end
 -- }}}
 
