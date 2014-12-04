@@ -156,6 +156,9 @@ vnoremap <Space> za
 " Close all other folds except for the current one
 nnoremap <leader>z zMzvzz
 
+" Make folds a bit nicer to the eye
+hi Folded ctermbg=none
+
 " }}}
 
 " ------------------------------------ Auto Commands --------------------- {{{
@@ -173,6 +176,9 @@ au BufRead,BufNewFile *.tex set filetype=tex
 
 " Automatically enable spelling for certain files
 au BufRead,BufNewFile *.md, *.wiki set spell
+
+" Try using foldmethod = syntax for c files
+au BufRead,BufNewFile *.c set foldmethod=syntax
 
 " }}}
 
