@@ -12,6 +12,7 @@ antigen bundle git
 antigen bundle vi-mode
 
 # Add bundles (from other sources)
+antigen bundle Tarrasch/zsh-bd
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Load a prompt theme
