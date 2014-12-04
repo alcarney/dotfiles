@@ -13,6 +13,7 @@ fi
 
 xrdb -merge ~/.Xresources
 redshift &
+xset b off&
 
 # exec gnome-session
 # exec startkde
