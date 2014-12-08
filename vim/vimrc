@@ -30,10 +30,10 @@ if exists(':Plugin')
     Plugin 'majutsushi/tagbar'
     Plugin 'mhinz/vim-signify'
     Plugin 'nathanaelkane/vim-indent-guides'
+    Plugin 'Raimondi/delimitMate'
     Plugin 'samsonw/vim-task'
     Plugin 'scrooloose/syntastic'
     Plugin 'SirVer/ultisnips'
-    Plugin 'Townk/vim-autoclose'
     Plugin 'tpope/vim-abolish'
     Plugin 'tpope/vim-commentary'
     Plugin 'tpope/vim-fugitive'
@@ -54,6 +54,9 @@ filetype plugin indent on
 
 " Set the leader character to ,
 let mapleader = ','
+
+" Think about setting a local leader as well
+" let maplocalleader = '\\'
 set tm=500
 
 " Make backspace behave
