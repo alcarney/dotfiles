@@ -188,7 +188,7 @@ au BufRead,BufNewFile *.c set foldmethod=syntax
 set listchars=tab:>-,trail:.,extends:→,precedes:←
 
 set list
-nmap <silent> <leader>t ;set list! <CR>
+nnoremap <silent> <leader>t ;set list! <CR>
 
 " Highlight a column when I go over a certain width
 highlight ColorColumn ctermbg=cyan
@@ -199,10 +199,10 @@ nnoremap ; :
 nnoremap : ;
 
 " Be mean and force myself to use hjkl
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
 
 " Alter vim's buffer switching behavoir
 set switchbuf = "useopen,usetab"
@@ -214,8 +214,8 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " Easier tab navigation
-noremap <S-l> gt
-noremap <S-h> gT
+nnoremap <S-l> gt
+nnoremap <S-h> gT
 
 " Make backspace behave
 set backspace=eol,start,indent
@@ -232,18 +232,18 @@ set cursorline
 " }}}
 
 " ----------------------------------- Leader shortcut commands  ----------- {{{
-nmap <leader>w ;w<CR>                       " Quicksave
-nmap <leader>r ;so /home/alex/.vimrc<CR>    " Reload vimrc 
-map <silent> <leader><CR> ;noh<CR>          " Clear search match highlights
+nnoremap <leader>w ;w<CR>                       " Quicksave
+nnoremap <leader>r ;so /home/alex/.vimrc<CR>    " Reload vimrc 
+nnoremap <silent> <leader><CR> ;noh<CR>          " Clear search match highlights
 nnoremap <leader>c :set cursorline! <CR>    " Toggle highlighting of the current line
 
 " Spell Checking
-map <leader>ss ;setlocal spell!<CR>  " Toggle spell checking
-map <leader>s? z=                    " Give spelling suggestions
-map <leader>sn ]s                    " Search for the next wrong word
-map <leader>sp [s                    " Search for the previous bad word
+nnoremap <leader>ss ;setlocal spell!<CR>  " Toggle spell checking
+nnoremap <leader>s? z=                    " Give spelling suggestions
+nnoremap <leader>sn ]s                    " Search for the next wrong word
+nnoremap <leader>sp [s                    " Search for the previous bad word
 
-map <leader>m ;call Toggle_task_status()<CR>
+nnoremap <leader>m ;call Toggle_task_status()<CR>
 
 " }}}
 
@@ -262,11 +262,11 @@ let g:netrw_list_hide='^\..*$'  " Dont show hidden files
 let g:netrw_browse_split=0      " Open files in the same window
 
 " Toggle the tagbar
-nmap <F8> ;TagbarToggle<CR>
+nnoremap <F8> ;TagbarToggle<CR>
 
 " Fugitive commands (Git integration)
-nmap <F2> ;Gstatus<CR>
-nmap <F3> ;Gcommit<CR>
+nnoremap <F2> ;Gstatus<CR>
+nnoremap <F3> ;Gcommit<CR>
 
 " Make syntastic automatically open the error box when errors are detected
 let g:syntastic_auto_loc_list = 1
