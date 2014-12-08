@@ -179,9 +179,6 @@ au BufRead,BufNewFile *.tex set filetype=tex
 " Automatically enable spelling for certain files
 au BufRead,BufNewFile *.md, *.wiki set spell
 
-" Try using foldmethod = syntax for c files
-au BufRead,BufNewFile *.c set foldmethod=syntax
-
 " }}}
 
 " ------------------------------------ Misc ------------------------------- {{{
