@@ -24,7 +24,6 @@ if exists(':Plugin')
     " Plugins
     Plugin 'altercation/vim-colors-solarized'
     Plugin 'bling/vim-airline'
-    Plugin 'ervandew/supertab'
     Plugin 'godlygeek/tabular'
     Plugin 'jeetsukumaran/vim-buffergator'
     Plugin 'majutsushi/tagbar'
@@ -285,19 +284,17 @@ let g:ycm_warning_symbol = '!'
 let g:ycm_error_symbol = '!!'
 
 
-let g:ycm_key_list_select_completion=['<C-n>']
+let g:ycm_key_list_select_completion=['<tab>']
 let g:ycm_key_list_previous_completion=['<C-p>']
-let g:SuperTabDefaultCompletionType='<C-n>'
 
 " Since UltiSnips and YouCompleteMe fight over tab lets change that
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-let g:UltiSnipsListSnippets="<c-tab>"
+let g:UltiSnipsExpandTrigger="<s-tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsListSnippets="<c-s-tab>"
 
 " Airline
 set noshowmode " Since airline shows the mode for us we no longer need vim to show it as well
-
 
 let g:airline#extensions#tabline#enabled = 1 " Display buffers for us when we are only using one tab, or all the tabs in a nice pretty format
 let g:airline_theme='badwolf'
