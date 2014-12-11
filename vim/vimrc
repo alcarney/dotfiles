@@ -187,7 +187,7 @@ au BufRead,BufNewFile *.md, *.wiki set spell
 set listchars=tab:>-,trail:.,extends:→,precedes:←
 
 set list
-nnoremap <silent> <leader>t ;set list! <CR>
+nnoremap <silent> <leader>t :set list! <CR>
 
 " Highlight a column when I go over a certain width
 highlight ColorColumn ctermbg=cyan
@@ -231,13 +231,13 @@ set cursorline
 " }}}
 
 " ----------------------------------- Leader shortcut commands  ----------- {{{
-nnoremap <leader>w ;w<CR>                       " Quicksave
-nnoremap <leader>r ;so /home/alex/.vimrc<CR>    " Reload vimrc 
-nnoremap <silent> <leader><CR> ;noh<CR>          " Clear search match highlights
+nnoremap <leader>w :w<CR>                       " Quicksave
+nnoremap <leader>r :so /home/alex/.vimrc<CR>    " Reload vimrc 
+nnoremap <silent> <leader><CR> :noh<CR>          " Clear search match highlights
 nnoremap <leader>c :set cursorline! <CR>    " Toggle highlighting of the current line
 
 " Spell Checking
-nnoremap <leader>ss ;setlocal spell!<CR>  " Toggle spell checking
+nnoremap <leader>ss :setlocal spell!<CR>  " Toggle spell checking
 nnoremap <leader>s? z=                    " Give spelling suggestions
 nnoremap <leader>sn ]s                    " Search for the next wrong word
 nnoremap <leader>sp [s                    " Search for the previous bad word
@@ -261,11 +261,11 @@ let g:netrw_list_hide='^\..*$'  " Dont show hidden files
 let g:netrw_browse_split=0      " Open files in the same window
 
 " Toggle the tagbar
-nnoremap <F8> ;TagbarToggle<CR>
+nnoremap <F8> :TagbarToggle<CR>
 
 " Fugitive commands (Git integration)
-nnoremap <F2> ;Gstatus<CR>
-nnoremap <F3> ;Gcommit<CR>
+nnoremap <F2> :Gstatus<CR>
+nnoremap <F3> :Gcommit<CR>
 
 " Make syntastic automatically open the error box when errors are detected
 let g:syntastic_auto_loc_list = 1
