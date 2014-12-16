@@ -1,11 +1,8 @@
 # {{{Application Shortcuts
 
-alias py="python2"
-
 alias mplayer="mplayer -msgcolor"
 alias playdvd="mplayer -msgcolor dvdnav:// -dvd-device /dev/sr0"
 
-alias pse="ps -e | grep $1"
 alias extract="atool -x"
 alias compress="atool -a"
 #}}}
@@ -18,29 +15,22 @@ alias paclean="sudo pacman -Sc"        # Clear cache of uninstalled packages
 alias pacis="pacman -Q"                # Check if package is installed
 alias pacinfo="pacman -Qi"             # Display info about installed package
 alias paclook="pacman -Ss"             # Search repositories for a package
-alias paclinfo="pacman -Si"            # Search repositiories for info about a package 
+alias paclinfo="pacman -Si"            # Search repositiories for info about a package
 #}}}
 
-#----------------Config File Shortcuts_____________________
-alias vimrc="vim /home/alex/.vimrc"
-alias zshrc="vim /home/alex/.zshrc"
-alias awesomerc="vim /home/alex/.config/awesome/rc.lua"
-alias conkyrc="vim /home/alex/.conkyrc"
-
 #--------------Improvements on the ls command---------------
-#alias lst="ls -C -F -X  -L -1 -s -h "
+#alias lst="ls -C -F -X  -L -1 -s -h " -> Now a function in zshrc
 alias lsta="ls -C -A -F -X -L -1 -s -h"
 alias lstr="ls -C -F -X -R -L -1 -s -h "
 alias lstra="ls -C -A -F -X -R -L -1 -s -h"
 
 #-----------------Making commands safer---------------------
-alias rm="rm -i"           # Prompt user to check each file that is removed 
-alias cp="cp -i"           # Prompt when overwriting files 
+alias rm="rm -i"           # Prompt user to check each file that is removed
+alias cp="cp -i"           # Prompt when overwriting files
 alias mv="mv -i"           # Prompt when overwriting files
 
 #------------------------Misc-------------------------------
 alias iplayer="get_iplayer"
-alias db="dropbox"
 alias cls="clear"
 alias maxpower="sudo cpupower frequency-set -g performance"
 alias minpower="sudo cpupower frequency-set -g powersave"
