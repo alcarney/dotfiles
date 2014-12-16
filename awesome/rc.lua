@@ -523,7 +523,6 @@ awful.rules.rules = {
     -- This little bit of magic allows me to "set" a terminal as part of my desktop background
     { rule = { name = "sh", class = "URxvt"},
         properties = { sticky = true,
-                       floating = true,
                        maximized = true;
                        below = true,
                        border_width = 0,
