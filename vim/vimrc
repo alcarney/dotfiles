@@ -25,7 +25,6 @@ if exists(':Plugin')
     Plugin 'altercation/vim-colors-solarized'
     Plugin 'bling/vim-airline'
     Plugin 'godlygeek/tabular'
-    Plugin 'jeetsukumaran/vim-buffergator'
     Plugin 'majutsushi/tagbar'
     Plugin 'mhinz/vim-signify'
     Plugin 'nathanaelkane/vim-indent-guides'
