@@ -5,7 +5,7 @@ alias playdvd="mplayer -msgcolor dvdnav:// -dvd-device /dev/sr0"
 
 alias extract="atool -x"
 alias compress="atool -a"
-alias surf="tabed surf -e"
+alias surft="tabbed surf -e"
 #}}}
 
 #{{{ Pacman Shortcuts
