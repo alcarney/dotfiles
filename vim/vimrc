@@ -251,6 +251,9 @@ nnoremap <leader>m ;call Toggle_task_status()<CR>
 " }}}
 
 " ------------------------------- Plugin Config -------------------- {{{
+" Unite.vim
+nnoremap <leader>b :Unite buffer<CR>                        " Open a list of buffers
+nnoremap <leader>l :Unite grep:$buffers<CR>                 " Search for lines in the open buffers
 
 " Netrw (File Browser)
 let g:netrw_liststlye=0
