@@ -32,6 +32,7 @@ if exists(':Plugin')
     Plugin 'samsonw/vim-task'
     Plugin 'scrooloose/syntastic'
     Plugin 'Shougo/unite.vim'
+    Plugin 'Shougo/vimproc.vim'
     Plugin 'SirVer/ultisnips'
     Plugin 'tpope/vim-abolish'
     Plugin 'tpope/vim-commentary'
