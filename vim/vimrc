@@ -261,9 +261,8 @@ nnoremap <leader>m ;call Toggle_task_status()<CR>
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 call unite#filters#sorter_default#use(['sorter_rank'])
 
-nnoremap <leader>b :Unite buffer<CR>                        " Open a list of buffers
-nnoremap <leader>bm :Unite bookmark<CR>                         " Open a list of bookmarked files
-nnoremap <leader>l :Unite grep:$buffers<CR>                 " Search for lines in the open buffers
+nnoremap <leader>b :Unite -start-insert buffer<CR>                        " Open a list of buffers
+nnoremap <leader>bm :Unite -start-insert bookmark<CR>                         " Open a list of bookmarked files
 
 " Netrw (File Browser)
 let g:netrw_liststlye=0
