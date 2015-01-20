@@ -13,11 +13,13 @@ fi
 
 xrdb -merge ~/.Xresources
 redshift &
-xset b off&
+xset b off &
+compton &
 
 # exec gnome-session
 # exec startkde
 # exec startxfce4
 # ...or the Window Manager of your choice
 
-exec awesome
+#exec awesome
+exec dwm
