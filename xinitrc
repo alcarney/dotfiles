@@ -29,10 +29,9 @@ start_xmonad()
 }
 
 # Default window manager
-session=${1:-default}
+session=${1:-xmonad}
 
 case $session in
     xmonad) start_xmonad;;
-    default) echo "default works...";;
     *) echo "Please enter an option"
 esac
