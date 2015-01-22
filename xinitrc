@@ -1,8 +1,8 @@
 #!/bin/sh
 #
-# ~/.xinitrc
+#	~/.xinitrc
 #
-# Executed by startx (run your window manager from here)
+# Executed by startx - window managers are launched from here
 
 if [ -d /etc/X11/xinit/xinitrc.d ]; then
   for f in /etc/X11/xinit/xinitrc.d/*; do
@@ -11,15 +11,28 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
   unset f
 fi
 
-xrdb -merge ~/.Xresources
-redshift &
-xset b off &
-compton &
+# Programs common to many WMs
+start_common ()
+{
+    xrdb -merge ~/.Xresources
+    redshift &
+    compton&
+}
 
-# exec gnome-session
-# exec startkde
-# exec startxfce4
-# ...or the Window Manager of your choice
+# XMonad specfic stuff
+start_xmonad()
+{
+    start_common
+    xsetroot -cursor_name left_ptr
+    feh --bg-fill "/home/alex/Media/Pictures/Wallpapers/bg.jpg"
+    exec xmonad
+}
 
-#exec awesome
-exec dwm
+# Default window manager
+session=${1:-default}
+
+case $session in
+    xmonad) start_xmonad;;
+    default) echo "default works...";;
+    *) echo "Please enter an option"
+esac
