@@ -16,10 +16,13 @@ redshift &
 xset b off &
 compton &
 
+xsetroot -cursor_name left_ptr
+exec xmonad
+
 # exec gnome-session
 # exec startkde
 # exec startxfce4
 # ...or the Window Manager of your choice
 
 #exec awesome
-exec dwm
+#exec dwm
