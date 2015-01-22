@@ -1,25 +1,20 @@
-# General settings
-*foreground: white
-*background: black
-
-# Font Settings
+!! Font Settings
 Xft.dpi:	    96
 Xft.antialias:	true
 Xft.rgba:       rgb
 Xft.hinting:    true
 Xft.hintstyle:	hintslight
 
-# urxvt settings
+!! urxvt settings
 URxvt.depth: 32
 URxvt.background: [75]#000000
 URxvt.scrollBar: false
 URxvt.cursorUnderline: true
 URxvt.cursorBlink: true
-#URxvt.font: 6x13
 URxvt.font: xft:DejaVu Sans Mono:pixelsize=12
 URxvt.letterSpace:-2
 
-# urxvt colors (Solarized)
+!! urxvt colors (Solarized)
 !! drop in Solarized colorscheme for Xresources/Xdefaults
  
 !!SOLARIZED HEX     16/8 TERMCOL  XTERM/HEX   L*A*B      RGB         HSB
