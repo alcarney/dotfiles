@@ -32,6 +32,7 @@ start_xmonad()
 session=${1:-xmonad}
 
 case $session in
+    dwm) exec dwm;;
     xmonad) start_xmonad;;
     *) echo "Please enter an option"
 esac
