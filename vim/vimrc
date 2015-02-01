@@ -125,6 +125,9 @@ nnoremap N Nzzzv
 
 " Open a quickfix window for the last search
 nnoremap <silent> <leader>/ :execute 'vimgrep /'.@/.'/g %'<CR>:copen<CR>
+
+" Open a quickfix window containing a list of todos for the current file
+nnoremap <leader>t :vimgrep /TODO/j %<CR>:cw<CR>
 " }}}
 
 " ----------------------------------- Interface ------------------------ {{{
@@ -186,10 +189,10 @@ au BufRead,BufNewFile *.md, *.wiki set spell
 " ------------------------------------ Misc ------------------------------- {{{
 
 " Show trailing whitespace characters
-set listchars=tab:>-,trail:.,extends:→,precedes:←
+set listchars=tab:>-,trail:.,extends:→,precedes:←,eol:↩
 
 set list
-nnoremap <silent> <leader>t :set list! <CR>
+nnoremap <silent> <leader>l :set list! <CR>
 
 " Highlight a column when I go over a certain width
 highlight ColorColumn ctermbg=cyan
