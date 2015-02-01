@@ -283,7 +283,7 @@ nnoremap <F2> :Gstatus<CR>
 nnoremap <F3> :Gcommit<CR>
 
 " Make syntastic automatically open the error box when errors are detected
-let g:syntastic_auto_loc_list = 1
+let g:syntastic_auto_loc_list = 0
 
 " Ultisnips settings
 let g:snips_author = "Alex Carney"
