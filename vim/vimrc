@@ -28,7 +28,7 @@ endfunction
 
 Plug 'altercation/vim-colors-solarized'
 Plug 'bling/vim-airline'
-Plug 'godlygeek/tabular'
+Plug 'godlygeek/tabular',  {'on' : 'TagbarToggle'}
 Plug 'majutsushi/tagbar'
 Plug 'mhinz/vim-signify'
 Plug 'nathanaelkane/vim-indent-guides'
