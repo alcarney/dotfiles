@@ -9,8 +9,22 @@
 
 set nocompatible
 
-" ---------------------------------------------- Vim Plug ----------------------
+"{{{ ---------------------------------------------- Vim Plug ----------------------
 call plug#begin('~/.vim/plugged')
+
+" Function which decides whether or not to comile YCM libs or not
+" Taken straight from the vim-plug readme
+function! YCMBuild(info)
+    " info is a dict with threee fields
+    "       - name: name of the plugin
+    "       - status: 'installed', 'updated' or 'unchanged'
+    "       - force: set when ! version of commands are used (e.g. PlugUpdate!)
+    let l:ycm_cmd= "./install.sh --clang-completer --system-libclang"
+
+    if a:info.status == 'installed' || a:info.force
+        execute "!" . l:ycm_cmd
+    endif
+endfunction
 
 Plug 'altercation/vim-colors-solarized'
 Plug 'bling/vim-airline'
@@ -35,20 +49,6 @@ Plug 'vim-scripts/a.vim'
 Plug 'vimwiki/vimwiki'
 
 call plug#end()
-
-" Function which decides whether or not to comile YCM libs or not
-" Taken straight from the vim-plug readme
-function! YCMBuild(info)
-    " info is a dict with threee fields
-    "       - name: name of the plugin
-    "       - status: 'installed', 'updated' or 'unchanged'
-    "       - force: set when ! version of commands are used (e.g. PlugUpdate!)
-    let l:ycm_cmd= "./install.sh --clang-completer --system-libclang"
-
-    if a:info.status == 'installed' || a:info.force
-        execute "!" . l:ycm_cmd
-    endif
-endfunction
 
 " Enable filetype plugins"
 filetype plugin indent on
