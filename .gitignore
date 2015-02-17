@@ -1,3 +1,4 @@
 tmux/plugins
+vim/autoload
 tmux/sidebar
 tmux/resurrect
