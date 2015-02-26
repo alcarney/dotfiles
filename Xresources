@@ -14,6 +14,9 @@ URxvt.cursorBlink: true
 URxvt.font: xft:DejaVu Sans Mono:pixelsize=12
 URxvt.letterSpace:-2
 
+!! dzen settings
+dzen2.font: xft:DejaVu Sans Mono:pixelsize=8
+
 !! urxvt colors (Solarized)
 !! drop in Solarized colorscheme for Xresources/Xdefaults
  
