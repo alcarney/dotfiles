@@ -13,6 +13,9 @@ dzenStyle = " -h 12  -y '0' -fg '#777777' -bg '#222222'"
 -- Dimensions of the xmonad bar
 xmonadStatus = "dzen2 -x '0' -w '400' -ta 'l'" ++ dzenStyle
 
+-- Dimensions of the "widget" bar
+widgetBar = "dzen_widgets.sh | dzen2 -x '400' -w '880' -ta 'r'" ++ dzenStyle
+
 -- Get information from xmoand and give it to dzen
 loggingHook h = dynamicLogWithPP $ myDzenPP { ppOutput = hPutStrLn h}
 
@@ -37,7 +40,8 @@ myWorkspaces = ["1:main", "2:web", "3", "4", "5", "6", "7", "8", "9"]
 
 main = do
 
-        status <- spawnPipe xmonadStatus
+        status  <- spawnPipe xmonadStatus
+        widgets <- spawnPipe widgetBar
 
         xmonad defaultConfig
               { terminal = term,
