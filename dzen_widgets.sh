@@ -7,6 +7,6 @@ status_line ()
 
 while true
 do
-    echo "$status_line"
+    echo "$(status_line)"
     sleep 1
 done
