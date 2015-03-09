@@ -16,7 +16,7 @@ antigen bundle Tarrasch/zsh-bd
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Load a prompt theme
-antigen theme robbyrussell
+antigen theme S1cK94/minimal minimal-path-git
 
 # Apply everything
 antigen apply
