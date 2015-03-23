@@ -15,7 +15,7 @@ fi
 start_common ()
 {
     xrdb -merge ~/.Xresources
-    redshift &
+    #redshift &
     compton&
 }
 
