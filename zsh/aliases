@@ -12,7 +12,7 @@ alias nv="nvim"
 #{{{ Pacman Shortcuts
 alias pacup="sudo pacman -Syu"         # Update packages
 alias pacin="sudo pacman -S"           # Install packages
-alias pacout="sudo pacman -R"          # Remove packages
+alias pacout="sudo pacman -Rs"         # Remove packages and any dependencies unique to that package
 alias paclean="sudo pacman -Sc"        # Clear cache of uninstalled packages
 alias pacis="pacman -Q"                # Check if package is installed
 alias pacinfo="pacman -Qi"             # Display info about installed package
