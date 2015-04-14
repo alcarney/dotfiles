@@ -10,7 +10,12 @@
    dotspacemacs-configuration-layer-path '()
    ;; List of configuration layers to load. If it is the symbol `all' instead
    ;; of a list then all discovered layers will be installed.
-   dotspacemacs-configuration-layers '(haskell git evernote)
+   dotspacemacs-configuration-layers '(auto-completion
+                                       evernote
+                                       git
+                                       haskell
+                                       org
+                                       syntax-checking)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -94,6 +99,11 @@ before layers configuration."
    dotspacemacs-smooth-scrolling t
    ;; If non-nil smartparens-strict-mode will be enabled in programming modes.
    dotspacemacs-smartparens-strict-mode nil
+   ;; What do you want displayed on the startup page, choose any of the following
+   ;; 'recents', 'bookmarks', or 'projects'
+   dotspacemacs-startup-lists '(recents
+                                bookmarks
+                                projects)
    ;; If non nil advises quit functions to keep server open when quitting.
    dotspacemacs-persistent-server nil
    ;; The default package repository used if no explicit repository has been
@@ -101,20 +111,23 @@ before layers configuration."
    ;; Not used for now.
    dotspacemacs-default-package-repository nil)
   ;; User initialization goes here
-  )
+)
 
 (defun dotspacemacs/config ()
   "Configuration function.
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
 
-  ;; ================ UI Tweaks ==============================
-
   ;; Give me a nicer powerline separtor (>)
   (setq powerline-default-separator 'arrow)
 
   ;; Automagically resize windows nicely
   (golden-ratio-mode 1)
+
+  (add-hook 'haskell-mode-hook 'haskell-indentation-mode)
+  (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
+  (add-hook 'haskell-mode-hook 'haskell-decl-scan-mode)
+  (add-hook 'haskell-mode-hook 'haskell-doc-mode)
 )
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
