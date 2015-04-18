@@ -16,6 +16,8 @@ start_common ()
 {
     xrdb -merge ~/.Xresources
     #redshift &
+    xsetroot -cursor_name left_ptr
+    feh --bg-fill "/home/alex/Media/Pictures/Wallpapers/bg.jpg"
     compton&
 }
 
@@ -23,16 +25,22 @@ start_common ()
 start_xmonad()
 {
     start_common
-    xsetroot -cursor_name left_ptr
-    feh --bg-fill "/home/alex/Media/Pictures/Wallpapers/bg.jpg"
     exec xmonad
 }
+
+start_dwm ()
+{
+    start_common    
+    exec dwm
+}
+
 
 # Default window manager
 session=${1:-xmonad}
 
 case $session in
-    dwm) exec dwm;;
+    dwm) start_dwm;;
+    xfce) exec startxfce4;;
     xmonad) start_xmonad;;
     *) echo "Please enter an option"
 esac
