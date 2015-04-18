@@ -196,10 +196,6 @@ nnoremap <silent> <leader>l :set list! <CR>
 highlight ColorColumn ctermbg=cyan
 call matchadd('ColorColumn', '\%126v', 100)
 
-" Make the command key ; instead of :
-nnoremap ; :
-nnoremap : ;
-
 " Be mean and force myself to use hjkl
 nnoremap <up> <nop>
 nnoremap <down> <nop>
