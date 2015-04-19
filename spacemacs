@@ -122,9 +122,12 @@ layers configuration."
   ;; Give me a nicer powerline separtor (>)
   (setq powerline-default-separator 'arrow)
 
-  ;; Automagically resize windows nicely
-  (golden-ratio-mode 1)
+  ;; Enabling some toggles
+  (global-centered-cursor-mode 1) ;; Keep the cursor in the centre of the screen
+  (golden-ratio-mode 1)           ;; Automagically resize windows in nice proportions
+  (fancy-battery-mode 1)          ;; Battery status
 
+  ;; Enable a few extra goodies in haskell-mode
   (add-hook 'haskell-mode-hook 'haskell-indentation-mode)
   (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
   (add-hook 'haskell-mode-hook 'haskell-decl-scan-mode)
