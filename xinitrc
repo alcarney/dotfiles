@@ -35,12 +35,18 @@ start_dwm ()
 }
 
 
+start_xfce ()
+{
+    xrdb -merge ~/.Xresources
+    exec startxfce4
+}
+
 # Default window manager
 session=${1:-xmonad}
 
 case $session in
     dwm) start_dwm;;
-    xfce) exec startxfce4;;
+    xfce) start_xfce;;
     xmonad) start_xmonad;;
     *) echo "Please enter an option"
 esac
