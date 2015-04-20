@@ -24,6 +24,9 @@ antigen apply
 # Load my list of aliases
 source $HOME/.zsh/aliases
 
+# Command not found packge finder
+source /usr/share/doc/pkgfile/command-not-found.zsh
+
 # Enable vi mode line editing
 bindkey -v
 export KEYTIMEOUT=1
