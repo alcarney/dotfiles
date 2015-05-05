@@ -10,7 +10,10 @@
    dotspacemacs-configuration-layer-path '()
    ;; List of configuration layers to load. If it is the symbol `all' instead
    ;; of a list then all discovered layers will be installed.
-   dotspacemacs-configuration-layers '(auto-completion
+   dotspacemacs-configuration-layers '(auto-completion :variables
+                                                       auto-completion-use-tab-instead-of-enter t
+                                       auctex
+                                       c-c++
                                        erc
                                        evernote
                                        git
@@ -126,6 +129,9 @@ layers configuration."
   (global-centered-cursor-mode 1) ;; Keep the cursor in the centre of the screen
   (golden-ratio-mode 1)           ;; Automagically resize windows in nice proportions
   (fancy-battery-mode 1)          ;; Battery status
+
+  ;; Latex stuff
+  (add-hook 'doc-view-mode-hook 'auto-revert-mode)
 
   ;; Enable a few extra goodies in haskell-mode
   (add-hook 'haskell-mode-hook 'haskell-indentation-mode)
