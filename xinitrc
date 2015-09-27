@@ -61,10 +61,18 @@ start_emacs ()
     exec emacs
 }
 
+start_bspwm()
+{
+    start_common
+    sxhkd &
+    exec bspwm
+}
+
 # Default window manager
-session=${1:-xmonad}
+session=${1:-dwm}
 
 case $session in
+    bspwm) start_bspwm;;
     emacs) start_emacs;;
     dwm) start_dwm;;
     xfce) start_xfce;;
