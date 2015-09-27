@@ -5,7 +5,7 @@ import XMonad.Util.Run (spawnPipe)
 
 import System.IO (hPutStrLn)
 
-term = "urxvt -e zsh -c 'tmuxutils --new-session'"
+term = "urxvt"
 
 -- Dzen colours and height settings
 dzenStyle = " -h 12  -y '0' -fg '#777777' -bg '#222222'"
