@@ -187,7 +187,7 @@ au BufRead,BufNewFile *.gradle set filetype=groovy
 " ------------------------------------ Misc ------------------------------- {{{
 
 " Show trailing whitespace characters
-set listchars=tab:>-,trail:.,extends:→,precedes:←,eol:↩
+set listchars=tab:>-,trail:.
 
 set list
 nnoremap <silent> <leader>l :set list! <CR>
