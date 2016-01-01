@@ -1,16 +1,143 @@
-# Dotfiles
+#+TITLE: Dotfiles
+#+AUTHOR: Alex Carney
+#+PROPERTY: header-args :tangle no :noweb no-export :mkdirp yes
 
 This is a collection of configuration files for various applications that I use, it
 includes configurations for the following applications:
 
-- Awesome WM 
-- Compton 
+- Awesome WM
+- Compton
 - Conky
-- Git 
-- Termite 
-- Tmux 
-- Vim 
-- Xresources 
+- Git
+- Termite
+- Tmux
+- Vim
+- Xresources
 - Zsh
 
 I think I should consider adding an install script, especially for my zsh and vim configs.
+
+* Window Management
+
+** Compositing
+
+:PROPERTIES:
+:header-args: :tangle compton.conf
+:END:
+
+To get nice transitions and visual effects, we need to use a compositor - also
+by keeping this separate from the window manager, when we hop around we still
+have things looking nice. In this case I use ~Compton~ simply because it seems
+to be the most popular one out there.
+
+There are three main effects:
+
+- Shadows
+- Opacity
+- Fading
+
+So without further ado, let's get into it
+
+*** Shadows
+
+Shadows give windows a 3D feel to them by making them appear like they are
+floating above the background.
+
+So first of all we need to enable the shadows, but disable it for window types
+where it wouldn't look right - for example docks and notifications
+
+#+begin_src sh
+shadow = true;
+no-dock-shadow = true;
+no-dnd-shadow = true;
+clear-shadow = true;
+
+shadow-exclude = [ "n:e:Notification" ];
+shadow-ignore-shaped = true;
+#+end_src
+
+Once we have enabled the shadows, now would be a good time to adjust how they
+look.
+
+#+begin_src sh
+shadow-radius = 5;
+shadow-offset-x = 0;
+shadow-offset-y = 0;
+
+shadow-red = 0.0;
+shadow-green = 0.0;
+shadow-blue = 0.0;
+#+end_src
+
+*** Opacity
+
+Opacity allows us to make certain windows translucent so even when our screen
+is full of windows we can still see our magnificent backgrounds. The settings
+here would actually affect /all/ windows, which for anything other than editors
+or terminals I don't think looks very good. So instead I set everything to be
+by default opaque and make windows translucent on a per application basis.
+
+#+begin_src sh
+menu-opacity = 1.0;
+inactive-opacity = 1.0;
+active-opacity = 1.0;
+#+end_src
+
+Then for windows that are translucent, we say which types of windows we'd like
+to blur the background of.
+
+#+begin_src sh
+blur-background = true;
+blur-background-fixed = false;
+blur-background-exclude = [ "window_type = 'dock'", "window_type = 'desktop'"];
+#+end_src
+
+*** Fading
+
+Finally for the last effect, fading which will blend the transition between
+windows when you switch between them. Setting this up is pretty straightforward
+
+#+begin_src sh
+fading = true;
+fade-in-step = 0.03;
+fade-out-step = 0.03;
+fade-exclude = [ ];
+#+end_src
+
+
+*** Performance
+
+Finally these settings don't directly affect the look of the desktop but does
+affect how the effects are computed and how the compositor detects changes it
+needs to react to
+
+**** TODO: Explain these better
+#+begin_src sh
+backend = "glx";
+mark-wmwin-focused = true;
+mark-ovredir-focused = true;
+use-ewmh-active-win = false;
+detect-rounded-corners = true;
+detect-client-opacity = true;
+refresh-rate = 0;
+vsync = "none";
+dbe = false;
+paint-on-overlay = false;
+sw-opti = false;
+unredir-if-possible = false;
+focus-exclude = [ ];
+detect-transient = true;
+detect-client-leader = true;
+invert-color-include = [ ];
+glx-no-stencil = true;
+glx-copy-from-front = false;
+glx-swap-method = "undefined";
+#+end_src
+
+Finally some rules for tooltips
+#+begin_src sh
+wintypes:
+{
+    tooltip = {fade = true; shadow = false; opacity = 0.75; focus = true;};
+};
+#+end_src

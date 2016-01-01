@@ -40,5 +40,5 @@ alias tether="sudo netctl start phone"
 alias dotfiles="cd ~/.config/dotfiles"
 
 #---------------- Second Monitor Commands -----------------
-alias onsecond="xrandr --output VGA1 --mode 1360x768 --left-of LVDS1"
+alias onsecond="xrandr --output VGA1 --mode 1360x768 --right-of LVDS1"
 alias offsecond="xrandr --output VGA1 --off"

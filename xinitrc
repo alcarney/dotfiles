@@ -31,7 +31,7 @@ start_common ()
     xsetroot -cursor_name left_ptr
 
     # Set the background and enable compositing
-    feh --bg-fill "/home/alex/Media/Pictures/Wallpapers/bg.jpg"
+    feh --randomize --recursive --bg-scale "/home/alex/Media/Pictures/wallpapers/"
     compton&
 }
 
@@ -48,10 +48,15 @@ start_dwm ()
     exec dwm
 }
 
+start_i3 ()
+{
+    start_common
+    exec i3
+}
 
 start_xfce ()
 {
-    xrdb -merge ~/.Xresources
+#    xrdb -merge ~/.Xresources
     exec startxfce4
 }
 
@@ -69,12 +74,13 @@ start_bspwm()
 }
 
 # Default window manager
-session=${1:-dwm}
+session=${1:-i3}
 
 case $session in
     bspwm) start_bspwm;;
     emacs) start_emacs;;
     dwm) start_dwm;;
+    i3) start_i3;;
     xfce) start_xfce;;
     xmonad) start_xmonad;;
     *) echo "Please enter an option"

@@ -44,7 +44,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
-Plug 'Valloric/YouCompleteMe', {'do' : function('YCMBuild') }
+"Plug 'Valloric/YouCompleteMe', {'do' : function('YCMBuild') }
 Plug 'vim-scripts/a.vim'
 Plug 'vimwiki/vimwiki'
 
