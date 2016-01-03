@@ -107,6 +107,10 @@ set $wp8 8
 set $wp9 9
 set $wp0 10
 
+# Put specific programs on particular workspaces
+assign [class="Emacs"] $wp2
+assign [class="Firefox"] $wp3
+
 # switch to workspace
 bindsym $mod+1 workspace $wp1
 bindsym $mod+2 workspace $wp2
