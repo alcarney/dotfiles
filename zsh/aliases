@@ -42,3 +42,6 @@ alias dotfiles="cd ~/.config/dotfiles"
 #---------------- Second Monitor Commands -----------------
 alias onsecond="xrandr --output VGA1 --mode 1360x768 --right-of LVDS1"
 alias offsecond="xrandr --output VGA1 --off"
+
+alias sharescreen="xrandr --output VGA1 --mode 1360x768 --same-as LVDS1"
+alias hidescreen="xrandr --output VGA1 --off"
