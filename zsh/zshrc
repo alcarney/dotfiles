@@ -1,5 +1,7 @@
 # Basic zsh configuration
 
+unset GREP_OPTIONS
+
 # Import antigen
 source ~/.zsh-antigen/antigen.zsh
 
@@ -7,7 +9,6 @@ source ~/.zsh-antigen/antigen.zsh
 antigen use oh-my-zsh
 
 # Add bundles (from oh-my-zsh)
-antigen bundle autoenv
 antigen bundle git
 antigen bundle vi-mode
 
@@ -16,7 +17,7 @@ antigen bundle Tarrasch/zsh-bd
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Load a prompt theme
-antigen theme S1cK94/minimal minimal-path-git
+antigen theme frisk
 
 # Apply everything
 antigen apply
