@@ -111,6 +111,10 @@ set $wp0 10
 assign [class="Emacs"] $wp2
 assign [class="Firefox"] $wp3
 
+# Put Specific workspaces on specific monitors (if available)
+workspace $wp2 output LVDS1
+workspace $wp3 output VGA1
+
 # switch to workspace
 bindsym $mod+1 workspace $wp1
 bindsym $mod+2 workspace $wp2
