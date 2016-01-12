@@ -3,21 +3,36 @@
 #+PROPERTY: header-args :tangle no :noweb no-export :mkdirp yes
 
 This is a collection of configuration files for various applications that I use, it
-includes configurations for the following applications:
+includes configurations for the following:
 
-- Awesome WM
-- Compton
 - Conky
+- Editors
+  + Vim
 - Git
-- Termite
-- Tmux
-- Vim
+- Shell
+  + Termite
+  + Tmux
+  + Zsh
+- [[Window Management]]
+  + [[Awesome WM]]
+  + [[Compton]]
+  + [[i3wm]]
 - Xresources
-- Zsh
 
 I think I should consider adding an install script, especially for my zsh and vim configs.
 
 * Window Management
+
+** Awesome WM
+
+This introduced me to tiling window managers and minimal interfaces in
+general. However I no longer use this, I just keep my old config around for
+nostalgia purposes.
+
+** i3
+
+I use i3-gaps from the aur since I think having gaps between my windows when
+tiled looks nice.
 
 ** Compositing
 
@@ -103,7 +118,6 @@ fade-in-step = 0.03;
 fade-out-step = 0.03;
 fade-exclude = [ ];
 #+end_src
-
 
 *** Performance
 
