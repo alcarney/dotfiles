@@ -33,9 +33,4 @@ set foldlevelstart=99
 " Close all other folds except for the current one
 nnoremap <leader>z zMzvzz
 
-" Misc
-" Make the command key ; instead of :
-nnoremap ; :
-nnoremap : ;
-
 map <silent> <leader><CR> ;noh<CR>          " Clear search match highlights
