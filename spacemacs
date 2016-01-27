@@ -10,15 +10,38 @@
    dotspacemacs-configuration-layer-path '()
    ;; List of configuration layers to load. If it is the symbol `all' instead
    ;; of a list then all discovered layers will be installed.
-   dotspacemacs-configuration-layers '(auto-completion :variables
-                                                       auto-completion-use-tab-instead-of-enter t
-                                       auctex
+   dotspacemacs-configuration-layers '((auto-completion :variables
+                                                       auto-completion-use-tab-instead-of-enter t)
                                        c-c++
+                                       clojure
+                                       emoji
                                        erc
+                                       ess
+                                       deft
+                                       dockerfile
                                        git
+                                       github
                                        haskell
+                                       html
+                                       idris
+                                       ipython-notebook
+                                       javascript
+                                       latex
+                                       markdown
+                                       mu4e
                                        org
-                                       syntax-checking)
+                                       python
+                                       ruby
+                                       selectric
+                                       shell
+                                       spacemacs-layouts
+                                       spell-checking
+                                       spotify
+                                       syntax-checking
+                                       themes-megapack
+                                       version-control
+                                       vim-empty-lines
+                                       yaml)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -43,7 +66,7 @@ before layers configuration."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(monokai)
+   dotspacemacs-themes '(material)
    ;; If non nil the cursor color matches the state color.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
@@ -86,11 +109,11 @@ before layers configuration."
    ;; A value from the range (0..100), in increasing opacity, which describes
    ;; the transparency level of a frame when it's active or selected.
    ;; Transparency can be toggled through `toggle-transparency'.
-   dotspacemacs-active-transparency 70
+   dotspacemacs-active-transparency 85
    ;; A value from the range (0..100), in increasing opacity, which describes
    ;; the transparency level of a frame when it's inactive or deselected.
    ;; Transparency can be toggled through `toggle-transparency'.
-   dotspacemacs-inactive-transparency 70
+   dotspacemacs-inactive-transparency 85
    ;; If non nil unicode symbols are displayed in the mode line.
    dotspacemacs-mode-line-unicode-symbols t
    ;; If non nil smooth scrolling (native-scrolling) is enabled. Smooth
@@ -132,7 +155,6 @@ layers configuration."
   (add-hook 'haskell-mode-hook 'haskell-indentation-mode)
   (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
   (add-hook 'haskell-mode-hook 'haskell-decl-scan-mode)
-  (add-hook 'haskell-mode-hook 'haskell-doc-mode)
-)
+  (add-hook 'haskell-mode-hook 'haskell-doc-mode))
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
