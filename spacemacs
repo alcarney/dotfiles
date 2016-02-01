@@ -146,6 +146,11 @@ layers configuration."
         (save-buffer)))
   (add-hook 'evil-insert-state-exit-hook 'save-on-insert-exit)
 
+  ;; Text mode hooks
+  (setq fill-column 79)
+  (add-hook 'text-mode-hook 'auto-fill-mode)
+  (add-hook 'text-mode-hook #'(lambda () (flyspell-mode 1)))
+
   ;; Give me a nicer powerline separtor (>)
   (setq powerline-default-separator 'arrow)
 
