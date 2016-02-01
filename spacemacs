@@ -66,7 +66,7 @@ before layers configuration."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(material)
+   dotspacemacs-themes '(material material-light)
    ;; If non nil the cursor color matches the state color.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
@@ -91,7 +91,7 @@ before layers configuration."
    dotspacemacs-enable-paste-micro-state t
    ;; Guide-key delay in seconds. The Guide-key is the popup buffer listing
    ;; the commands bound to the current keystrokes.
-   dotspacemacs-guide-key-delay 0.4
+   dotspacemacs-guide-key-delay 0.6
    ;; If non nil a progress bar is displayed when spacemacs is loading. This
    ;; may increase the boot time on some systems and emacs builds, set it to
    ;; nil ;; to boost the loading time.
@@ -125,7 +125,6 @@ before layers configuration."
    ;; What do you want displayed on the startup page, choose any of the following
    ;; 'recents', 'bookmarks', or 'projects'
    dotspacemacs-startup-lists '(recents
-                                bookmarks
                                 projects)
    ;; If non nil advises quit functions to keep server open when quitting.
    dotspacemacs-persistent-server nil
@@ -141,12 +140,19 @@ before layers configuration."
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
 
+  ;; Autosave when we exit exit evil mode
+  (defun save-on-insert-exit ()
+    (if (buffer-file-name)
+        (save-buffer)))
+  (add-hook 'evil-insert-state-exit-hook 'save-on-insert-exit)
+
   ;; Give me a nicer powerline separtor (>)
   (setq powerline-default-separator 'arrow)
 
   ;; Enabling some toggles
   (global-centered-cursor-mode 1) ;; Keep the cursor in the centre of the screen
   (fancy-battery-mode 1)          ;; Battery status
+
 
   ;; Latex stuff
   (add-hook 'doc-view-mode-hook 'auto-revert-mode)
