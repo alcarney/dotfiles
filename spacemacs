@@ -140,6 +140,9 @@ before layers configuration."
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
 
+  ;; I like to have comments in italics
+  (set-face-italic 'font-lock-comment-face t)
+
   ;; Autosave when we exit exit evil mode
   (defun save-on-insert-exit ()
     (if (buffer-file-name)
@@ -148,8 +151,12 @@ layers configuration."
 
   ;; Text mode hooks
   (setq fill-column 79)
+  (add-hook 'text-mode-hook 'spacemacs/toggle-fill-column-indicator-on)
   (add-hook 'text-mode-hook 'auto-fill-mode)
   (add-hook 'text-mode-hook #'(lambda () (flyspell-mode 1)))
+
+  ;; Prog mode hooks
+  (add-hook 'prog-mode-hook 'spacemacs/toggle-fill-column-indicator-on)
 
   ;; Give me a nicer powerline separtor (>)
   (setq powerline-default-separator 'arrow)
