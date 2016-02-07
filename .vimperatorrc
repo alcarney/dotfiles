@@ -1,0 +1,17 @@
+" Disbale all gui things, including scrollbars
+set scrollbars=false
+set gui=none
+
+" Pressing <C-i> in a text entry field will launch vim to edit the text with
+set editor="vim"
+
+" Don't enter insert mode on page load
+set focuscontent=true
+
+" Use the alphabet rather than numbers for hints
+set hintchars="abcdefghijklmnopqrstuvwxyz"
+
+" Leader Mappings
+let mapleader=","
+
+map <Leader>t :tabgroups
