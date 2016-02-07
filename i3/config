@@ -108,7 +108,7 @@ set $wp9 9
 set $wp0 10
 
 # Put specific programs on particular workspaces
-assign [class="Emacs"] $wp2
+assign [class="Emacs"] $wp1
 assign [class="Firefox"] $wp3
 
 # Put Specific workspaces on specific monitors (if available)
