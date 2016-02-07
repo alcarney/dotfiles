@@ -96,9 +96,9 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # Workspace names
-set $wp1 "α"
-set $wp2 "β"
-set $wp3 "γ"
+set $wp1 "1:α"
+set $wp2 "2:β"
+set $wp3 "3:γ"
 set $wp4 4
 set $wp5 5
 set $wp6 6
@@ -108,11 +108,11 @@ set $wp9 9
 set $wp0 10
 
 # Put specific programs on particular workspaces
-assign [class="Emacs"] $wp2
+assign [class="Emacs"] $wp1
 assign [class="Firefox"] $wp3
 
 # Put Specific workspaces on specific monitors (if available)
-workspace $wp2 output LVDS1
+workspace $wp1 output LVDS1
 workspace $wp3 output VGA1
 
 # switch to workspace
@@ -215,6 +215,7 @@ bindsym $mod+m mode "mouse"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+        strip_workspace_numbers yes
         font pango:DejaVu Sans Mono 8
         status_command i3blocks
         tray_output primary
