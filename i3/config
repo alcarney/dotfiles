@@ -96,6 +96,7 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # Workspace names
+<<<<<<< HEAD
 set $wp1 "1:α"
 set $wp2 "2:β"
 set $wp3 "3:γ"
