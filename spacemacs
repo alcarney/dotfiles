@@ -77,9 +77,9 @@ before layers configuration."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
-   dotspacemacs-default-font '("DejaVu Sans Mono"
+   dotspacemacs-default-font '("Source Code Pro"
                                :size 12
-                               :weight light
+                               :weight semi-light
                                :width normal
                                :powerline-scale 1.1)
    ;; The leader key
@@ -104,7 +104,7 @@ before layers configuration."
    dotspacemacs-loading-progress-bar t
    ;; If non nil the frame is fullscreen when Emacs starts up.
    ;; (Emacs 24.4+ only)
-   dotspacemacs-fullscreen-at-startup nil
+   dotspacemacs-fullscreen-at-startup t
    ;; If non nil `spacemacs/toggle-fullscreen' will not use native fullscreen.
    ;; Use to disable fullscreen animations in OSX."
    dotspacemacs-fullscreen-use-non-native nil
@@ -148,6 +148,12 @@ layers configuration."
 
   ;; I like to have comments in italics
   (set-face-italic 'font-lock-comment-face t)
+
+
+  ;; Startup transparent
+  (set-frame-parameter (selected-frame) 'alpha
+                       (cons dotspacemacs-active-transparency
+                             dotspacemacs-inactive-transparency))
 
   ;; Autosave when we exit exit evil mode
   (defun save-on-insert-exit ()
