@@ -31,7 +31,7 @@ start_common ()
     xsetroot -cursor_name left_ptr
 
     # Set the background and enable compositing
-    feh --randomize --recursive --bg-scale "/home/alex/Media/Pictures/wallpapers/"
+    feh --randomize --recursive --bg-scale "/home/alex/Media/Wallpapers/"
     compton&
 }
 

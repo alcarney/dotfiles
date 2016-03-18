@@ -25,7 +25,7 @@ for_window [class="^.*"] border pixel 1
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 8
+font pango:DejaVu Sans Mono 4
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -99,7 +99,7 @@ bindsym $mod+a focus parent
 set $wp1 "1:α"
 set $wp2 "2:β"
 set $wp3 "3:γ"
-set $wp4 4
+set $wp4 "4:♪"
 set $wp5 5
 set $wp6 6
 set $wp7 7
@@ -110,6 +110,7 @@ set $wp0 10
 # Put specific programs on particular workspaces
 assign [class="Emacs"] $wp1
 assign [class="Firefox"] $wp3
+assign [class="Spotify"] $wp4
 
 # Put Specific workspaces on specific monitors (if available)
 workspace $wp1 output LVDS1
