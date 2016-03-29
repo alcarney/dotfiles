@@ -13,10 +13,10 @@ includes configurations for the following:
   + Termite
   + Tmux
   + Zsh
-- [[Window Management]]
-  + [[Awesome WM]]
-  + [[Compton]]
-  + [[i3wm]]
+- Window Management
+  + Awesome WM
+  + Compton
+  + i3wm
 - Xresources
 
 I think I should consider adding an install script, especially for my zsh and vim configs.

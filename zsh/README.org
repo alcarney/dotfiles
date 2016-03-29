@@ -1,0 +1,87 @@
+#+TITLE: ZSH Config
+#+AUTHOR: Alex Carney
+#+PROPERTY: header-args :tangle no :noweb no-export :mkdirp yes
+
+* Aliases
+
+:PROPERTIES:
+:header-args: :tangle aliases :padline yes
+:END:
+
+Here are all the aliases that I use, however apart from a select few I probably
+use these no where near often enough to justify defining them in the first
+place
+
+A few mplayer shortcuts, both enable colour output, the other one is just a
+quick way to start dvd playback
+#+begin_src sh
+alias mplayer="mplayer -msgcolor"
+alias playdvd="mplayer -msgcolor dvdnav:// -dvd-device /dev/sr0"
+#+end_src
+
+I use a program called ~atool~ which wraps many of the programs which handle
+compressed files. From tar to zips to lzips and 7z's this program has you
+covered. Since I am super lazy I have some aliases for extracting and
+compressing archives - never have to remember argument switches again!
+#+begin_src sh
+alias extract="atool -x"
+alias compress="atool -a"
+#+end_src
+
+I have been using arch linux for many years now and I have a number of
+shortcuts for commonly used ~pacman~ (Arch Linux's package manager) commands
+#+begin_src sh
+alias pacup="sudo pacman -Syu"         # Update packages
+alias pacin="sudo pacman -S"           # Install packages
+alias pacout="sudo pacman -Rs"         # Remove packages and any dependencies unique to that package
+alias paclean="sudo pacman -Sc"        # Clear cache of uninstalled packages
+alias pacis="pacman -Q"                # Check if package is installed
+alias pacinfo="pacman -Qi"             # Display info about installed package
+alias paclook="pacman -Ss"             # Search repositories for a package
+alias paclinfo="pacman -Si"            # Search repositiories for info about a package
+#+end_src
+
+I like lots of information whenever I ~ls~ inside a directory so I turn on many
+argument switches:
+
+    - ~F~ Append characters to filenames depending on what type they are e.g
+      ~/~ for directory names and ~*~ for executables etc.
+    - ~X~ Sort alphabetically
+    - ~L~ Deference symbolic links, i.e. show linked file size rather than size
+      of the link itself
+    - ~1~ One entry per line
+    - ~s~ Show the size of the file
+    - ~h~ Human readable sizes e.g. G M k etc.
+
+There are a few other options which are not enabled on my standard ~lst~
+command:
+
+    - ~A~ Show all files - including hidden ones - but not ~.~ and ~..~
+    - ~R~ Recursive list the contents of sub directories as well.
+#+begin_src sh
+#alias lst="ls -F -X  -L -1 -s -h " -> Now a function in zshrc
+alias lsta="ls -A -F -X -L -1 -s -h"
+alias lstr="ls -F -X -R -L -1 -s -h "
+alias lstra="ls -A -F -X -R -L -1 -s -h"
+
+#-----------------Making commands safer---------------------
+alias rm="rm -i"           # Prompt user to check each file that is removed
+alias cp="cp -i"           # Prompt when overwriting files
+alias mv="mv -i"           # Prompt when overwriting files
+
+#------------------------Misc-------------------------------
+alias iplayer="get_iplayer"
+alias cls="clear"
+alias maxpower="sudo cpupower frequency-set -g performance"
+alias minpower="sudo cpupower frequency-set -g powersave"
+alias tether="sudo netctl start phone"
+alias dotfiles="cd ~/.config/dotfiles"
+
+#---------------- Second Monitor Commands -----------------
+alias onsecond="xrandr --output VGA1 --mode 1360x768 --right-of LVDS1"
+alias offsecond="xrandr --output VGA1 --off"
+
+alias sharescreen="xrandr --output VGA1 --mode 1360x768 --same-as LVDS1"
+alias hidescreen="xrandr --output VGA1 --off"
+
+#+end_src
