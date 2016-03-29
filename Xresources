@@ -31,7 +31,7 @@ rofi.font:                           mono 8
 !!rofi.bg-active:                      #FDF6E3
 !!rofi.hlbg-active:                    #268BD2
 rofi.hlbg:                           #00ff00
-rofi.hlfg:                           #ffffff
+rofi.hlfg:                           #222222
 rofi.bc:                             #009900
 rofi.color-window:                   #fdf6e3,#002b36
 rofi.bw:                             5
