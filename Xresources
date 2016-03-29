@@ -19,12 +19,21 @@ URxvt.letterSpace:-2
 dzen2.font: xft:DejaVu Sans Mono:pixelsize=8
 
 !! rofi settings
-rofi.lines:    5
-rofi.eh:       2
-rofi.width:    100
-rofi.padding:  400
+rofi.lines:    12
+rofi.eh:       1
+rofi.width:    50
 rofi.terminal: urxvt
-!!rofi.font:     xft:DejaVu Sans Mono:pixelsize=12
+rofi.bg:       #000000
 rofi.fg:       #ffffff
-rofi.bg:       #222222
-rofi.opacity:  85
+rofi.font:                           mono 8
+!!rofi.fg-active:                      #00ff00
+!!rofi.hlfg-active:                    #00ff00
+!!rofi.bg-active:                      #FDF6E3
+!!rofi.hlbg-active:                    #268BD2
+rofi.hlbg:                           #00ff00
+rofi.hlfg:                           #ffffff
+rofi.bc:                             #009900
+rofi.color-window:                   #fdf6e3,#002b36
+rofi.bw:                             5
+rofi.fuzzy:                          true
+rofi.line-margin:                    2
