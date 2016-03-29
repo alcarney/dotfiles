@@ -105,7 +105,7 @@ before layers configuration."
    dotspacemacs-loading-progress-bar t
    ;; If non nil the frame is fullscreen when Emacs starts up.
    ;; (Emacs 24.4+ only)
-   dotspacemacs-fullscreen-at-startup t
+   dotspacemacs-fullscreen-at-startup nil
    ;; If non nil `spacemacs/toggle-fullscreen' will not use native fullscreen.
    ;; Use to disable fullscreen animations in OSX."
    dotspacemacs-fullscreen-use-non-native nil
@@ -151,12 +151,6 @@ layers configuration."
 
   ;; I like to have comments in italics
   (set-face-italic 'font-lock-comment-face t)
-
-
-  ;; Startup transparent
-  (set-frame-parameter (selected-frame) 'alpha
-                       (cons dotspacemacs-active-transparency
-                             dotspacemacs-inactive-transparency))
 
   ;; Autosave when we exit exit evil mode
   (defun save-on-insert-exit ()

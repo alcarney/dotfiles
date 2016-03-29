@@ -19,6 +19,9 @@ gaps inner 5
 # So that gaps actually look ok we need to disable titlebars
 for_window [class="^.*"] border pixel 1
 
+# Manage uzbl for me
+for_window [class="Uzbl-core"] focus child, layout stacking, focus
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 #font pango:monospace 8
@@ -39,6 +42,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Shift+Return exec uzbl-browser
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -93,20 +97,19 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+Shift+a focus child
 
 # Workspace names
-<<<<<<< HEAD
-set $wp1 "1:α"
-set $wp2 "2:β"
-set $wp3 "3:γ"
-set $wp4 "4:♪"
-set $wp5 5
-set $wp6 6
-set $wp7 7
-set $wp8 8
-set $wp9 9
-set $wp0 10
+set $wp1 "I"
+set $wp2 "II"
+set $wp3 "III"
+set $wp4 "IV"
+set $wp5 "V"
+set $wp6 "VI"
+set $wp7 "VII"
+set $wp8 "VIII"
+set $wp9 "IX"
+set $wp0 "X"
 
 # Put specific programs on particular workspaces
 assign [class="Emacs"] $wp1
@@ -214,11 +217,5 @@ mode "mouse" {
 
 bindsym $mod+m mode "mouse"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-        strip_workspace_numbers yes
-        font pango:DejaVu Sans Mono 8
-        status_command i3blocks
-        tray_output primary
-}
+exec --no-startup-id "/home/alex/.config/i3/bar.sh" 
+
