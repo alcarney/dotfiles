@@ -18,7 +18,7 @@ antigen bundle Tarrasch/zsh-bd
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Load a prompt theme
-antigen theme frisk
+antigen theme bureau
 
 # Apply everything
 antigen apply
