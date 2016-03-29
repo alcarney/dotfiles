@@ -1,0 +1,71 @@
+# i3status configuration file.
+# see "man i3status" for documentation.
+
+# It is important that this file is edited as UTF-8.
+# The following line should contain a sharp s:
+# ß
+# If the above line is not correctly displayed, fix your editor first!
+
+general {
+        colors = true
+        output_format = "lemonbar"
+        separator = " < "
+        color_separator = "#aaaaaa"
+        interval = 1
+}
+
+order += "disk /"
+order += "ethernet enp0s26u1u2"
+order += "ethernet enp0s25"
+order += "wireless wlp2s0"
+order += "battery 0"
+order += "load"
+order += "volume master"
+order += "tztime local"
+
+ethernet enp0s26u1u2 {
+        format_up = "E: %ip "
+        format_down = ""
+
+}
+
+ethernet enp0s25  {
+        format_up = "E: %ip (%speed)"
+        format_down = ""
+}
+
+wireless wlp2s0 {
+        format_up = "W: %ip "
+        format_down = ""
+}
+
+battery 0 {
+        format = "%status %percentage"
+}
+
+run_watch DHCP {
+        pidfile = "/var/run/dhclient*.pid"
+}
+
+run_watch VPN {
+        pidfile = "/var/run/vpnc/pid"
+}
+
+tztime local {
+        format = "%H:%M:%S %d/%m"
+}
+
+load {
+        format = "%1min"
+}
+
+disk "/" {
+        format = "%avail"
+}
+
+volume master {
+    format = "V: %volume"
+    format_muted = "V: M (%volume)"
+    device = "default"
+    mixer = "Master"
+}
