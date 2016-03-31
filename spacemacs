@@ -48,7 +48,7 @@
      vim-empty-lines
      yaml)
    ;; A list of packages I want installed, not provided by any layer above
-   dotspacemacs-additional-packages '(punpun-theme eink-theme)
+   dotspacemacs-additional-packages '(punpun-theme eink-theme mode-icons)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -83,8 +83,13 @@ before layers configuration."
                                :weight semi-light
                                :width normal
                                :powerline-scale 1.1)
+   ;; Set the editing style to vim
+   dotspacemacs-editing-style 'vim
    ;; The leader key
    dotspacemacs-leader-key "SPC"
+   ;; I think setting this allows me to user leader shortcuts even when in
+   ;; emacs mode and insert mode
+   dotspacemacs-emacs-leader-key "M-m"
    ;; Major mode leader key is a shortcut key which is the equivalent of
    ;; pressing `<leader> m`. Set it to `nil` to disable it.
    dotspacemacs-major-mode-leader-key ","
@@ -148,6 +153,7 @@ before layers configuration."
 layers configuration."
 
   (load-theme 'punpun-dark)
+  (mode-icons-mode)
 
   ;; I like to have comments in italics
   (set-face-italic 'font-lock-comment-face t)
