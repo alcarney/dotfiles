@@ -28,7 +28,7 @@ for_window [class="Uzbl-core"] focus child, layout stacking, focus
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 8
+font pango:DejaVu Sans Mono 4
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -93,7 +93,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+Shift+a focus child
 
 # Workspace names
 set $wp1 "I"
@@ -111,6 +111,7 @@ set $wp0 "X"
 assign [class="Emacs"] $wp1
 assign [class="Firefox"] $wp3
 assign [class="Uzbl-core"] $wp3
+assign [class="Spotify"] $wp4
 
 # Put Specific workspaces on specific monitors (if available)
 workspace $wp1 output LVDS1

@@ -17,6 +17,7 @@ general {
 order += "disk /"
 order += "ethernet enp0s26u1u2"
 order += "ethernet enp0s25"
+order += "ethernet enp10s0"
 order += "wireless wlp2s0"
 order += "battery 0"
 order += "load"
@@ -34,6 +35,11 @@ ethernet enp0s25  {
         format_down = ""
 }
 
+ethernet enp10s0  {
+        format_up = "E: %ip (%speed)"
+        format_down = ""
+}
+
 wireless wlp2s0 {
         format_up = "W: %ip "
         format_down = ""
@@ -41,6 +47,7 @@ wireless wlp2s0 {
 
 battery 0 {
         format = "%status %percentage"
+        format_down = ""
 }
 
 run_watch DHCP {

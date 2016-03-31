@@ -1,6 +1,7 @@
 # Basic zsh configuration
 
 unset GREP_OPTIONS
+unsetopt nomatch
 
 # Import antigen
 source ~/.zsh-antigen/antigen.zsh
@@ -17,16 +18,13 @@ antigen bundle Tarrasch/zsh-bd
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Load a prompt theme
-antigen theme frisk
+antigen theme bureau
 
 # Apply everything
 antigen apply
 
 # Load my list of aliases
 source $HOME/.zsh/aliases
-
-# Command not found packge finder
-source /usr/share/doc/pkgfile/command-not-found.zsh
 
 # Enable vi mode line editing
 bindkey -v

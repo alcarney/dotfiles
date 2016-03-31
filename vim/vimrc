@@ -10,7 +10,7 @@
 set nocompatible
 
 "{{{ ---------------------------------------------- Vim Plug ----------------------
-call plug#begin('~/.vim/plugged')
+"call plug#begin('~/.vim/plugged')
 
 " Function which decides whether or not to comile YCM libs or not
 " Taken straight from the vim-plug readme
@@ -26,29 +26,29 @@ function! YCMBuild(info)
     endif
 endfunction
 
-Plug 'altercation/vim-colors-solarized'
-Plug 'bling/vim-airline'
-Plug 'godlygeek/tabular',  {'on' : 'TagbarToggle'}
-Plug 'majutsushi/tagbar'
-Plug 'mhinz/vim-signify'
-Plug 'nathanaelkane/vim-indent-guides'
-Plug 'Raimondi/delimitMate'
-Plug 'samsonw/vim-task'
-Plug 'scrooloose/syntastic'
-Plug 'Shougo/unite.vim'
-Plug 'Shougo/unite-outline'
-Plug 'Shougo/vimproc.vim'
-Plug 'SirVer/ultisnips'
-Plug 'tpope/vim-abolish'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-vinegar'
+"Plug 'altercation/vim-colors-solarized'
+"Plug 'bling/vim-airline'
+"Plug 'godlygeek/tabular',  {'on' : 'TagbarToggle'}
+"Plug 'majutsushi/tagbar'
+"Plug 'mhinz/vim-signify'
+"Plug 'nathanaelkane/vim-indent-guides'
+"Plug 'Raimondi/delimitMate'
+"Plug 'samsonw/vim-task'
+"Plug 'scrooloose/syntastic'
+"Plug 'Shougo/unite.vim'
+"Plug 'Shougo/unite-outline'
+"Plug 'Shougo/vimproc.vim'
+"Plug 'SirVer/ultisnips'
+"Plug 'tpope/vim-abolish'
+"Plug 'tpope/vim-commentary'
+"Plug 'tpope/vim-fugitive'
+"Plug 'tpope/vim-surround'
+"Plug 'tpope/vim-vinegar'
 "Plug 'Valloric/YouCompleteMe', {'do' : function('YCMBuild') }
-Plug 'vim-scripts/a.vim'
-Plug 'vimwiki/vimwiki'
+"Plug 'vim-scripts/a.vim'
+"Plug 'vimwiki/vimwiki'
 
-call plug#end()
+"call plug#end()
 
 " Enable filetype plugins"
 filetype plugin indent on
@@ -74,9 +74,9 @@ set lazyredraw
 
 syntax enable                          " Turn on syntax highlighting
 
-let g:solarized_termtrans = 1
+"let g:solarized_termtrans = 1
 set background=dark
-colorscheme solarized
+"colorscheme solarized
 
 " Overriding vim's comment highlighting defintion to make it italic
 hi Comment term=italic cterm=italic
@@ -255,63 +255,63 @@ nnoremap <leader>m ;call Toggle_task_status()<CR>
 
 
 " Use fuzzy search by default
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
-call unite#filters#sorter_default#use(['sorter_rank'])
+"call unite#filters#matcher_default#use(['matcher_fuzzy'])
+"call unite#filters#sorter_default#use(['sorter_rank'])
 
 " Open a list of buffers
-nnoremap <leader>b :Unite -start-insert buffer<CR>
+"nnoremap <leader>b :Unite -start-insert buffer<CR>
 
 " Open a list of bookmarked files
-nnoremap <leader>bm :Unite -start-insert bookmark<CR>
+"nnoremap <leader>bm :Unite -start-insert bookmark<CR>
 
 " Netrw (File Browser)
-let g:netrw_liststlye=0
-let g:netrw_banner=0
-let g:netrw_altv=1              "Open files on the right please
-let g:netrw_preview=1
-let g:netrw_list_hide='^\..*$'  " Dont show hidden files
-let g:netrw_browse_split=0      " Open files in the same window
+"let g:netrw_liststlye=0
+"let g:netrw_banner=0
+"let g:netrw_altv=1              "Open files on the right please
+"let g:netrw_preview=1
+"let g:netrw_list_hide='^\..*$'  " Dont show hidden files
+"let g:netrw_browse_split=0      " Open files in the same window
 
 " Toggle the tagbar
-nnoremap <F8> :TagbarToggle<CR>
+"nnoremap <F8> :TagbarToggle<CR>
 
 " Fugitive commands (Git integration)
-nnoremap <F2> :Gstatus<CR>
-nnoremap <F3> :Gcommit<CR>
+"nnoremap <F2> :Gstatus<CR>
+"nnoremap <F3> :Gcommit<CR>
 
 " Make syntastic automatically open the error box when errors are detected
-let g:syntastic_auto_loc_list = 0
+"let g:syntastic_auto_loc_list = 0
 
 " Ultisnips settings
-let g:snips_author = "Alex Carney"
+"let g:snips_author = "Alex Carney"
 
-let g:ycm_add_preview_to_completeopt = 1 " Open the preview window when giving semantic completions
-let g:ycm_autoclose_preview_window_after_insertion = 1 " Close the preview after leaving insert mode
+"let g:ycm_add_preview_to_completeopt = 1 " Open the preview window when giving semantic completions
+"let g:ycm_autoclose_preview_window_after_insertion = 1 " Close the preview after leaving insert mode
 
 " Some Syntastic Integraion Settings
-let g:ycm_warning_symbol = '!'
-let g:ycm_error_symbol = '!!'
+"let g:ycm_warning_symbol = '!'
+"let g:ycm_error_symbol = '!!'
 
 
-let g:ycm_key_list_select_completion=['<tab>']
-let g:ycm_key_list_previous_completion=['<C-p>']
+"let g:ycm_key_list_select_completion=['<tab>']
+"let g:ycm_key_list_previous_completion=['<C-p>']
 
 " Since UltiSnips and YouCompleteMe fight over tab lets change that
-let g:UltiSnipsExpandTrigger="<s-tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-let g:UltiSnipsListSnippets="<c-s-tab>"
+"let g:UltiSnipsExpandTrigger="<s-tab>"
+"let g:UltiSnipsJumpForwardTrigger="<c-j>"
+"let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+"let g:UltiSnipsListSnippets="<c-s-tab>"
 
 " Airline
-set noshowmode " Since airline shows the mode for us we no longer need vim to show it as well
+"set noshowmode " Since airline shows the mode for us we no longer need vim to show it as well
 
-let g:airline#extensions#tabline#enabled = 1 " Display buffers for us when we are only using one tab, or all the tabs in a nice pretty format
-let g:airline_theme='badwolf'
+"let g:airline#extensions#tabline#enabled = 1 " Display buffers for us when we are only using one tab, or all the tabs in a nice pretty format
+"let g:airline_theme='badwolf'
 "let g:airline_powerline_fonts = 1
 
 " Vimwiki Settings
-let wiki = {}
-let wiki.path = '~/Documents/Wikis/'
+"let wiki = {}
+"let wiki.path = '~/Documents/Wikis/'
 
-let g:vimwiki_list = [wiki]
+"let g:vimwiki_list = [wiki]
 " }}}
