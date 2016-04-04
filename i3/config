@@ -107,10 +107,13 @@ set $wp8 "VIII"
 set $wp9 "IX"
 set $wp0 "X"
 
+# Set the default workspace layout to stacked
+workspace_layout stacked
+
 # Put specific programs on particular workspaces
 assign [class="Emacs"] $wp1
-assign [class="Firefox"] $wp3
-assign [class="Uzbl-core"] $wp3
+assign [class="Firefox"] $wp1
+assign [class="Uzbl-core"] $wp1
 assign [class="Spotify"] $wp4
 
 # Put Specific workspaces on specific monitors (if available)
