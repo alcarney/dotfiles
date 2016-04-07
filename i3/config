@@ -215,4 +215,4 @@ mode "mouse" {
 bindsym $mod+m mode "mouse"
 
 # Start lemonbar
-exec --no-startup-id "/home/alex/.config/i3/bar.sh | lemonbar -B '#222222'"
+#exec --no-startup-id "/home/alex/.config/i3/bar.sh | lemonbar -B '#222222'"

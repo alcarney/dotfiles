@@ -51,6 +51,7 @@ start_dwm ()
 start_i3 ()
 {
     start_common
+    /home/alex/.config/i3/bar.sh | lemonbar -B '#222222' | sh &
     exec i3
 }
 
