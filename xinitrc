@@ -30,9 +30,10 @@ start_common ()
     # Set the Cursor
     xsetroot -cursor_name left_ptr
 
-    # Set the background and enable compositing
+    # Set the background, enable compositing and notifications
     feh --randomize --recursive --bg-scale "/home/alex/Media/Wallpapers/"
     compton&
+    dunst&
 }
 
 # XMonad specfic stuff
