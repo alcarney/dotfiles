@@ -30,9 +30,10 @@ start_common ()
     # Set the Cursor
     xsetroot -cursor_name left_ptr
 
-    # Set the background and enable compositing
+    # Set the background, enable compositing and notifications
     feh --randomize --recursive --bg-scale "/home/alex/Media/Wallpapers/"
     compton&
+    dunst&
 }
 
 # XMonad specfic stuff
@@ -51,6 +52,7 @@ start_dwm ()
 start_i3 ()
 {
     start_common
+    /home/alex/.config/i3/bar.sh | lemonbar -B '#222222' | sh &
     exec i3
 }
 

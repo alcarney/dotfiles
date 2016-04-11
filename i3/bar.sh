@@ -9,8 +9,13 @@ lsep () {
     echo " %{F#aaaaaa}>%{F-} "
 }
 
+bg-change () {
+    cmd='feh --randomize --recursive --bg-scale "/home/alex/Media/Wallpapers/"'
+    echo " %{A:$cmd:} WP %{A} "
+}
+
 i3status | while :
 do
     read line
-    echo " $(ws) %{r} $line " || exit 1
+    echo " $(ws) %{r} $line $(bg-change) " || exit 1
 done
