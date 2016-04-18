@@ -24,6 +24,7 @@
      ess
      deft
      dockerfile
+     finance
      git
      github
      haskell
