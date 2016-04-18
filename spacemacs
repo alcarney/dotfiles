@@ -37,6 +37,7 @@
      mu4e
      org
      python
+     ranger
      ruby
      selectric
      shell
@@ -164,6 +165,20 @@ layers configuration."
     (if (buffer-file-name)
         (save-buffer)))
   (add-hook 'evil-insert-state-exit-hook 'save-on-insert-exit)
+
+  ;; Email!
+  (setq mu4e-maildir          "~/Maildir"
+        mu4e-sent-folder      "/[Gmail].Sent Mail"
+        mu4e-drafts-folder    "/[Gmail].Drafts"
+        mu4e-trash-folder     "/[Gmail].Bin"
+        mu4e-get-mail-command "offlineimap"
+        mu4e-show-images      t
+        mu4e-show-addresses   t)
+
+  ;; Email shortcuts
+  (setq mu4e-maildir-shortcuts
+        '(("/INBOX" . ?i)))
+
 
   ;; Text mode hooks
   (setq fill-column 79)
