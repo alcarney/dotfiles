@@ -196,6 +196,18 @@ layers configuration."
   (global-centered-cursor-mode 1) ;; Keep the cursor in the centre of the screen
   (fancy-battery-mode 1)          ;; Battery status
 
+  ;; Org Stuff
+  (spacemacs/set-leader-keys "mol" 'org-toggle-latex-fragment)
+
+  (setq org-list-allow-alphabetical t)
+  (setq org-latex-create-formula-image-program 'imagemagick)
+  (setq org-latex-packages-alist '(("" "tikz" t)))
+
+  (org-babel-do-load-languages 'org-babel-load-languages
+                               '((emacs-lisp . t)
+                                 (python . t)
+                                 (latex . t)
+                                 (sh . t)))
 
   ;; Latex stuff
   (add-hook 'doc-view-mode-hook 'auto-revert-mode)

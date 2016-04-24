@@ -17,9 +17,10 @@ general {
 order += "disk /"
 order += "ethernet enp0s26u1u2"
 order += "ethernet enp0s25"
-order += "ethernet enp10s0"
-order += "wireless wlp2s0"
+order += "ethernet enp0s20f0u1"
+order += "wireless wlp4s0"
 order += "battery 0"
+order += "battery 1"
 order += "load"
 order += "volume master"
 order += "tztime local"
@@ -35,18 +36,23 @@ ethernet enp0s25  {
         format_down = ""
 }
 
-ethernet enp10s0  {
-        format_up = "E: %ip (%speed)"
+ethernet enp0s20f0u1  {
+        format_up = "P: %ip (%speed)"
         format_down = ""
 }
 
-wireless wlp2s0 {
+wireless wlp4s0 {
         format_up = "W: %ip "
         format_down = ""
 }
 
 battery 0 {
-        format = "%status %percentage"
+        format = "%status %percentage %emptytime"
+        format_down = ""
+}
+
+battery 1 {
+        format = "%status %percentage %emptytime"
         format_down = ""
 }
 
