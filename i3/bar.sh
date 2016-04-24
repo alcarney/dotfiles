@@ -9,6 +9,16 @@ lsep () {
     echo " %{F#aaaaaa}>%{F-} "
 }
 
+datenow () {
+    datefmt="%d/%m"
+    echo "%{F#ff0000}$(date +$datefmt)%{F-}"
+}
+
+timenow () {
+    datefmt="%H:%M:%S"
+    echo "%{F#ff0000}$(date +$datefmt)%{F-}"
+}
+
 bg-change () {
     cmd='feh --randomize --recursive --bg-scale "/home/alex/Media/Wallpapers/"'
     echo " %{A:$cmd:} WP %{A} "
@@ -17,5 +27,5 @@ bg-change () {
 i3status | while :
 do
     read line
-    echo " $(ws) %{r} $line $(bg-change) " || exit 1
+    echo " $(ws) %{c} $(datenow) $(timenow) %{r} $line $(bg-change) " || exit 1
 done
