@@ -1,0 +1,20 @@
+#!/bin/bash
+
+case "$1" in
+    lock)
+        i3lock-fancy -g;;
+
+    suspend)
+        i3lock-fancy -g&
+        systemctl suspend;;
+
+    reboot)
+        systemctl reboot;;
+
+    shutdown)
+        systemctl poweroff;;
+
+    *)
+        echo "Usage: {lock|suspend|reboot|shutdown}"
+        exit 1
+esac
