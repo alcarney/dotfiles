@@ -1,12 +1,13 @@
 # {{{Application Shortcuts
 
-alias mplayer="mplayer -msgcolor"
-alias playdvd="mplayer -msgcolor dvdnav:// -dvd-device /dev/sr0"
-
 alias extract="atool -x"
 alias compress="atool -a"
 alias surft="tabbed surf -e"
 alias nv="nvim"
+
+# Dockerised apps - no guarantess they will be installed
+alias pandoc="docker run -it --rm haskell:pandoc"
+alias stylish-haskell="docker run -it --rm haskell:stylish-haskell"
 #}}}
 
 #{{{ Pacman Shortcuts
