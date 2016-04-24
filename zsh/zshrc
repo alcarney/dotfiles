@@ -23,21 +23,6 @@ antigen theme bureau
 # Apply everything
 antigen apply
 
-# Load my list of aliases
-source $HOME/.zsh/aliases
-
-# Enable vi mode line editing
-bindkey -v
-export KEYTIMEOUT=1
-
-# Setting the timezone
-TZ='Europe/London' ; export TZ
-
-# Set a number of environment variables
-export EDITOR='nvim'
-export PATH=$PATH:$HOME/bin:$HOME/.gem/ruby/2.3.0/bin:$HOME/.cabal/bin:$HOME/.cask/bin
-export LD_LIBRARY_PATH="/opt/java/jre/lib/amd64:/home/alex/.mylibs"
-export MANPAGER="/bin/sh -c \"col -b | vim -u '~/.vim/vimrc_man' -c 'set ft=man ts=8 nomod nolist nonu noma fdm=indent' -\""
 
 autoload -U colors && colors
 
