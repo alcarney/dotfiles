@@ -12,6 +12,9 @@ set nocompatible
 " Enable filetype plugins"
 filetype plugin indent on
 
+" Stop logging please
+set viminfo=
+
 " Set the leader character to ,
 let mapleader = ','
 
@@ -200,5 +203,3 @@ nnoremap <leader>sp [s                    " Search for the previous bad word
 
 
 " }}}
-
-
