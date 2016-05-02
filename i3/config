@@ -93,6 +93,13 @@ bindsym $mod+a focus parent
 # focus the child container
 bindsym $mod+Shift+a focus child
 
+# Colors                 border      backgr      text        indicator   child_border
+client.focused           #ff0000     #222222     #ffffff     #00ffff     #ffffff
+client.unfocused         #333333     #222222     #888888     #00ffff     #ff0000
+client.focused_inactive  #ff0000     #222222     #ffffff     #00ffff     #ff0000
+client.urgent            #000000     #440000     #888888     #00ffff     #ff0000
+
+
 # Workspace names
 set $wp1 "I"
 set $wp2 "II"
@@ -213,6 +220,3 @@ mode "mouse" {
 }
 
 bindsym $mod+m mode "mouse"
-
-# Start lemonbar
-#exec --no-startup-id "/home/alex/.config/i3/bar.sh | lemonbar -B '#222222'"
