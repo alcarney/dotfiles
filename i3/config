@@ -93,6 +93,13 @@ bindsym $mod+a focus parent
 # focus the child container
 bindsym $mod+Shift+a focus child
 
+# Colors                 border      backgr      text        indicator   child_border
+client.focused           #ff0000     #222222     #ffffff     #00ffff     #ffffff
+client.unfocused         #333333     #222222     #888888     #00ffff     #ff0000
+client.focused_inactive  #ff0000     #222222     #ffffff     #00ffff     #ff0000
+client.urgent            #000000     #440000     #888888     #00ffff     #ff0000
+
+
 # Workspace names
 set $wp1 "I"
 set $wp2 "II"
@@ -128,6 +135,9 @@ bindsym $mod+2 workspace $wp2
 #bindsym $mod+8 workspace $wp8
 #bindsym $mod+9 workspace $wp9
 #bindsym $mod+0 workspace $wp0
+
+# Pressin one of the above for a second time will take me back to where I came from
+workspace_auto_back_and_forth yes
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $wp1
@@ -213,6 +223,3 @@ mode "mouse" {
 }
 
 bindsym $mod+m mode "mouse"
-
-# Start lemonbar
-#exec --no-startup-id "/home/alex/.config/i3/bar.sh | lemonbar -B '#222222'"
