@@ -196,6 +196,9 @@ layers configuration."
   (global-centered-cursor-mode 1) ;; Keep the cursor in the centre of the screen
   (fancy-battery-mode 1)          ;; Battery status
 
+  ;; Deft Config
+  (setq deft-use-filename-as-title t)
+
   ;; Org Stuff
   (spacemacs/set-leader-keys "mol" 'org-toggle-latex-fragment)
 

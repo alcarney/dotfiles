@@ -6,6 +6,7 @@ case "$1" in
 
     suspend)
         i3lock-fancy -g&
+        sleep 1
         systemctl suspend;;
 
     reboot)

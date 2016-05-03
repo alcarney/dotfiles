@@ -9,12 +9,13 @@
 general {
         colors = true
         output_format = "lemonbar"
-        separator = " < "
+        separator = "  "
         color_separator = "#aaaaaa"
         interval = 1
 }
 
 order += "disk /"
+order += "disk /home"
 order += "ethernet enp0s26u1u2"
 order += "ethernet enp0s25"
 order += "ethernet enp0s20f0u1"
@@ -72,7 +73,11 @@ load {
 }
 
 disk "/" {
-        format = "%avail"
+        format = "/: %avail"
+}
+
+disk "/home" {
+        format = "/home: %avail"
 }
 
 volume master {

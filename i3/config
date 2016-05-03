@@ -114,8 +114,8 @@ assign [class="Firefox"] $wp1
 assign [class="Uzbl-core"] $wp1
 
 # Put Specific workspaces on specific monitors (if available)
-workspace $wp1 output LVDS1
-workspace $wp3 output VGA1
+workspace $wp1 output eDP-1
+workspace $wp2 output HDMI-2
 
 # switch to workspace
 bindsym $mod+1 workspace $wp1
