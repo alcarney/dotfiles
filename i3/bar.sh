@@ -24,8 +24,13 @@ bg-change () {
     echo " %{A:$cmd:} WP %{A} "
 }
 
+pow () {
+    cmd='/home/alex/bin/i3exit suspend'
+    echo " %{A:$cmd:} L %{A} "
+}
+
 i3status | while :
 do
     read line
-    echo " $(ws) %{c} $(datenow) $(timenow) %{r} $line $(bg-change) " || exit 1
+    echo " $(ws) %{c} $(datenow) $(timenow) %{r} $line $(bg-change) $(pow)" || exit 1
 done
