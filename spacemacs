@@ -50,7 +50,10 @@
      vim-empty-lines
      yaml)
    ;; A list of packages I want installed, not provided by any layer above
-   dotspacemacs-additional-packages '(punpun-theme eink-theme mode-icons)
+   dotspacemacs-additional-packages '(darkokai-theme
+                                      eink-theme
+                                      mode-icons
+                                      punpun-theme)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -154,7 +157,7 @@ before layers configuration."
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
 
-  (load-theme 'punpun-dark)
+  (load-theme 'darkokai)
   (mode-icons-mode)
 
   ;; I like to have comments in italics
@@ -230,7 +233,7 @@ layers configuration."
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("7beac4a68f03662b083c9c2d4f1d7f8e4be2b3d4b0d904350a9edf3cf7ce3d7f" default))))
+    ("0f98f9c2f1241c3b6227af48dc96e708ec023dd68363edb5d36dc7beaad64c23" "7beac4a68f03662b083c9c2d4f1d7f8e4be2b3d4b0d904350a9edf3cf7ce3d7f" default))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
