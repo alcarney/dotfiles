@@ -34,6 +34,7 @@ start_common ()
     feh --randomize --recursive --bg-scale "/home/alex/Media/Wallpapers/"
     compton&
     dunst&
+    stalonetray&
 }
 
 # XMonad specfic stuff
@@ -52,7 +53,7 @@ start_dwm ()
 start_i3 ()
 {
     start_common
-    /home/alex/.config/i3/bar.sh | lemonbar -B '#222222' | sh &
+    /home/alex/.config/i3/bar.sh | lemonbar -b -B '#222222' | sh &
     exec i3
 }
 

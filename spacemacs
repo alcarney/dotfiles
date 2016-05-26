@@ -18,7 +18,8 @@
                       auto-completion-enable-help-tooltip      t
                       auto-completion-sort-by-usage            t)
      c-c++
-     clojure
+     (clojure :variables
+              clojure-enable-fancify-symbols t)
      emoji
      erc
      ess
