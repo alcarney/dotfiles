@@ -52,6 +52,7 @@
      yaml)
    ;; A list of packages I want installed, not provided by any layer above
    dotspacemacs-additional-packages '(darkokai-theme
+                                      docker
                                       eink-theme
                                       mode-icons
                                       punpun-theme)
@@ -234,7 +235,7 @@ layers configuration."
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("0f98f9c2f1241c3b6227af48dc96e708ec023dd68363edb5d36dc7beaad64c23" "7beac4a68f03662b083c9c2d4f1d7f8e4be2b3d4b0d904350a9edf3cf7ce3d7f" default))))
+    ("1a53efc62256480d5632c057d9e726b2e64714d871e23e43816735e1b85c144c" "0f98f9c2f1241c3b6227af48dc96e708ec023dd68363edb5d36dc7beaad64c23" "7beac4a68f03662b083c9c2d4f1d7f8e4be2b3d4b0d904350a9edf3cf7ce3d7f" default))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
