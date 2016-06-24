@@ -101,8 +101,8 @@ client.urgent            #000000     #440000     #888888     #00ffff     #ffffff
 
 
 # Workspace names
-set $wp1 "I"
-set $wp2 "II"
+set $wp1 1
+set $wp2 2
 #set $wp3 "III"
 #set $wp4 "IV"
 #set $wp5 "V"
