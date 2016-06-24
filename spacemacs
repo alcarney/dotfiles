@@ -184,6 +184,9 @@ layers configuration."
   (setq mu4e-maildir-shortcuts
         '(("/INBOX" . ?i)))
 
+  ;; TMPL files
+  (add-to-list 'auto-mode-alist '("\\.tmpl\\'" . web-mode))
+
 
   ;; Text mode hooks
   (setq fill-column 79)
@@ -225,6 +228,7 @@ layers configuration."
   (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
   (add-hook 'haskell-mode-hook 'haskell-decl-scan-mode)
   (add-hook 'haskell-mode-hook 'haskell-doc-mode))
+
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
