@@ -80,7 +80,7 @@ before layers configuration."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(material punpun-dark punpun-light)
+   dotspacemacs-themes '(spacemacs-dark)
    ;; If non nil the cursor color matches the state color.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
@@ -159,7 +159,7 @@ before layers configuration."
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
 
-  (load-theme 'darkokai)
+  ;;(load-theme 'darkokai)
   (mode-icons-mode)
 
   ;; I like to have comments in italics
@@ -198,7 +198,7 @@ layers configuration."
   (add-hook 'prog-mode-hook 'spacemacs/toggle-fill-column-indicator-on)
 
   ;; Give me a nicer powerline separtor (>)
-  (setq powerline-default-separator 'arrow)
+  (setq powerline-default-separator 'bar)
 
   ;; Enabling some toggles
   (global-centered-cursor-mode 1) ;; Keep the cursor in the centre of the screen
