@@ -11,6 +11,7 @@ antigen use oh-my-zsh
 
 # Add bundles (from oh-my-zsh)
 antigen bundle git
+antigen bundle taskwarrior
 antigen bundle vi-mode
 
 # Add bundles (from other sources)
