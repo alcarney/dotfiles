@@ -24,6 +24,8 @@
      emoji
      erc
      ess
+     (dash :variables
+           dash-helm-dash-docset-path "/home/alex/.local/share/Zeal/Zeal/docsets") 
      deft
      dockerfile
      finance
@@ -207,6 +209,9 @@ layers configuration."
 
   ;; Deft Config
   (setq deft-use-filename-as-title t)
+
+  ;; Helm Dash
+  (setq helm-dash-browser-func 'eww)
 
   ;; Org Stuff
   (spacemacs/set-leader-keys "mol" 'org-toggle-latex-fragment)
