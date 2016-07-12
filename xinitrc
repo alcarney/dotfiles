@@ -21,7 +21,7 @@ start_common ()
     xset b off
 
     # Remap CAPS to ESC
-    setxkbmap -option caps:escape
+    setxkbmap -layout gb -option caps:escape
 
     # Disable those annoying "forward" and "back" keys on my laptop
     xmodmap -e "keycode 166="
