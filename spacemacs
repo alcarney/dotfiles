@@ -40,6 +40,7 @@
      markdown
      mu4e
      org
+     pandoc
      python
      ranger
      ruby
