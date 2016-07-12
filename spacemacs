@@ -20,6 +20,7 @@
      c-c++
      (clojure :variables
               clojure-enable-fancify-symbols t)
+     elm
      emoji
      erc
      ess
