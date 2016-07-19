@@ -26,40 +26,42 @@
      ess
      (dash :variables
            dash-helm-dash-docset-path "/home/alex/.local/share/Zeal/Zeal/docsets") 
-     deft
      dockerfile
-     finance
      git
      github
+     gtags
      haskell
      html
+     (ibuffer :variables
+              ibuffer-group-buffers-by 'projects)
      idris
      ipython-notebook
      javascript
      latex
      markdown
-     mu4e
      org
      pandoc
      python
      ranger
      ruby
      selectric
+     semantic
      shell
      spacemacs-layouts
      spell-checking
      spotify
      syntax-checking
      themes-megapack
+     theming
      version-control
      vim-empty-lines
      yaml)
    ;; A list of packages I want installed, not provided by any layer above
-   dotspacemacs-additional-packages '(darkokai-theme
-                                      docker
-                                      eink-theme
+   dotspacemacs-additional-packages '(docker
+                                      fountain-mode
+                                      metalheart-theme
                                       mode-icons
-                                      punpun-theme)
+                                      )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -111,7 +113,7 @@ before layers configuration."
    dotspacemacs-command-key ":"
    ;; If non nil the paste micro-state is enabled. While enabled pressing `p`
    ;; several times cycle between the kill ring content.
-   dotspacemacs-enable-paste-micro-state nil
+   dotspacemacs-enable-paste-micro-state t
    ;; Guide-key delay in seconds. The Guide-key is the popup buffer listing
    ;; the commands bound to the current keystrokes.
    dotspacemacs-guide-key-delay 1
@@ -163,36 +165,23 @@ before layers configuration."
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
 
-  ;;(load-theme 'darkokai)
   (mode-icons-mode)
 
   ;; I like to have comments in italics and grey 
-  (set-face-italic 'font-lock-comment-face t)
-  (set-face-foreground 'font-lock-comment-face "#666666")
-  (set-face-background 'font-lock-comment-face "#292b2e")
+  (setq theming-modifications '(
+                                (metalheart (font-lock-comment-face :foreground "#666666"
+                                                                    :background "#1d272a"
+                                                                    :slant italic))
+                                (spacemacs-dark (font-lock-comment-face :slant italic
+                                                                        :foreground "#666666"
+                                                                        :background "#292b2e"))))
+  (spacemacs/update-theme)
 
   ;; Autosave when we exit exit evil mode
   (defun save-on-insert-exit ()
     (if (buffer-file-name)
         (save-buffer)))
   (add-hook 'evil-insert-state-exit-hook 'save-on-insert-exit)
-
-  ;; Email!
-  (setq mu4e-maildir          "~/Maildir"
-        mu4e-sent-folder      "/[Gmail].Sent Mail"
-        mu4e-drafts-folder    "/[Gmail].Drafts"
-        mu4e-trash-folder     "/[Gmail].Bin"
-        mu4e-get-mail-command "offlineimap"
-        mu4e-show-images      t
-        mu4e-show-addresses   t)
-
-  ;; Email shortcuts
-  (setq mu4e-maildir-shortcuts
-        '(("/INBOX" . ?i)))
-
-  ;; TMPL files
-  (add-to-list 'auto-mode-alist '("\\.tmpl\\'" . web-mode))
-
 
   ;; Text mode hooks
   (setq fill-column 79)
@@ -246,13 +235,24 @@ layers configuration."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(Linum-format "%7i ")
  '(custom-safe-themes
    (quote
-    ("1a53efc62256480d5632c057d9e726b2e64714d871e23e43816735e1b85c144c" "0f98f9c2f1241c3b6227af48dc96e708ec023dd68363edb5d36dc7beaad64c23" "7beac4a68f03662b083c9c2d4f1d7f8e4be2b3d4b0d904350a9edf3cf7ce3d7f" default))))
+    ("9e147cee63e1a2a6b16021e0645bc66c633c42b849e78b8e295df4b7fe55c56a" "1a53efc62256480d5632c057d9e726b2e64714d871e23e43816735e1b85c144c" "0f98f9c2f1241c3b6227af48dc96e708ec023dd68363edb5d36dc7beaad64c23" "7beac4a68f03662b083c9c2d4f1d7f8e4be2b3d4b0d904350a9edf3cf7ce3d7f" default)))
+ '(fci-rule-character-color "#202020")
+ '(fringe-mode 4 nil (fringe))
+ '(main-line-color1 "#1E1E1E")
+ '(main-line-color2 "#111111")
+ '(main-line-separator-style (quote chamfer))
+ '(paradox-github-token t)
+ '(powerline-color1 "#1E1E1E")
+ '(powerline-color2 "#111111")
+ '(selectric-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
- '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))
+ '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil))))
+ '(font-lock-comment-face ((t (:slant italic)))))
