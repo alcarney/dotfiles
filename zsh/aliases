@@ -34,6 +34,7 @@ alias mv="mv -i"           # Prompt when overwriting files
 
 #------------------------Misc-------------------------------
 alias iplayer="get_iplayer"
+alias iradio="get_iplayer --type=radio"
 alias cls="clear"
 alias maxpower="sudo cpupower frequency-set -g performance"
 alias minpower="sudo cpupower frequency-set -g powersave"
