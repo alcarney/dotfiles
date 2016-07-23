@@ -1,5 +1,7 @@
 tmux/plugins
 vim/plugged
 vim/autoload
+nvim/plugged
+nvim/autoload
 tmux/sidebar
 tmux/resurrect
