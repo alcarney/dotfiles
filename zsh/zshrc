@@ -1,5 +1,10 @@
 # Basic zsh configuration
 
+# Fix tmux PATH issue
+if [[ $TERM = "tmux-256color" ]]; then
+    source ~/.zshenv
+fi
+
 unset GREP_OPTIONS
 unsetopt nomatch
 
