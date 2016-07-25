@@ -1,4 +1,7 @@
-call plug#begin('.config/nvim/plugged')
+
+let s:path = expand('~/.config/nvim/plugged')
+
+call plug#begin(s:path)
 
 " Interface Plugins
 Plug 'jdkanani/vim-material-theme'
