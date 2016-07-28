@@ -19,6 +19,19 @@ Plug 'neomake/neomake'
 
 call plug#end()
 
+" ----------------------------- General Config ------------------
+
+" Tabs and Spaces
+set expandtab
+set smarttab
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+
+" But make an exception for makefiles
+autocmd FileType make setlocal noexpandtab
+
 " Colors
 syntax enable
 set background=dark
