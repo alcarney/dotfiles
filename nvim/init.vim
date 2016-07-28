@@ -1,18 +1,32 @@
+" Set the path the plugins will live in
+let s:path = expand('~/.config/nvim/')
+let s:config = s:path . 'init.vim'
 
-let s:path = expand('~/.config/nvim/plugged')
-
-call plug#begin(s:path)
+" Invoke vim-plug
+call plug#begin(s:path . 'plugged')
 
 " Interface Plugins
 Plug 'jdkanani/vim-material-theme'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-Plug 'Shougo/unite.vim'
+" Helmish
+Plug 'junegunn/fzf', {'dir' : '~/.fzf', 'do' : './install --all'}
+Plug 'junegunn/fzf.vim'
 
 " Generic editing plugins
 Plug 'tpope/vim-surround'
 Plug 'neomake/neomake'
+
+" Completion
+function! DoRemote(arg)
+    UpdateRemotePlugins
+endfunction
+Plug 'Shougo/deoplete.nvim' , { 'do': function('DoRemote') }
+
+" Git
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 
 " Nice icons
 " Plug 'ryanoasis/vim-devicons'  -- FIXME: Icons are only squares
@@ -37,11 +51,38 @@ syntax enable
 set background=dark
 colorscheme material-theme
 
+set list
+set listchars=tab:».,trail:·,extends:→,precedes:←
+
 " Keys
 let mapleader = ' '
-nnoremap <Leader>b :buffers<CR>
+nnoremap <leader>c             :set list!<CR>
+nnoremap <leader>w             :w<CR>
+nnoremap <leader><tab>         :b#<CR>
+nnoremap <leader>bd            :bd<CR>
+
+"----------------------------- Auto Commands ---------------------
+
+" Automatically set the working dir to the current file
+autocmd BufEnter * silent! lcd %:p:h
+
+" Trim trailing whitespace on save.
+autocmd BufWritePre <buffer> %s/\s\+$//e
+
+" ------------------- Plugins -----------------------------------
 
 " Airline config
 let g:airline_theme='base16color'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+
+" Deoplete
+let g:deoplete#enable_at_startup = 1
+
+" Fugitive
+nnoremap <leader>gs       :Gstatus<CR>
+
+" FZF Config
+nnoremap <leader>b   :Buffers<CR>
+nnoremap <leader>f   :Files ~/<CR>
+nnoremap <leader>pf  :GFiles<CR>

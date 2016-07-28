@@ -61,3 +61,5 @@ function precmd()  # Prints an extra newline between commands which i think look
 {
 	echo
 }
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
