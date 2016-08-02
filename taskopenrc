@@ -1,3 +1,4 @@
 EDITOR=nvim
 NOTES_FOLDER=$HOME/.task/notes/
 NOTES_EXT=.rst
+NOTES_REGEX=notes
