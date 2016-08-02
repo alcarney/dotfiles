@@ -19,6 +19,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'neomake/neomake'
+Plug 'dhruvasagar/vim-table-mode'
 
 " Completion
 function! DoRemote(arg)
@@ -103,6 +104,13 @@ nnoremap <leader>pf  :GFiles<CR>
 " Git Gutter
 nnoremap <c-j> <Plug>GitGutterNextHunk
 nnoremap <c-k> <Plug>GitGutterPrevHunk
+
+" Table Mode
+nnoremap <leader>tm    :TableModeToggle<CR>
+nnoremap <leader>mt    :Tableize<CR>
+let g:table_mode_corner="+"
+let g:table_mode_fillchar="="
+
 
 " Tagbar
 nnoremap <leader>t :TagbarToggle<CR>
