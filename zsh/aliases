@@ -6,8 +6,8 @@ alias surft="tabbed surf -e"
 alias nv="nvim"
 alias db="dropbox-cli"
 
-# Dockerised apps - no guarantess they will be installed
-alias stylish-haskell="docker run -it --rm haskell:stylish-haskell"
+alias to="taskopen"
+
 #}}}
 
 #{{{ Pacman Shortcuts

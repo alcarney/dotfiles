@@ -62,4 +62,14 @@ function precmd()  # Prints an extra newline between commands which i think look
 	echo
 }
 
+function ts() # Handles sync and git backup of taskwarrior tasks
+{
+    cd $HOME/.task/
+    task sync
+    git add .
+    git commit -m "Sync and backup"
+    git push origin master
+    cd -
+}
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
