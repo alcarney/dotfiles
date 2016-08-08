@@ -40,7 +40,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec st -e tmux -2
-bindsym $mod+Shift+Return exec uzbl-browser
+bindsym $mod+Shift+Return exec st
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -50,9 +50,9 @@ bindsym $mod+Shift+q kill
 #     - Opening ssh connections
 #     - Switching windows
 #     - Taking screenshots/screencasts (via teiler)
-bindsym $mod+d exec rofi -show run 
-bindsym $mod+s exec rofi -show ssh 
-bindsym $mod+f exec rofi -show window 
+bindsym $mod+d exec rofi -show run
+bindsym $mod+s exec rofi -show ssh
+bindsym $mod+f exec rofi -show window
 bindsym Print exec teiler
 
 # change focus

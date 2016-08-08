@@ -7,19 +7,19 @@ call plug#begin(s:path . 'plugged')
 
 " Interface Plugins
 Plug 'jdkanani/vim-material-theme'
+Plug 'majutsushi/tagbar' {'on' : 'TagbarToggle'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'majutsushi/tagbar'
 
 " Helmish
 Plug 'junegunn/fzf', {'dir' : '~/.fzf', 'do' : './install --all'}
 Plug 'junegunn/fzf.vim'
 
 " Generic editing plugins
+Plug 'dhruvasagar/vim-table-mode' {'for' : ['rst', 'markdown']}
+Plug 'neomake/neomake'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
-Plug 'neomake/neomake'
-Plug 'dhruvasagar/vim-table-mode'
 
 " Completion and snippets
 function! DoRemote(arg)
@@ -51,6 +51,7 @@ set softtabstop=4
 syntax enable
 set background=dark
 colorscheme material-theme
+highlight Comment cterm=italic
 
 set list
 set listchars=tab:».,trail:·,extends:→,precedes:←
@@ -68,11 +69,11 @@ nnoremap <leader>bd            :bd<CR>
 
 "----------------------------- Auto Commands ---------------------
 
-" Automatically set the working dir to the current file
-autocmd BufEnter * silent! lcd %:p:h
-
-" Trim trailing whitespace on save.
-autocmd BufWritePre <buffer> %s/\s\+$//e
+augroup general
+    autocmd!
+    autocmd BufEnter * silent! lcd %:p:h         " Automatically set the working dir to the current file
+    autocmd BufWritePre * %s/\s\+$//e            " Trim trailing whitespace on save.
+augroup END
 
 " ----------------------------- File Types -----------------------
 
@@ -86,12 +87,18 @@ augroup wordwrap
 augroup END
 
 " Make
-autocmd FileType make setlocal noexpandtab
+augroup make_filetype
+    autocmd!
+    autocmd FileType make setlocal noexpandtab
+augroup END
 
 " R
-autocmd FileType r inoremap <buffer> _  <-
-autocmd FileType r inoremap <buffer> __ _
-autocmd FileType r set tabstop=2
+augroup r_filetype
+    autocmd!
+    autocmd FileType r inoremap <buffer> _  <-
+    autocmd FileType r inoremap <buffer> __ _
+    autocmd FileType r setlocal tabstop=2 shiftwidth=2 softtabstop=2
+augroup END
 
 " ------------------- Plugins -----------------------------------
 
@@ -117,6 +124,12 @@ nnoremap <leader>pf  :GFiles<CR>
 nnoremap <c-j> <Plug>GitGutterNextHunk
 nnoremap <c-k> <Plug>GitGutterPrevHunk
 
+" Neomake
+augroup neomake
+    autocmd!
+    autocmd BufWritePost * Neomake
+augroup END
+
 " Table Mode
 nnoremap <leader>tm    :TableModeToggle<CR>
 nnoremap <leader>mt    :Tableize<CR>
@@ -125,6 +138,14 @@ let g:table_mode_fillchar="="
 
 " Tagbar
 nnoremap <leader>t :TagbarToggle<CR>
+let g:tagbar_type_r = {
+    \ 'ctagstype' : 'r',
+    \ 'kinds'     : [
+        \ 'f:Functions',
+        \ 'g:GlobalVariables',
+        \ 'v:FunctionVariables',
+    \ ]
+\ }
 
 " UltiSnips
 let g:UltiSnipsExpandTrigger="<tab>"
