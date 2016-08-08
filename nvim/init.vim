@@ -6,8 +6,8 @@ let s:config = s:path . 'init.vim'
 call plug#begin(s:path . 'plugged')
 
 " Interface Plugins
-Plug 'jdkanani/vim-material-theme'
-Plug 'majutsushi/tagbar' {'on' : 'TagbarToggle'}
+Plug 'sickill/vim-monokai'
+Plug 'majutsushi/tagbar'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
@@ -16,7 +16,8 @@ Plug 'junegunn/fzf', {'dir' : '~/.fzf', 'do' : './install --all'}
 Plug 'junegunn/fzf.vim'
 
 " Generic editing plugins
-Plug 'dhruvasagar/vim-table-mode' {'for' : ['rst', 'markdown']}
+Plug 'dhruvasagar/vim-table-mode', {'for' : ['rst', 'markdown']}
+Plug 'jiangmiao/auto-pairs', {'for' : ['r']}
 Plug 'neomake/neomake'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
@@ -50,7 +51,7 @@ set softtabstop=4
 " Colors
 syntax enable
 set background=dark
-colorscheme material-theme
+colorscheme monokai
 highlight Comment cterm=italic
 
 set list
