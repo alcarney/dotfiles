@@ -2,12 +2,15 @@
     email = alcarneyorg@gmail.com
     name = Alex Carney
 
+[alias]
+    hist = log --branches --remotes --tags --graph --oneline --decorate
+
 [core]
-    editor = vim
+    editor = nvim
     excludesfile = ~/.gitignore_global
 
 [web]
-    browser = dwb
+    browser = chromium
 
 [merge]
     tool = vimdiff
