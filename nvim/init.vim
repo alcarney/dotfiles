@@ -5,9 +5,16 @@ let s:config = s:path . 'init.vim'
 " Invoke vim-plug
 call plug#begin(s:path . 'plugged')
 
+" ColorSchemes
+Plug 'jez/vim-colors-solarized'
+"Plug 'sickill/vim-monokai'
+
 " Interface Plugins
-Plug 'sickill/vim-monokai'
+Plug 'junegunn/limelight.vim'
+Plug 'kabbamine/zeavim.vim'
 Plug 'majutsushi/tagbar'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
@@ -17,7 +24,8 @@ Plug 'junegunn/fzf.vim'
 
 " Generic editing plugins
 Plug 'dhruvasagar/vim-table-mode', {'for' : ['rst', 'markdown']}
-Plug 'jiangmiao/auto-pairs', {'for' : ['r']}
+Plug 'jiangmiao/auto-pairs', {'for' : ['r', 'vim', 'javascript']}
+Plug 'junegunn/vim-peekaboo'
 Plug 'neomake/neomake'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
@@ -50,13 +58,16 @@ set softtabstop=4
 
 " Colors
 syntax enable
-set background=dark
-colorscheme monokai
+set background=light
+colorscheme solarized
 highlight Comment cterm=italic
 
 set list
 set listchars=tab:».,trail:·,extends:→,precedes:←
 set hidden
+
+set scrolloff=999
+set cursorline
 
 " Be able to switch away from modified buffers without saving
 set hidden
@@ -80,11 +91,18 @@ augroup END
 
 " Autowrap at column 79 in 'prose files'
 augroup wordwrap
+    autocmd!
     autocmd FileType rst set textwidth=79
     autocmd FileType rst set colorcolumn=80
     autocmd FileType rst highlight ColorColumn ctermbg=0
     autocmd FileType rst set fo+=t
     autocmd FileType rst set fo-=l
+
+    autocmd FileType markdown set textwidth=79
+    autocmd FileType markdown set colorcolumn=80
+    autocmd FileType markdown highlight ColorColumn ctermbg=0
+    autocmd FileType markdown set fo+=t
+    autocmd FileType markdown set fo-=l
 augroup END
 
 " Make
@@ -99,12 +117,20 @@ augroup r_filetype
     autocmd FileType r inoremap <buffer> _  <-
     autocmd FileType r inoremap <buffer> __ _
     autocmd FileType r setlocal tabstop=2 shiftwidth=2 softtabstop=2
+    autocmd FileType r setlocal comments="b:#,b:#'"
+augroup END
+
+" RST
+augroup rst_filetype
+    autocmd!
+    autocmd FileType rst let @t='yypVr='
+    autocmd FileType rst let @s='@tyykPj'
 augroup END
 
 " ------------------- Plugins -----------------------------------
 
 " Airline config
-let g:airline_theme='base16color'
+let g:airline_theme='solarized'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
@@ -124,6 +150,19 @@ nnoremap <leader>pf  :GFiles<CR>
 " Git Gutter
 nnoremap <c-j> <Plug>GitGutterNextHunk
 nnoremap <c-k> <Plug>GitGutterPrevHunk
+
+" Indent Guides
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
+highlight IndentGuidesOdd ctermbg=black
+highlight IndentGuidesEven ctermbg=grey
+
+" Limelight
+function! ToggleLimelight()
+    set cursorline!
+    Limelight!!0.8
+endfunction
+nnoremap <leader>l :call ToggleLimelight()<CR>
 
 " Neomake
 augroup neomake

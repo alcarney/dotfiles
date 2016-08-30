@@ -5,3 +5,4 @@ nvim/plugged
 nvim/autoload
 tmux/sidebar
 tmux/resurrect
+nvim/.netrwhist
