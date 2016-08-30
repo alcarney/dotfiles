@@ -1,6 +1,6 @@
 tilda_config_version = "1.1.13"
 # image = ""
-command = "tmux"
+#command = ""
 font = "DejaVu Sans Mono 10"
 key = "F1"
 addtab_key = "<Shift><Control>t"
