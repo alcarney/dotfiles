@@ -15,7 +15,6 @@ source ~/.zsh-antigen/antigen.zsh
 antigen use oh-my-zsh
 
 # Add bundles (from oh-my-zsh)
-antigen bundle git
 antigen bundle taskwarrior
 antigen bundle vi-mode
 
@@ -70,6 +69,18 @@ function ts() # Handles sync and git backup of taskwarrior tasks
     git commit -m "Sync and backup"
     git push origin master
     cd -
+}
+
+function tick()
+{
+    due=$1
+    shift
+    task add +in +tickle wait:$due $@
+}
+
+function next()
+{
+    task $1 mod +next
 }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
