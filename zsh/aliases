@@ -2,13 +2,19 @@
 
 alias extract="atool -x"
 alias compress="atool -a"
-alias surft="tabbed surf -e"
 alias nv="nvim"
 alias db="dropbox-cli"
 
 alias to="taskopen"
+alias tn="task +next"
+alias in="task add +in"
 
 #}}}
+
+#{{{ Git Shortcuts
+alias gst='git status'
+alias gd='git diff'
+alias gf='git flow'
 
 #{{{ Pacman Shortcuts
 alias pacup="sudo pacman -Syu"         # Update packages
@@ -19,6 +25,8 @@ alias pacis="pacman -Q"                # Check if package is installed
 alias pacinfo="pacman -Qi"             # Display info about installed package
 alias paclook="pacman -Ss"             # Search repositories for a package
 alias paclinfo="pacman -Si"            # Search repositiories for info about a package
+
+#TODO: Add yaourt shortcuts
 #}}}
 
 #--------------Improvements on the ls command---------------
@@ -41,9 +49,3 @@ alias minpower="sudo cpupower frequency-set -g powersave"
 alias tether="sudo netctl start phone"
 alias dotfiles="cd ~/.config/dotfiles"
 
-#---------------- Second Monitor Commands -----------------
-alias onsecond="xrandr --output VGA1 --mode 1360x768 --right-of LVDS1"
-alias offsecond="xrandr --output VGA1 --off"
-
-alias sharescreen="xrandr --output VGA1 --mode 1360x768 --same-as LVDS1"
-alias hidescreen="xrandr --output VGA1 --off"
