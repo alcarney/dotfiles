@@ -8,14 +8,14 @@
 #include /usr/share/doc/task/rc/light-256.theme
 #include /usr/share/doc/task/rc/dark-16.theme
 #include /usr/share/doc/task/rc/dark-256.theme
-include /usr/share/doc/task/rc/dark-red-256.theme
+#include /usr/share/doc/task/rc/dark-red-256.theme
 #include /usr/share/doc/task/rc/dark-green-256.theme
 #include /usr/share/doc/task/rc/dark-blue-256.theme
 #include /usr/share/doc/task/rc/dark-violets-256.theme
 #include /usr/share/doc/task/rc/dark-yellow-green.theme
 #include /usr/share/doc/task/rc/dark-gray-256.theme
 #include /usr/share/doc/task/rc/dark-gray-blue-256.theme
-#include /usr/share/doc/task/rc/solarized-dark-256.theme
+include /usr/share/doc/task/rc/solarized-dark-256.theme
 #include /usr/share/doc/task/rc/solarized-light-256.theme
 #include /usr/share/doc/task/rc/no-color.theme
 
@@ -31,6 +31,15 @@ include /usr/share/doc/task/rc/holidays.en-GB.rc
 # Files
 data.location=~/.task
 
+default.command=minimal
+
+report.in.columns     = id,description
+report.in.description = Inbox
+report.in.filter      = status:pending limit:page (+in)
+report.in.labels      = ID,Description
+
+report.minimal.filter = status:pending
+
 taskd.certificate=/home/alex/.task/private.certificate.pem
 taskd.key=/home/alex/.task/private.key.pem
 taskd.ca=/home/alex/.task/ca.cert.pem
@@ -38,14 +47,10 @@ taskd.server=taskwarrior.inthe.am:53589
 taskd.credentials=inthe_am/alex.rugby101/14ef5c5c-8147-4de3-9cad-4fcda738554f
 taskd.trust=ignore hostname
 
+uda.priority.values=H,M,,L
 urgency.uda.priority.L.coefficient=-1.0
 urgency.uda.priority.M.coefficient=0.0
 urgency.uda.priority.H.coefficient=1.0
 
-context.heath=+heath -code -uni
-context.home=-heath +code +uni
-context.code=+code
-context.uni= -heath -code
-context.ideas=+idea +ideas
-context.lists=+list
-context=heath
+context.heath=pro:Heath or +in
+context.code=+code or +in
