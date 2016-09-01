@@ -51,6 +51,3 @@ uda.priority.values=H,M,,L
 urgency.uda.priority.L.coefficient=-1.0
 urgency.uda.priority.M.coefficient=0.0
 urgency.uda.priority.H.coefficient=1.0
-
-context.heath=pro:Heath or +in
-context.code=+code or +in
