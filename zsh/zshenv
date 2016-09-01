@@ -1,5 +1,3 @@
-# Load my list of aliases
-source $HOME/.zsh/aliases
 
 # Enable vi mode line editing
 bindkey -v

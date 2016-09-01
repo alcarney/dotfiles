@@ -8,6 +8,12 @@ fi
 unset GREP_OPTIONS
 unsetopt nomatch
 
+# Load my list of aliases
+source $HOME/.zsh/aliases
+
+# Load my taskwarrior specific settings
+source $HOME/.zsh/taskwarrior
+
 # Import antigen
 source ~/.zsh-antigen/antigen.zsh
 
@@ -43,44 +49,16 @@ lst () { # Lists the contents of the dir in a single column unless there's too m
 
 cdl () {  # Clears the screen and list the contents of the directory just entered into
 
-	if [[ $1 = '' ]]; then
-		cd ~ && clear && lst
-	else
-		cd "$1" && clear && lst
-	fi
+    if [[ $1 = '' ]]; then
+        cd ~ && clear && lst
+    else
+        cd "$1" && clear && lst
+    fi
 
 }
-
-testnet () { # Checks if internet is connected if not tells me to sort it
-    ping -c 1 www.google.com
-}
-
 
 function precmd()  # Prints an extra newline between commands which i think looks nicer
 {
-	echo
+    echo
 }
-
-function ts() # Handles sync and git backup of taskwarrior tasks
-{
-    cd $HOME/.task/
-    task sync
-    git add .
-    git commit -m "Sync and backup"
-    git push origin master
-    cd -
-}
-
-function tick()
-{
-    due=$1
-    shift
-    task add +in +tickle wait:$due $@
-}
-
-function next()
-{
-    task $1 mod +next
-}
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

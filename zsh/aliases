@@ -5,10 +5,6 @@ alias compress="atool -a"
 alias nv="nvim"
 alias db="dropbox-cli"
 
-alias to="taskopen"
-alias tn="task +next"
-alias in="task add +in"
-
 #}}}
 
 #{{{ Git Shortcuts
