@@ -3,6 +3,7 @@
     name = Alex Carney
 
 [alias]
+    co   = checkout
     hist = log --branches --remotes --tags --graph --oneline --decorate
 
 [core]
