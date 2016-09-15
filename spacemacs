@@ -25,7 +25,7 @@
      erc
      ess
      (dash :variables
-           dash-helm-dash-docset-path "/home/alex/.local/share/Zeal/Zeal/docsets") 
+           dash-helm-dash-docset-path "/home/alex/.local/share/Zeal/Zeal/docsets")
      dockerfile
      git
      github
@@ -167,7 +167,7 @@ layers configuration."
 
   (mode-icons-mode)
 
-  ;; I like to have comments in italics and grey 
+  ;; I like to have comments in italics and grey
   (setq theming-modifications '(
                                 (metalheart (font-lock-comment-face :foreground "#666666"
                                                                     :background "#1d272a"
