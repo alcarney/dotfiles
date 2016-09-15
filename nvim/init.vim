@@ -24,7 +24,7 @@ Plug 'junegunn/fzf.vim'
 
 " Generic editing plugins
 Plug 'dhruvasagar/vim-table-mode', {'for' : ['rst', 'markdown']}
-Plug 'jiangmiao/auto-pairs', {'for' : ['r', 'vim', 'javascript']}
+Plug 'jiangmiao/auto-pairs', {'for' : ['r', 'vim', 'javascript', 'cpp']}
 Plug 'junegunn/vim-peekaboo'
 Plug 'neomake/neomake'
 Plug 'tpope/vim-commentary'
@@ -35,6 +35,7 @@ function! DoRemote(arg)
     UpdateRemotePlugins
 endfunction
 Plug 'Shougo/deoplete.nvim' , { 'do': function('DoRemote') }
+Plug 'zchee/deoplete-clang'
 Plug 'SirVer/ultisnips'
 
 " Git
@@ -78,12 +79,15 @@ nnoremap <leader>c             :set list!<CR>
 nnoremap <leader>w             :w<CR>
 nnoremap <leader><tab>         :b#<CR>
 nnoremap <leader>bd            :bd<CR>
+nnoremap <leader>z             zMzvzz
+
+let c_no_comment_fold=1
 
 "----------------------------- Auto Commands ---------------------
 
 augroup general
     autocmd!
-    autocmd BufEnter * silent! lcd %:p:h         " Automatically set the working dir to the current file
+    "autocmd BufEnter * silent! lcd %:p:h         " Automatically set the working dir to the current file
     autocmd BufWritePre * %s/\s\+$//e            " Trim trailing whitespace on save.
 augroup END
 
@@ -103,6 +107,12 @@ augroup wordwrap
     autocmd FileType markdown highlight ColorColumn ctermbg=0
     autocmd FileType markdown set fo+=t
     autocmd FileType markdown set fo-=l
+augroup END
+
+" C++
+augroup cpp_filetype
+    autocmd!
+    autocmd FileType cpp let @u='gUiwe'
 augroup END
 
 " Make
@@ -139,6 +149,10 @@ set ttimeoutlen=10
 " Deoplete
 let g:deoplete#enable_at_startup = 1
 
+" Deoplete-Clang
+let g:deoplete#sources#clang#libclang_path='/usr/lib/libclang.so'
+let g:deoplete#sources#clang#clang_header='/usr/lib/clang'
+
 " Fugitive
 nnoremap <leader>gs       :Gstatus<CR>
 
@@ -165,9 +179,11 @@ endfunction
 nnoremap <leader>l :call ToggleLimelight()<CR>
 
 " Neomake
+let g:neomake_open_list=2
+
 augroup neomake
     autocmd!
-    autocmd BufWritePost * Neomake
+    autocmd BufWrite * Neomake!
 augroup END
 
 " Table Mode
@@ -191,3 +207,6 @@ let g:tagbar_type_r = {
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-n>"
 let g:UltiSnipsJumpBackwardTrigger="<c-p>"
+
+" Zeavim
+nnoremap <leader>d    <Plug>Zeavim
