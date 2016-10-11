@@ -31,7 +31,8 @@ start_common ()
     xsetroot -cursor_name left_ptr
 
     # Set the background, enable compositing and notifications
-    feh --randomize --recursive --bg-scale "/home/alex/Media/Wallpapers/"
+    # feh --randomize --recursive --bg-scale "/home/alex/Media/Wallpapers/"
+    feh --bg-scale '/home/alex/Media/Wallpapers/tilt-shift-train.png'
     compton&
     dunst&
 }
@@ -52,7 +53,8 @@ start_dwm ()
 start_i3 ()
 {
     start_common
-    yabar&
+    lemonbuddy_wrapper top&
+#    lemonbuddy_wrapper bottom&
     exec i3
 }
 
