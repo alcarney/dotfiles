@@ -4,6 +4,7 @@ alias extract="atool -x"
 alias compress="atool -a"
 alias nv="nvim"
 alias db="dropbox-cli"
+alias mux='tmuxinator'
 
 #}}}
 
