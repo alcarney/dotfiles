@@ -36,6 +36,7 @@ function! DoRemote(arg)
 endfunction
 Plug 'Shougo/deoplete.nvim' , { 'do': function('DoRemote') }
 Plug 'zchee/deoplete-clang'
+Plug 'zchee/deoplete-jedi'
 Plug 'SirVer/ultisnips'
 
 " Git
@@ -152,6 +153,9 @@ let g:deoplete#enable_at_startup = 1
 " Deoplete-Clang
 let g:deoplete#sources#clang#libclang_path='/usr/lib/libclang.so'
 let g:deoplete#sources#clang#clang_header='/usr/lib/clang'
+
+" Deoplete Jedi
+let g:deoplete#sources#jedi#show_docstring=1
 
 " Fugitive
 nnoremap <leader>gs       :Gstatus<CR>
