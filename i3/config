@@ -39,8 +39,7 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec st -e tmux -2
-bindsym $mod+Shift+Return exec st
+bindsym $mod+Return exec st
 
 # kill focused window
 bindsym $mod+Shift+q kill
