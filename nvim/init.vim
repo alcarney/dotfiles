@@ -26,7 +26,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'dhruvasagar/vim-table-mode', {'for' : ['rst', 'markdown']}
 Plug 'jiangmiao/auto-pairs', {'for' : ['r', 'vim', 'javascript', 'cpp']}
 Plug 'junegunn/vim-peekaboo'
-Plug 'neomake/neomake'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 
@@ -38,6 +37,9 @@ Plug 'Shougo/deoplete.nvim' , { 'do': function('DoRemote') }
 Plug 'zchee/deoplete-clang'
 Plug 'zchee/deoplete-jedi'
 Plug 'SirVer/ultisnips'
+
+" Linting
+Plug 'w0rp/ale'
 
 " Git
 Plug 'airblade/vim-gitgutter'
@@ -140,10 +142,19 @@ augroup END
 
 " ------------------- Plugins -----------------------------------
 
+" Ale
+let g:ale_sign_error = ''
+let g:ale_sign_warning = ''
+
+let g:ale_statusline_format = [' %d', ' %d', ' ok']
+
 " Airline config
 let g:airline_theme='solarized'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+
+let g:airline_section_error = '%{ALEGetStatusLine()}'
+set noshowmode
 
 set ttimeoutlen=10
 
@@ -181,14 +192,6 @@ function! ToggleLimelight()
     Limelight!!0.8
 endfunction
 nnoremap <leader>l :call ToggleLimelight()<CR>
-
-" Neomake
-let g:neomake_open_list=2
-
-augroup neomake
-    autocmd!
-    autocmd BufWrite * Neomake!
-augroup END
 
 " Table Mode
 nnoremap <leader>tm    :TableModeToggle<CR>
