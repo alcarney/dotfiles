@@ -41,6 +41,9 @@ Plug 'SirVer/ultisnips'
 " Linting
 Plug 'w0rp/ale'
 
+" Interactive Scratchpad
+Plug 'metakirby5/codi.vim'
+
 " Git
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
@@ -62,7 +65,7 @@ set softtabstop=4
 
 " Colors
 syntax enable
-set background=light
+set background=dark
 colorscheme solarized
 highlight Comment cterm=italic
 
