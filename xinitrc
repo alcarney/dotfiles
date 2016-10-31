@@ -53,8 +53,8 @@ start_dwm ()
 start_i3 ()
 {
     start_common
-    lemonbuddy_wrapper top&
-#    lemonbuddy_wrapper bottom&
+    lemonbuddy top&
+    lemonbuddy bottom&
     exec i3
 }
 
