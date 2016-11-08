@@ -126,6 +126,12 @@ augroup markdown_filetype
     autocmd FileType markdown set fo-=l
 augroup END
 
+" Python
+augroup python_filetype
+    autocmd!
+    autocmd FileType python setlocal equalprg=autopep8\ -
+augroup END
+
 " R
 augroup r_filetype
     autocmd!
