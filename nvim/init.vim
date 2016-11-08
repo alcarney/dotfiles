@@ -24,6 +24,7 @@ Plug 'junegunn/fzf.vim'
 
 " Generic editing plugins
 Plug 'dhruvasagar/vim-table-mode', {'for' : ['rst', 'markdown']}
+Plug 'godlygeek/tabular'
 Plug 'jiangmiao/auto-pairs', {'for' : ['r', 'vim', 'javascript', 'cpp']}
 Plug 'junegunn/vim-peekaboo'
 Plug 'tpope/vim-commentary'
@@ -43,6 +44,9 @@ Plug 'w0rp/ale'
 
 " Interactive Scratchpad
 Plug 'metakirby5/codi.vim'
+
+" LaTeX
+Plug 'lervag/vimtex', { 'for': ['tex'] }
 
 " Git
 Plug 'airblade/vim-gitgutter'
@@ -85,6 +89,7 @@ nnoremap <leader>c             :set list!<CR>
 nnoremap <leader>w             :w<CR>
 nnoremap <leader><tab>         :b#<CR>
 nnoremap <leader>bd            :bd<CR>
+nnoremap <leader>bb            :Buffers<CR>
 nnoremap <leader>z             zMzvzz
 
 let c_no_comment_fold=1
@@ -99,22 +104,6 @@ augroup END
 
 " ----------------------------- File Types -----------------------
 
-" Autowrap at column 79 in 'prose files'
-augroup wordwrap
-    autocmd!
-    autocmd FileType rst set textwidth=79
-    autocmd FileType rst set colorcolumn=80
-    autocmd FileType rst highlight ColorColumn ctermbg=0
-    autocmd FileType rst set fo+=t
-    autocmd FileType rst set fo-=l
-
-    autocmd FileType markdown set textwidth=79
-    autocmd FileType markdown set colorcolumn=80
-    autocmd FileType markdown highlight ColorColumn ctermbg=0
-    autocmd FileType markdown set fo+=t
-    autocmd FileType markdown set fo-=l
-augroup END
-
 " C++
 augroup cpp_filetype
     autocmd!
@@ -125,6 +114,16 @@ augroup END
 augroup make_filetype
     autocmd!
     autocmd FileType make setlocal noexpandtab
+augroup END
+
+" Markdown
+augroup markdown_filetype
+    autocmd!
+    autocmd FileType markdown set textwidth=79
+    autocmd FileType markdown set colorcolumn=80
+    autocmd FileType markdown highlight ColorColumn ctermbg=0
+    autocmd FileType markdown set fo+=t
+    autocmd FileType markdown set fo-=l
 augroup END
 
 " R
@@ -141,6 +140,21 @@ augroup rst_filetype
     autocmd!
     autocmd FileType rst let @t='yypVr='
     autocmd FileType rst let @s='@tyykPj'
+    autocmd FileType rst set textwidth=79
+    autocmd FileType rst set colorcolumn=80
+    autocmd FileType rst highlight ColorColumn ctermbg=0
+    autocmd FileType rst set fo+=t
+    autocmd FileType rst set fo-=l
+augroup END
+
+" Tex
+augroup tex_filetype
+    autocmd!
+    autocmd FileType tex set textwidth=79
+    autocmd FileType tex set colorcolumn=80
+    autocmd FileType tex highlight ColorColumn ctermbg=0
+    autocmd FileType tex set fo+=t
+    autocmd FileType tex set fo-=l
 augroup END
 
 " ------------------- Plugins -----------------------------------
