@@ -189,11 +189,6 @@ let g:deoplete#sources#jedi#show_docstring=1
 " Fugitive
 nnoremap <leader>gs       :Gstatus<CR>
 
-" FZF Config
-nnoremap <leader>b   :Buffers<CR>
-nnoremap <leader>f   :Files ~/<CR>
-nnoremap <leader>pf  :GFiles<CR>
-
 " Git Gutter
 nnoremap <c-j> <Plug>GitGutterNextHunk
 nnoremap <c-k> <Plug>GitGutterPrevHunk
@@ -210,28 +205,6 @@ function! ToggleLimelight()
     Limelight!!0.8
 endfunction
 nnoremap <leader>l :call ToggleLimelight()<CR>
-
-" Table Mode
-nnoremap <leader>tm    :TableModeToggle<CR>
-nnoremap <leader>mt    :Tableize<CR>
-let g:table_mode_corner="+"
-let g:table_mode_fillchar="="
-
-" Tagbar
-nnoremap <leader>t :TagbarToggle<CR>
-let g:tagbar_type_r = {
-    \ 'ctagstype' : 'r',
-    \ 'kinds'     : [
-        \ 'f:Functions',
-        \ 'g:GlobalVariables',
-        \ 'v:FunctionVariables',
-    \ ]
-\ }
-
-" UltiSnips
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-n>"
-let g:UltiSnipsJumpBackwardTrigger="<c-p>"
 
 " Zeavim
 nnoremap <leader>d    <Plug>Zeavim
