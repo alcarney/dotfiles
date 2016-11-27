@@ -12,18 +12,12 @@ Plug 'jez/vim-colors-solarized'
 " Interface Plugins
 Plug 'junegunn/limelight.vim'
 Plug 'kabbamine/zeavim.vim'
-Plug 'majutsushi/tagbar'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-" Helmish
-Plug 'junegunn/fzf', {'dir' : '~/.fzf', 'do' : './install --all'}
-Plug 'junegunn/fzf.vim'
-
 " Generic editing plugins
-Plug 'dhruvasagar/vim-table-mode', {'for' : ['rst', 'markdown']}
 Plug 'godlygeek/tabular'
 Plug 'jiangmiao/auto-pairs', {'for' : ['r', 'vim', 'javascript', 'cpp']}
 Plug 'junegunn/vim-peekaboo'
@@ -37,7 +31,6 @@ endfunction
 Plug 'Shougo/deoplete.nvim' , { 'do': function('DoRemote') }
 Plug 'zchee/deoplete-clang'
 Plug 'zchee/deoplete-jedi'
-Plug 'SirVer/ultisnips'
 
 " Linting
 Plug 'w0rp/ale'
@@ -51,9 +44,6 @@ Plug 'lervag/vimtex', { 'for': ['tex'] }
 " Git
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
-
-" Nice icons
-" Plug 'ryanoasis/vim-devicons'  -- FIXME: Icons are only squares
 
 call plug#end()
 
@@ -77,11 +67,16 @@ set list
 set listchars=tab:».,trail:·,extends:→,precedes:←
 set hidden
 
-set scrolloff=999
 set cursorline
 
 " Be able to switch away from modified buffers without saving
 set hidden
+
+" Make find recursive
+set path=**
+
+" No *.swp files please
+set noswapfile
 
 " Keys
 let mapleader = ' '
