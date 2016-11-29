@@ -7,7 +7,6 @@ call plug#begin(s:path . 'plugged')
 
 " ColorSchemes
 Plug 'jez/vim-colors-solarized'
-"Plug 'sickill/vim-monokai'
 
 " Interface Plugins
 Plug 'junegunn/limelight.vim'
@@ -63,11 +62,10 @@ set background=dark
 colorscheme solarized
 highlight Comment cterm=italic
 
+" Non printable characters
 set list
 set listchars=tab:».,trail:·,extends:→,precedes:←
 set hidden
-
-set cursorline
 
 " Be able to switch away from modified buffers without saving
 set hidden
@@ -79,30 +77,18 @@ set path=**
 set noswapfile
 
 " Keys
-let mapleader = ' '
-nnoremap <leader>c             :set list!<CR>
-nnoremap <leader>w             :w<CR>
-nnoremap <leader><tab>         :b#<CR>
-nnoremap <leader>bd            :bd<CR>
-nnoremap <leader>bb            :Buffers<CR>
-nnoremap <leader>z             zMzvzz
+nnoremap - :e .<CR>
 
-let c_no_comment_fold=1
+let mapleader = ' '
+nnoremap <leader><tab>         :b#<CR>
+nnoremap <leader>bb            :buf
+nnoremap <leader>z             zMzvzz
 
 "----------------------------- Auto Commands ---------------------
 
 augroup general
     autocmd!
-    "autocmd BufEnter * silent! lcd %:p:h         " Automatically set the working dir to the current file
     autocmd BufWritePre * %s/\s\+$//e            " Trim trailing whitespace on save.
-augroup END
-
-" ----------------------------- File Types -----------------------
-
-" C++
-augroup cpp_filetype
-    autocmd!
-    autocmd FileType cpp let @u='gUiwe'
 augroup END
 
 " Make
@@ -114,11 +100,11 @@ augroup END
 " Markdown
 augroup markdown_filetype
     autocmd!
-    autocmd FileType markdown set textwidth=79
-    autocmd FileType markdown set colorcolumn=80
+    autocmd FileType markdown setlocal textwidth=79
+    autocmd FileType markdown setlocal colorcolumn=80
     autocmd FileType markdown highlight ColorColumn ctermbg=0
-    autocmd FileType markdown set fo+=t
-    autocmd FileType markdown set fo-=l
+    autocmd FileType markdown setlocal fo+=t
+    autocmd FileType markdown setlocal fo-=l
 augroup END
 
 " Python
@@ -141,21 +127,21 @@ augroup rst_filetype
     autocmd!
     autocmd FileType rst let @t='yypVr='
     autocmd FileType rst let @s='@tyykPj'
-    autocmd FileType rst set textwidth=79
-    autocmd FileType rst set colorcolumn=80
+    autocmd FileType rst setlocal textwidth=79
+    autocmd FileType rst setlocal colorcolumn=80
     autocmd FileType rst highlight ColorColumn ctermbg=0
-    autocmd FileType rst set fo+=t
-    autocmd FileType rst set fo-=l
+    autocmd FileType rst setlocal fo+=t
+    autocmd FileType rst setlocal fo-=l
 augroup END
 
 " Tex
 augroup tex_filetype
     autocmd!
-    autocmd FileType tex set textwidth=79
-    autocmd FileType tex set colorcolumn=80
+    autocmd FileType tex setlocal textwidth=79
+    autocmd FileType tex setlocal colorcolumn=80
     autocmd FileType tex highlight ColorColumn ctermbg=0
-    autocmd FileType tex set fo+=t
-    autocmd FileType tex set fo-=l
+    autocmd FileType tex setlocal fo+=t
+    autocmd FileType tex setlocal fo-=l
 augroup END
 
 " ------------------- Plugins -----------------------------------
