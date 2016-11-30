@@ -76,6 +76,9 @@ set path=**
 " No *.swp files please
 set noswapfile
 
+" Live search and replace in a new split
+set inccommand=split
+
 " Keys
 nnoremap - :e .<CR>
 
