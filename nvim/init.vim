@@ -2,28 +2,29 @@
 let s:path = expand('~/.config/nvim/')
 let s:config = s:path . 'init.vim'
 
-" Invoke vim-plug
+" -------------------------- Plugins! ---------------------------------------
 call plug#begin(s:path . 'plugged')
 
-" ColorSchemes
+" Interface
 Plug 'jez/vim-colors-solarized'
-
-" Interface Plugins
-Plug 'junegunn/limelight.vim'
-Plug 'kabbamine/zeavim.vim'
-Plug 'nathanaelkane/vim-indent-guides'
-Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+let g:airline_theme='solarized'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+
+set noshowmode
+set ttimeoutlen=10
+
 " Generic editing plugins
 Plug 'godlygeek/tabular'
-Plug 'jiangmiao/auto-pairs', {'for' : ['r', 'vim', 'javascript', 'cpp']}
+Plug 'jiangmiao/auto-pairs', {'for' : ['r', 'vim', 'javascript', 'cpp', 'python']}
 Plug 'junegunn/vim-peekaboo'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 
-" Completion and snippets
+" Completion - TODO: Replace this with builtin completion stuff
 function! DoRemote(arg)
     UpdateRemotePlugins
 endfunction
@@ -31,22 +32,31 @@ Plug 'Shougo/deoplete.nvim' , { 'do': function('DoRemote') }
 Plug 'zchee/deoplete-clang'
 Plug 'zchee/deoplete-jedi'
 
-" Linting
-Plug 'w0rp/ale'
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#sources#clang#libclang_path='/usr/lib/libclang.so'
+let g:deoplete#sources#clang#clang_header='/usr/lib/clang'
+let g:deoplete#sources#jedi#show_docstring=1
 
 " Interactive Scratchpad
 Plug 'metakirby5/codi.vim'
 
-" LaTeX
-Plug 'lervag/vimtex', { 'for': ['tex'] }
-
 " Git
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
+nnoremap <leader>gs       :Gstatus<CR>
+
+" -------------------------- Language Specific Plugins -----------------------
+
+" Idris
+Plug 'idris-hackers/idris-vim', { 'for': ['idris'] }
+let g:idris_conceal = 1
+
+" Latex
+Plug 'lervag/vimtex', { 'for': ['tex'] }
 
 call plug#end()
 
-" ----------------------------- General Config ------------------
+" -------------------------- General Config -----------------------------------
 
 " Tabs and Spaces
 set expandtab
@@ -86,6 +96,8 @@ let mapleader = ' '
 nnoremap <leader><tab>         :b#<CR>
 nnoremap <leader>bb            :buf
 nnoremap <leader>z             zMzvzz
+nnoremap <leader>n             :cn<CR>
+nnoremap <leader>N             :cp<CR>
 
 "----------------------------- Auto Commands ---------------------
 
@@ -114,6 +126,9 @@ augroup END
 augroup python_filetype
     autocmd!
     autocmd FileType python setlocal equalprg=autopep8\ -
+    autocmd FileType python setlocal makeprg=flake8\ %
+    autocmd FileType python au QuickFixCmdPost <buffer> :cwindow
+    autocmd FileType python au BufWritePost <buffer> :silent make
 augroup END
 
 " R
@@ -140,60 +155,9 @@ augroup END
 " Tex
 augroup tex_filetype
     autocmd!
-    autocmd FileType tex setlocal textwidth=79
-    autocmd FileType tex setlocal colorcolumn=80
-    autocmd FileType tex highlight ColorColumn ctermbg=0
-    autocmd FileType tex setlocal fo+=t
-    autocmd FileType tex setlocal fo-=l
+    autocmd FileType tex,plaintex setlocal textwidth=79
+    autocmd FileType tex,plaintex setlocal colorcolumn=80
+    autocmd FileType tex,plaintex highlight ColorColumn ctermbg=0
+    autocmd FileType tex,plaintex setlocal fo+=t
+    autocmd FileType tex,plaintex setlocal fo-=l
 augroup END
-
-" ------------------- Plugins -----------------------------------
-
-" Ale
-let g:ale_sign_error = ''
-let g:ale_sign_warning = ''
-
-let g:ale_statusline_format = [' %d', ' %d', ' ok']
-
-" Airline config
-let g:airline_theme='solarized'
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-
-let g:airline_section_error = '%{ALEGetStatusLine()}'
-set noshowmode
-
-set ttimeoutlen=10
-
-" Deoplete
-let g:deoplete#enable_at_startup = 1
-
-" Deoplete-Clang
-let g:deoplete#sources#clang#libclang_path='/usr/lib/libclang.so'
-let g:deoplete#sources#clang#clang_header='/usr/lib/clang'
-
-" Deoplete Jedi
-let g:deoplete#sources#jedi#show_docstring=1
-
-" Fugitive
-nnoremap <leader>gs       :Gstatus<CR>
-
-" Git Gutter
-nnoremap <c-j> <Plug>GitGutterNextHunk
-nnoremap <c-k> <Plug>GitGutterPrevHunk
-
-" Indent Guides
-let g:indent_guides_start_level = 2
-let g:indent_guides_guide_size = 1
-highlight IndentGuidesOdd ctermbg=black
-highlight IndentGuidesEven ctermbg=grey
-
-" Limelight
-function! ToggleLimelight()
-    set cursorline!
-    Limelight!!0.8
-endfunction
-nnoremap <leader>l :call ToggleLimelight()<CR>
-
-" Zeavim
-nnoremap <leader>d    <Plug>Zeavim
