@@ -53,8 +53,8 @@ start_dwm ()
 start_i3 ()
 {
     start_common
-    lemonbuddy top&
-    lemonbuddy bottom&
+    polybar top&
+    polybar bottom&
     exec i3
 }
 
