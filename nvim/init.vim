@@ -6,7 +6,7 @@ let s:config = s:path . 'init.vim'
 call plug#begin(s:path . 'plugged')
 
 " Interface
-Plug 'jez/vim-colors-solarized'
+Plug 'romainl/flattened'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
@@ -55,7 +55,7 @@ set softtabstop=4
 " Colors
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme flattened_dark
 highlight Comment cterm=italic
 
 " Non printable characters
@@ -82,8 +82,12 @@ let mapleader = ' '
 nnoremap <leader><tab>         :b#<CR>
 nnoremap <leader>bb            :buf
 nnoremap <leader>z             zMzvzz
-nnoremap <leader>n             :cn<CR>
-nnoremap <leader>N             :cp<CR>
+nnoremap <leader>n             :lnext<CR>
+nnoremap <leader>N             :lprev<CR>
+
+" Search through command history based on current command line
+cnoremap <c-n> <down>
+cnoremap <c-p> <up>
 
 "----------------------------- Auto Commands ---------------------
 
@@ -113,8 +117,8 @@ augroup python_filetype
     autocmd!
     autocmd FileType python setlocal equalprg=autopep8\ -
     autocmd FileType python setlocal makeprg=flake8\ %
-    autocmd FileType python au QuickFixCmdPost <buffer> :cwindow
-    autocmd FileType python au BufWritePost <buffer> :silent make
+    autocmd FileType python au QuickFixCmdPost <buffer> :lwindow
+    autocmd FileType python au BufWritePost <buffer> :silent lmake
 augroup END
 
 " R
