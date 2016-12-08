@@ -40,6 +40,8 @@ let g:idris_conceal = 1
 " Latex
 Plug 'lervag/vimtex', { 'for': ['tex', 'plaintex'] }
 
+let g:tex_flavour = 'latex'
+
 call plug#end()
 
 " -------------------------- General Config -----------------------------------
@@ -84,6 +86,9 @@ nnoremap <leader>bb            :buf
 nnoremap <leader>z             zMzvzz
 nnoremap <leader>n             :lnext<CR>
 nnoremap <leader>N             :lprev<CR>
+
+" Run the command on the current line and dump the results in the buffer
+nnoremap Q !!$SHELL<CR>
 
 " Search through command history based on current command line
 cnoremap <c-n> <down>
@@ -145,9 +150,11 @@ augroup END
 " Tex
 augroup tex_filetype
     autocmd!
-    autocmd FileType tex,plaintex setlocal textwidth=79
-    autocmd FileType tex,plaintex setlocal colorcolumn=80
-    autocmd FileType tex,plaintex highlight ColorColumn ctermbg=0
-    autocmd FileType tex,plaintex setlocal fo+=t
-    autocmd FileType tex,plaintex setlocal fo-=l
+    autocmd FileType tex setlocal textwidth=79
+    autocmd FileType tex setlocal colorcolumn=80
+    autocmd FileType tex highlight ColorColumn ctermbg=0
+    autocmd FileType tex setlocal fo+=t
+    autocmd FileType tex setlocal fo-=l
+
+    autocmd FileType tex let b:vimtex_main = 'main.tex'
 augroup END
