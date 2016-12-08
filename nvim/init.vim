@@ -19,23 +19,9 @@ set ttimeoutlen=10
 
 " Generic editing plugins
 Plug 'godlygeek/tabular'
-Plug 'jiangmiao/auto-pairs', {'for' : ['r', 'vim', 'javascript', 'cpp', 'python']}
 Plug 'junegunn/vim-peekaboo'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
-
-" Completion - TODO: Replace this with builtin completion stuff
-function! DoRemote(arg)
-    UpdateRemotePlugins
-endfunction
-Plug 'Shougo/deoplete.nvim' , { 'do': function('DoRemote') }
-Plug 'zchee/deoplete-clang'
-Plug 'zchee/deoplete-jedi'
-
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources#clang#libclang_path='/usr/lib/libclang.so'
-let g:deoplete#sources#clang#clang_header='/usr/lib/clang'
-let g:deoplete#sources#jedi#show_docstring=1
 
 " Interactive Scratchpad
 Plug 'metakirby5/codi.vim'
@@ -52,7 +38,7 @@ Plug 'idris-hackers/idris-vim', { 'for': ['idris'] }
 let g:idris_conceal = 1
 
 " Latex
-Plug 'lervag/vimtex', { 'for': ['tex'] }
+Plug 'lervag/vimtex', { 'for': ['tex', 'plaintex'] }
 
 call plug#end()
 
