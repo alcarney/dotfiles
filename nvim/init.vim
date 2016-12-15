@@ -9,6 +9,8 @@ call plug#begin(s:path . 'plugged')
 Plug 'romainl/flattened'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'junegunn/rainbow_parentheses.vim'
+let g:rainbow#pairs = [['(', ')'], ['[', ']']]
 
 let g:airline_theme='solarized'
 let g:airline_powerline_fonts = 1
@@ -65,6 +67,9 @@ set list
 set listchars=tab:».,trail:·,extends:→,precedes:←
 set hidden
 
+" Tags
+set tags=.tags
+
 " Be able to switch away from modified buffers without saving
 set hidden
 
@@ -101,6 +106,13 @@ augroup general
     autocmd BufWritePre * %s/\s\+$//e            " Trim trailing whitespace on save.
 augroup END
 
+" Hy (Pythonic Lisp)
+augroup hy_filetype
+    autocmd!
+    autocmd BufNewFile, BufRead *.hy set filetype=hy
+    autocmd FileType hy RainbowParentheses
+augroup END
+
 " Make
 augroup make_filetype
     autocmd!
@@ -124,6 +136,7 @@ augroup python_filetype
     autocmd FileType python setlocal makeprg=flake8\ %
     autocmd FileType python au QuickFixCmdPost <buffer> :lwindow
     autocmd FileType python au BufWritePost <buffer> :silent lmake
+    autocmd FileType python au BufWritePost <buffer> :silent !ctags -R -f .tags .
 augroup END
 
 " R
