@@ -35,6 +35,9 @@ nnoremap <leader>gs       :Gstatus<CR>
 
 " -------------------------- Language Specific Plugins -----------------------
 
+" Fountain
+Plug 'vim-scripts/fountain.vim', {'for': ['fountain']}
+
 " Idris
 Plug 'idris-hackers/idris-vim', { 'for': ['idris'] }
 let g:idris_conceal = 1
@@ -103,6 +106,7 @@ cnoremap <c-p> <up>
 
 augroup general
     autocmd!
+    autocmd BufRead,BufNewFile *.spmd set filetype=fountain
     autocmd BufWritePre * %s/\s\+$//e            " Trim trailing whitespace on save.
 augroup END
 
