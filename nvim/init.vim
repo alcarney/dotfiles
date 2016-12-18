@@ -86,14 +86,16 @@ set noswapfile
 set inccommand=split
 
 " Keys
-nnoremap - :e .<CR>
+nnoremap -  :e .<CR>
+nnoremap ]l :lnext<CR>
+nnoremap [l :lprev<CR>
+nnoremap ]c :cnext<CR>
+nnoremap [c :cprev<CR>
 
 let mapleader = ' '
 nnoremap <leader><tab>         :b#<CR>
 nnoremap <leader>bb            :buf
 nnoremap <leader>z             zMzvzz
-nnoremap <leader>n             :lnext<CR>
-nnoremap <leader>N             :lprev<CR>
 
 " Run the command on the current line and dump the results in the buffer
 nnoremap Q !!$SHELL<CR>
@@ -128,6 +130,7 @@ augroup markdown_filetype
     autocmd!
     autocmd FileType markdown setlocal textwidth=79
     autocmd FileType markdown setlocal colorcolumn=80
+    autocmd FileType markdown setlocal spell
     autocmd FileType markdown highlight ColorColumn ctermbg=0
     autocmd FileType markdown setlocal fo+=t
     autocmd FileType markdown setlocal fo-=l
