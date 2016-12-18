@@ -34,7 +34,6 @@ start_common ()
     # feh --randomize --recursive --bg-scale "/home/alex/Media/Wallpapers/"
     feh --bg-scale '/home/alex/Media/Wallpapers/World_Trade_Flower.jpg'
     compton&
-    dunst&
 }
 
 # XMonad specfic stuff
