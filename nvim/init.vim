@@ -91,16 +91,12 @@ set inccommand=split
 "----------------------------- Keys ------------------------------------------
 
 nnoremap -  :e .<CR>
+
+" Location lists and quickfixes
 nnoremap ]l @=execute('lnext')<CR>
 nnoremap [l @=execute('lprev')<CR>
 nnoremap ]c @=execute('cnext')<CR>
 nnoremap [c @=execute('cprev')<CR>
-nnoremap // :silent! lgrep <c-r>/ %<CR>:lwindow<CR>
-
-let mapleader = ' '
-nnoremap <leader><tab>         :b#<CR>
-nnoremap <leader>bb            :buf
-nnoremap <leader>z             zMzvzz
 
 " Run the command on the current line and dump the results in the buffer
 nnoremap Q !!$SHELL<CR>
@@ -108,6 +104,21 @@ nnoremap Q !!$SHELL<CR>
 " Search through command history based on current command line
 cnoremap <c-n> <down>
 cnoremap <c-p> <up>
+
+let mapleader = ' '
+nnoremap <leader><tab>         :b#<CR>
+nnoremap <leader>bb            :buf
+nnoremap <leader>z             zMzvzz
+
+" Open all matches of the previous search in the current buffer in a loclist
+nnoremap <leader>// :silent! lgrep <c-r>/ %<CR>:lwindow<CR>
+
+" Open all matches of the previous search in all files in a loclist
+nnoremap <leader>/f :silent! lgrep <c-r>/ *<CR>:lwindow<CR>
+
+" Open all matches of the previous search in all files in the current 'project'
+" in a loclist
+nnoremap <leader>/p :silent! lgrep <c-r>/ `git ls-files`<CR>:lwindow<CR>
 
 "----------------------------- Auto Commands ---------------------
 
