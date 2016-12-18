@@ -95,7 +95,7 @@ nnoremap ]l @=execute('lnext')<CR>
 nnoremap [l @=execute('lprev')<CR>
 nnoremap ]c @=execute('cnext')<CR>
 nnoremap [c @=execute('cprev')<CR>
-nnoremap // :silent! lgrep <c-r>/ %<CR>:lopen<CR>
+nnoremap // :silent! lgrep <c-r>/ %<CR>:lwindow<CR>
 
 let mapleader = ' '
 nnoremap <leader><tab>         :b#<CR>
