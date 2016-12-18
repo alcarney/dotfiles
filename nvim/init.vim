@@ -79,18 +79,23 @@ set hidden
 " Make find recursive
 set path=**
 
+" Don't highlight search matches
+set nohlsearch
+
 " No *.swp files please
 set noswapfile
 
 " Live search and replace in a new split
 set inccommand=split
 
-" Keys
+"----------------------------- Keys ------------------------------------------
+
 nnoremap -  :e .<CR>
-nnoremap ]l :lnext<CR>
-nnoremap [l :lprev<CR>
-nnoremap ]c :cnext<CR>
-nnoremap [c :cprev<CR>
+nnoremap ]l @=execute('lnext')<CR>
+nnoremap [l @=execute('lprev')<CR>
+nnoremap ]c @=execute('cnext')<CR>
+nnoremap [c @=execute('cprev')<CR>
+nnoremap // :silent! lgrep <c-r>/ %<CR>:lopen<CR>
 
 let mapleader = ' '
 nnoremap <leader><tab>         :b#<CR>
