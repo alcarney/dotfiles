@@ -48,6 +48,9 @@ modules-left = spotify
 modules-center = clock
 modules-right = cpu ram
 
+tray-position = right
+tray-padding = 2
+
 [bar/top]
 ;monitor = eDP1
 bottom = fasle
