@@ -85,6 +85,9 @@ modules-left = i3
 modules-center = window
 modules-right = volume wireless tether battery-one battery-two
 
+tray-position = right
+tray-padding = 2
+
 [module/window]
 type=internal/xwindow
 
