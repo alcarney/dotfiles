@@ -13,3 +13,20 @@ export EDITOR='nvim'
 export PATH=$PATH:$HOME/bin:$HOME/.gem/ruby/2.3.0/bin:$HOME/.cabal/bin:$HOME/.cask/bin
 export LD_LIBRARY_PATH="/opt/java/jre/lib/amd64:/home/alex/.mylibs"
 export MANPAGER="/bin/sh -c \"col -b | vim -u '~/.vim/vimrc' -c 'set ft=man ts=8 nomod nolist nonu noma fdm=indent' -\""
+
+# History
+
+# Lines of history in memory
+export HISTSIZE=1200
+
+# Lines of history on file
+export SAVEHIST=1000
+
+# This will prevent multiple sessions clobbering the history file
+setopt append_history
+
+# More detailed history
+setopt extended_history
+
+# Don't add duplicates
+setopt hist_ignore_dups

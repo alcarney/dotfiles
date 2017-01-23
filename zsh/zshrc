@@ -14,6 +14,9 @@ source $HOME/.zsh/aliases
 # Load my taskwarrior specific settings
 source $HOME/.zsh/taskwarrior
 
+# Load fzf keybindings
+source /usr/share/fzf/key-bindings.zsh
+
 # Import antigen
 source ~/.zsh-antigen/antigen.zsh
 
