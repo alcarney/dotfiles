@@ -24,6 +24,7 @@ Plug 'godlygeek/tabular'
 Plug 'junegunn/vim-peekaboo'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
+Plug 'wellle/targets.vim'
 
 " Interactive Scratchpad
 Plug 'metakirby5/codi.vim'
@@ -34,6 +35,9 @@ Plug 'tpope/vim-fugitive'
 nnoremap <leader>gs       :Gstatus<CR>
 
 " -------------------------- Language Specific Plugins -----------------------
+
+" C++
+let g:load_doxygen_syntax=1
 
 " Fountain
 Plug 'vim-scripts/fountain.vim', {'for': ['fountain']}
@@ -87,6 +91,13 @@ set noswapfile
 " Live search and replace in a new split
 set inccommand=split
 
+"----------------------------- Functions -------------------------------------
+function! Docs(thing)
+    :execute ':silent !' . &keywordprg . ' ' . a:thing . ' > /tmp/docs'
+    pedit /tmp/docs
+endfunction
+
+
 "----------------------------- Keys ------------------------------------------
 
 nnoremap -  :e .<CR>
@@ -99,6 +110,9 @@ nnoremap [c @=execute('cprev')<CR>
 
 " Run the command on the current line and dump the results in the buffer
 nnoremap Q !!$SHELL<CR>
+
+" A 'better K', run my Docs command on the word under the cursor
+nnoremap K :call Docs(expand("<cword>"))<CR>
 
 " Search through command history based on current command line
 cnoremap <c-n> <down>
