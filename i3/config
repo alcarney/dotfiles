@@ -93,10 +93,10 @@ bindsym $mod+a focus parent
 bindsym $mod+Shift+a focus child
 
 # Colors                 border      backgr      text        indicator   child_border
-client.focused           #ff0000     #222222     #ffffff     #00ffff     #ff0000
-client.unfocused         #333333     #222222     #888888     #00ffff     #ffffff
-client.focused_inactive  #ff0000     #222222     #ffffff     #00ffff     #ffffff
-client.urgent            #000000     #440000     #888888     #00ffff     #ffffff
+client.focused           #ffffff     #222222     #ffffff     #00ffff     #ffffff
+client.unfocused         #333333     #222222     #888888     #00ffff     #888888
+client.focused_inactive  #ffffff     #222222     #ffffff     #00ffff     #888888
+client.urgent            #000000     #440000     #888888     #00ffff     #888888
 
 
 # Workspace names
@@ -114,11 +114,6 @@ set $wp3 3
 # Set the default workspace layout to stacked
 workspace_layout stacked
 
-# Put specific programs on particular workspaces
-assign [class="Emacs"] $wp1
-assign [class="Firefox"] $wp1
-assign [class="Uzbl-core"] $wp1
-
 # Put Specific workspaces on specific monitors (if available)
 workspace $wp1 output eDP1
 workspace $wp2 output HDMI2
@@ -135,8 +130,12 @@ bindsym $mod+3 workspace $wp3
 #bindsym $mod+9 workspace $wp9
 #bindsym $mod+0 workspace $wp0
 
-# Pressin one of the above for a second time will take me back to where I came from
+# Pressing one of the above for a second time will take me back to where I came from
 workspace_auto_back_and_forth yes
+
+# Move to next/previous workspace
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $wp1
