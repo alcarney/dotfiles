@@ -9,5 +9,5 @@ setlocal makeprg=flake8\ %
 autocmd QuickFixCmdPost <buffer> :lwindow
 
 " Automatically lint on write
-autocmd BufWritePost <buffer> :silent lmake
+autocmd BufWritePost <buffer> :silent! lmake
 
