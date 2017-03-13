@@ -32,7 +32,7 @@ start_common ()
 
     # Set the background, enable compositing and notifications
     # feh --randomize --recursive --bg-scale "/home/alex/Media/Wallpapers/"
-    feh --bg-scale '/home/alex/Media/Wallpapers/World_Trade_Flower.jpg'
+    feh --bg-scale '/home/alex/Media/Wallpapers/tilt_shift_island.jpe'
     compton&
 }
 
