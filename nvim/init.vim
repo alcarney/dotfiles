@@ -25,6 +25,7 @@ Plug 'junegunn/vim-peekaboo'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'wellle/targets.vim'
+Plug 'junegunn/goyo.vim'
 
 " Interactive Scratchpad
 Plug 'metakirby5/codi.vim'
