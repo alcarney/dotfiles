@@ -57,7 +57,6 @@ call plug#end()
 " Tabs and Spaces
 set expandtab
 set smarttab
-set smartindent
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
