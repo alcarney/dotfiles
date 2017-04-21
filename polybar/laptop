@@ -198,12 +198,23 @@ format-volume-padding = 4
 
 [module/i3]
 type = internal/i3
-label-focused = 
-label-focused-padding = 1
-label-unfocused = 
-label-unfocused-padding = 1
-label-visible = 
-label-visible-padding = 1
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-default = 
+
+label-focused = %icon%
+label-focused-padding = 2
+label-focused-underline = #ffffff
+label-unfocused = %icon%
+label-unfocused-padding = 2
+label-visible = %icon%
+label-visible-padding = 2
+label-urgent = %icon%
+label-urgent-padding = 2
+label-urgent-underline = #ff0000
 
 [module/wireless]
 type = internal/network
