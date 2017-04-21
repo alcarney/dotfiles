@@ -6,6 +6,7 @@ alias nv="nvim"
 alias qutebrowser="qutebrowser --backend webengine"
 alias iplayer="get_iplayer"
 alias iradio="get_iplayer --type=radio"
+alias mux="tmuxinator"
 
 #}}}
 
