@@ -17,8 +17,20 @@ gaps inner 10
 # So that gaps actually look ok we need to disable titlebars
 for_window [class="^.*"] border pixel 1
 
-# Manage uzbl for me
-for_window [class="Uzbl-core"] focus child, layout stacking, focus
+# Code
+assign [class="st-256color"] $wp1
+
+# Web
+assign [class="qutebrowser"] $wp2
+assign [class="Firefox"] $wp2
+
+# Chat
+assign [instance="Gitter"] $wp3
+assign [class="telegram-desktop"] $wp3
+
+
+# Music
+assign [class="Spotify"] $wp4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -103,13 +115,13 @@ client.urgent            #000000     #440000     #888888     #00ffff     #888888
 set $wp1 1
 set $wp2 2
 set $wp3 3
-#set $wp4 "IV"
-#set $wp5 "V"
-#set $wp6 "VI"
-#set $wp7 "VII"
-#set $wp8 "VIII"
-#set $wp9 "IX"
-#set $wp0 "X"
+set $wp4 4
+set $wp5 5
+set $wp6 6
+set $wp7 7
+set $wp8 8
+set $wp9 9
+set $wp0 0
 
 # Set the default workspace layout to stacked
 workspace_layout stacked
@@ -122,13 +134,13 @@ workspace $wp2 output HDMI2
 bindsym $mod+1 workspace $wp1
 bindsym $mod+2 workspace $wp2
 bindsym $mod+3 workspace $wp3
-#bindsym $mod+4 workspace $wp4
-#bindsym $mod+5 workspace $wp5
-#bindsym $mod+6 workspace $wp6
-#bindsym $mod+7 workspace $wp7
-#bindsym $mod+8 workspace $wp8
-#bindsym $mod+9 workspace $wp9
-#bindsym $mod+0 workspace $wp0
+bindsym $mod+4 workspace $wp4
+bindsym $mod+5 workspace $wp5
+bindsym $mod+6 workspace $wp6
+bindsym $mod+7 workspace $wp7
+bindsym $mod+8 workspace $wp8
+bindsym $mod+9 workspace $wp9
+bindsym $mod+0 workspace $wp0
 
 # Pressing one of the above for a second time will take me back to where I came from
 workspace_auto_back_and_forth yes
@@ -141,13 +153,13 @@ bindsym $mod+Shift+Tab workspace prev
 bindsym $mod+Shift+1 move container to workspace $wp1
 bindsym $mod+Shift+2 move container to workspace $wp2
 bindsym $mod+Shift+3 move container to workspace $wp3
-#bindsym $mod+Shift+4 move container to workspace $wp4
-#bindsym $mod+Shift+5 move container to workspace $wp5
-#bindsym $mod+Shift+6 move container to workspace $wp6
-#bindsym $mod+Shift+7 move container to workspace $wp7
-#bindsym $mod+Shift+8 move container to workspace $wp8
-#bindsym $mod+Shift+9 move container to workspace $wp9
-#bindsym $mod+Shift+0 move container to workspace $wp0
+bindsym $mod+Shift+4 move container to workspace $wp4
+bindsym $mod+Shift+5 move container to workspace $wp5
+bindsym $mod+Shift+6 move container to workspace $wp6
+bindsym $mod+Shift+7 move container to workspace $wp7
+bindsym $mod+Shift+8 move container to workspace $wp8
+bindsym $mod+Shift+9 move container to workspace $wp9
+bindsym $mod+Shift+0 move container to workspace $wp0
 
 # reload the configuration file
 bindsym $mod+Shift+c reload

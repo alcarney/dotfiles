@@ -3,6 +3,7 @@
 alias extract="atool -x"
 alias compress="atool -a"
 alias nv="nvim"
+alias mux="tmuxinator"
 alias qutebrowser="qutebrowser --backend webengine"
 alias iplayer="get_iplayer"
 alias iradio="get_iplayer --type=radio"
