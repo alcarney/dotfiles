@@ -22,9 +22,11 @@ set ttimeoutlen=10
 " Generic editing plugins
 Plug 'godlygeek/tabular'
 Plug 'junegunn/vim-peekaboo'
+Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'wellle/targets.vim'
+Plug 'junegunn/goyo.vim'
 
 " Interactive Scratchpad
 Plug 'metakirby5/codi.vim'
@@ -57,7 +59,6 @@ call plug#end()
 " Tabs and Spaces
 set expandtab
 set smarttab
-set smartindent
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
