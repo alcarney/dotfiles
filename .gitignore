@@ -6,3 +6,5 @@ nvim/autoload
 tmux/sidebar
 tmux/resurrect
 nvim/.netrwhist
+ptpython/history
+qutebrowser/qsettings/QtProject.conf
