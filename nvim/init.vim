@@ -101,12 +101,6 @@ endfunction
 
 nnoremap -  :e .<CR>
 
-" Location lists and quickfixes
-nnoremap ]l @=execute('lnext')<CR>
-nnoremap [l @=execute('lprev')<CR>
-nnoremap ]c @=execute('cnext')<CR>
-nnoremap [c @=execute('cprev')<CR>
-
 " Run the command on the current line and dump the results in the buffer
 nnoremap Q !!$SHELL<CR>
 
@@ -119,7 +113,7 @@ cnoremap <c-p> <up>
 
 let mapleader = ' '
 nnoremap <leader><tab>         :b#<CR>
-nnoremap <leader>bb            :buf
+nnoremap <leader>f             gqip
 nnoremap <leader>z             zMzvzz
 nnoremap <leader>l             :lclose<CR>
 
