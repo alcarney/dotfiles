@@ -32,5 +32,6 @@ attach: false
 
 windows:
   - qutebrowser: qutebrowser --backend webengine
-  - telegram: telegram-desktop
+#  - telegram: telegram-desktop
+  - spotify: flatpak run com.spotify.Client
   - gitter: gitter
