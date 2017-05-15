@@ -8,3 +8,8 @@ tmux/resurrect
 nvim/.netrwhist
 ptpython/history
 qutebrowser/qsettings/QtProject.conf
+cache.db
+history.cmdline
+history.search
+pb-lock.pid
+queue
