@@ -1,0 +1,35 @@
+" vim: set ft=vim:
+set statusline=
+
+" The number of the current buffer
+set statusline+=%(\ %n\ \ %)
+
+" Git branch name - if available
+set statusline+=%{fugitive#head()!=''?'\ \ '.fugitive#head().'\ \ ':''}
+
+" Can the file be modified?
+set statusline+=%{&readonly?'\ ':''}
+
+" The current filename
+set statusline+=%f
+
+" Has it been modified?
+set statusline+=%{&modified?'!':''}
+
+" End of the first highlight group
+set statusline+=\ %1*
+
+" Everything from now on will appear on the right
+set statusline+=%=
+
+" Second highlight group
+set statusline+=\%*
+
+" Filetype
+set statusline+=\ %{&filetype}\ 
+
+" Line and column numbers
+set statusline+=\ %l\,\ %c
+
+" Highlighting and colours
+hi User1 ctermfg=14 ctermbg=0

@@ -1,20 +1,15 @@
 " Set the path the plugins will live in
 let s:path = expand('~/.config/nvim/')
 let s:config = s:path . 'init.vim'
+let s:status = s:path . 'statusline'
 
 " -------------------------- Plugins! ---------------------------------------
 call plug#begin(s:path . 'plugged')
 
 " Interface
 Plug 'romainl/flattened'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/rainbow_parentheses.vim'
 let g:rainbow#pairs = [['(', ')'], ['[', ']']]
-
-let g:airline_theme='solarized'
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
 
 set noshowmode
 set ttimeoutlen=10
@@ -91,6 +86,9 @@ set noswapfile
 
 " Live search and replace in a new split
 set inccommand=split
+
+" Statusline
+exec 'source ' . s:status
 
 "----------------------------- Functions -------------------------------------
 function! Docs(thing)
