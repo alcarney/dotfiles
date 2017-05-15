@@ -4,6 +4,9 @@ setlocal textwidth=79
 setlocal colorcolumn=80
 highlight ColorColumn ctermbg=0
 
+" Spell checking
+setlocal spell
+
 " Tell gq to format according to textwidth
 setlocal formatoptions+=t
 
