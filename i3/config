@@ -130,6 +130,9 @@ workspace_layout stacked
 workspace $wp1 output eDP1
 workspace $wp2 output HDMI2
 
+# Make workspace 0 the 'floating' workspace
+for_window [workspace=$wp0] floating enable
+
 # switch to workspace
 bindsym $mod+1 workspace $wp1
 bindsym $mod+2 workspace $wp2
