@@ -2,7 +2,7 @@
 set statusline=
 
 " The number of the current buffer
-set statusline+=%(\ %n\ \ %)
+set statusline+=%2*%(\ %n\ %*%)
 
 " Git branch name - if available
 set statusline+=%{fugitive#head()!=''?'\ \ '.fugitive#head().'\ \ ':''}
@@ -26,10 +26,18 @@ set statusline+=%=
 set statusline+=\%*
 
 " Filetype
-set statusline+=\ %{&filetype}\ 
+set statusline+=\ %{&filetype!=''?&filetype.'\ ':''}
 
 " Line and column numbers
 set statusline+=\ %l\,\ %c
 
 " Highlighting and colours
 hi User1 ctermfg=14 ctermbg=0
+hi User2 ctermfg=0 ctermbg=14
+
+" Some autocommands to give some indication to what mode we are in
+
+augroup modeindicator
+    autocmd InsertEnter * hi User2 ctermbg=46 ctermfg=14
+    autocmd InsertLeave * hi User2 ctermbg=14 ctermfg=0
+augroup END
