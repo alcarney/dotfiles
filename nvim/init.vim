@@ -15,7 +15,6 @@ set noshowmode
 set ttimeoutlen=10
 
 " Generic editing plugins
-Plug 'godlygeek/tabular'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
