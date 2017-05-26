@@ -19,10 +19,6 @@ Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'wellle/targets.vim'
-Plug 'junegunn/goyo.vim'
-
-" Interactive Scratchpad
-Plug 'metakirby5/codi.vim'
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -37,12 +33,18 @@ let g:load_doxygen_syntax=1
 Plug 'vim-scripts/fountain.vim', {'for': ['fountain']}
 
 " Idris
-Plug 'idris-hackers/idris-vim', { 'for': ['idris'] }
+Plug 'idris-hackers/idris-vim', {'for': ['idris']}
 let g:idris_conceal = 1
 
 " Latex
-Plug 'lervag/vimtex', { 'for': ['tex', 'plaintex'] }
+Plug 'lervag/vimtex', {'for': ['tex', 'plaintex']}
 let g:tex_flavour = 'latex'
+
+" Python
+Plug 'davidhalter/jedi-vim', {'for': ['python']}
+let g:jedi#auto_vim_configuration = 0
+let g:jedi#popup_on_dot = 0
+let g:jedi#popup_select_first = 0
 
 call plug#end()
 
@@ -87,22 +89,12 @@ set inccommand=split
 " Statusline
 exec 'source ' . s:status
 
-"----------------------------- Functions -------------------------------------
-function! Docs(thing)
-    :execute ':silent !' . &keywordprg . ' ' . a:thing . ' > /tmp/docs'
-    pedit /tmp/docs
-endfunction
-
-
 "----------------------------- Keys ------------------------------------------
 
 nnoremap -  :e .<CR>
 
 " Run the command on the current line and dump the results in the buffer
 nnoremap Q !!$SHELL<CR>
-
-" A 'better K', run my Docs command on the word under the cursor
-nnoremap K :call Docs(expand("<cword>"))<CR>
 
 " Search through command history based on current command line
 cnoremap <c-n> <down>
