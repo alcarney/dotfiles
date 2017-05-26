@@ -11,7 +11,7 @@ set statusline+=%{fugitive#head()!=''?'\ \ '.fugitive#head().'\ \ ':''}
 set statusline+=%{&readonly?'\ ':''}
 
 " The current filename
-set statusline+=%f
+set statusline+=\ %f
 
 " Has it been modified?
 set statusline+=%{&modified?'!':''}
