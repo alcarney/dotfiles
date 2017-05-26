@@ -25,7 +25,6 @@ Plug 'junegunn/goyo.vim'
 Plug 'metakirby5/codi.vim'
 
 " Git
-Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 nnoremap <leader>gs       :Gstatus<CR>
 
