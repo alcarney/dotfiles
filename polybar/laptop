@@ -46,7 +46,7 @@ font-1 = fontawesome-webfont:size=10:weight=heavy;0
 
 modules-left = spotify
 modules-center = clock
-modules-right = cpu ram
+modules-right = updates cpu ram
 
 tray-position = right
 tray-padding = 2
@@ -87,6 +87,14 @@ modules-right = volume wireless tether battery-one battery-two
 
 tray-position = right
 tray-padding = 2
+
+[module/updates]
+type=custom/script
+interval=3600
+format=<label>
+label=%output:0:50%
+exec= .config/dotfiles/polybar/updates.sh
+exec-if= "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
 
 [module/window]
 type=internal/xwindow
