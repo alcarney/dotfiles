@@ -77,6 +77,10 @@ set hidden
 " Make find recursive
 set path=**
 
+" Wildmenu
+set wildignore=*.pyc,.git,*.o,*.png,*.gif,*.jpg
+set wildignore+=,*.jpeg
+
 " Don't highlight search matches
 set nohlsearch
 
@@ -122,6 +126,7 @@ augroup general
     autocmd!
     autocmd BufRead,BufNewFile *.spmd set filetype=fountain
     autocmd BufWritePre * %s/\s\+$//e            " Trim trailing whitespace on save.
+    autocmd BufWritePre * silent $g/^$/d                " Delete the last line if blank
 augroup END
 
 " Check the ftplugin folder for filetype specific settings!
@@ -132,4 +137,3 @@ augroup hy_filetype
     autocmd BufNewFile, BufRead *.hy set filetype=hy
     autocmd FileType hy RainbowParentheses
 augroup END
-
