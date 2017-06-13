@@ -14,3 +14,10 @@ autocmd QuickFixCmdPost <buffer> :lwindow
 " Automatically lint on write
 autocmd BufWritePost <buffer> :silent! lmake
 
+" Create folds on docstrings
+setlocal foldmethod=syntax
+setlocal foldminlines=12
+
+" Make the folds more subtle
+hi Folded cterm=italic
+
