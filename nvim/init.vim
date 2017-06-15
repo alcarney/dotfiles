@@ -78,8 +78,10 @@ set hidden
 set path=**
 
 " Wildmenu
-set wildignore=*.pyc,.git,*.o,*.png,*.gif,*.jpg
-set wildignore+=,*.jpeg
+set wildmenu
+set wildmode=longest:full,full
+set wildignore=*.pyc,.git/,*.o,*.png,*.jpg
+set wildignore+=*.jpeg
 
 " Don't highlight search matches
 set nohlsearch
