@@ -14,6 +14,6 @@ try:
     artists_str = ", ".join(artists) if len(artists) > 1 else artists[0]
 
     # print(artists)
-    print("%s | %s" % (title, artists_str))
+    print("  %s | %s" % (title, artists_str))
 except:
     print("Not playing")
