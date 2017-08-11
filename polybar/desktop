@@ -46,9 +46,9 @@ module_margin_right = 0
 font-0 = DejaVuSans:size=8;0
 font-1 = fontawesome-webfont:size=10:weight=heavy;0
 
-modules-left = mpd
-modules-center =
-modules-right = cpu ram
+modules-left = spotify
+modules-center = clock
+modules-right = updates cpu ram
 
 [bar/top]
 ;monitor = eDP1
@@ -81,23 +81,30 @@ font-0 = DejaVuSans:size=8;0
 font-1 = fontawesome-webfont:size=10:weight=heavy;0
 
 modules-left = i3
-modules-center = clock
-modules-right = volume
+modules-center = window
+modules-right = volume net
 
-[module/mpd]
-type = internal/mpd
-host = 127.0.0.1
-port = 6600
-format-online = <icon-prev> <icon-seekb> <icon-stop> <toggle> <icon-seekf> <icon-next>  <icon-repeat> <icon-random>   <label-time>  <label-song>
-icon-play = 
-icon-pause = 
-icon-stop = 
-icon-prev = 
-icon-next = 
-icon-seekb = 
-icon-seekf = 
-icon-random = 
-icon-repeat = 
+[module/window]
+type=internal/xwindow
+
+[module/net]
+type=internal/network
+interface=enp10s0
+label-connected=  %linkspeed%
+label-disconnected= 
+
+[module/spotify]
+type = custom/script
+exec = $HOME/.config/dotfiles/polybar/spotify-now-playing.py
+interval = 1
+
+[module/updates]
+type=custom/script
+interval=3600
+format=<label>
+label=%output:0:50%
+exec= .config/dotfiles/polybar/updates.sh
+exec-if= "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
 
 [module/cpu]
 type = internal/cpu
