@@ -19,6 +19,14 @@ Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'wellle/targets.vim'
+Plug 'w0rp/ale', {'for': ['python', 'cpp']}
+
+let g:ale_sign_column_always = 1
+let g:ale_open_list = 1
+let g:ale_sign_error= ''
+let g:ale_sign_warning = ''
+let g:ale_echo_msg_error_str = ''
+let g:ale_echo_msg_format = '[%linter%] %s'
 
 " Git
 Plug 'tpope/vim-fugitive'
