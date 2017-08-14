@@ -110,9 +110,10 @@ nnoremap -  :e .<CR>
 " Run the command on the current line and dump the results in the buffer
 nnoremap Q !!$SHELL<CR>
 
-" Automatically center lines when I navigate the jump list
+" Automatically center lines after a few common motions
 nnoremap <c-o> <c-o>zz
 nnoremap <c-i> <c-i>zz
+nnoremap <s-g> <s-g>zz
 
 " Search through command history based on current command line
 cnoremap <c-n> <down>
