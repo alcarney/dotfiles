@@ -122,8 +122,9 @@ cnoremap <c-p> <up>
 
 let mapleader = ' '
 nnoremap <leader><tab>         :b#<CR>
-nnoremap <leader>b             :ls<CR>:b
-nnoremap <leader>f             gqip
+nnoremap <leader>b             :ls<CR>:b<Space>
+nnoremap <leader>F             :filter /
+nnoremap <leader>f             :find<Space>
 nnoremap <leader>i             :ilist /
 nnoremap <leader>l             :lclose<CR>
 nnoremap <leader>z             zMzvzz
