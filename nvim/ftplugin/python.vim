@@ -19,3 +19,7 @@ hi Folded cterm=italic
 hi SignColumn ctermbg=0
 hi ALEErrorSign ctermbg=0
 hi ALEWarningsSign ctermbg=0
+
+" Simple Expansions
+inoremap """<Space> """<CR>"""<Esc>O
+inoremap def<Space> def ():<Esc>2hi

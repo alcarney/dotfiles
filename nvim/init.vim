@@ -137,6 +137,12 @@ nnoremap <leader>/f :silent! lgrep <c-r>/ *<CR>:lwindow<CR>
 " in a loclist
 nnoremap <leader>/p :silent! lgrep <c-r>/ `git ls-files`<CR>:lwindow<CR>
 
+" Quick and dirty expansions
+inoremap (<Space> ()<Esc>i
+inoremap [<Space> []<Esc>i
+inoremap '<Space> ''<Esc>i
+inoremap "<Space> ""<Esc>i
+
 "----------------------------- Auto Commands ---------------------
 
 augroup general
