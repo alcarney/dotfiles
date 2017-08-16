@@ -124,8 +124,9 @@ let mapleader = ' '
 nnoremap <leader><tab>         :b#<CR>
 nnoremap <leader>b             :ls<CR>:b
 nnoremap <leader>f             gqip
-nnoremap <leader>z             zMzvzz
+nnoremap <leader>i             :ilist /
 nnoremap <leader>l             :lclose<CR>
+nnoremap <leader>z             zMzvzz
 
 " Open all matches of the previous search in the current buffer in a loclist
 nnoremap <leader>// :silent! lgrep <c-r>/ %<CR>:lwindow<CR>
