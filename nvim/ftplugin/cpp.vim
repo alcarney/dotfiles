@@ -1,3 +1,4 @@
+let g:load_doxygen_syntax=1
 
 hi SignColumn ctermbg=0
 hi ALEErrorSign ctermbg=0

@@ -35,9 +35,6 @@ nnoremap <leader>gs       :Gstatus<CR>
 
 " -------------------------- Language Specific Plugins -----------------------
 
-" C++
-let g:load_doxygen_syntax=1
-
 " Fountain
 Plug 'vim-scripts/fountain.vim', {'for': ['fountain']}
 
