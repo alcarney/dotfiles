@@ -29,10 +29,6 @@ let g:ale_echo_msg_error_str = ''
 let g:ale_echo_msg_format = '[%linter%] %s'
 let g:ale_lint_on_text_changed = 'never'
 
-" Git
-Plug 'tpope/vim-fugitive'
-nnoremap <leader>gs       :Gstatus<CR>
-
 " -------------------------- Language Specific Plugins -----------------------
 
 " Fountain
@@ -51,6 +47,9 @@ Plug 'davidhalter/jedi-vim', {'for': ['python']}
 let g:jedi#auto_vim_configuration = 0
 let g:jedi#popup_on_dot = 0
 let g:jedi#popup_select_first = 0
+
+" Git
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
