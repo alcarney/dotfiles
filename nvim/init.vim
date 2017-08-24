@@ -17,6 +17,8 @@ Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'wellle/targets.vim'
+Plug 'michaeljsmith/vim-indent-object'
+Plug 'machakann/vim-highlightedyank'
 Plug 'w0rp/ale', {'for': ['python', 'cpp']}
 
 let g:ale_sign_column_always = 1
