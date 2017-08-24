@@ -138,6 +138,7 @@ nnoremap <leader>/p :silent! lgrep <c-r>/ `git ls-files`<CR>:lwindow<CR>
 " Quick and dirty expansions
 inoremap (<Space> ()<Esc>i
 inoremap [<Space> []<Esc>i
+inoremap {<Space> {}<Esc>i
 inoremap '<Space> ''<Esc>i
 inoremap "<Space> ""<Esc>i
 
