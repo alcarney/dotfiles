@@ -116,6 +116,10 @@ nnoremap <s-g> <s-g>zz
 cnoremap <c-n> <down>
 cnoremap <c-p> <up>
 
+" Quickly cycle through buffers
+nnoremap > :bn<CR>
+nnoremap < :bp<CR>
+
 let mapleader = ' '
 nnoremap <leader><tab>         :b#<CR>
 nnoremap <leader>b             :filter! /\[/ ls<CR>:b<Space>
