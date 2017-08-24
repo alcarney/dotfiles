@@ -8,8 +8,6 @@ call plug#begin(s:path . 'plugged')
 
 " Interface
 Plug 'romainl/flattened'
-Plug 'junegunn/rainbow_parentheses.vim'
-let g:rainbow#pairs = [['(', ')'], ['[', ']']]
 
 set noshowmode
 set ttimeoutlen=10
