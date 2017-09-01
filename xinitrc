@@ -49,6 +49,11 @@ start_dwm ()
     exec dwm
 }
 
+start_herbs () {
+    start_common
+    exec herbstluftwm --locked
+}
+
 start_i3 ()
 {
     start_common
@@ -77,12 +82,13 @@ start_bspwm()
 }
 
 # Default window manager
-session=${1:-i3}
+session=${1:-hc}
 
 case $session in
     bspwm) start_bspwm;;
     emacs) start_emacs;;
     dwm) start_dwm;;
+    hc) start_herbs;;
     i3) start_i3;;
     xfce) start_xfce;;
     xmonad) start_xmonad;;
