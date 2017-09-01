@@ -58,6 +58,17 @@ batfmt () {
 
 # Tag formatting
 tagfmt () {
+
+    # I want to skip tags that are simply empty numbers
+    if [ $(echo $1 | grep '\.[0-9]') ] ; then
+        return
+    fi
+
+    # Or the tag that is selected
+    if [ $(echo $1 | grep '#.*') ] ; then
+        return
+    fi
+
     # Look at the first character - this tells us the state
     # of the tag, from the manpage (as of v0.7)
     # .  the tag is empty
@@ -141,12 +152,15 @@ cpufmt () {
     # The triple "redirect" character tells bash that the
     # 'file' we are redirecting from is actually just a string
     IFS=$'\t' read -ra tags <<< $(herbstclient tag_status $monitor)
+    stag=$(herbstclient tag_status $monitor | \
+            awk 'BEGIN{RS="\t"} ;/^#/ {gsub("#", "") ; printf("%s", $0)}')
     sep="^fg($selbg)|^fg()"
     window=""
     err=""
     battery=""
     net=""
     cpu=""
+
 
     # The following code takes the input generated from the
     # previous code block and processes it to form the panel
@@ -162,7 +176,12 @@ cpufmt () {
         # What type of data did we receive?
         case "${data[0]}" in
             tag*)
-                IFS=$'\t' read -ra tags <<< $(herbstclient tag_status $monitor);;
+                # Get all tags
+                IFS=$'\t' read -ra tags <<< $(herbstclient tag_status $monitor)
+
+                # Get the selected tag
+                stag=$(herbstclient tag_status $monitor | \
+                    awk 'BEGIN{RS="\t"} ;/^#/ {gsub("#", "") ; printf("%s", $0)}');;
 
             date)
                 date=${data[@]:1};;
@@ -195,6 +214,7 @@ cpufmt () {
         # do is produce the dzen output!
 
         # Draw the tags
+        echo -n "^bg($selbg)^fg($selfg) $stag ^bg()^fg()"
         for t in "${tags[@]}" ; do
             tagfmt $t
         done
