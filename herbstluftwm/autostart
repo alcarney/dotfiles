@@ -38,9 +38,12 @@ hc keybind $Mod-j     focus down
 hc keybind $Mod-k     focus up
 hc keybind $Mod-l     focus right
 
-# Get a persistent sidebar
-sidebar=~/.config/herbstluftwm/toggledualhead.sh
-hc keybind $Mod-t spawn "$sidebar"
+# # Get a persistent sidebar
+# sidebar=~/.config/herbstluftwm/toggledualhead.sh
+# hc keybind $Mod-t spawn "$sidebar"
+
+# Tag switcher
+hc keybind $Mod-t spawn ~/.config/herbstluftwm/tag_switch.sh
 
 # moving clients
 hc keybind $Mod-Shift-Left  shift left
@@ -109,10 +112,11 @@ hc mousebind $Mod-Button3 resize
 
 # focus
 hc keybind $Mod-BackSpace   cycle_monitor
-hc keybind $Mod-Tab         cycle_all +1
-hc keybind $Mod-Shift-Tab   cycle_all -1
-hc keybind $Mod-c cycle
+hc keybind $Mod-Tab         cycle +1
+hc keybind $Mod-Shift-Tab   cycle -1
+#hc keybind $Mod-c cycle
 hc keybind $Mod-i jumpto urgent
+
 
 # theme
 hc attr theme.tiling.reset 1
