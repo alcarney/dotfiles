@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+CONFDIR=$HOME/.config/herbstluftwm
+
 # this is a simple config for herbstluftwm
 
 hc() {
@@ -23,7 +25,7 @@ hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-c close
 hc keybind $Mod-Shift-s ~/bin/i3exit suspend
 
-hc keybind $Mod-Return spawn ${TERMINAL:-st} # use your $TERMINAL with xterm as fallback
+hc keybind $Mod-Return spawn $CONFDIR/start_terminal.sh
 hc keybind $Mod-d spawn dmenu_run -i -p ">" -nb "#101010" -nf "#454545" -sb "#9fbc00"\
                                   -sf "#222222" -fn "DejaVu Sans Mono-8"
 
@@ -43,7 +45,7 @@ hc keybind $Mod-l     focus right
 # hc keybind $Mod-t spawn "$sidebar"
 
 # Tag switcher
-hc keybind $Mod-t spawn ~/.config/herbstluftwm/tag_switch.sh
+hc keybind $Mod-t spawn $CONFDIR/tag_switch.sh
 
 # moving clients
 hc keybind $Mod-Shift-Left  shift left
@@ -116,6 +118,9 @@ hc keybind $Mod-Tab         cycle +1
 hc keybind $Mod-Shift-Tab   cycle -1
 #hc keybind $Mod-c cycle
 hc keybind $Mod-i jumpto urgent
+
+# Focus follows the mouse
+hc set focus_follows_mouse 1
 
 
 # theme
