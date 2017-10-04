@@ -29,6 +29,9 @@ hc keybind $Mod-Return spawn $CONFDIR/start_terminal.sh
 hc keybind $Mod-d spawn dmenu_run -i -p ">" -nb "#101010" -nf "#454545" -sb "#9fbc00"\
                                   -sf "#222222" -fn "DejaVu Sans Mono-8"
 
+# Open a new terminal attached to given tmux session
+hc keybind $Mod+w spawn $CONFDIR/select_tmux_session.sh
+
 # basic movement
 # focusing clients
 hc keybind $Mod-Left  focus left
