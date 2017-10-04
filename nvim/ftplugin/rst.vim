@@ -18,3 +18,8 @@ setlocal formatoptions+=t
 " Tell gq to break long lines?
 setlocal formatoptions-=l
 
+" Create undo breakpoints at punctuation
+inoremap <buffer> . .<c-g>u
+inoremap <buffer> ? ?<c-g>u
+inoremap <buffer> ! !<c-g>u
+inoremap <buffer> , ,<c-g>u

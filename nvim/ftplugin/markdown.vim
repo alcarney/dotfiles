@@ -14,3 +14,9 @@ setlocal formatoptions+=t
 setlocal formatoptions-=l
 
 inoremap <buffer> `python ```python<CR>```<Esc>O
+
+" Create undo breakpoints at punctuation
+inoremap <buffer> . .<c-g>u
+inoremap <buffer> ? ?<c-g>u
+inoremap <buffer> ! !<c-g>u
+inoremap <buffer> , ,<c-g>u
