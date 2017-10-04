@@ -13,4 +13,4 @@ setlocal formatoptions+=t
 " Tell gq to break long lines?
 setlocal formatoptions-=l
 
-
+inoremap <buffer> `python ```python<CR>```<Esc>O
