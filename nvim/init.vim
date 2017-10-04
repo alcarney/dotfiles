@@ -15,11 +15,12 @@ set ttimeoutlen=10
 " Generic editing plugins
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
 Plug 'wellle/targets.vim'
 Plug 'michaeljsmith/vim-indent-object'
-Plug 'machakann/vim-highlightedyank'
-Plug 'w0rp/ale', {'for': ['python', 'cpp']}
+
+Plug 'machakann/vim-sandwich'
+
+Plug 'w0rp/ale', {'for': ['python', 'cpp', 'rust']}
 
 let g:ale_sign_column_always = 1
 let g:ale_open_list = 1
@@ -50,6 +51,9 @@ let g:jedi#popup_select_first = 0
 
 " Git
 Plug 'tpope/vim-fugitive'
+
+" Rust
+Plug 'rust-lang/rust.vim' , {'for': ['rust']}
 
 call plug#end()
 
@@ -123,8 +127,8 @@ nnoremap < :bp<CR>
 let mapleader = ' '
 nnoremap <leader><tab>         :b#<CR>
 nnoremap <leader>b             :filter! /\[/ ls<CR>:b<Space>
-nnoremap <leader>F             :filter /
 nnoremap <leader>f             :find<Space>
+nnoremap <leader>F             :tabnew<CR>:find<Space>
 nnoremap <leader>i             :ilist /
 nnoremap <leader>l             :lclose<CR>
 nnoremap <leader>z             zMzvzz
@@ -143,6 +147,7 @@ nnoremap <leader>/p :silent! lgrep <c-r>/ `git ls-files`<CR>:lwindow<CR>
 inoremap (<Space> ()<Esc>i
 inoremap [<Space> []<Esc>i
 inoremap {<Space> {}<Esc>i
+inoremap {<CR>    {<CR><CR>}<Esc>ki<Tab>
 inoremap '<Space> ''<Esc>i
 inoremap "<Space> ""<Esc>i
 
@@ -156,10 +161,3 @@ augroup general
 augroup END
 
 " Check the ftplugin folder for filetype specific settings!
-
-" Hy (Pythonic Lisp)
-augroup hy_filetype
-    autocmd!
-    autocmd BufNewFile, BufRead *.hy set filetype=hy
-    autocmd FileType hy RainbowParentheses
-augroup END
