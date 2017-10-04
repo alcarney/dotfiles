@@ -21,5 +21,5 @@ hi ALEErrorSign ctermbg=0
 hi ALEWarningsSign ctermbg=0
 
 " Simple Expansions
-inoremap """<Space> """<CR>"""<Esc>O
-inoremap def<Space> def ():<Esc>2hi
+inoremap <buffer> """<Space> """<CR>"""<Esc>O
+inoremap <buffer> def<Space> def ():<Esc>2hi
