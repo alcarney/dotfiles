@@ -1,4 +1,3 @@
-" Set the path the plugins will live in
 let s:path = expand('~/.config/nvim/')
 let s:config = s:path . 'init.vim'
 let s:status = s:path . 'statusline'
@@ -17,19 +16,8 @@ Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
 Plug 'wellle/targets.vim'
 Plug 'michaeljsmith/vim-indent-object'
-
 Plug 'machakann/vim-sandwich'
-
-Plug 'w0rp/ale', {'for': ['python', 'cpp', 'rust']}
-
-let g:ale_sign_column_always = 1
-let g:ale_open_list = 1
-let g:ale_sign_error= ''
-let g:ale_sign_warning = ''
-let g:ale_echo_msg_error_str = ''
-let g:ale_echo_msg_format = '[%linter%] %s'
-let g:ale_lint_on_text_changed = 'never'
-
+Plug 'tommcdo/vim-lion'
 " -------------------------- Language Specific Plugins -----------------------
 
 " Fountain
@@ -46,11 +34,16 @@ let g:tex_flavour = 'latex'
 " Python
 Plug 'davidhalter/jedi-vim', {'for': ['python']}
 let g:jedi#auto_vim_configuration = 0
-let g:jedi#popup_on_dot = 0
-let g:jedi#popup_select_first = 0
+let g:jedi#popup_on_dot           = 0
+let g:jedi#popup_select_first     = 0
 
 " Git
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+
+let g:gitgutter_sign_added    = '•'
+let g:gitgutter_sign_modified = '•'
+let g:gitgutter_sign_removed  = '•'
 
 " Rust
 Plug 'rust-lang/rust.vim' , {'for': ['rust']}
@@ -130,7 +123,6 @@ nnoremap <leader>b             :filter! /\[/ ls<CR>:b<Space>
 nnoremap <leader>f             :find<Space>
 nnoremap <leader>F             :tabnew<CR>:find<Space>
 nnoremap <leader>i             :ilist /
-nnoremap <leader>l             :lclose<CR>
 nnoremap <leader>z             zMzvzz
 
 " Open all matches of the previous search in the current buffer in a loclist
@@ -158,6 +150,12 @@ augroup general
     autocmd BufRead,BufNewFile *.spmd set filetype=fountain
     autocmd BufWritePre * %s/\s\+$//e            " Trim trailing whitespace on save.
     autocmd BufWritePre * silent $g/^$/d                " Delete the last line if blank
+augroup END
+
+augroup lint
+    autocmd!
+    autocmd BufWritePost *.py silent make! | silent redraw!
+    autocmd QuickFixCmdPost [^l]* cwindow
 augroup END
 
 " Check the ftplugin folder for filetype specific settings!
