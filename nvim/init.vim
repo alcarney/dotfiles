@@ -58,6 +58,7 @@ set smarttab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
+set autoindent
 
 " Colors
 syntax enable
@@ -103,8 +104,11 @@ nnoremap -  :e .<CR>
 
 " Run the command on the current line and dump the results in the buffer
 nnoremap Q !!$SHELL<CR>
+nnoremap QQ yyp!!$SHELL<CR>
 
 " Automatically center lines after a few common motions
+nnoremap n nzz
+nnoremap N Nzz
 nnoremap <c-o> <c-o>zz
 nnoremap <c-i> <c-i>zz
 nnoremap <s-g> <s-g>zz
@@ -128,6 +132,9 @@ nnoremap <leader>z             zMzvzz
 " Open all matches of the previous search in the current buffer in a loclist
 nnoremap <leader>// :silent! lgrep <c-r>/ %<CR>:lwindow<CR>
 
+" Run :g/pattern/# on the previous search
+nnoremap <leader>/# :g/<c-r>//#<CR>
+
 " Open all matches of the previous search in all files in a loclist
 nnoremap <leader>/f :silent! lgrep <c-r>/ *<CR>:lwindow<CR>
 
@@ -149,7 +156,7 @@ augroup general
     autocmd!
     autocmd BufRead,BufNewFile *.spmd set filetype=fountain
     autocmd BufWritePre * %s/\s\+$//e            " Trim trailing whitespace on save.
-    autocmd BufWritePre * silent $g/^$/d                " Delete the last line if blank
+    autocmd VimResized * <c-w>=                  " Resize splits if vim is resized
 augroup END
 
 augroup lint
