@@ -1,6 +1,5 @@
 let s:path = expand('~/.config/nvim/')
 let s:config = s:path . 'init.vim'
-let s:status = s:path . 'statusline'
 
 " -------------------------- Plugins! ---------------------------------------
 call plug#begin(s:path . 'plugged')
@@ -22,6 +21,9 @@ Plug 'tommcdo/vim-lion'
 
 " Fountain
 Plug 'vim-scripts/fountain.vim', {'for': ['fountain']}
+
+" Vue.js
+Plug 'posva/vim-vue', {'for': ['vue']}
 
 " Idris
 Plug 'idris-hackers/idris-vim', {'for': ['idris']}
@@ -64,6 +66,9 @@ syntax enable
 set background=dark
 colorscheme flattened_dark
 highlight Comment cterm=italic
+highlight StatusLine cterm=italic
+highlight StatusLineNC cterm=italic
+highlight Visual cterm=bold
 
 " Non printable characters
 set list
@@ -82,7 +87,7 @@ set path=**
 " Wildmenu
 set wildmenu
 set wildmode=longest:full,full
-set wildignore=*.pyc,.git/,*.o,*.png,*.jpg
+set wildignore=.git/,*.o,*.png,*.jpg
 set wildignore+=*.jpeg
 
 " Don't highlight search matches
@@ -95,7 +100,9 @@ set noswapfile
 set inccommand=split
 
 " Statusline
-exec 'source ' . s:status
+set laststatus=0
+set showtabline=0
+set noruler
 
 "----------------------------- Keys ------------------------------------------
 
@@ -118,38 +125,59 @@ nnoremap > :bn<CR>
 nnoremap < :bp<CR>
 
 let mapleader = ' '
+let maplocalleader = '\'
 nnoremap <leader><tab>         :b#<CR>
 nnoremap <leader>b             :filter! /\[/ ls<CR>:b<Space>
 nnoremap <leader>f             :find<Space>
-nnoremap <leader>F             :tabnew<CR>:find<Space>
-nnoremap <leader>i             :ilist /
 nnoremap <leader>z             zMzvzz
 
+nnoremap <localleader><tab>    <c-w>p
+nnoremap <localleader>f        :echo expand("%")<CR>
+nnoremap <localleader>t        :tabs<CR>
+
 " Open all matches of the previous search in the current buffer in a loclist
-nnoremap <leader>// :silent! lgrep <c-r>/ %<CR>:lwindow<CR>
+nnoremap <leader>// :silent! lvimgrep /<c-r>//j %<CR>:lwindow<CR>
 
 " Open all matches of the previous search in all files in a loclist
-nnoremap <leader>/f :silent! lgrep <c-r>/ *<CR>:lwindow<CR>
+nnoremap <leader>/f :silent! lvimgrep /<c-r>//j *<CR>:lwindow<CR>
+
+" Open all matches of the previous search in all files in dir/*.ext
+nnoremap <leader>/d :silent! lvimgrep /<c-r>//j <c-r>=expand("%:p:h")<CR>/*.<c-r>=expand("%:e")<CR><CR>:lwindow<CR>
 
 " Open all matches of the previous search in all files in the current 'project'
 " in a loclist
-nnoremap <leader>/p :silent! lgrep <c-r>/ `git ls-files`<CR>:lwindow<CR>
+nnoremap <leader>/p :silent! lvimgrep /<c-r>//j `git ls-files`<CR>:lwindow<CR>
 
-" Quick and dirty expansions
-inoremap (<Space> ()<Esc>i
-inoremap [<Space> []<Esc>i
-inoremap {<Space> {}<Esc>i
-inoremap {<CR>    {<CR><CR>}<Esc>ki<Tab>
-inoremap '<Space> ''<Esc>i
-inoremap "<Space> ""<Esc>i
+" Do a search for the previous pattern, but leave the scope of the search for
+" the user to fill in
+nnoremap <leader>/s :silent! lvimgrep /<c-r>//j
+
+" Create a command to diff the current buffer against the file on disk
+" tweaked version of :help :DiffOrig
+command! DiffOrig tabedit % | vert new | set buftype=nofile | read ++edit # |
+            \ 0d_ | windo diffthis
+nnoremap <leader>d :DiffOrig<CR>
+
+" Functions
+
+" A poor man's tagbar, call it with a filename and a regexp to filter by
+" it opens the result in a new vertical split - see lang.vim files for
+" invocations
+function! Defs(filename, pattern)
+    vert new
+    set buftype=nofile
+    exec '0read ' . a:filename
+    exec 'g!/' . a:pattern . '/d'
+endfunction
 
 "----------------------------- Auto Commands ---------------------
 
 augroup general
     autocmd!
-    autocmd BufRead,BufNewFile *.spmd set filetype=fountain
+    autocmd BufRead,BufNewFile *.pm setlocal filetype=racket
     autocmd BufWritePre * %s/\s\+$//e            " Trim trailing whitespace on save.
     autocmd BufWritePre * silent $g/^$/d                " Delete the last line if blank
+    autocmd VimResized * <c-w>=
 augroup END
 
 augroup lint

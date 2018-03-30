@@ -1,3 +1,4 @@
+set wildignore+=*.pyc,__pycache__/
 
 " Format python code according to pep8
 setlocal equalprg=autopep8\ -
@@ -15,8 +16,4 @@ setlocal foldminlines=12
 " Make the folds more subtle
 hi Folded cterm=italic
 
-" Simple Expansions
-inoremap <buffer> """<Space> """<CR>"""<Esc>O
-inoremap <buffer> def<Space> def ():<Esc>2hi
-
-"nnoremap <buffer> <leader>D :silent call Defs(expand("%"), '^[ ]*(def|class)')<CR>
+nnoremap gd :call jedi#goto()<CR>
