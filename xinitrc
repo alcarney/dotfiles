@@ -30,9 +30,12 @@ start_common ()
     # Set the Cursor
     xsetroot -cursor_name left_ptr
 
-    # Set the background, enable compositing and notifications
-    # feh --randomize --recursive --bg-scale "/home/alex/Media/Wallpapers/"
-    feh --bg-scale '/home/alex/Media/Wallpapers/tilt_shift_island.jpe'
+    # Use the previous wallpaper + colorscheme
+    wal -R
+
+    # Set the lockscreen program
+    xss-lock -- i3lock -n -i /home/alex/Media/Wallpapers/arrival.jpg &
+
     compton&
 }
 
@@ -57,8 +60,6 @@ start_herbs () {
 start_i3 ()
 {
     start_common
-    polybar top&
-    polybar bottom&
     exec i3
 }
 
@@ -81,16 +82,24 @@ start_bspwm()
     exec bspwm
 }
 
-# Default window manager
-session=${1:-hc}
+start_mate()
+{
+    # Remap CAPS to ESC
+    setxkbmap -layout gb -option caps:escape
 
+    # Disable those annoying "forward" and "back" keys on my laptop
+    xmodmap -e "keycode 166="
+    xmodmap -e "keycode 167="
+    exec mate-session
+}
+
+# Default window manager
+session=${1:-i3}
 case $session in
     bspwm) start_bspwm;;
-    emacs) start_emacs;;
     dwm) start_dwm;;
     hc) start_herbs;;
+    mate) start_mate;;
     i3) start_i3;;
-    xfce) start_xfce;;
-    xmonad) start_xmonad;;
     *) echo "Please enter an option"
 esac
