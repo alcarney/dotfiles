@@ -39,6 +39,8 @@ antigen apply
 
 autoload -U colors && colors
 
+(cat ~/.cache/wal/sequences &)
+
 # {{{ Functions
 lst () { # Lists the contents of the dir in a single column unless there's too much in the dir
          # then it lists it in multiple columns
@@ -60,8 +62,22 @@ cdl () {  # Clears the screen and list the contents of the directory just entere
 
 }
 
+gst() {
+    git status --short
+    git --no-pager diff --shortstat
+}
+
 function precmd()  # Prints an extra newline between commands which i think looks nicer
 {
     echo
 }
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export PATH=/home/alex/.local/bin:$PATH
+
+# added by travis gem
+[ -f /home/alex/.travis/travis.sh ] && source /home/alex/.travis/travis.sh
+
+# tabtab source for electron-forge package
+# uninstall by removing these lines or running `tabtab uninstall electron-forge`
+[[ -f /home/alex/Projects/animation/anim8/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /home/alex/Projects/animation/anim8/node_modules/tabtab/.completions/electron-forge.zsh

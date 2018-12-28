@@ -8,11 +8,12 @@ alias qutebrowser="qutebrowser --backend webengine"
 alias iplayer="get_iplayer"
 alias iradio="get_iplayer --type=radio"
 alias mux="tmuxinator"
+alias icat="kitty +kitten icat"
 
 #}}}
 
 #{{{ Git Shortcuts
-alias gst='git status'
+#alias gst='git status'
 alias gd='git diff'
 
 #{{{ Pacman Shortcuts
