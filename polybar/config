@@ -1,0 +1,185 @@
+[colors]
+background = ${xrdb:color0:#222}
+foreground = ${xrdb:color7:#222}
+foreground-alt = ${xrdb:color7:#222}
+primary = ${xrdb:color1:#222}
+secondary = ${xrdb:color2:#222}
+alert = ${xrdb:color3:#222}
+
+[bar/top]
+width = 100%
+height = 20
+padding-right = 1
+module-margin = 1
+
+font-0 = Source Code Pro:pixelsize=11
+font-1 = fontawesome-webfont:pixelsize=11
+font-2 = siji:pixelsize=11
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 2
+
+modules-left =
+modules-center = i3
+modules-right =
+
+[bar/bottom]
+width = 100%
+height = 20
+padding-right = 1
+module-margin = 1
+
+font-0 = Source Code Pro:pixelsize=11
+font-1 = fontawesome-webfont:pixelsize=11
+font-2 = siji:pixelsize=11
+
+bottom = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 2
+
+modules-right = battery0 battery1 wireless volume clock
+modules-center = spotify-prev spotify-next spotify-playing spotify-song
+modules-left = cpu ram
+
+tray-position = right
+
+[module/battery0]
+type = internal/battery
+battery = BAT0
+
+format-charging = <animation-charging> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-framerate = 750
+
+[module/battery1]
+type = internal/battery
+battery = BAT1
+
+format-charging = <animation-charging> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-framerate = 750
+
+[module/clock]
+type = internal/date
+date = %H:%M
+
+[module/cpu]
+type = internal/cpu
+label =
+format = <label> <ramp-coreload>
+format-padding =
+ramp-coreload-0 = ▁
+ramp-coreload-1 = ▂
+ramp-coreload-2 = ▃
+ramp-coreload-3 = ▄
+ramp-coreload-4 = ▅
+ramp-coreload-5 = ▆
+ramp-coreload-6 = ▇
+ramp-coreload-7 = █
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+
+label-mode = %mode%
+
+label-focused = %icon%
+label-focused-background = ${colors.background}
+label-focused-underline = ${colors.secondary}
+label-focused-padding = 2
+
+label-unfocused = %icon%
+label-unfocused-padding = 2
+
+label-urgent = %icon%
+label-urgent-background = ${colors.secondary}
+label-urgent-padding = 2
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-default = 
+strip-wsnumbers = true
+
+[module/ram]
+type = internal/memory
+label =
+format = <label> <bar-used>
+format-padding =
+bar-used-width = 10
+bar-used-foreground-0 = ${colors.primary}
+bar-used-foreground-1 = ${colors.primary}
+bar-used-foreground-2 = ${colors.primary}
+bar-used-foreground-3 = ${colors.primary}
+bar-used-fill = ▁
+bar-used-empty =
+bar-used-empty-foreground = #888888
+bar-used-indicator = ▁
+
+[module/spotify-song]
+type = custom/script
+exec = $HOME/.config/polybar/spotify.py
+interval = 1
+
+[module/spotify-playing]
+type = custom/script
+exec = $HOME/.config/polybar/spotify-playing.py
+interval = 1
+
+click-left = /home/alex/.config/polybar/spotify-playback-toggle
+
+[module/spotify-next]
+type = custom/script
+exec = $HOME/.config/polybar/spotify-next.py
+
+click-left = $HOME/.config/polybar/spotify-next
+
+[module/spotify-prev]
+type = custom/script
+exec = $HOME/.config/polybar/spotify-prev.py
+
+click-left = $HOME/.config/polybar/spotify-prev
+
+[module/title]
+type = internal/xwindow
+
+[module/volume]
+type = internal/volume
+label-volume =  %percentage%
+label-muted = 
+
+[module/wireless]
+type = internal/network
+interface = wlp4s0
+
+label-connected =  %essid%
