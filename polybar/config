@@ -43,7 +43,7 @@ line-size = 2
 
 modules-right = battery0 battery1 wireless volume clock
 modules-center = spotify-prev spotify-next spotify-playing spotify-song
-modules-left = cpu ram
+modules-left = wallpaper cpu ram
 
 tray-position = right
 
@@ -183,3 +183,10 @@ type = internal/network
 interface = wlp4s0
 
 label-connected =  %essid%
+
+[module/wallpaper]
+type = custom/script
+exec = $HOME/.config/polybar/wallpaper-icon
+interval = 300
+click-left = $HOME/.config/polybar/wallpaper-change
+

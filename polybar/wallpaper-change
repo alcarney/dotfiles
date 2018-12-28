@@ -1,0 +1,10 @@
+#!/bin/bash
+
+DIR=$HOME/Media/Wallpapers
+file=$(ls $DIR | sort -R | head -n 1)
+
+image="${DIR}/${file}"
+
+wal-set $image
+notify-send "Wallpaper: $file"
+
