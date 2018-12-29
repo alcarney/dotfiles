@@ -34,7 +34,7 @@ start_common ()
     wal -R
 
     # Set the lockscreen program
-    xss-lock -- $HOME/.config/i3/lock.sh &
+    xss-lock -- i3lock -u -i $HOME/.xlock/lock.png &
 
     compton&
 }
