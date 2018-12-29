@@ -56,15 +56,8 @@ bindsym $mod+Shift+q kill
 
 # Rofi all the things!
 bindsym $mod+d exec rofi -show run
-#bindsym $mod+s exec rofi -show ssh
+bindsym $mod+s exec rofi -show ssh
 #bindsym $mod+w exec rofi -show window
-
-# start dmenu (a program launcher)
-#bindsym $mod+d exec dmenu_run
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+h focus left
@@ -100,7 +93,7 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
+bindsym $mod+q layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
@@ -115,6 +108,10 @@ bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
+
+# scratchpad windows
+bindsym $mod+i move scratchpad
+bindsym $mod+o scratchpad show
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -140,6 +137,9 @@ bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
+
+# Pressing the workspace shortcut twice will send us back to where we came from
+workspace_auto_back_and_forth yes
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
