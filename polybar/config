@@ -124,11 +124,11 @@ label-urgent = %icon%
 label-urgent-background = ${colors.secondary}
 label-urgent-padding = 2
 
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-default = 
+ws-icon-0 = 1;  .code
+ws-icon-1 = 2;  .web
+ws-icon-2 = 3;  .chat
+ws-icon-3 = 4;  .media
+ws-icon-default =  .work
 strip-wsnumbers = true
 
 [module/ram]
