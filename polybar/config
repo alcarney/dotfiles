@@ -43,7 +43,7 @@ line-size = 2
 
 modules-right = battery0 battery1 wireless volume clock
 modules-center = spotify-prev spotify-next spotify-playing spotify-song
-modules-left = wallpaper cpu ram
+modules-left = wallpaper cpu ram filesystem
 
 tray-position = right
 
@@ -105,6 +105,25 @@ ramp-coreload-5 = ▆
 ramp-coreload-6 = ▇
 ramp-coreload-7 = █
 
+[module/filesystem]
+type = internal/fs
+
+mount-0 = /
+mount-1 = /home
+
+format-mounted = <bar-used>
+label-mounted = 
+
+bar-used-width = 10
+bar-used-foreground-0 = ${colors.primary}
+bar-used-foreground-1 = ${colors.primary}
+bar-used-foreground-2 = ${colors.primary}
+bar-used-foreground-3 = ${colors.primary}
+bar-used-fill = ▁
+bar-used-empty = ▁
+bar-used-empty-foreground = #888888
+bar-used-indicator = ▁
+
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
@@ -133,8 +152,7 @@ strip-wsnumbers = true
 
 [module/ram]
 type = internal/memory
-label =
-format = <label> <bar-used>
+format = <bar-used>
 format-padding =
 bar-used-width = 10
 bar-used-foreground-0 = ${colors.primary}
@@ -142,7 +160,7 @@ bar-used-foreground-1 = ${colors.primary}
 bar-used-foreground-2 = ${colors.primary}
 bar-used-foreground-3 = ${colors.primary}
 bar-used-fill = ▁
-bar-used-empty =
+bar-used-empty = ▁
 bar-used-empty-foreground = #888888
 bar-used-indicator = ▁
 
@@ -190,3 +208,4 @@ exec = $HOME/.config/polybar/wallpaper-icon
 interval = 300
 click-left = $HOME/.config/polybar/wallpaper-change
 
+; vim: ft=cfg
