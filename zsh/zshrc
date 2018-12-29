@@ -12,7 +12,10 @@ unsetopt nomatch
 source $HOME/.zsh/aliases
 
 # Load my taskwarrior specific settings
-source $HOME/.zsh/taskwarrior
+#source $HOME/.zsh/taskwarrior
+
+# Load my git specific settings
+source $HOME/.zsh/git
 
 # Load fzf keybindings
 source /usr/share/fzf/key-bindings.zsh
@@ -60,11 +63,6 @@ cdl () {  # Clears the screen and list the contents of the directory just entere
         cd "$1" && clear && lst
     fi
 
-}
-
-gst() {
-    git status --short
-    git --no-pager diff --shortstat
 }
 
 function precmd()  # Prints an extra newline between commands which i think looks nicer

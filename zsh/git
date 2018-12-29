@@ -1,0 +1,7 @@
+# vim: ft=zsh
+
+gst() {  # Display a compact, but useful "git status" screen.
+    git status -sb
+    git --no-pager diff --shortstat
+}
+
