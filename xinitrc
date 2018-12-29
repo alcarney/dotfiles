@@ -34,7 +34,7 @@ start_common ()
     wal -R
 
     # Set the lockscreen program
-    xss-lock -- i3lock -n -i /home/alex/Media/Wallpapers/arrival.jpg &
+    xss-lock -- $HOME/.config/i3/lock.sh &
 
     compton&
 }
