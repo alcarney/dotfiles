@@ -187,4 +187,5 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+exec --no-startup-id /usr/lib/kdeconnectd
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
