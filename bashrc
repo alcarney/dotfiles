@@ -14,7 +14,6 @@ LS_COLORS="di=1"
 
 # PROMPT_COMMAND: Execute a command before displaying the prompt.
 PROMPT_COMMAND='echo'
-PS='[\u@\h \W]\$ '
 
 export LS_COLORS
 export PROMPT_COMMAND
@@ -81,6 +80,21 @@ cd () {
 }
 
 # -- Extras
+
+
+# PS1: The format of the prompt
+#
+# \W:  The name of the current working directory
+
+if [ -f "/usr/share/git/completion/git-prompt.sh" ]; then
+    source "/usr/share/git/completion/git-prompt.sh"
+
+    export GIT_PS1_SHOWDIRTYSTATE=1
+    export GIT_PS1_SHOWUPSTREAM='verbose'
+    export PS1='\W $(__git_ps1 "(%s)") > '
+else
+    export PS1='\W > '
+fi
 
 # If git is installed, source the completion script
 [ -f "/usr/share/git/completion/git-completion.bash" ] && source "/usr/share/git/completion/git-completion.bash"
