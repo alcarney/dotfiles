@@ -4,20 +4,31 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# -- PATH: Places to search for executables
 
-# -- Environment Variables
+# Create a list of places to check and potentially add to our path
+paths=(
+    "$HOME/bin"
+    "$HOME/go/bin"
+    "$HOME/.local/bin"
+    "$HOME/.poetry/bin"
+)
+
+# Loop through each path and add any that exist to the path
+for p in ${paths[@]}
+do
+    [ -d $p ] && export PATH="$p:$PATH"
+done
+
+# -- Other Environment Variables
 
 # LS_COLORS: Controls which colors ls will use
 #
 # di=1:    Bold directories
-LS_COLORS="di=1"
+export LS_COLORS="di=1"
 
 # PROMPT_COMMAND: Execute a command before displaying the prompt.
-PROMPT_COMMAND='echo'
-
-export LS_COLORS
-export PROMPT_COMMAND
-
+export PROMPT_COMMAND='echo'
 
 # -- Aliases
 
@@ -52,7 +63,6 @@ alias gst='git status -sb ; git --no-pager diff --shortstat'
 #
 # pacin:    Install packages
 # pacinfo:  Display package info for an installed package
-# pacis:    Is a package installed?
 # paclean:  Remove any packages that are no longer installed from the cache
 # paclinfo: Search repositories for info on a package
 # paclook:  Search repositories for a package
@@ -60,7 +70,6 @@ alias gst='git status -sb ; git --no-pager diff --shortstat'
 # pacup:    Update the system
 alias pacin='sudo pacman -S'
 alias pacinfo='pacman -Qi'
-alias pacis='pacman -Q'
 alias paclean='sudo pacman -Sc'
 alias paclinfo='pacman -Si'
 alias paclook='pacman -Ss'
@@ -79,6 +88,18 @@ cd () {
     ls
 }
 
+# pacis:
+#
+# If given an argument this function does a grep on all installed packages.
+# Otherwise all packages are simply listed
+pacis () {
+    if [ "$1" = "" ]; then
+        pacman -Q
+    else
+        pacman -Q | grep "$1"
+    fi
+}
+
 # -- Extras
 
 
@@ -91,7 +112,7 @@ if [ -f "/usr/share/git/completion/git-prompt.sh" ]; then
 
     export GIT_PS1_SHOWDIRTYSTATE=1
     export GIT_PS1_SHOWUPSTREAM='verbose'
-    export PS1='\W $(__git_ps1 "(%s)") > '
+    export PS1='\W $(__git_ps1 "(%s)")> '
 else
     export PS1='\W > '
 fi
