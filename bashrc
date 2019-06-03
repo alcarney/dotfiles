@@ -4,6 +4,20 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# -- Options
+#
+# autocd:       If the command matches a directory name cd into it.
+# cdable_vars:  Any variable set to a path can be used as a cd 'bookmark'
+# globstar:     Enable recursive ** globbing
+shopt -s autocd
+shopt -s cdable_vars
+shopt -s globstar
+
+
+# -- cd bookmarks:
+export dotfiles="$HOME/.config/dotfiles"
+export stylo="$HOME/Projects/stylo/"
+
 # -- PATH: Places to search for executables
 
 # Create a list of places to check and potentially add to our path
@@ -41,7 +55,6 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
 
-
 # ls: Enhanced
 #
 # -C:                        List entries by columns
@@ -76,17 +89,7 @@ alias paclook='pacman -Ss'
 alias pacout='sudo pacman -Rs'
 alias pacup='sudo pacman -Syu'
 
-
 # -- Functions
-
-# cd: Enhanced
-#
-# Very simple but useful override of the built in `cd` command. Execute cd as
-# normal but then automatically `ls` the dir as we enter it.
-cd () {
-    builtin cd $1
-    ls
-}
 
 # pacis:
 #
