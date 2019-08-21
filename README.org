@@ -4,11 +4,297 @@ This is a another attempt at me "literate programmatising" my dotfile
 configuration. I have no idea how long it will last
 
 
+* Bar
+
+Here we define the overall structure of the main configuration file.
+#+BEGIN_SRC conf :noweb yes :tangle polybar/config
+<<polybar-colors>>
+
+<<polybar-main>>
+
+<<polybar-modules>>
+#+END_SRC
+
+This script is invoked by ~i3~ to launch the bar, this allows for easier
+iteration on the configuration since if an instance of the bar is already
+running it will kill it before launching a new one.
+
+#+BEGIN_SRC bash :tangle polybar/launch.sh :shebang #!/bin/bash
+killall -q polybar
+
+while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
+
+polybar main&
+#+END_SRC
+
+** Bars
+
+At the moment I'm only using the one bar at the top of the screen.
+
+#+NAME: polybar-main
+#+BEGIN_SRC conf
+[bar/main]
+width = 100%
+height = 18
+padding-right = 1
+module-margin = 1
+
+font-0 = siji:pixelsize=9
+font-1 = fontawesome-webfont:pixelsize=11
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+modules-right = battery0 battery1 wireless volume clock
+modules-center = i3
+modules-left = wallpaper cpu ram filesystem
+#+END_SRC
+
+** Modules
+
+With the main bar defined, it's time to define each of the modules that it is
+comprised of.
+
+*** Battery
+
+Since I have two batteries in my laptop I require two battery module definitions
+
+#+NAME: polybar-modules
+#+BEGIN_SRC conf :noweb yes
+[module/battery0]
+type = internal/battery
+battery = BAT0
+
+<<polybar-battery-settings>>
+
+[module/battery1]
+type = internal/battery
+battery = BAT1
+
+<<polybar-battery-settings>>
+#+END_SRC
+
+With the following settings common to both.
+
+#+NAME: polybar-battery-settings
+#+BEGIN_SRC conf
+format-charging = <animation-charging> <label-charging>
+format-charging-padding = 1
+
+format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-padding = 1
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-framerate = 750
+
+#+END_SRC
+
+*** Clock
+
+Telling the time
+
+#+NAME: polybar-modules
+#+BEGIN_SRC conf
+[module/clock]
+type = internal/date
+date = %H:%M
+
+format =  <label>
+format-padding = 1
+
+#+END_SRC
+
+*** CPU
+
+Keeping track of how hard the computer is working.
+
+#+NAME: polybar-modules
+#+BEGIN_SRC conf
+[module/cpu]
+type = internal/cpu
+
+format = <ramp-coreload>
+format-padding = 2
+
+ramp-coreload-0 = ▁
+ramp-coreload-1 = ▂
+ramp-coreload-2 = ▃
+ramp-coreload-3 = ▄
+ramp-coreload-4 = ▅
+ramp-coreload-5 = ▆
+ramp-coreload-6 = ▇
+ramp-coreload-7 = █
+
+#+END_SRC
+
+*** Filesystem
+
+Making sure we don't run out of disk space
+
+#+NAME: polybar-modules
+#+BEGIN_SRC conf
+[module/filesystem]
+type = internal/fs
+
+mount-0 = /
+mount-1 = /home
+
+format-mounted = <label-mounted>
+format-mounted-padding = 2
+
+label-mounted =  %mountpoint% %percentage_used%%
+
+#+END_SRC
+
+*** i3
+
+This module visualises which i3 workspace I am currently using
+
+#+NAME: polybar-modules
+#+BEGIN_SRC conf
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+
+label-mode = %mode%
+
+label-focused = %icon%
+label-focused-background = ${colors.primary}
+label-focused-padding = 2
+
+label-unfocused = %icon%
+label-unfocused-padding = 2
+
+label-urgent = %icon%
+label-urgent-background = ${colors.secondary}
+label-urgent-padding = 2
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-default = 
+strip-wsnumbers = true
+
+#+END_SRC
+
+*** Ram
+
+How else could we shake our heads at all the RAM our electron apps are using?
+
+#+NAME: polybar-modules
+#+BEGIN_SRC conf
+[module/ram]
+type = internal/memory
+
+format =  <label>
+format-padding = 2
+
+label = %percentage_used%%
+
+#+END_SRC
+
+*** Volume
+
+Let's turn it up!
+
+#+NAME: polybar-modules
+#+BEGIN_SRC conf
+[module/volume]
+type = internal/alsa
+
+label-volume =  %percentage%
+label-volume-background = ${colors.background}
+label-volume-padding = 1
+
+label-muted =  
+label-muted-background = ${colors.background}
+label-muted-padding = 1
+
+#+END_SRC
+
+*** Wallpaper
+
+This shows the change wallpaper icon, which when clicked will pick a new
+wallpaper
+
+#+NAME: polybar-modules
+#+BEGIN_SRC conf
+[module/wallpaper]
+type = custom/script
+exec = $HOME/.config/polybar/wallpaper-icon
+interval = 300
+click-left = $HOME/.config/polybar/wallpaper-change
+
+#+END_SRC
+
+This relies on two bash scripts, the first is trivial and simply echoes the icon
+so that it shows up in the bar.
+
+#+BEGIN_SRC bash :tangle polybar/wallpaper-icon :shebang #!/bin/bash
+echo ""
+#+END_SRC
+
+The other script is also relatively simple, it selects a random wallpaper from
+my Wallpapers directory and passes it to ~pywal~ and ~betterlockscreen~.
+
+#+BEGIN_SRC bash :tangle polybar/wallpaper-change :shebang #!/bin/bash
+DIR=$HOME/Media/Wallpapers
+image=$(find $DIR -type f | sort -R | head -n 1)
+
+wal-set $image                                                                # Set the image as the background and recalculate the colorscheme
+betterlockscreen -u $image                                                    # Update the image used on the lockscreen
+notify-send -i $image "$(basename $image)" "Wallpaper & Lock Screen Updated"  # Send a notification when done.
+#+END_SRC
+
+*** Wifi
+
+Show what wifi network we are currently connected to.
+
+#+NAME: polybar-modules
+#+BEGIN_SRC conf
+[module/wireless]
+type = internal/network
+interface = wlp4s0
+
+label-connected =   %essid%
+label-connected-background = ${colors.background}
+label-connected-padding = 1
+
+#+END_SRC
 
 * Colour
 
 Where possible I have a consistent colour scheme automatically generated based
-on my current wallpaper courtesy of the fantastic [[https://github.com/dylanaraps/pywal][pywal]] project.
+on my current wallpaper courtesy of the fantastic [[https://github.com/dylanaraps/pywal][pywal]] project. Keeping colour
+configurations up to date and in sync it warrants its own dedicated config section.
+
+** Bar
+
+I'm not entirely sure of how this hangs together but ~pywal~ seems to be updating
+~Xresources~ behind the scenes so we can pull the colours from there into ~polybar~.
+
+#+NAME: polybar-colors
+#+BEGIN_SRC conf
+[colors]
+background = ${xrdb:color0:#222}
+foreground = ${xrdb:color15:#fff}
+primary = ${xrdb:color2:#222}
+secondary = ${xrdb:color1:#222}
+#+END_SRC
+
+** Terminal
 
 Setting colours for the terminal is easy enough, just reference the generated
 config file.
@@ -18,25 +304,9 @@ config file.
 include ~/.cache/wal/colors-kitty.conf
 #+END_SRC
 
-* i3
+* Miscellaneous
 
-* Final Assembly
-
-In this section all the code blocks defined above are knitted together to form
-my configuration that is then tangled to real files on disk.
-
-** Kitty
-
-[[https://sw.kovidgoyal.net/kitty/][kitty]] seems to be gaining popularity as a terminal emulator and seems nice
-enough with nice features like GPU rendering. The configuration itself is
-trivial (at least for now) just setting the font and the colours
-
-#+BEGIN_SRC conf :noweb yes :tangle kitty/kitty.conf
-font_size 9
-font_family Iosevka
-
-<<kitty-colors>>
-#+END_SRC
+Odds and ends with no other home yet are configured here.
 
 ** X11
 *** Xinitrc
@@ -52,6 +322,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
   for f in /etc/X11/xinit/xinitrc.d/*; do
     [ -x "$f" ] && . "$f"
   done
+  unset f
 fi
 
 # Use settings in the .Xresources file
@@ -72,4 +343,17 @@ xsetroot -cursor_name left_ptr
 
 # Start i3
 exec i3
+#+END_SRC
+
+* Terminal
+
+[[https://sw.kovidgoyal.net/kitty/][kitty]] seems to be gaining popularity as a terminal emulator and seems nice
+enough with nice features like GPU rendering. The configuration itself is
+trivial (at least for now) just setting the font and the colours
+
+#+BEGIN_SRC conf :noweb yes :tangle kitty/kitty.conf
+font_size 9
+font_family Iosevka
+
+<<kitty-colors>>
 #+END_SRC
