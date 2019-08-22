@@ -26,6 +26,8 @@ paths=(
     "$HOME/go/bin"
     "$HOME/.local/bin"
     "$HOME/.poetry/bin"
+    "$HOME/.npm-g/bin"
+
 )
 
 # Loop through each path and add any that exist to the path
