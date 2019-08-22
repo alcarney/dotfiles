@@ -1,8 +1,19 @@
-#+TITLE: DOTFILES
+#+TITLE: Dotfiles
 
 This is a another attempt at me "literate programmatising" my dotfile
 configuration. I have no idea how long it will last
 
+**Dependencies**
+
+In order to setup everything here the following packages need to be installed
+
+#+BEGIN_SRC bash :tangle install.sh :shebang #!/bin/bash
+sudo pacman -S \
+    sxiv                  # Used to do select new wallpapers
+
+pikaur -S \
+    polybar               # Displays the bar of the top of the screen.
+#+END_SRC
 
 * Bar
 
@@ -246,12 +257,13 @@ so that it shows up in the bar.
 echo ""
 #+END_SRC
 
-The other script is also relatively simple, it selects a random wallpaper from
-my Wallpapers directory and passes it to ~pywal~ and ~betterlockscreen~.
+The other script is also relatively simple, it uses ~sxiv~ to allow me to select
+a wallpaper from my my wallpapers directory and passes it to ~pywal~ and
+~betterlockscreen~.
 
 #+BEGIN_SRC bash :tangle polybar/wallpaper-change :shebang #!/bin/bash
 DIR=$HOME/Media/Wallpapers
-image=$(find $DIR -type f | sort -R | head -n 1)
+image=$(sxiv -o -t -b $DIR)
 
 wal-set $image                                                                # Set the image as the background and recalculate the colorscheme
 betterlockscreen -u $image                                                    # Update the image used on the lockscreen
@@ -274,7 +286,7 @@ label-connected-padding = 1
 
 #+END_SRC
 
-* Colour
+* Colours
 
 Where possible I have a consistent colour scheme automatically generated based
 on my current wallpaper courtesy of the fantastic [[https://github.com/dylanaraps/pywal][pywal]] project. Keeping colour
