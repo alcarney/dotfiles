@@ -3,7 +3,7 @@
 This is a another attempt at me "literate programmatising" my dotfile
 configuration. I have no idea how long it will last
 
-**Dependencies**
+*Dependencies*
 
 In order to setup everything here the following packages need to be installed
 
@@ -27,9 +27,9 @@ Here we define the overall structure of the main configuration file.
 <<polybar-modules>>
 #+END_SRC
 
-This script is invoked by ~i3~ to launch the bar, this allows for easier
-iteration on the configuration since if an instance of the bar is already
-running it will kill it before launching a new one.
+This script is used to launch the bar, this allows for easier iteration on the
+configuration since if an instance of the bar is already running it will kill it
+before launching a new one.
 
 #+BEGIN_SRC bash :tangle polybar/launch.sh :shebang #!/bin/bash
 killall -q polybar
@@ -37,6 +37,13 @@ killall -q polybar
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 polybar main&
+#+END_SRC
+
+Configure ~i3~ to launch the bar on startup
+
+#+NAME: i3-startup
+#+BEGIN_SRC conf
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 #+END_SRC
 
 ** Bars
@@ -307,6 +314,35 @@ primary = ${xrdb:color2:#222}
 secondary = ${xrdb:color1:#222}
 #+END_SRC
 
+** i3
+
+~i3~ can also load its colours from Xresources so updating the colorscheme is
+nice and easy
+
+#+NAME: i3-colors
+#+BEGIN_SRC conf
+set_from_resource $pri i3wm.color2  #ffffff
+set_from_resource $bg  i3wm.color0  #000000
+set_from_resource $fg  i3wm.color7  #dddddd
+
+# class                  border  backgr.  text  indicator  child_border
+client.focused           $bg     $bg      $fg   $bg        $bg
+client.focused_inactive  $bg     $bg      $fg   $bg        $bg
+client.unfocused         $bg     $bg      $fg   $bg        $bg
+client.urgent            $bg     $bg      $fg   $bg        $bg
+client.placeholder       $bg     $bg      $fg   $bg        $bg
+
+client.background        $bg
+#+END_SRC
+
+We can also configure ~i3~ to call ~pywal~ to restore the wallpaper and colour
+configuration on startup
+
+#+NAME: i3-startup
+#+BEGIN_SRC conf
+exec --no-startup-id wal -R
+#+END_SRC
+
 ** Terminal
 
 Setting colours for the terminal is easy enough, just reference the generated
@@ -315,6 +351,221 @@ config file.
 #+NAME: kitty-colors
 #+BEGIN_SRC conf
 include ~/.cache/wal/colors-kitty.conf
+#+END_SRC
+
+* i3
+
+#+BEGIN_SRC conf :tangle i3/config :noweb yes
+set $mod Mod4
+
+# Looks
+font pango:monospace 8
+
+default_border pixel 10
+border_radius 5
+gaps outer 10
+gaps inner 10
+
+<<i3-colors>>
+
+# Keybindings
+<<i3-lifecycle-keys>>
+<<i3-scratchpad-keys>>
+<<i3-terminal-keys>>
+<<i3-window-keys>>
+<<i3-workspace-keys>>
+
+# Startup
+<<i3-startup>>
+#+END_SRC
+
+** Life Cycle
+
+Keybindings that manage the life cycle of ~i3~
+
+#+NAME: i3-lifecycle-keys
+#+BEGIN_SRC conf
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+#+END_SRC
+
+and the system
+
+#+NAME: i3-lifecycle-keys
+#+BEGIN_SRC conf
+bindsym $mod+Shift+x exec betterlockscreen -l dimblur
+#+END_SRC
+
+** Scratchpad
+
+The [[https://i3wm.org/docs/userguide.html#_scratchpad][Scratchpad]] is a *fantastic* feature of ~i3~ think of it as a dropdown
+terminal but it can work for *any* application! To move a window to the
+scratchpad simply use the following keybinding
+
+#+NAME: i3-scratchpad-keys
+#+BEGIN_SRC conf
+bindsym $mod+i move scratchpad
+#+END_SRC
+
+This will make the window disappear, to bring it back simply press the
+complementary keybinding
+
+#+NAME: i3-scratchpad-keys
+#+BEGIN_SRC conf
+bindsym $mod+o scratchpad show
+#+END_SRC
+
+Et voila! Instant "dropdown" applications
+
+** Window Management
+
+Since ~i3~ is a window manager it would be good to set up some keys that manage
+windows!
+
+#+NAME: i3-window-keys
+#+BEGIN_SRC conf
+bindsym $mod+Shift+q kill
+#+END_SRC
+
+*Window Focus*
+
+#+NAME: i3-window-keys
+#+BEGIN_SRC conf
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+bindsym $mod+a focus parent
+bindsym $mod+s focus child
+#+END_SRC
+
+*Window Movement*
+
+#+NAME: i3-window-keys
+#+BEGIN_SRC conf
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+#+END_SRC
+
+*Window Layout*
+
+#+NAME: i3-window-keys
+#+BEGIN_SRC conf
+bindsym $mod+b split h
+bindsym $mod+v split v
+
+bindsym $mod+q layout stacking
+bindstm $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+#+END_SRC
+
+*Floating Windows*
+
+This binding will switch between floating / tiled mode for the focused window.
+
+#+NAME: i3-window-keys
+#+BEGIN_SRC conf
+bindsym $mod+Shift+space floating toggle
+#+END_SRC
+
+This binding will switch focus between floating / tiled windows.
+
+#+BEGIN_SRC conf
+bindsym $mod+space foccs mode_toggle
+#+END_SRC
+
+Setting this allows floating windows to be dragged around by the mouse
+
+#+NAME: i3-window-keys
+#+BEGIN_SRC conf
+floating_modifier $mod
+#+END_SRC
+
+*Resizing Windows*
+
+~i3~ has the concept of [[https://i3wm.org/docs/userguide.html#binding_modes][modes]], the next set of bindings use this concept to
+create a mode in which we can resize windows while it is active
+
+#+NAME: i3-window-keys
+#+BEGIN_SRC conf
+mode "resize" {
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+
+bindsym $mod+r mode "resize"
+#+END_SRC
+
+** Workspaces
+
+As well as managing windows ~i3~ can provide us with a number of virtual
+desktops called workspaces to help organise windows further.
+
+*Workspace Definitions*
+
+#+NAME: i3-workspace-keys
+#+BEGIN_SRC conf
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+#+END_SRC
+
+*Workspace Switching*
+
+#+NAME: i3-workspace-keys
+#+BEGIN_SRC conf
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+#+END_SRC
+
+This handy setting also allows us to jump back to the workspace we came from if
+we press the same key combo twice.
+
+#+NAME: i3-workspace-keys
+#+BEGIN_SRC conf
+workspace_auto_back_and_forth yes
+#+END_SRC
+
+*Send to Workspace*
+
+These bindings allow us to send the focused window to another workspace.
+
+#+NAME: i3-workspace-keys
+#+BEGIN_SRC conf
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
 #+END_SRC
 
 * Miscellaneous
@@ -369,4 +620,11 @@ font_size 9
 font_family Iosevka
 
 <<kitty-colors>>
+#+END_SRC
+
+The terminal can be launched by hitting ~Windows+Enter~ under ~i3~
+
+#+NAME: i3-terminal-keys
+#+BEGIN_SRC conf
+bindsym $mod+Return exec kitty
 #+END_SRC
