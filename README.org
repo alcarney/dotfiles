@@ -375,6 +375,7 @@ gaps inner 10
 
 # Keybindings
 <<i3-lifecycle-keys>>
+<<i3-rofi-keys>>
 <<i3-scratchpad-keys>>
 <<i3-terminal-keys>>
 <<i3-window-keys>>
@@ -612,6 +613,57 @@ xsetroot -cursor_name left_ptr
 
 # Start i3
 exec i3
+#+END_SRC
+
+* Rofi
+
+[[https://github.com/davatorium/rofi][Rofi]] is a great application launcher, window switcher and general purpose "select
+from list of things" program
+
+** Config
+
+Using a configuration file we can avoid most of the command line arguments
+
+#+BEGIN_SRC css :tangle rofi/config.rasi
+configuration {
+    display-run: "> ";
+}
+
+window {
+    location: west;
+    anchor: west;
+    height: 100%;
+    width: 25%;
+    orientation: horizontal;
+    children: [mainbox];
+}
+
+mainbox {
+    spacing: 0.8em;
+    children: [entry, listview];
+}
+
+listview {
+
+}
+#+END_SRC
+
+** Bindings
+
+These bindings are used to launch ~rofi~ in various modes under ~i3~
+
+*Launch Application*
+
+#+NAME: i3-rofi-keys
+#+BEGIN_SRC conf
+bindsym $mod+Shift+Return exec rofi -show run
+#+END_SRC
+
+*Raise Window*
+
+#+NAME: i3-rofi-keys
+#+BEGIN_SRC conf
+bindsym $mod+Tab exec rofi -show window
 #+END_SRC
 
 * Terminal
