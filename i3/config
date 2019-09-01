@@ -25,6 +25,8 @@ client.background        $bg
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+x exec betterlockscreen -l dimblur
+bindsym $mod+Shift+Return exec rofi -show run
+bindsym $mod+Tab exec rofi -show window
 bindsym $mod+i move scratchpad
 bindsym $mod+o scratchpad show
 bindsym $mod+Return exec kitty
