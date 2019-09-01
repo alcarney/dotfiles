@@ -9,11 +9,16 @@ In order to setup everything here the following packages need to be installed
 
 #+BEGIN_SRC bash :tangle install.sh :shebang #!/bin/bash
 sudo pacman -S \
-    sxiv                  # Used to do select new wallpapers
+    imagemagick \
+    rofi \
+    sxiv
 
 pikaur -S \
-    i3-gaps-rounded-git   # Fork of i3-gaps that adds support for rounded corners
-    polybar               # Displays the bar of the top of the screen.
+    i3-gaps-rounded-git \
+    polybar
+
+python -m pip install --upgrade --user pipx
+pipx install pywal
 #+END_SRC
 
 * Bar
@@ -273,7 +278,7 @@ a wallpaper from my my wallpapers directory and passes it to ~pywal~ and
 DIR=$HOME/Media/Wallpapers
 image=$(sxiv -o -t -b $DIR)
 
-wal-set $image                                                                # Set the image as the background and recalculate the colorscheme
+wal -i $image                                                                # Set the image as the background and recalculate the colorscheme
 betterlockscreen -u $image                                                    # Update the image used on the lockscreen
 notify-send -i $image "$(basename $image)" "Wallpaper & Lock Screen Updated"  # Send a notification when done.
 #+END_SRC

@@ -1,7 +1,12 @@
 #!/bin/bash
 sudo pacman -S \
-    sxiv                  # Used to do select new wallpapers
+    imagemagick \
+    rofi \
+    sxiv
 
 pikaur -S \
-    i3-gaps-rounded-git   # Fork of i3-gaps that adds support for rounded corners
-    polybar               # Displays the bar of the top of the screen.
+    i3-gaps-rounded-git \
+    polybar
+
+python -m pip install --upgrade --user pipx
+pipx install pywal

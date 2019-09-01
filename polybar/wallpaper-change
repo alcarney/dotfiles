@@ -2,6 +2,6 @@
 DIR=$HOME/Media/Wallpapers
 image=$(sxiv -o -t -b $DIR)
 
-wal-set $image                                                                # Set the image as the background and recalculate the colorscheme
+wal -i $image                                                                # Set the image as the background and recalculate the colorscheme
 betterlockscreen -u $image                                                    # Update the image used on the lockscreen
 notify-send -i $image "$(basename $image)" "Wallpaper & Lock Screen Updated"  # Send a notification when done.
