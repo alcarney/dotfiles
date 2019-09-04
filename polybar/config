@@ -149,6 +149,7 @@ type = custom/script
 exec = $HOME/.config/polybar/wallpaper-icon
 interval = 300
 click-left = $HOME/.config/polybar/wallpaper-change
+click-right = $HOME/.config/polybar/wallpaper-change -l
 
 [module/wireless]
 type = internal/network

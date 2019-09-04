@@ -260,6 +260,7 @@ type = custom/script
 exec = $HOME/.config/polybar/wallpaper-icon
 interval = 300
 click-left = $HOME/.config/polybar/wallpaper-change
+click-right = $HOME/.config/polybar/wallpaper-change -l
 
 #+END_SRC
 
@@ -278,7 +279,7 @@ a wallpaper from my my wallpapers directory and passes it to ~pywal~ and
 DIR=$HOME/Media/Wallpapers
 image=$(sxiv -o -t -b $DIR)
 
-wal -i $image                                                                # Set the image as the background and recalculate the colorscheme
+wal "$@" -i $image                                                            # Set the image as the background and recalculate the colorscheme
 betterlockscreen -u $image                                                    # Update the image used on the lockscreen
 notify-send -i $image "$(basename $image)" "Wallpaper & Lock Screen Updated"  # Send a notification when done.
 #+END_SRC
@@ -346,6 +347,49 @@ configuration on startup
 #+NAME: i3-startup
 #+BEGIN_SRC conf
 exec --no-startup-id wal -R
+#+END_SRC
+
+** Rofi
+
+#+BEGIN_SRC css :tangle wal/templates/config.rasi
+ * {{
+ location: south east;
+ anchor: south east;
+ border-color: {color0};
+ background-color: {color0};
+ text-color: {color1};
+ spacing: 2;
+}}
+
+#window {{
+ width: 100%;
+ border: 0;
+}}
+
+#listview {{
+ fixed-height: 1;
+ padding: 1em;
+
+ columns: 1;
+ lines: 6;
+ background-color: {color0};
+}}
+
+#inputbar {{
+ padding: 5px;
+ background-color: {color0};
+ text-color: {color1} ;
+}}
+
+#element {{
+ padding: 5px;
+ background-color: {color0};
+ text-color: {color1};
+}}
+
+#element selected.normal {{
+  text-color: {color15};
+}}
 #+END_SRC
 
 ** Terminal
@@ -602,7 +646,7 @@ xrdb -merge ~/.Xresources
 xset b off
 
 # Set GB layout, remap CAPS to ESC
-setxbmap -layout gb -option caps:escape
+setxkbmap -layout gb -option caps:escape
 
 # Disable page up / page down keys on my laptop.
 xmodmap -e "keycode 166="
@@ -627,24 +671,7 @@ Using a configuration file we can avoid most of the command line arguments
 #+BEGIN_SRC css :tangle rofi/config.rasi
 configuration {
     display-run: "> ";
-}
-
-window {
-    location: west;
-    anchor: west;
-    height: 100%;
-    width: 25%;
-    orientation: horizontal;
-    children: [mainbox];
-}
-
-mainbox {
-    spacing: 0.8em;
-    children: [entry, listview];
-}
-
-listview {
-
+    theme: "~/.cache/wal/config.rasi";
 }
 #+END_SRC
 

@@ -1,21 +1,4 @@
 configuration {
     display-run: "> ";
-}
-
-window {
-    location: west;
-    anchor: west;
-    height: 100%;
-    width: 25%;
-    orientation: horizontal;
-    children: [mainbox];
-}
-
-mainbox {
-    spacing: 0.8em;
-    children: [entry, listview];
-}
-
-listview {
-
+    theme: "~/.cache/wal/config.rasi";
 }

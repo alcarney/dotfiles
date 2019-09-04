@@ -15,7 +15,7 @@ xrdb -merge ~/.Xresources
 xset b off
 
 # Set GB layout, remap CAPS to ESC
-setxbmap -layout gb -option caps:escape
+setxkbmap -layout gb -option caps:escape
 
 # Disable page up / page down keys on my laptop.
 xmodmap -e "keycode 166="
