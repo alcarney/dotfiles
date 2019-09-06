@@ -425,6 +425,9 @@ gaps inner 10
 <<i3-window-keys>>
 <<i3-workspace-keys>>
 
+# Window Rules
+<<i3-window-rules>>
+
 # Startup
 <<i3-startup>>
 #+END_SRC
@@ -553,6 +556,18 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+#+END_SRC
+
+** Window Rules
+
+This section contains all the rules that govern how windows for individual
+application are handled.
+
+**Sxiv**
+
+#+NAME: i3-window-rules
+#+BEGIN_SRC conf
+for_window [class="Sxiv"] floating enable
 #+END_SRC
 
 ** Workspaces
