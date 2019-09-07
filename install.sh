@@ -5,6 +5,7 @@ sudo pacman -S \
     sxiv
 
 pikaur -S \
+    compton-git \
     i3-gaps-rounded-git \
     polybar
 

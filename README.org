@@ -14,6 +14,7 @@ sudo pacman -S \
     sxiv
 
 pikaur -S \
+    compton-git \
     i3-gaps-rounded-git \
     polybar
 
@@ -400,6 +401,85 @@ config file.
 #+NAME: kitty-colors
 #+BEGIN_SRC conf
 include ~/.cache/wal/colors-kitty.conf
+#+END_SRC
+
+* Compton
+
+Compton is a program that makes everything look just that little bit prettier
+
+#+BEGIN_SRC conf :tangle compton.conf :noweb yes
+backend = "glx";
+detect-transient = true;
+detect-client-leader = true;
+detect-rounded-corners = true;
+
+<<compton-dimming>>
+<<compton-fading>>
+<<compton-opacity>>
+<<compton-shadows>>
+
+wintypes:
+{
+  dock = { shadow = false; };
+};
+#+END_SRC
+
+Configure compton to start as i3 starts
+
+#+NAME: i3-startup
+#+BEGIN_SRC conf
+exec --no-startup-id compton --focus-exclude '_NET_WM_NAME@:s = "rofi"'
+#+END_SRC
+
+
+** Blur
+
+*Not yet active in config* Waiting on backends that support this to stabilise
+
+#+NAME: compton-blur
+#+BEGIN_SRC conf
+blur:
+{
+  method = "gaussian";
+    size = 10;
+  deviation = 5.0;
+};
+#+END_SRC
+
+** Dimming
+
+#+NAME: compton-dimming
+#+BEGIN_SRC conf
+inactive-dim = 0.1;
+#+END_SRC
+
+** Fading
+
+#+NAME: compton-fading
+#+BEGIN_SRC conf
+fading = true;
+#+END_SRC
+
+** Opacity
+
+Basic opacity settings
+
+#+NAME: compton-opacity
+#+BEGIN_SRC conf
+active-opacity = 0.95;
+inactive-opacity = 0.95;
+#+END_SRC
+
+Disable opacity for certain applications
+
+** Shadows
+
+#+NAME: compton-shadows
+#+BEGIN_SRC conf
+shadow = true;
+shadow-radius = 4;
+shadow-offset-x = 2;
+shadow-offset-y = 2;
 #+END_SRC
 
 * i3
