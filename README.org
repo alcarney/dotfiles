@@ -595,6 +595,15 @@ bindstm $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 #+END_SRC
 
+**Fullscreen Windows**
+
+This will allow toggling fullscreen display of the focused window.
+
+#+NAME: i3-window-keys
+#+BEGIN_SRC conf
+bindsym $mod+f fullscreen toggle
+#+END_SRC
+
 *Floating Windows*
 
 This binding will switch between floating / tiled mode for the focused window.

@@ -48,6 +48,7 @@ bindsym $mod+v split v
 bindsym $mod+q layout stacking
 bindstm $mod+w layout tabbed
 bindsym $mod+e layout toggle split
+bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+space floating toggle
 floating_modifier $mod
 mode "resize" {
