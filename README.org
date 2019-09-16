@@ -10,6 +10,9 @@ In order to setup everything here the following packages need to be installed
 #+BEGIN_SRC bash :tangle install.sh :shebang #!/bin/bash
 sudo pacman -S \
     imagemagick \
+    jq \
+    networkmanager \
+    pass \
     ripgrep \
     rofi \
     sxiv
@@ -471,8 +474,6 @@ active-opacity = 0.95;
 inactive-opacity = 0.95;
 #+END_SRC
 
-Disable opacity for certain applications
-
 ** Shadows
 
 #+NAME: compton-shadows
@@ -932,6 +933,38 @@ def init_logging(verbose, quiet):
 
     log.setLevel(level)
     log.addHandler(console)
+#+END_SRC
+
+** Wifi
+
+A short script for selecting wifi networks, it wraps ~networkmanager~ and ~pass~
+to make connecting to known wifi networks easier.
+
+#+BEGIN_SRC sh
+$ wifi                # List available wifi networks
+$ wifi <SSID>         # Connect to given SSID
+#+END_SRC
+
+The script uses ~pass~ and looks for a password entry under ~Wifi/<SSID>~ in the
+db and uses that to authenticate. If an entry cannot be found it assumes the
+network is open and tries to connect anyway.
+
+#+BEGIN_SRC bash :tangle scripts/wifi :shebang #!/bin/bash
+case $1 in
+    "")
+        nmcli d wifi list
+        ;;
+    *)
+        pw=$(pass "Wifi/$1" 2> /dev/null)
+
+        if [ $? -eq 0 ]; then
+            nmcli d wifi connect $1 password $pw
+        else
+            echo "No wifi password found, assuming open network"
+            nmcli d wifi connect "$1"
+        fi
+        ;;
+esac
 #+END_SRC
 
 * Terminal

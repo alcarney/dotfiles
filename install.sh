@@ -1,6 +1,9 @@
 #!/bin/bash
 sudo pacman -S \
     imagemagick \
+    jq \
+    networkmanager \
+    pass \
     ripgrep \
     rofi \
     sxiv

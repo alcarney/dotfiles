@@ -1,0 +1,16 @@
+#!/bin/bash
+case $1 in
+    "")
+        nmcli d wifi list
+        ;;
+    *)
+        pw=$(pass "Wifi/$1" 2> /dev/null)
+
+        if [ $? -eq 0 ]; then
+            nmcli d wifi connect $1 password $pw
+        else
+            echo "No wifi password found, assuming open network"
+            nmcli d wifi connect "$1"
+        fi
+        ;;
+esac
