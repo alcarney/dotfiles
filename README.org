@@ -10,6 +10,7 @@ In order to setup everything here the following packages need to be installed
 #+BEGIN_SRC bash :tangle install.sh :shebang #!/bin/bash
 sudo pacman -S \
     imagemagick \
+    ripgrep \
     rofi \
     sxiv
 
@@ -795,6 +796,142 @@ bindsym $mod+Shift+Return exec rofi -show run
 #+NAME: i3-rofi-keys
 #+BEGIN_SRC conf
 bindsym $mod+Tab exec rofi -show window
+#+END_SRC
+
+* Scripts
+
+** Pydev
+
+A python script for python development
+
+#+BEGIN_SRC python :tangle scripts/pydev :noweb yes :shebang #!/usr/bin/env python3
+import argparse
+import logging
+import os
+import subprocess
+
+<<pyutils-logging>>
+<<pydev-features>>
+
+cli = argparse.ArgumentParser(description="Utilities for python development")
+cli.add_argument(
+    "-v",
+    "--verbose",
+    action="count",
+    default=0,
+    help="increase the verbosity of the logging output"
+)
+cli.add_argument(
+    "-q", "--quiet", action="store_true", help="suppress any logging output"
+)
+
+commands = cli.add_subparsers(title="commands")
+<<pydev-cli>>
+
+def main():
+    namespace = cli.parse_args()
+
+    exclude = ["run", "verbose", "quiet"]
+    args = {k: v for k, v in vars(namespace).items() if k not in exclude}
+
+    init_logging(namespace.verbose, namespace.quiet)
+
+    if hasattr(namespace, "run"):
+        namespace.run(**args)
+    else:
+        cli.print_help()
+
+if __name__ == "__main__":
+    main()
+#+END_SRC
+
+*** Search
+
+#+BEGIN_SRC sh
+$ pydev search Parser                                  # Search for "Parser" within the default virtualenv (.dev)
+$ pydev search @shape --project                        # Search for "@shape" within the local project
+$ pydev search Reader --venv .test --pkg docutils      # Search for "Reader" within the 'docutils' package inside the '.test' virtualenv
+#+END_SRC
+
+Something I find myself doing more and more is reading the source code of other
+projects (particularly ~docutils~ related projects) to try and understand how
+things are used. The ~search~ command is a very thin wrapper around ~ripgrep~
+that allows easy searching across the local project, a package or an entire
+virtualenv.
+
+It has the following command line options
+
+#+NAME: pydev-cli
+#+BEGIN_SRC python
+search = commands.add_parser("search", help="search for a given pattern")
+search.add_argument("pattern", type=str, help="the pattern to search for")
+search.add_argument(
+    "-p", "--pkg", type=str, default=None, help="search within a given package"
+)
+search.add_argument(
+    "--project", action="store_true", help="restrict search to the project's codebase"
+)
+search.add_argument(
+    "--venv", default=".dev", help="search in the given virtual environment"
+)
+search.set_defaults(run=do_search)
+#+END_SRC
+
+And now its implementation
+
+#+NAME: pydev-features
+#+BEGIN_SRC python
+def do_search(pattern, venv=None, pkg=None, project=False):
+    cmd = ["rg", pattern]
+
+    if venv is not None:
+        path = os.path.join(venv, "lib", "python3.7", "site-packages")
+
+        if pkg is not None:
+            path = os.path.join(path, pkg)
+
+    if not project:
+        cmd.append(path)
+
+    log.debug("Running command: %s", " ".join(cmd))
+    subprocess.run(cmd)
+#+END_SRC
+
+** Utils
+
+This section contains utilities that can be reused across scripts thanks to the
+magic of tangling.
+
+*** Logging
+
+Since we're only dealing with scripts we don't need to go overboard on the
+logging, but for debugging/development purposes it's useful to have the ability
+to increase the verbosity of the output.
+
+#+NAME: pyutils-logging
+#+BEGIN_SRC python
+LOG_LEVELS = [
+    (logging.INFO, "%(message)s"),
+    (logging.DEBUG, "[%(levelname)s]: %(message)s"),
+]
+log = logging.getLogger(__name__)
+
+def init_logging(verbose, quiet):
+    """Initialise the logging system."""
+
+    if quiet or verbose < 0:
+        return
+
+    try:
+        level, fmt = LOG_LEVELS[verbose]
+    except IndexError:
+        level, fmt = LOG_LEVELS[-1]
+
+    console = logging.StreamHandler()
+    console.setFormatter(logging.Formatter(fmt))
+
+    log.setLevel(level)
+    log.addHandler(console)
 #+END_SRC
 
 * Terminal
