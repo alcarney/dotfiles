@@ -1,0 +1,124 @@
+#!/usr/bin/env python3
+import argparse
+from typing import List, Optional
+
+
+cli = argparse.ArgumentParser(
+    description="Simple utility for creating comment banners"
+)
+cli.add_argument(
+    "text", type=str, nargs='*', help="the text to put in in the banner."
+)
+cli.add_argument(
+    "-a",
+    "--align",
+    choices=["left", "center", "right"],
+    default="center",
+    help="set the alignment of the text in the banner (default center)")
+cli.add_argument(
+    "-c", "--comment", type=str, default=None, help="comment character(s) to prefix the line with"
+)
+cli.add_argument(
+    "-f",
+    "--fill",
+    default="-",
+    help="the string used to fill the space with (default '-')"
+)
+cli.add_argument("-t", "--test", action="store_true", help=argparse.SUPPRESS)
+cli.add_argument(
+    "-w", "--width", type=int, default=80, help="the column width to use (default 80)"
+)
+
+
+FORMATS = {
+    "left": lambda s: f"{s} ",
+    "center": lambda s: f" {s} ",
+    "right": lambda s: f" {s}",
+}
+
+ALIGNMENTS = {
+    "left": lambda text, fill, width: f"{text}".ljust(fill, width),
+    "center": lambda text, fill, width: f"{text}".center(fill, width),
+    "right": lambda text, fill, width: f"{text}".rjust(fill, width),
+}
+
+
+def make_banner(
+    text: str,
+    *,
+    align: str = "center",
+    comment: Optional[str] = None,
+    fill: str = "-",
+    width: int = 80,
+    ) -> str:
+    """Given the banner text, make the banner.
+
+    Simplest use is to pass the string representing the banner text, this will create
+    a banner 80 characters wide with the text centered and the space filled with the
+    default :code:`fill` character::
+
+    >>> make_banner("test")
+    '------------------------------------- test -------------------------------------'
+
+    These defaults however can be changed by making use of the :code:`fill` and
+    :code:`width` keyword arguments.
+
+    >>> make_banner("test", fill=".", width=20)
+    '....... test .......'
+
+    If you are generating a banner for a comment in a source file then you can provide
+    a string representing the :code:`comment` character(s) to have it included as a
+    prefix.
+
+    >>> make_banner("test", comment="#")
+    '# ------------------------------------ test ------------------------------------'
+
+    Finally the default center alignment can be changed to either be left or right
+    aligned by passing :code:`"left"`, :code:`"right"` or indeed :code:`"center"` to
+    the :code:`align` argument.
+
+    >>> make_banner("test", align="left")
+    'test ---------------------------------------------------------------------------'
+
+    >>> make_banner("test", align="right")
+    '--------------------------------------------------------------------------- test'
+
+
+    :param align: Set the alignment of the text to be centered (default) or left/right
+                  justified
+    :param comment: The comment string to prefix the line with.
+    :param fill: The string used to fill the space with
+    :param text: The text to convert into a banner
+    :param width: The column width of the line
+    """
+
+    prefix = f"{comment} " if comment else ""
+    fill_width = width - len(prefix)
+
+    return prefix + ALIGNMENTS[align](FORMATS[align](text), fill_width, fill)
+
+
+def main() -> None:
+
+    namespace = cli.parse_args()
+
+    if namespace.test:
+        import doctest
+        doctest.testmod()
+
+        return
+
+    if len(namespace.text) == 0:
+        cli.print_help()
+        return
+
+    exclude = ["test"]
+    args = {k: v for k, v in vars(namespace).items() if k not in exclude}
+    args["text"] = " ".join(args["text"])
+
+    banner = make_banner(**args)
+    print(banner)
+
+
+if __name__ == '__main__':
+    main()
