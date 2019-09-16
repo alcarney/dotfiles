@@ -1,0 +1,101 @@
+#!/bin/bash
+
+# Should be user's id number
+user=
+dir=$HOME/Media/Spotify
+
+# Grab the credentials from the environment
+string=${CLIENTID}:${CLIENTSECRET}
+auth_token=$(echo -n "$string" | base64 -w 0)
+echo "Authenticating..."
+
+# "Log in" and obtain a token! - Finally!
+access_token=$(curl -s -X "POST" -H "Authorization: Basic $auth_token"  \
+                    -d grant_type=client_credentials \
+                    https://accounts.spotify.com/api/token | jq -r .access_token)
+
+echo -n "Indexing Playlists... "
+response=$(curl -s -H "Authorization: Bearer $access_token" \
+                https://api.spotify.com/v1/users/$user/playlists?limit=50)
+
+# Create an array for the first batch of playlists
+playlists=($(echo $response | jq -r .items[].href))
+
+# Are there more to get?
+next=$(echo $response | jq -r .next)
+while [ "$next" != "null" ]
+do
+    # Make another request with the next url
+    response=$(curl -s -H "Authorization: Bearer $access_token" $next)
+
+    # Update the playlists
+    playlists+=($(echo $response | jq -r .items[].href))
+
+    # Next?
+    next=$(echo $response | jq -r .next)
+done
+
+echo -e "\t -> ${#playlists[@]} Playlists Found"
+echo "Archiving Playlists..."
+
+# Now that we have found all the playlists we need to go through each
+# one and extract all the songs
+
+# First make sure that the backup dir exists
+if [ -d $dir ]; then
+    # If it does, clear it out
+    rm -r $dir
+    mkdir -p $dir
+else
+    # Otherwise create it
+    mkdir -p $dir
+fi
+
+
+for url in ${playlists[@]}
+do
+    # Get the playlist
+    response=$(curl -s -H "Authorization: Bearer $access_token" $url)
+    #echo $response
+
+    # Get the name
+    playlist=$(echo $response | jq -r .name | sed 's/ /_/g')
+    echo -ne "\t$(echo $playlist | sed 's/_/ /g')..."
+
+    # Extract the info we want to save
+    tracks=($(echo $response | jq -r .tracks.items[].track.name | sed 's/ /_/g'))
+    artists=($(echo $response |\
+              jq -r '.tracks.items[].track.artists' |\
+              jq -r 'reduce .[].name as $name (""; "\(.)--\($name)")' |\
+              sed 's/ /_/g'))
+
+    # Here we have to do a similar thing as before - are there more tracks to get?
+    next=$(echo $response | jq -r .tracks.next)
+
+    while [ "$next" != "null" ]
+    do
+        # Get the next lot
+        response=$(curl -s -H "Authorization: Bearer $access_token" $next)
+
+        # Update the info
+        tracks+=($(echo $response | jq -r .items[].track.name | sed 's/ /_/g'))
+        artists+=($(echo $response |\
+                   jq -r '.items[].track.artists' |\
+                   jq -r 'reduce .[].name as $name (""; "\(.)--\($name)")' |\
+                   sed 's/ /_/g'))
+
+        # Next?
+        next=$(echo $response | jq -r .next)
+    done
+
+    for ((i=0; i<${#tracks[@]}; i++))
+    do
+        echo -ne "$(echo ${tracks[$i]} | sed 's/_/ /g'), "
+        echo "$(echo ${artists[$i]} | sed 's/^--//' | sed 's/_/ /g')"
+    done > "${dir}/${playlist}.csv"
+
+    echo -e "\t${#tracks[@]} Saved"
+
+done
+
+echo "Done!"
