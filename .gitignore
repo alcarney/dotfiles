@@ -3,6 +3,8 @@ vim/plugged
 vim/autoload
 nvim/plugged
 nvim/autoload
+nvim/.py3
+nvim/.black
 tmux/sidebar
 tmux/resurrect
 nvim/.netrwhist

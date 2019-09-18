@@ -765,6 +765,320 @@ xsetroot -cursor_name left_ptr
 exec i3
 #+END_SRC
 
+* Neovim
+
+Certain features/plugins depend on resources being available, so it's a good
+idea to have an installation script to put that all in order.
+
+#+BEGIN_SRC bash :shebang #!/bin/bash :noweb yes :tangle nvim/install.sh
+if [ -d ~/.config/nvim ]; then
+    rm -r ~/.config/nvim
+fi
+
+ln -s ~/.config/dotfiles/nvim ~/.config/nvim
+
+<<neovim-bootstrap>>
+sudo pacman -S neovim
+#+END_SRC
+
+The main configuration file.
+
+#+BEGIN_SRC fundamental :tangle nvim/init.vim :noweb yes
+" ---------------------------------- init.vim ----------------------------------
+"
+" settings that apply everywhere
+
+<<neovim-appearance>>
+
+" ------------------------------- auto commands --------------------------------
+<<neovim-autocommands>>
+
+<<neovim-behavior>>
+
+" ---------------------------------- key maps ----------------------------------
+"
+" mapleader:      prefix to use for <leader> mappings
+" maplocalleader: prefix to use for <localleader> mappings
+let mapleader = '\'
+let maplocalleader = ' '
+
+<<neovim-keymaps>>
+" ---------------------------------- plugins -----------------------------------
+"
+call plug#begin('~/.local/share/nvim/plugged')
+
+<<neovim-plugins>>
+
+call plug#end()
+
+<<neovim-providers>>
+
+<<neovim-searching>>
+
+<<neovim-whitespace>>
+#+END_SRC
+
+** Appearance
+
+#+NAME: neovim-appearance
+#+BEGIN_SRC fundamental
+" --------------------------------- appearance ---------------------------------
+"
+" colorcolumn: highlight the column at `textwidth` + 1
+" list:        display non printable characters according to `listchars`
+" listchars:   describes how to visualise certain non printable characters
+" nowrap:      don't visually wrap long lines
+set colorcolumn=+1
+set list
+set listchars=tab:».,trail:·,extends:→,precedes:←
+set nowrap
+
+highlight ColorColumn ctermbg=0 cterm=italic
+
+#+END_SRC
+
+** Auto Commands
+
+Auto commands, are commands that can be configured to run whenever a particular
+event happens in ~neovim~ e.g. file save, file open, window open, window close
+etc.
+
+This auto command will automatically trim any trailing whitespace in a file on
+save
+
+#+NAME: neovim-autocommands
+#+BEGIN_SRC fundamental
+augroup general
+    autocmd!
+    autocmd BufWritePre * %s/\s\+$//e
+augroup END
+#+END_SRC
+
+** Behaviour
+
+#+NAME: neovim-behavior
+#+BEGIN_SRC fundamental
+" ---------------------------------- behavior ----------------------------------
+"
+" hidden:     allow modified buffers to be sent to the background
+" splitbelow: open new windows below the current one
+" splitright: open new windows to the right of the current one
+" textwidth:  how many characters to a line
+set hidden
+set splitbelow
+set splitright
+set textwidth=80
+
+#+END_SRC
+
+** Keymaps
+
+*** Buffers
+
+#+NAME: neovim-keymaps
+#+BEGIN_SRC fundamental
+" buffers ------------------------------
+"
+" [b:            goto previous buffer
+" ]b:            goto next buffer
+" <leader>b:     list open buffers, quixfix windows and other 'vim' windows are
+"                not included
+" <leader><tab>: switch to most recent buffer
+nnoremap [b            :bp<cr>
+nnoremap ]b            :bn<cr>
+nnoremap <leader>b     :filter! /\[/ ls<cr>:b<space>
+nnoremap <leader><tab> :b#<cr>
+
+#+END_SRC
+
+*** Files
+
+#+NAME: neovim-keymaps
+#+BEGIN_SRC fundamental
+" files --------------------------------
+"
+" <leader>f: find file
+nnoremap <leader>f  :find<space>
+
+#+END_SRC
+
+*** Movement
+
+#+NAME: neovim-keymaps
+#+BEGIN_SRC fundamental
+" movement -----------------------------
+"
+" tweaks to a number of movement commands to ensure that the result is always
+" centered on the screen
+nnoremap n     nzz
+nnoremap N     Nzz
+nnoremap G     Gzz
+nnoremap <c-i> <c-i>zz
+nnoremap <c-o> <c-o>zz
+
+#+END_SRC
+
+*** Search
+
+#+NAME: neovim-keymaps
+#+BEGIN_SRC fundamental
+" search -------------------------------
+"
+" <leader>#: flash up the results from the previous search in the messages area
+" <leader>/: open a location list containing the results of the previous search
+nnoremap <leader># :g/<c-r>//#<cr>
+nnoremap <leader>/ :silent! lvimgrep /<c-r>//j %<cr>:lwindow<cr>
+
+#+END_SRC
+
+*** Windows
+
+#+NAME: neovim-keymaps
+#+BEGIN_SRC fundamental
+" windows ------------------------------
+"
+" <c-l>:     move to window right
+" <c-k>:     move to window above
+" <c-j>:     move to window below
+" <c-h>:     move to window left
+" <leader>o: move to `other` window
+nnoremap <c-l>      <c-w><c-l>
+nnoremap <c-k>      <c-w><c-k>
+nnoremap <c-j>      <c-w><c-j>
+nnoremap <c-h>      <c-w><c-h>
+nnoremap <leader>o  <c-w>p
+
+#+END_SRC
+
+** Plugins
+
+In order to bootstrap the plugin system we need to download the plugin manager.
+
+#+NAME: neovim-bootstrap
+#+BEGIN_SRC bash
+url="https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
+
+if [ ! -f ~/.config/nvim/autoload/plug.vim ]; then
+    curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs $url
+fi
+#+END_SRC
+
+*** Python
+
+I currently make use of the following plugins for editing python code.
+
+*black*
+
+#+NAME: neovim-plugins
+#+BEGIN_SRC fundamental
+" python -------------------------------
+"
+" psf/black: python source code formatter
+let g:black_virtualenv = '/home/alex/.config/nvim/.black'
+Plug 'psf/black', {'for': 'python'}
+
+#+END_SRC
+
+*vim-isort*
+
+The ~vim-isort~ plugin requires that the ~isort~ package is available
+
+#+NAME: neovim-bootstrap-python
+#+BEGIN_SRC fundamental
+pip install isort
+#+END_SRC
+
+#+NAME: neovim-plugins
+#+BEGIN_SRC fundamental
+" fisadev/vim-isort: python import statement sorter
+let g:vim_isort_map = ''
+let g:vim_isort_python_version = 'python3'
+Plug 'fisadev/vim-isort', {'for': 'python'}
+#+END_SRC
+
+In addition to the plugins outlined above, I also make use of the following
+python specific configuration
+
+#+BEGIN_SRC fundamental :tangle nvim/ftplugin/python.vim
+" --------------------------------- python.vim ---------------------------------
+
+" ------------------------------- auto commands --------------------------------
+augroup python
+    autocmd!
+    autocmd BufWritePre *.py execute ':Isort'
+    autocmd BufWritePre *.py execute ':Black'
+augroup END
+
+" ------------------------------ text formatting -------------------------------
+setlocal textwidth=88
+#+END_SRC
+
+** Providers
+
+Providers enable ~neovim~ to be extended by writing plugins in various other
+languages
+
+*** Python
+
+To enable a provider for python we simply need to have a virtual environment
+available with the ~neovim~ package installed.
+
+#+NAME: neovim-bootstrap
+#+BEGIN_SRC bash :noweb yes
+if [ -d ~/.config/nvim/.py3 ]; then
+    rm -r ~/.config/nvim/.py3
+fi
+
+python -m venv ~/.config/nvim/.py3
+. ~/.config/nvim/.py3/bin/activate
+
+pip install neovim
+<<neovim-bootstrap-python>>
+deactivate
+#+END_SRC
+
+Then we simply have to tell ~neovim~ where to look
+
+#+NAME: neovim-providers
+#+BEGIN_SRC fundamental
+" ------------------------------ provider: python ------------------------------
+let g:python3_host_prog = '/home/alex/.config/nvim/.py3/bin/python3'
+
+#+END_SRC
+
+** Searching
+
+#+NAME: neovim-searching
+#+BEGIN_SRC fundamental
+" --------------------------------- searching ----------------------------------
+"
+" inccommand: preview the results of a :s/.../.../ command in a split window
+" incsearch:  jump to matches as they are typed
+" nohlsearch: don't highlight matching search results
+set inccommand=split
+set incsearch
+set nohlsearch
+
+#+END_SRC
+
+** Whitespace
+
+#+NAME: neovim-whitespace
+#+BEGIN_SRC fundamental
+" --------------------------------- whitespace ---------------------------------
+"
+" exapndtab:   insert `tabstop` spaces when hitting the <tab> key
+" softtabstop: treat N spaces as a tab character for certain operations.
+"              e.g. backspace
+" shiftwidth:  how many spaces do the indentation commands use?
+" tabstop:     tabs = N spaces
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
+
+#+END_SRC
+
 * Rofi
 
 [[https://github.com/davatorium/rofi][Rofi]] is a great application launcher, window switcher and general purpose "select
