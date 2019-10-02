@@ -101,4 +101,3 @@ for_window [class="Sxiv"] floating enable
 # Startup
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id wal -R
-exec --no-startup-id compton --focus-exclude '_NET_WM_NAME@:s = "rofi"'

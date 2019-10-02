@@ -428,14 +428,6 @@ wintypes:
 };
 #+END_SRC
 
-Configure compton to start as i3 starts
-
-#+NAME: i3-startup
-#+BEGIN_SRC conf
-exec --no-startup-id compton --focus-exclude '_NET_WM_NAME@:s = "rofi"'
-#+END_SRC
-
-
 ** Blur
 
 *Not yet active in config* Waiting on backends that support this to stabilise
