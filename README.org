@@ -1121,18 +1121,9 @@ import subprocess
 <<pydev-features>>
 
 cli = argparse.ArgumentParser(description="Utilities for python development")
-cli.add_argument(
-    "-v",
-    "--verbose",
-    action="count",
-    default=0,
-    help="increase the verbosity of the logging output"
-)
-cli.add_argument(
-    "-q", "--quiet", action="store_true", help="suppress any logging output"
-)
-
 commands = cli.add_subparsers(title="commands")
+
+<<pyutils-logging-cli>>
 <<pydev-cli>>
 
 def main():
@@ -1240,6 +1231,87 @@ def init_logging(verbose, quiet):
     log.setLevel(level)
     log.addHandler(console)
 #+END_SRC
+
+**** Cli Arguments
+
+The following command line arguments can be used to configure the logging for a
+given invocation
+
+#+NAME: pyutils-logging-cli
+#+BEGIN_SRC python
+cli.add_argument(
+    "-v",
+    "--verbose",
+    action="count",
+    default=0,
+    help="increase the verbosity of the logging output"
+)
+cli.add_argument(
+    "-q", "--quiet", action="store_true", help="suppress any logging output"
+)
+#+END_SRC
+
+** VM-Disk
+
+A script for managing VM disk images.
+
+#+BEGIN_SRC python :shebang #!/usr/bin/env python :tangle scripts/vm-disk :noweb yes
+import argparse
+import logging
+import subprocess
+
+<<pyutils-logging>>
+<<vm-disk-features>>
+
+cli = argparse.ArgumentParser(description="Utilities for managing and running vms")
+commands = cli.add_subparsers(title="commands")
+
+<<pyutils-logging-cli>>
+<<vm-disk-cli>>
+
+def main():
+    namespace = cli.parse_args()
+
+    exclude = ["run", "verbose", "quiet"]
+    args = {k: v for k, v in vars(namespace).items() if k not in exclude}
+
+    init_logging(namespace.verbose, namespace.quiet)
+
+    if hasattr(namespace, "run"):
+        namespace.run(**args)
+    else:
+        cli.print_help()
+
+if __name__ == '__main__':
+    main()
+#+END_SRC
+
+*** Create
+
+This command is used to create new vm disk images and takes the following
+arguments
+
+#+NAME: vm-disk-cli
+#+BEGIN_SRC python
+create = commands.add_parser("create", help="create a new vm disk image")
+create.add_argument("filename", type=str, help="the filename to give the image")
+create.add_argument(
+    "--size", type=str, default="20G", help="the disk space to allocate to the image"
+)
+create.set_defaults(run=do_create)
+#+END_SRC
+
+#+NAME: vm-disk-features
+#+BEGIN_SRC python
+def do_create(filename, size):
+    """Create a new vm disk image"""
+    imagename = f"{filename}.cow"
+    cmd = ["qemu-img", "create", "-f", "qcow2", imagename, size]
+
+    log.debug("Running command: %s", " ".join(cmd))
+    subprocess.run(cmd)
+#+END_SRC
+
 
 ** Wifi
 
