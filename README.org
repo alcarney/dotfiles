@@ -542,7 +542,8 @@ complementary keybinding
 bindsym $mod+o scratchpad show
 #+END_SRC
 
-Et voila! Instant "dropdown" applications
+Et voila! Instant "dropdown" applications.
+#+EN
 
 ** Window Management
 
@@ -609,8 +610,9 @@ bindsym $mod+Shift+space floating toggle
 
 This binding will switch focus between floating / tiled windows.
 
+#+NAME: i3-window-keys
 #+BEGIN_SRC conf
-bindsym $mod+space foccs mode_toggle
+bindsym $mod+space focus mode_toggle
 #+END_SRC
 
 Setting this allows floating windows to be dragged around by the mouse
@@ -628,16 +630,15 @@ create a mode in which we can resize windows while it is active
 #+NAME: i3-window-keys
 #+BEGIN_SRC conf
 mode "resize" {
-        bindsym h resize shrink width 10 px or 10 ppt
-        bindsym j resize grow height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
+    bindsym h resize shrink width 10 px or 10 ppt
+    bindsym j resize grow height 10 px or 10 ppt
+    bindsym k resize shrink height 10 px or 10 ppt
+    bindsym l resize grow width 10 px or 10 ppt
 
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+r mode "default"
 }
-
 bindsym $mod+r mode "resize"
 #+END_SRC
 
@@ -646,7 +647,18 @@ bindsym $mod+r mode "resize"
 This section contains all the rules that govern how windows for individual
 application are handled.
 
+**Firefox**
+
+Make sure firefox opens on the web browsing workspace
+
+#+NAME: i3-window-rules
+#+BEGIN_SRC conf
+assign [class="firefox"] 2
+#+END_SRC
+
 **Sxiv**
+
+Make sure when the image viewer is opened, it's opened in floating mode.
 
 #+NAME: i3-window-rules
 #+BEGIN_SRC conf
