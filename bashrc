@@ -16,7 +16,7 @@ shopt -s globstar
 
 # -- cd bookmarks:
 export dotfiles="$HOME/.config/dotfiles"
-export stylo="$HOME/Projects/stylo/"
+export arlunio="$HOME/Projects/arlunio/"
 
 # -- PATH: Places to search for executables
 
