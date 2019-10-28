@@ -3,8 +3,10 @@
     name = Alex Carney
 
 [alias]
-    co   = checkout
-    hist = log --branches --remotes --tags --graph --oneline --decorate
+    amend = commit --amend --no-edit
+    co    = checkout
+    d     = diff
+    hist  = log --branches --remotes --tags --graph --oneline --decorate
 
 [core]
     editor = nvim
