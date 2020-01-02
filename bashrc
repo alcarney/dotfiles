@@ -9,10 +9,19 @@
 # autocd:       If the command matches a directory name cd into it.
 # cdable_vars:  Any variable set to a path can be used as a cd 'bookmark'
 # globstar:     Enable recursive ** globbing
+# histappend:   On exit append history to HISTFILE, don't overwrite
 shopt -s autocd
 shopt -s cdable_vars
 shopt -s globstar
+shopt -s histappend
 
+# -- Options: History
+#
+# HISTCONTROL:
+# - erasedups:  Delete any previous instances of the command before addding
+#               it to the history
+#
+export HISTCONTROL="ignoreboth:erasedups"
 
 # -- cd bookmarks:
 export dotfiles="$HOME/.config/dotfiles"
