@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Thin wrapper around nmap to discover ssh-able hosts on the
+# local network.
+find_ssh() {
+    nmap -sV -p 22 192.168.0.0/24 --open | awk '
+    BEGIN {OFS="\t"}
+    /scan report/ {ip=$5}
+    /open/ {print ip, $0}
+    '
+}
+
+case $1 in
+    ssh)
+        shift
+        find_ssh
+        ;;
+    *)
+        echo "Huh?"
+        ;;
+esac
