@@ -24,8 +24,9 @@ shopt -s histappend
 export HISTCONTROL="ignoreboth:erasedups"
 
 # -- cd bookmarks:
-export dotfiles="$HOME/.config/dotfiles"
 export arlunio="$HOME/Projects/arlunio/"
+export blog="$HOME/Projects/blog/"
+export dotfiles="$HOME/.config/dotfiles"
 
 # -- PATH: Places to search for executables
 

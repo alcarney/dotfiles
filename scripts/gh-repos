@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# List the repos on the user's account
+list-repos () {
+    account=${1:-"alcarney"}
+    url="https://api.github.com/users/${account}/repos"
+
+    curl -s $url | jq -r '.[].name'
+}
+
+case $1 in
+    list)
+        shift
+        list-repos $@
+        ;;
+    *)
+        echo "Huh?"
+        ;;
+esac

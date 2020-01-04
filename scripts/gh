@@ -1,0 +1,13 @@
+#!/bin/bash
+
+case $1 in
+    repo)
+        shift
+        gh-repos $@
+        ;;
+    *)
+        echo "Huh?"
+        ;;
+esac
+
+
