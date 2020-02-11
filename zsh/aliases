@@ -1,0 +1,46 @@
+# -- Aliases
+
+# misc: Miscellaneous aliases
+#
+# cp:  Prompt the user if overwriting existing files
+# mv:  Prompt the user if overwriting existing files
+# rm:  Prompt to confirm file removal.
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -i'
+
+# ls: Enhanced
+#
+# -C:                        List entries by columns
+# -F:                        Append character to indicate the type of each file
+# -h:                        Human readable file sizes
+# -X:                        Sort files by extension
+# --color=auto               Colorise the output
+# --group-directories-first: Directories are listed before files.
+alias ls='ls -CFhX --color=auto --group-directories-first'
+
+# git: Git shortcuts
+#
+# gd:  Git diff
+# gst: More compact git status
+alias gd='git diff'
+alias gst='git status -sb ; git --no-pager diff --shortstat'
+
+# pacman: Shortcuts to common package management tasks
+#
+# pacin:    Install packages
+# pacinfo:  Display package info for an installed package
+# paclean:  Remove any packages that are no longer installed from the cache
+# paclinfo: Search repositories for info on a package
+# paclook:  Search repositories for a package
+# pacout:   Remove a package and any of its unique dependencies
+# pacup:    Update the system
+alias pacin='sudo pacman -S'
+alias pacinfo='pacman -Qi'
+alias paclean='sudo pacman -Sc'
+alias paclinfo='pacman -Si'
+alias paclook='pacman -Ss'
+alias pacout='sudo pacman -Rs'
+alias pacup='sudo pacman -Syu'
+
+
