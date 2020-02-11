@@ -1,0 +1,11 @@
+#!/bin/bash
+
+sessions=$(tmux ls | cut -f 1 -d ':')
+
+if [[ ! -z $(echo $sessions | grep 'dashboard') ]]; then
+    tmux attach -t 'dashboard'
+fi
+
+tmux new-session -d -s 'dashboard'
+tmux send-keys 'llyfr open' C-m
+tmux attach -t 'dashboard'
