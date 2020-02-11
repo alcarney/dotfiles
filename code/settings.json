@@ -41,7 +41,7 @@
     "search.location": "panel",
     "terminal.integrated.fontSize": 11,
     "terminal.integrated.rightClickBehavior": "copyPaste",
-    "window.titleBarStyle": "custom",
+    "window.titleBarStyle": "native",
     "window.newWindowDimensions": "maximized",
     "window.zoomLevel": 0,
     "workbench.activityBar.visible": true,
