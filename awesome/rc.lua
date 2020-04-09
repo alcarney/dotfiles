@@ -50,7 +50,8 @@ end
 beautiful.init(gears.filesystem.get_configuration_dir() .. "theme/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "alacritty"
+terminal = "kitty"
+home = os.getenv("HOME") or "/home/alex"
 editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -126,8 +127,17 @@ local taglist_buttons = gears.table.join(
                     awful.button({ }, 5, function(t) awful.tag.viewprev(t.screen) end)
                 )
 
-local function set_wallpaper(s)
-    -- Wallpaper
+local function set_wallpaper(s, variant)
+
+    -- First look to see if we are using betterlockscreen
+    local wal = home .. "/.cache/i3lock/current/" .. variant .. ".png"
+
+    if gears.filesystem.file_readable(wal) then
+        gears.wallpaper.maximized(wal, s, false)
+        return
+    end
+
+    -- Otherwise fallback to the theme.
     if beautiful.wallpaper then
         local wallpaper = beautiful.wallpaper
         -- If wallpaper is a function, call it with the screen
@@ -139,11 +149,11 @@ local function set_wallpaper(s)
 end
 
 -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
-screen.connect_signal("property::geometry", set_wallpaper)
+screen.connect_signal("property::geometry", function(s) set_wallpaper(s, "wall") end)
 
 awful.screen.connect_for_each_screen(function(s)
     -- Wallpaper
-    set_wallpaper(s)
+    set_wallpaper(s, "wall")
 
     -- Each screen has its own tag table.
     awful.tag({ " 1", " 2", " 3", " 4", " 5", " 6", " 7", " 8", " 9" }, s, awful.layout.layouts[1])
@@ -220,8 +230,9 @@ globalkeys = gears.table.join(
         end,
         {description = "focus previous by index", group = "client"}
     ),
-    awful.key({ modkey,           }, "w", function () mymainmenu:show() end,
-              {description = "show main menu", group = "awesome"}),
+
+    awful.key({ modkey, "Control"   }, "l", function () awful.spawn("betterlockscreen -l dimblur -t ''") end,
+              {description = "lock session", group = "awesome"}),
 
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
@@ -456,7 +467,11 @@ awful.rules.rules = {
           "ConfigManager",  -- Thunderbird's about:config.
           "pop-up",       -- e.g. Google Chrome's (detached) Developer Tools.
         }
-      }, properties = { floating = true }},
+      }, properties = {
+          floating = true,
+          placement = awful.placement.centered,
+         }
+      },
 
     -- Add titlebars to normal clients and dialogs
     { rule_any = {type = { "normal", "dialog" }
