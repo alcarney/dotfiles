@@ -19,6 +19,7 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 require("awful.hotkeys_popup.keys")
 
 local dock = require('ui.dock')
+local sysinfo = require('ui.sysinfo')
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -217,6 +218,8 @@ globalkeys = gears.table.join(
               {description = "view next", group = "tag"}),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
               {description = "go back", group = "tag"}),
+    awful.key({ modkey,           }, "i",     sysinfo.show_info,
+              {description = "show system info", group="awesome"}),
 
     awful.key({ modkey,           }, "j",
         function ()
@@ -292,7 +295,7 @@ globalkeys = gears.table.join(
               {description = "restore minimized", group = "client"}),
 
     -- Prompt
-    awful.key({ modkey },            "r",     function () awful.spawn('rofi -show run') end,
+    awful.key({ modkey },            "r",     function () awful.spawn('rofi -show drun -show-icons') end,
               {description = "open rofi", group = "launcher"}),
 
     awful.key({ modkey }, "x",
