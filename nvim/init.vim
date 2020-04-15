@@ -92,6 +92,9 @@ nnoremap <leader>o  <c-w>p
 "
 call plug#begin('~/.local/share/nvim/plugged')
 
+" general ------------------------------
+Plug 'machakann/vim-sandwich'
+
 " python -------------------------------
 "
 " psf/black: python source code formatter
