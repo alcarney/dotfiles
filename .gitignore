@@ -1,8 +1,10 @@
+*.desktop
 .swp
 cache.db
 
 code/globalStorage/
 code/workspaceStorage/
+code/eq-material-theme-icons.json
 
 history.cmdline
 history.search
@@ -27,3 +29,5 @@ tmux/sidebar
 
 vim/autoload
 vim/plugged
+
+zsh/antigen.zsh
