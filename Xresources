@@ -17,15 +17,3 @@ URxvt.font: xft:Source Code Pro:antialias=false:pixelsize=13
 !! dzen settings
 dzen2.font: xft:DejaVu Sans Mono:pixelsize=8
 
-!! rofi settings
-rofi.lines:                          12
-rofi.eh:                             1
-rofi.width:                          50
-rofi.terminal:                       kitty
-!!                                   bg,    fg,    alt-bg,sel-bg,sel-fg
-rofi.color-normal:                   nord0, nord4, nord0, nord1, nord9
-rofi.color-window:                   nord0, nord9
-rofi.font:                           mono 9
-rofi.bw:                             1
-rofi.fuzzy:                          true
-rofi.line-margin:                    2
