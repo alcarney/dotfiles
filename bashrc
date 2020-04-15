@@ -134,3 +134,12 @@ fi
 
 # If git is installed, source the completion script
 [ -f "/usr/share/git/completion/git-completion.bash" ] && source "/usr/share/git/completion/git-completion.bash"
+
+# Drop into the fish shell only if
+# - It's available
+# - We aren't running a 'one-liner' (bash -c '...')
+# - Bash itself is not being launched from within fish
+[ -f "/usr/bin/fish" ] &&\
+[ -z "$BASH_EXECUTION_STRING" ] &&\
+[ "$(ps --no-headers --pid=$PPID --format=cmd)" != "fish" ] && exec fish
+
