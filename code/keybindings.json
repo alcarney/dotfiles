@@ -30,10 +30,6 @@
         "command": "-workbench.action.reopenClosedEditor"
     },
     {
-        "key": "ctrl+shift+t",
-        "command": "workbench.action.tasks.test"
-    },
-    {
         "key": "ctrl+b",
         "command": "extension.vim_ctrl+b",
         "when": "editorTextFocus && vim.active && vim.use<C-b> && !inDebugRepl && vim.mode != 'Insert' && false"
@@ -42,5 +38,46 @@
         "key": "ctrl+b",
         "command": "-extension.vim_ctrl+b",
         "when": "editorTextFocus && vim.active && vim.use<C-b> && !inDebugRepl && vim.mode != 'Insert'"
+    },
+    {
+        "key": "ctrl+shift+t",
+        "command": "workbench.action.tasks.runTask"
+    },
+    {
+        "key": "shift+enter",
+        "command": "-python.execSelectionInTerminal",
+        "when": "editorTextFocus && !findInputFocussed && !jupyter.ownsSelection && !replaceInputFocussed && editorLangId == 'python'"
+    },
+    {
+        "key": "shift+enter",
+        "command": "jupyter.execSelectionInteractive",
+        "when": "editorTextFocus && jupyter.ownsSelection && !findInputFocussed && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
+    },
+    {
+        "key": "shift+enter",
+        "command": "-jupyter.execSelectionInteractive",
+        "when": "editorTextFocus && jupyter.ownsSelection && !findInputFocussed && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
+    },
+    {
+        "key": "shift+alt+r",
+        "command": "esbonio.languageServer.restart",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+w",
+        "command": "workbench.action.quickSwitchWindow"
+    },
+    {
+        "key": "ctrl+alt+w",
+        "command": "workbench.action.quickOpenNavigateNext",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+q",
+        "command": "-workbench.action.quit"
+    },
+    {
+        "key": "ctrl+q",
+        "command": "workbench.action.quickOpenView"
     }
 ]
