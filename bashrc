@@ -34,9 +34,11 @@ export dotfiles="$HOME/.config/dotfiles"
 paths=(
     "$HOME/bin"
     "$HOME/go/bin"
+    "$HOME/.cargo/bin"
+    "$HOME/.emacs.d/bin"
     "$HOME/.local/bin"
     "$HOME/.poetry/bin"
-    "$HOME/.npm-g/bin"
+    "$HOME/.npm-packages/bin"
 
 )
 
