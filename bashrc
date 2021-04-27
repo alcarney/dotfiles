@@ -138,7 +138,7 @@ else
 fi
 
 # If git is installed, source the completion script
-[ -f "/usr/share/git/completion/git-completion.bash" ] && source "/usr/share/git/completion/git-completion.bash"
+[ -f "/usr/share/bash-completion/completions/git" ] && source "/usr/share/bash-completion/completions/git"
 
 # Drop into the fish shell only if
 # - It's available
