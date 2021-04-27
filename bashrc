@@ -58,6 +58,9 @@ export LS_COLORS="di=1"
 # PROMPT_COMMAND: Execute a command before displaying the prompt.
 export PROMPT_COMMAND='echo'
 
+# SSH_AUTH_SOCK: Use gpg as an ssh agent
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+
 # -- Aliases
 
 # misc: Miscellaneous aliases
