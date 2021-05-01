@@ -4,6 +4,11 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+    source /etc/bashrc
+fi
+
 # -- Options
 #
 # autocd:       If the command matches a directory name cd into it.
