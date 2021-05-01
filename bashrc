@@ -99,14 +99,14 @@ alias gst='git status -sb ; git --no-pager diff --shortstat'
 #
 # \W:  The name of the current working directory
 
-if [ -f "/usr/share/git/completion/git-prompt.sh" ]; then
-    source "/usr/share/git/completion/git-prompt.sh"
+if [ -f "/usr/share/git-core/contrib/completion/git-prompt.sh" ]; then
+    source "/usr/share/git-core/contrib/completion/git-prompt.sh"
 
     export GIT_PS1_SHOWDIRTYSTATE=1
     export GIT_PS1_SHOWUPSTREAM='verbose'
-    export PS1='\W $(__git_ps1 "(%s)")> '
+    export PS1='\W $(__git_ps1 "(%s)")\n> '
 else
-    export PS1='\W > '
+    export PS1='\W\n> '
 fi
 
 # If git is installed, source the completion script
