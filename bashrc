@@ -31,6 +31,7 @@ export HISTCONTROL="ignoreboth:erasedups"
 # -- cd bookmarks:
 export arlunio="$HOME/Projects/arlunio/"
 export blog="$HOME/Projects/blog/"
+export esbonio="$HOME/Projects/esbonio"
 export dotfiles="$HOME/.config/dotfiles"
 
 # -- PATH: Places to search for executables
