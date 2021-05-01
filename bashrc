@@ -95,40 +95,6 @@ alias ls='ls -CFhX --color=auto --group-directories-first'
 alias gd='git diff'
 alias gst='git status -sb ; git --no-pager diff --shortstat'
 
-# pacman: Shortcuts to common package management tasks
-#
-# pacin:    Install packages
-# pacinfo:  Display package info for an installed package
-# paclean:  Remove any packages that are no longer installed from the cache
-# paclinfo: Search repositories for info on a package
-# paclook:  Search repositories for a package
-# pacout:   Remove a package and any of its unique dependencies
-# pacup:    Update the system
-alias pacin='sudo pacman -S'
-alias pacinfo='pacman -Qi'
-alias paclean='sudo pacman -Sc'
-alias paclinfo='pacman -Si'
-alias paclook='pacman -Ss'
-alias pacout='sudo pacman -Rs'
-alias pacup='sudo pacman -Syu'
-
-# -- Functions
-
-# pacis:
-#
-# If given an argument this function does a grep on all installed packages.
-# Otherwise all packages are simply listed
-pacis () {
-    if [ "$1" = "" ]; then
-        pacman -Q
-    else
-        pacman -Q | grep "$1"
-    fi
-}
-
-# -- Extras
-
-
 # PS1: The format of the prompt
 #
 # \W:  The name of the current working directory
