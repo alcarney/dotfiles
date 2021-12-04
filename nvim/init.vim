@@ -1,0 +1,122 @@
+" -- init.vim
+"
+"  Base settings and defaults that apply everywhere
+
+" -- tabs and spaces
+"
+" tabstop:     Tabs = N spaces
+" expandtab:   Insert spaces when we use the <tab> key
+" shiftwidth:  How many spaces do indentation commands use?
+" softtabstop: Treat N spaces as a single tab character
+set tabstop=4
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+
+" -- text formatting
+"
+" textwidth:     Lines should be N characters long
+" formatoptions: Controls how automatic formatting works
+"   c              Automatically wrap comments according to `textwidth`
+"   o              Automatically insert comment chars on 'o' (normal mode)
+"   r              Automatically insert comment chars on Enter (insert mode)
+"   q              Allow formatting with 'gq'
+"   j              Automatically remove comment chars on 'j' (normal mode)
+set textwidth=79
+set formatoptions=corqj
+
+" -- appearance
+"
+" list:          Display whitespace chars according to `listchars`
+" title:         Use the current filename as window title
+" nowrap:        Disable line wrapping
+" number:        Show line numbers
+" listchars:     Render the listed whitespace chars as...
+" noshowmode:    Hide the default mode indicator e.g. '-- INSERT --'
+" cursorline:    Highlight the current line
+" laststatus:    Always show the statusline
+" showtabline:   Only show tabline when there's more than one tab
+" colorcolumn:   Highlight column at textwidth + 1
+" termguicolors: Enable 24bit color in the terminal
+set list
+set title
+set nowrap
+set number
+set noshowmode
+"set cursorline
+set laststatus=2
+set showtabline=1
+set colorcolumn=+1
+set termguicolors
+set listchars=tab:».,trail:·,extends:→,precedes:←
+
+" fallback colorscheme if plugins aren't available
+colorscheme desert
+
+highlight Comment term=italic cterm=italic gui=italic
+highlight ColorColumn ctermbg=0 guibg=#4b4b4b
+
+" -- keymaps
+"
+" mapleader:      Prefix key to use for <leader> mappings
+" maplocalleader: Prefix key to use for <localleader> mappings
+let mapleader = ' '
+let maplocalleader = ','
+
+" -- buffers
+"
+" hidden: Permit modified buffers to be sent to the background
+set hidden
+
+" -- windows
+"
+" splitbelow: Open horizontal splits below
+set splitbelow
+
+nnoremap <c-h>     <c-w><c-h>
+nnoremap <c-j>     <c-w><c-j>
+nnoremap <c-k>     <c-w><c-k>
+nnoremap <c-l>     <c-w><c-l>
+
+" -- centered movement
+"
+" Tweak some of the standard movement commands to also re-center the buffer.
+nnoremap n     nzz
+nnoremap N     Nzz
+nnoremap G     Gzz
+nnoremap <c-i> <c-i>zz
+nnoremap <c-o> <c-o>zz
+
+" -- editing
+inoremap <s-tab> <c-o><<
+"nnoremap! <C-BS> <C-W>   this doesn't work for some reason...
+
+" -- searching
+"
+" incsearch:    Incrementally higlight search matches
+" inccommand:   Preview :s/../../ commands in a new split
+" noignorecase: Case sensitive searches by default.
+"               Use '\c' anywhere in the search pattern to disable it.
+set incsearch
+set noignorecase
+set inccommand=split
+
+" open results of the most recent search in a location list
+nnoremap <leader>/  :silent! lvimgrep /<c-r>//j %<cr>:lwindow<cr>
+
+" reset search highlights
+nnoremap <localleader>l      <Cmd>nohlsearch<Bar>diffupdate<CR><C-L>
+
+
+" ---------------------------------- Auto Commands ---------------------------
+"
+" - Trim trailing whitespace on save
+augroup general
+    autocmd!
+    autocmd BufWritePre * %s/\s\+$//e
+augroup END
+
+lua << EOF
+require'alc.bootstrap'()
+require'alc.plugins'
+EOF
