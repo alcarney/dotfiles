@@ -10,6 +10,17 @@ return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
   -- Appearance
+  use {
+    "arcticicestudio/nord-vim",
+    config = function()
+      vim.cmd [[colorscheme nord]]
+    end
+  }
+
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = {'kyazdani42/nvim-web-devicons', opt = true}
+  }
 
   -- Generic Editing
   use 'machakann/vim-sandwich'

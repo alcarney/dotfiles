@@ -32,6 +32,7 @@ set formatoptions=corqj
 " nowrap:        Disable line wrapping
 " number:        Show line numbers
 " listchars:     Render the listed whitespace chars as...
+" background:    Light or dark colorscheme?
 " noshowmode:    Hide the default mode indicator e.g. '-- INSERT --'
 " cursorline:    Highlight the current line
 " laststatus:    Always show the statusline
@@ -48,6 +49,7 @@ set laststatus=2
 set showtabline=1
 set colorcolumn=+1
 set termguicolors
+set background=dark
 set listchars=tab:».,trail:·,extends:→,precedes:←
 
 " fallback colorscheme if plugins aren't available
@@ -119,4 +121,5 @@ augroup END
 lua << EOF
 require'alc.bootstrap'()
 require'alc.plugins'
+require'lualine'.setup()
 EOF
