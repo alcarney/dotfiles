@@ -16,12 +16,12 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
 
 require'lspconfig'.pyright.setup{
   capabilities = capabilities,
-  -- TODO: Do something smarter to automatically pick the correct virutalenv.
-  on_init = function(client)
-    client.config.settings.python.pythonPath = "/home/alex/Projects/esbonio/.env/bin/python"
-    client.notify("workspace/didChangeConfiguration")
-    return true
-  end,
+  settings = {
+    python = {
+      -- Use whichever python is active in the current environment
+      pythonPath = vim.fn.system("command -v python | tr -d '[:space:]'")
+    }
+  },
   on_attach = function(client, bufnr)
     vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
