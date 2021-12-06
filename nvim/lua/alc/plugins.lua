@@ -24,9 +24,11 @@ return require('packer').startup(function()
 
   -- Generic Editing
   use 'machakann/vim-sandwich'
+  use 'hrsh7th/nvim-cmp'
 
   -- LSP
   use 'neovim/nvim-lspconfig'
+  use 'hrsh7th/cmp-nvim-lsp'
 
   -- Python
   use {

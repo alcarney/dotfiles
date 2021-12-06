@@ -36,6 +36,7 @@ set formatoptions=corqj
 " noshowmode:    Hide the default mode indicator e.g. '-- INSERT --'
 " cursorline:    Highlight the current line
 " laststatus:    Always show the statusline
+" signcolumn:    Where to show git signs, warning/error markers etc.
 " showtabline:   Only show tabline when there's more than one tab
 " colorcolumn:   Highlight column at textwidth + 1
 " termguicolors: Enable 24bit color in the terminal
@@ -44,12 +45,13 @@ set title
 set nowrap
 set number
 set noshowmode
-"set cursorline
+set cursorline
 set laststatus=2
 set showtabline=1
 set colorcolumn=+1
 set termguicolors
 set background=dark
+set signcolumn=number
 set listchars=tab:».,trail:·,extends:→,precedes:←
 
 " fallback colorscheme if plugins aren't available
