@@ -76,6 +76,27 @@ _G.packer_plugins = {
     path = "/home/alex/.local/share/nvim/site/pack/packer/opt/black",
     url = "https://github.com/psf/black"
   },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/home/alex/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  ["nord-vim"] = {
+    config = { "\27LJ\2\0024\0\0\2\0\3\0\0056\0\0\0009\0\1\0'\1\2\0B\0\2\1K\0\1\0\21colorscheme nord\bcmd\bvim\0" },
+    loaded = true,
+    path = "/home/alex/.local/share/nvim/site/pack/packer/start/nord-vim",
+    url = "https://github.com/arcticicestudio/nord-vim"
+  },
+  ["nvim-lspconfig"] = {
+    loaded = true,
+    path = "/home/alex/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/home/alex/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/kyazdani42/nvim-web-devicons"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/alex/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -93,6 +114,10 @@ time([[Defining packer_plugins]], false)
 time([[Setup for black]], true)
 try_loadstring("\27LJ\2\2`\0\0\3\0\a\0\v6\0\0\0009\0\1\0006\1\0\0009\1\3\0019\1\4\1'\2\5\0B\1\2\2'\2\6\0&\1\2\1=\1\2\0K\0\1\0\n/venv\tdata\fstdpath\afn\21black_virtualenv\6g\bvim\0", "setup", "black")
 time([[Setup for black]], false)
+-- Config for: nord-vim
+time([[Config for nord-vim]], true)
+try_loadstring("\27LJ\2\0024\0\0\2\0\3\0\0056\0\0\0009\0\1\0'\1\2\0B\0\2\1K\0\1\0\21colorscheme nord\bcmd\bvim\0", "config", "nord-vim")
+time([[Config for nord-vim]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads

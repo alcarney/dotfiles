@@ -25,6 +25,9 @@ return require('packer').startup(function()
   -- Generic Editing
   use 'machakann/vim-sandwich'
 
+  -- LSP
+  use 'neovim/nvim-lspconfig'
+
   -- Python
   use {
     'psf/black',
