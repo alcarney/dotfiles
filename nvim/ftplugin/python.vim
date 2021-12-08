@@ -5,8 +5,8 @@ setlocal textwidth=88
 
 augroup python
     autocmd!
-    " see: plugin/reorder_python_imports.vim
-    autocmd BufWritePre *.py execute ':ReorderPyImports'
+    " see: autoload/pyimports.vim
+    autocmd BufWritePre *.py execute 'call pyimports#Reorder()'
     autocmd BufWritePre *.py execute ':Black'
 augroup END
 

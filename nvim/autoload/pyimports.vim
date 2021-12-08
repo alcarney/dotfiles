@@ -1,6 +1,5 @@
-" -- reorder_python_imports.vim
-"
-" Simple plugin that calls `reorder_python_imports` on the current buffer.
+
+" Calls `reorder_python_imports` on the current buffer.
 " Loosely modelled after the black.vim plugin
 "
 " https://github.com/psf/black/blob/main/autoload/black.vim
@@ -8,9 +7,10 @@
 " This assumes that the `reorder_python_imports` package is avaiable to to the
 " interpreter specified by g:python3_host_prog
 python3<<EOF
-from reorder_python_imports import fix_file_contents
 
 def ReorderImports():
+    from reorder_python_imports import fix_file_contents
+
     contents = "\n".join(vim.current.buffer) + "\n"
     reformatted = fix_file_contents(contents)
 
@@ -20,4 +20,6 @@ def ReorderImports():
     vim.current.buffer[:] = reformatted.split("\n")[:-1]
 EOF
 
-command! ReorderPyImports :py3 ReorderImports()
+function pyimports#Reorder()
+    :py3 ReorderImports()
+endfunction

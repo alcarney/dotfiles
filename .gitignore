@@ -9,12 +9,6 @@ code/eq-material-theme-icons.json
 history.cmdline
 history.search
 
-nvim/.black
-nvim/.netrwhist
-nvim/.py3
-nvim/autoload
-nvim/plugged
-
 pb-lock.pid
 
 ptpython/history
