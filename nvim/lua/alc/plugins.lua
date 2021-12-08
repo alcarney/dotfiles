@@ -25,6 +25,7 @@ return require('packer').startup(function()
   -- Generic Editing
   use 'machakann/vim-sandwich'
   use 'hrsh7th/nvim-cmp'
+  use 'L3MON4D3/LuaSnip'
 
   -- LSP
   use 'neovim/nvim-lspconfig'
