@@ -44,6 +44,10 @@ end
 return function()
   local did_stuff = false
 
+  if os.getenv("LSP_DEBUG") then
+    vim.lsp.set_log_level("debug")
+  end
+
   -- Is packer available?
   if not pcall(require, 'packer') then
     did_stuff = did_stuff or install_packer()
