@@ -126,6 +126,9 @@ lua << EOF
 vim.diagnostic.config({virtual_text = false})
 
 require'alc.bootstrap'()
+
 require'alc.plugins'
 require'lualine'.setup()
+
+require'alc.lsp'
 EOF
