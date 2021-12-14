@@ -16,6 +16,18 @@ local on_attach = function(client, bufnr)
 
 end
 
+-- C/C++
+lspconfig.clangd.setup{
+  capabilities = capabilities,
+  on_attach = on_attach
+}
+
+-- CMake
+lspconfig.cmake.setup{
+  capabilities = capabilities,
+  on_attach = on_attach
+}
+
 -- Esbonio
 lspconfig.esbonio.setup{
   capabilities = capabilities,
