@@ -113,6 +113,15 @@ nnoremap <leader>/  :silent! lvimgrep /<c-r>//j %<cr>:lwindow<cr>
 " reset search highlights
 nnoremap <localleader>l      <Cmd>nohlsearch<Bar>diffupdate<CR><C-L>
 
+" -- netrw - the built in file browser
+"
+" netrw_banner=0:    Hide the banner
+" netrw_listhide:    Which files should be excluded?
+" netrw_liststyle=3  Display files in a tree.
+let g:netrw_banner=0
+let g:netrw_liststyle=3
+let g:netrw_list_hide=netrw_gitignore#Hide()
+
 
 " ---------------------------------- Auto Commands ---------------------------
 "
