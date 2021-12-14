@@ -29,6 +29,7 @@ set formatoptions=corqj
 "
 " list:          Display whitespace chars according to `listchars`
 " title:         Use the current filename as window title
+" mouse:         Which modes is the mouse active?
 " nowrap:        Disable line wrapping
 " number:        Show line numbers
 " listchars:     Render the listed whitespace chars as...
@@ -44,6 +45,7 @@ set list
 set title
 set nowrap
 set number
+set mouse=nv
 set noshowmode
 set cursorline
 set laststatus=2
