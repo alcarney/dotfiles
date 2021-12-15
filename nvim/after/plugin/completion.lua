@@ -1,6 +1,12 @@
 local cmp = require('cmp')
+local lspkind = require('lspkind')
 
 cmp.setup({
+  formatting = {
+    format = lspkind.cmp_format({
+      with_text = false
+    }),
+  },
   sources = {
     { name = "nvim_lsp" }
   },

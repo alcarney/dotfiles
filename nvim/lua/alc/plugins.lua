@@ -22,7 +22,9 @@ return require('packer').startup(function()
     requires = {'kyazdani42/nvim-web-devicons', opt = true}
   }
 
-  -- Generic Editing
+  use 'onsails/lspkind-nvim'
+
+  -- Editing
   use 'machakann/vim-sandwich'
   use 'hrsh7th/nvim-cmp'
   use 'L3MON4D3/LuaSnip'
