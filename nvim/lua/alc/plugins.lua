@@ -34,6 +34,16 @@ return require('packer').startup(function()
   use 'L3MON4D3/LuaSnip'
   use 'tpope/vim-unimpaired'
 
+  -- Git
+  use {
+    'lewis6991/gitsigns.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim'
+    },
+    config = function()
+      require('gitsigns').setup()
+    end
+  }
 
   -- LSP
   use 'neovim/nvim-lspconfig'
