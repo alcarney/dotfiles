@@ -59,9 +59,6 @@ set listchars=tab:».,trail:·,extends:→,precedes:←
 " fallback colorscheme if plugins aren't available
 colorscheme desert
 
-highlight Comment term=italic cterm=italic gui=italic
-highlight ColorColumn ctermbg=0 guibg=#4b4b4b
-
 " -- keymaps
 "
 " mapleader:      Prefix key to use for <leader> mappings

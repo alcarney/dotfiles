@@ -13,7 +13,11 @@ return require('packer').startup(function()
   use {
     "arcticicestudio/nord-vim",
     config = function()
-      vim.cmd [[colorscheme nord]]
+      vim.cmd [[
+        colorscheme nord
+
+        highlight Comment term=italic cterm=italic gui=italic
+      ]]
     end
   }
 
