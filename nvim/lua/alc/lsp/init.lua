@@ -31,7 +31,25 @@ lspconfig.cmake.setup{
 -- Esbonio
 lspconfig.esbonio.setup{
   capabilities = capabilities,
-  on_attach = on_attach
+  on_attach = on_attach,
+  handlers = {
+    ["window/logMessage"] = function (_, result, ctx, _)
+      local message = result.message
+      local client = vim.lsp.get_client_by_id(ctx.client_id)
+
+      if not client.esbonio_log then
+        client.esbonio_log = vim.api.nvim_create_buf(true, true)
+        print(vim.inspect(client.esbonio_log))
+      end
+
+      for line in message:gmatch("([^\n]*)\n?") do
+        if #line > 0 then
+          vim.api.nvim_buf_set_lines(client.esbonio_log, -1, -1, false, {line})
+        end
+      end
+
+    end
+  }
 }
 
 -- Pyright
