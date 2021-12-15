@@ -53,7 +53,7 @@ set showtabline=1
 set colorcolumn=+1
 set termguicolors
 set background=dark
-set signcolumn=number
+set signcolumn=yes
 set listchars=tab:».,trail:·,extends:→,precedes:←
 
 " fallback colorscheme if plugins aren't available
