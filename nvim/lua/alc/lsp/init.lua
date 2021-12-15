@@ -31,6 +31,11 @@ lspconfig.cmake.setup{
 -- Esbonio
 lspconfig.esbonio.setup{
   capabilities = capabilities,
+  init_options = {
+    server = {
+      logLevel = "debug"
+    },
+  },
   on_attach = on_attach,
   handlers = {
     ["window/logMessage"] = function (_, result, ctx, _)
