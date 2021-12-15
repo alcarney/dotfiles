@@ -94,7 +94,26 @@ nnoremap <c-i> <c-i>zz
 nnoremap <c-o> <c-o>zz
 
 " -- editing
-inoremap <s-tab> <c-o><<
+"
+" Make alt+j/alt+k behave like alt+up/alt+down in VSCode.
+inoremap <a-j>      <esc>:move .+1<cr>==gi
+inoremap <a-down>   <esc>:move .+1<cr>==gi
+inoremap <a-k>      <esc>:move .-2<cr>==gi
+inoremap <a-up>     <esc>:move .-2<cr>==gi
+
+xnoremap <a-j>      :move '>+1<cr>gv
+xnoremap <a-down>   :move '>+1<cr>gv
+xnoremap <a-k>      :move '<-2<cr>gv
+xnoremap <a-up>     :move '<-2<cr>gv
+
+" tab/shift+tab can indent/dedent in insert mode
+inoremap <tab>     <c-o>>>
+inoremap <s-tab>   <c-o><<
+
+" keep selection when indenting
+xnoremap >   >gv
+xnoremap <   <gv
+
 "nnoremap! <C-BS> <C-W>   this doesn't work for some reason...
 
 " -- searching
