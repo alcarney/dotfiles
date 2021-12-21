@@ -1,0 +1,58 @@
+#!/bin/bash
+
+DRY_RUN=
+RG_ARGS=()
+RG_DIR=
+
+find_in_package () {
+
+    # Are we in a virtual environment?
+    if [ ! -z "${VIRTUAL_ENV}" ]; then
+        RG_DIR="${VIRTUAL_ENV}/lib/python3.10/site-packages/${1}"
+        RG_ARGS+=("$2")
+    else
+        printf "Don't know how to find in package in this situation.\n"
+        exit 1
+    fi
+}
+
+while [[ $# -gt 0 ]]; do
+  key="$1"
+
+  case $key in
+    --dry-run)
+      DRY_RUN="true"
+      shift
+      ;;
+    -p|--package)
+      find_in_package $2 $3
+      shift
+      shift
+      shift
+      ;;
+    -t|--type)
+      RG_ARGS+=("-t $2")
+      shift
+      shift  
+      ;;
+    *)
+      printf "Unknown argument '${key}'\n"
+      exit 1
+      ;;
+  esac
+done
+
+if [ -z "${RG_DIR}" ]; then
+    printf "TODO: Print usage\n"
+fi
+
+if [ -z "${RG_ARGS}" ]; then
+    printf "TODO: Print usage\n"
+fi
+
+
+if [ ! -z "${DRY_RUN}" ]; then
+    echo "rg ${RG_ARGS[@]} ${RG_DIR}"
+else
+    rg ${RG_ARGS[@]} ${RG_DIR}
+fi

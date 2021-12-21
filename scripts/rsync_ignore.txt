@@ -1,0 +1,17 @@
+.cache
+.cargo
+.config/Code
+.env
+.local
+.mozilla
+.npm
+.pytest_cache
+.tox
+.var
+.vscode-server
+.vscode-test
+.vscode
+__pycache__
+_build
+node_modules
+*.egg-info

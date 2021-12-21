@@ -1,0 +1,49 @@
+#!/bin/bash
+
+CODE_DIR="$HOME/Code" 
+
+# Install deps
+sudo dnf install -y \
+    automake \
+    gnutls-devel \
+    giflib-devel \
+    gtk3-devel \
+    jansson-devel \
+    libgccjit-devel \
+    libjpeg-devel \
+    librsvg2-devel \
+    libtiff-devel \
+    libXpm-devel \
+    ncurses-devel \
+    texinfo \
+    webkit2gtk3-devel
+
+if ! [ -d "$CODE_DIR" ]; then
+    mkdir "$HOME/Code"
+fi 
+
+if ! [ -d "$CODE_DIR/emacs" ]; then
+    cd "$CODE_DIR"
+    git clone https://git.savannah.gnu.org/git/emacs.git
+fi
+
+cd "$CODE_DIR/emacs"
+git pull --rebase
+
+# Generate the ./configure script if necessary
+if [ ! -f "./configure" ]; then
+    ./autogen.sh
+fi
+
+# Configure
+./configure --with-cairo \
+            --with-json \
+            --with-native-compilation
+            #--with-pgtk \
+            #--with-xwidgets
+
+# Make
+CFLAGS=-O2 NATIVE_FULL_AOT=1 make -j 4
+
+# Install
+sudo make install

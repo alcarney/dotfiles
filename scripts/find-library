@@ -1,0 +1,67 @@
+#!/bin/bash
+
+# Inspired by Emacs' `find-library' function, this attempts to find whatever library code you are looking for...
+OPEN=
+DRY_RUN=
+FIND_ARGS=
+FIND_DIR=
+
+
+find_in_package () {
+
+    # Are we in a virtual environment?
+    if [ ! -z "${VIRTUAL_ENV}" ]; then
+        FIND_DIR="${VIRTUAL_ENV}/lib/python*/site-packages/${1}/"
+        FIND_ARGS="-type f -name *.py -name *${2}*"
+    else
+        printf "Don't know how to find in package in this situation.\n"
+        exit 1
+    fi
+}
+
+
+while [[ $# -gt 0 ]]; do
+  key="$1"
+
+  case $key in
+    --dry-run)
+      DRY_RUN="true"
+      shift
+      ;;
+    --open)
+      OPEN="true"
+      shift
+      ;;
+    -p|--package)
+      find_in_package $2 $3
+      shift
+      shift
+      shift
+      ;;
+    *)
+      printf "Unknown argument '${key}'\n"
+      exit 1
+      ;;
+  esac
+done
+
+if [ -z "${FIND_DIR}" ]; then
+    printf "TODO: Print usage\n"
+fi
+
+if [ -z "${FIND_ARGS}" ]; then
+    printf "TODO: Print usage\n"
+fi
+
+if [ ! -z "${DRY_RUN}" ]; then
+    printf "find ${FIND_DIR} ${FIND_ARGS}\n"
+else
+    results=$(find ${FIND_DIR} ${FIND_ARGS})
+    
+    if [ -z "${OPEN}" ]; then
+        printf "$results\n"
+    else
+        $EDITOR $results
+    fi
+
+fi
