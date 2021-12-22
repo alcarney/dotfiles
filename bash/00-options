@@ -1,0 +1,47 @@
+# -- options
+#
+# autocd:       If the command matches a directory name, cd into it
+# globstar:     Enable recursive ** globbing
+shopt -s autocd
+shopt -s globstar
+
+# -- cd "bookmarks"
+#
+# cdable_vars:  Enable "cd bookmarks".
+#               This allows variables containing a path to be used as a
+#               "bookmark" and can be cd'd into from anywhere.
+#
+# Some bookmarks are declared here, while project bookmarks are automatically
+# generated from a script `regen_bookmarks` which results in a file
+# ~/.bashrc.d/01-bookmarks.
+shopt -s cdable_vars
+
+export dotfiles="${HOME}/.config/dotfiles"
+
+# -- history
+#
+# histappend:   On exist append history to HISTFILE, don't overwrite
+# HISTCONTROL:
+# - erasedups:  Delete any previous instances of a command before adding it to
+#               the history
+shopt -s histappend
+export HISTCONTROL="erasedups"
+
+# -- path
+#
+# If the following paths actually exist on this machine, add them to PATH
+paths=(
+    "$HOME/bin"
+    "$HOME/go/bin"
+    "$HOME/.cargo/bin"
+    "$HOME/.emacs.d/bin"
+    "$HOME/.local/bin"
+    "$HOME/.npm-packages/bin"
+)
+
+for p in ${paths[@]}
+do
+    [ -d $p ] && export PATH="$p:$PATH"
+done
+
+

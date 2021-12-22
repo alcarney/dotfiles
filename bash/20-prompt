@@ -1,0 +1,23 @@
+__venv_py_version()
+{
+    if [ -z "${VIRTUAL_ENV}" ]; then
+        echo ""
+    else
+        echo " 🐍 v$(python --version | sed 's/Python //')"
+    fi
+}
+
+if [ -f "/usr/share/git-core/contrib/completion/git-prompt.sh" ]; then
+    source "/usr/share/git-core/contrib/completion/git-prompt.sh"
+
+    export GIT_PS1_SHOWDIRTYSTATE=1       # (*) unstaged changes, (+) staged changes
+    export GIT_PS1_SHOWSTASHSTATE=1       # ($) stashed
+    export GIT_PS1_SHOWUNTRACKEDFILES=1   # (%) untracked files
+    export GIT_PS1_SHOWUPSTREAM=verbose
+    export GIT_PS1_SHOWCOLORHINTS=1
+
+    export PROMPT_COMMAND='__git_ps1 "\n\w " "$(__venv_py_version)\n> " "[ %s]"'
+else
+    export PS1="\W\n> "
+fi
+
