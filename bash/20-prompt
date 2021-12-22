@@ -1,3 +1,5 @@
+# vim: ft=bash
+
 __venv_py_version()
 {
     if [ -z "${VIRTUAL_ENV}" ]; then
@@ -5,6 +7,18 @@ __venv_py_version()
     else
         echo " 🐍 v$(python --version | sed 's/Python //')"
     fi
+}
+
+__is_toolbox()
+{
+    if [ -f /run/.containerenv ] && [ -f /run/.toolboxenv ]; then
+        name=$(grep name /run/.containerenv | sed 's/.*"\(.*\)"/\1/')
+
+    else
+        name="\h"
+    fi
+
+    echo "\e[0;32m${name}\e[0m"
 }
 
 if [ -f "/usr/share/git-core/contrib/completion/git-prompt.sh" ]; then
@@ -16,7 +30,7 @@ if [ -f "/usr/share/git-core/contrib/completion/git-prompt.sh" ]; then
     export GIT_PS1_SHOWUPSTREAM=verbose
     export GIT_PS1_SHOWCOLORHINTS=1
 
-    export PROMPT_COMMAND='__git_ps1 "\n\w " "$(__venv_py_version)\n> " "[ %s]"'
+    export PROMPT_COMMAND='__git_ps1 "\n\w " "$(__venv_py_version)\n$(__is_toolbox) > " "[ %s]"'
 else
     export PS1="\W\n> "
 fi
