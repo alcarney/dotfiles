@@ -1,5 +1,0 @@
-configuration {
-    display-run: "run";
-    modi: "window,run,ssh,drun";
-    theme: "~/.cache/wal/colors-rofi-dark.rasi";
-}
