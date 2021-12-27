@@ -39,8 +39,6 @@ return packer.startup(function()
     requires = {'kyazdani42/nvim-web-devicons', opt = true}
   }
 
-  use 'onsails/lspkind-nvim'
-
   -- Editing
   use 'machakann/vim-sandwich'
   use 'hrsh7th/nvim-cmp'
