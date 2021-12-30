@@ -6,15 +6,27 @@ local on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
   local opts = { noremap = true, silent = true}
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd',        '<cmd>lua vim.lsp.buf.definition()<CR>',    opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
 
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gh',        '<cmd>lua vim.lsp.buf.hover()<CR>',         opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gh', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
 
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '[g',        '<cmd>lua vim.diagnostic.goto_prev()<CR>',  opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', ']g',        '<cmd>lua vim.diagnostic.goto_next()<CR>',  opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '[g', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', ']g', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
 
 end
+
+-- Global diagnostic config.
+vim.diagnostic.config({
+  virtual_text = false,
+  float = {
+    focusable = false,
+    style = "minimal",
+    border = "rounded",
+    source = "always"
+  }
+})
 
 -- C/C++
 lspconfig.clangd.setup{

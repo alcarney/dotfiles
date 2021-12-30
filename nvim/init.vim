@@ -148,10 +148,6 @@ augroup general
 augroup END
 
 lua << EOF
-
--- Disable virtual text for diagnostics.
-vim.diagnostic.config({virtual_text = false})
-
 require'alc.bootstrap'()
 
 require'alc.plugins'
