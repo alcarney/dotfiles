@@ -43,6 +43,7 @@ lspconfig.cmake.setup{
 -- Esbonio
 lspconfig.esbonio.setup{
   capabilities = capabilities,
+  filetypes = {"rst", "python"},
   init_options = {
     server = {
       logLevel = "debug"
