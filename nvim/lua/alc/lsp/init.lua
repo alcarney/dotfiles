@@ -48,6 +48,9 @@ lspconfig.esbonio.setup{
     server = {
       logLevel = "debug"
     },
+    sphinx = {
+      buildDir = "${confDir}/_build"
+    }
   },
   on_attach = on_attach,
   handlers = {
