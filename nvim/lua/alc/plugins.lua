@@ -44,6 +44,8 @@ return packer.startup(function()
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
+  use "rcarriga/nvim-notify"
+
   -- Editing
   use 'machakann/vim-sandwich'
   use 'hrsh7th/nvim-cmp'
