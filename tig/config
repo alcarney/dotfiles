@@ -1,0 +1,2 @@
+bind main f !git commit --fixup=%(commit)
+bind main r !git rebase -i --autosquash %(commit)
