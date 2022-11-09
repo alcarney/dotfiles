@@ -106,10 +106,6 @@ xnoremap <a-down>   :move '>+1<cr>gv
 xnoremap <a-k>      :move '<-2<cr>gv
 xnoremap <a-up>     :move '<-2<cr>gv
 
-" tab/shift+tab can indent/dedent in insert mode
-inoremap <tab>     <c-o>>>
-inoremap <s-tab>   <c-o><<
-
 " keep selection when indenting
 xnoremap >   >gv
 xnoremap <   <gv
