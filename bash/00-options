@@ -5,18 +5,16 @@
 shopt -s autocd
 shopt -s globstar
 
-# -- cd "bookmarks"
+# -- CDPATH
 #
-# cdable_vars:  Enable "cd bookmarks".
-#               This allows variables containing a path to be used as a
-#               "bookmark" and can be cd'd into from anywhere.
+# To quote the manpage:
 #
-# Some bookmarks are declared here, while project bookmarks are automatically
-# generated from a script `regen_bookmarks` which results in a file
-# ~/.bashrc.d/01-bookmarks.
-shopt -s cdable_vars
-
-export dotfiles="${HOME}/.config/dotfiles"
+# > The search path for the cd command. This is a colon separated list of
+# > directories in which the shell looks for destination directories specified
+# > by the cd command.
+#
+# So by setting this I can cd to a project's directory from *anywhere*!
+[ -d "$HOME/Projects" ] && export CDPATH=".:~/Projects"
 
 # -- history
 #
@@ -43,5 +41,3 @@ for p in ${paths[@]}
 do
     [ -d $p ] && export PATH="$p:$PATH"
 done
-
-
