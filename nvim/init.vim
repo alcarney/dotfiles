@@ -37,7 +37,8 @@ set formatoptions=corqj
 " background:    Light or dark colorscheme?
 " noshowmode:    Hide the default mode indicator e.g. '-- INSERT --'
 " cursorline:    Highlight the current line
-" laststatus:    Always show the statusline
+" nofoldenable:  Disable folding
+" laststatus:    Only show a single, full-width statusline
 " signcolumn:    Where to show git signs, warning/error markers etc.
 " showtabline:   Only show tabline when there's more than one tab
 " colorcolumn:   Highlight column at textwidth + 1
@@ -49,7 +50,8 @@ set number
 set mouse=nv
 set noshowmode
 set cursorline
-set laststatus=2
+set nofoldenable
+set laststatus=3
 set showtabline=1
 set colorcolumn=+1
 set termguicolors
