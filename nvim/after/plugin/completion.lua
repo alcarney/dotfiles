@@ -44,9 +44,6 @@ local has_words_before = function()
 end
 
 cmp.setup({
-  documentation = {
-    border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-  },
   -- VSCode style completion items:
   -- https://github.com/hrsh7th/nvim-cmp/wiki/Menu-Appearance#how-to-add-visual-studio-code-codicons-to-the-menu
   formatting = {
@@ -57,11 +54,25 @@ cmp.setup({
     end
   },
   mapping = {
+    ["<C-n"] = cmp.mapping(function(fallback)
+      if cmp.visibile() then
+        cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
+      else
+        fallback()
+      end
+    end, {"i"}),
+    ["<C-p"] = cmp.mapping(function(fallback)
+      if cmp.visibile() then
+        cmp.select_prev_item({ behavior = cmp.SelectBehavior.Select })
+      else
+        fallback()
+      end
+    end, {"i", "s"}),
     ["<c-space>"] = cmp.mapping(cmp.mapping.complete(), {"i", "c"}),
     ["<tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.confirm({select = false})
-      elseif luasnip.expand_or_jumpable() then
+      elseif luasnip.expand_or_locally_jumpable() then
         luasnip.expand_or_jump()
       elseif has_words_before() then
         cmp.complete()
@@ -81,11 +92,18 @@ cmp.setup({
     end, {"i", "s"}),
   },
   sources = {
-    { name = "nvim_lsp" }
+    { name = "nvim_lsp" },
+    { name = "luasnip" },
   },
   snippet = {
     expand = function(args)
       require("luasnip").lsp_expand(args.body)
     end,
   },
+  view = {
+    entries = "native"
+  },
+  window = {
+    documentation = cmp.config.window.bordered(),
+  }
 })
