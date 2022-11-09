@@ -1,27 +1,7 @@
 local lspconfig = require('lspconfig')
 local has_telescope, _ = pcall(require, 'telescope')
 
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-
-local on_attach = function(client, bufnr)
-  vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
-
-  local opts = { noremap = true, silent = true}
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
-
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gh', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
-
-  if has_telescope then
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>ca', '<cmd>Telescope lsp_code_actions<CR>', opts)
-  else
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
-  end
-
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '[g', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', ']g', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
-
-end
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 -- Global diagnostic config.
 vim.diagnostic.config({
@@ -33,6 +13,23 @@ vim.diagnostic.config({
     source = "always"
   }
 })
+
+local keymap_opts = { noremap = true, silent = true}
+vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, keymap_opts)
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, keymap_opts)
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next, keymap_opts)
+vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, keymap_opts)
+
+local on_attach = function(client, bufnr)
+  vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+
+  local bufopts = { noremap=true, silent=true, buffer=bufnr }
+  vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
+  vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
+  vim.keymap.set('n', 'gh', vim.lsp.buf.hover, bufopts)
+  vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, bufopts)
+end
+
 
 -- C/C++
 lspconfig.clangd.setup{
@@ -49,7 +46,8 @@ lspconfig.cmake.setup{
 -- Esbonio
 lspconfig.esbonio.setup{
   capabilities = capabilities,
-  filetypes = {"rst", "python"},
+  cmd = {"python",  "-m", "esbonio"},
+  filetypes = {"rst"},
   init_options = {
     server = {
       logLevel = "debug"
@@ -59,24 +57,6 @@ lspconfig.esbonio.setup{
     }
   },
   on_attach = on_attach,
-  handlers = {
-    ["window/logMessage"] = function (_, result, ctx, _)
-      local message = result.message
-      local client = vim.lsp.get_client_by_id(ctx.client_id)
-
-      if not client.esbonio_log then
-        client.esbonio_log = vim.api.nvim_create_buf(true, true)
-        print(vim.inspect(client.esbonio_log))
-      end
-
-      for line in message:gmatch("([^\n]*)\n?") do
-        if #line > 0 then
-          vim.api.nvim_buf_set_lines(client.esbonio_log, -1, -1, false, {line})
-        end
-      end
-
-    end
-  }
 }
 
 -- Pyright
