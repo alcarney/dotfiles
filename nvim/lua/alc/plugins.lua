@@ -64,6 +64,9 @@ return packer.startup(function()
     end
   }
 
+  -- Nix
+  use 'LnL7/vim-nix'
+
   -- LSP
   use 'neovim/nvim-lspconfig'
   use 'hrsh7th/cmp-nvim-lsp'
