@@ -1,6 +1,7 @@
 " -- init.vim
 "
 "  Base settings and defaults that apply everywhere
+set path+=**
 
 " -- tabs and spaces
 "
