@@ -148,9 +148,6 @@ augroup END
 
 lua << EOF
 require'alc.bootstrap'()
-
 require'alc.plugins'
-require'lualine'.setup()
-
 require'alc.lsp'
 EOF

@@ -24,10 +24,11 @@ return packer.startup(function()
 
   -- Appearance
   use {
-    "arcticicestudio/nord-vim",
+    "sainnhe/everforest",
     config = function()
       vim.cmd [[
-        colorscheme nord
+      let g:everforest_background = 'hard'
+      colorscheme everforest
 
         highlight Comment term=italic cterm=italic gui=italic
       ]]
