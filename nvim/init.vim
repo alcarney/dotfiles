@@ -59,6 +59,36 @@ set background=dark
 set signcolumn=yes
 set listchars=tab:».,trail:·,extends:→,precedes:←
 
+" -- custom tabline
+"
+" I like to keep tabs focused on a particular project by using :tcd to set the
+" woking directory for the tab to the project's root.
+"
+" This tabline function simply displays the working directory for the
+" corresponding tab.
+function Tabline()
+    let s = ''
+
+    for i in range(tabpagenr('$'))
+        " highlight just the selected tab
+        if i + 1 == tabpagenr()
+            let s .= '%#TabLineSel#'
+        else
+            let s .= '%#TabLine#'
+        endif
+
+        let s .= ' %{getcwd(-1,' . (i + 1) . ')} '
+    endfor
+
+    " fill the remaining space with the fill color
+    let s .= '%#TabLineFill#'
+
+    return s
+endfunction
+
+set tabline=%!Tabline()
+
+
 " fallback colorscheme if plugins aren't available
 colorscheme desert
 
