@@ -64,6 +64,9 @@ return packer.startup(function()
     end
   }
 
+  -- Terminals
+  use {"akinsho/toggleterm.nvim", tag = "*" }
+
   -- Nix
   use 'LnL7/vim-nix'
 
