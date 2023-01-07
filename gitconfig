@@ -9,7 +9,6 @@
 
 [core]
     editor = nvim
-    pager  = delta
 
 [delta]
     navigate     = true
@@ -17,9 +16,6 @@
 
 [diff]
     colorMoved = default
-
-[interactive]
-    diffFilter = delta --color-only
 
 [merge]
     conflictstyle = diff3
