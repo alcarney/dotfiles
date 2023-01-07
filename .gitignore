@@ -33,3 +33,8 @@ vim/autoload
 vim/plugged
 
 zsh/antigen.zsh
+/emacs/.cache/
+/emacs/eshell/
+/emacs/transient/
+/emacs/tramp
+/emacs/projects
