@@ -49,7 +49,8 @@
         modus-themes-paren-match        'intense-bold
         modus-themes-region             'bg-only-no-extend
         modus-themes-scale-headings     t
-        modus-themes-slanted-constructs t)
+        modus-themes-slanted-constructs t
+        modus-themes-variable-pitch-ui  t)
 
   (load-theme 'modus-operandi t))
 
