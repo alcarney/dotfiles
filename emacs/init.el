@@ -32,10 +32,16 @@
 (require 'alc-editing)
 (require 'alc-minibuffer)
 (require 'alc-modeline)
+(require 'alc-notes)
+
 (require 'alc-lang)
 (require 'alc-lang-rst)
 (require 'alc-lang-nix)
 (require 'alc-lang-python)
+
+(use-package solaire-mode
+  :ensure t
+  :init (solaire-global-mode +1))
 
 (use-package modus-themes
   :bind ("<f5>" . modus-themes-toggle)
