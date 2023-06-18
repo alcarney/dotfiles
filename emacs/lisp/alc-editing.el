@@ -35,4 +35,13 @@ can easily surround a region with some characters. Uses
 (define-key global-map (kbd "(") #'my/surround-or-self-insert)
 (define-key global-map (kbd "<") #'my/surround-or-self-insert)
 
+(use-package whitespace
+  :init
+  (setq whitespace-style '(face empty tab-mark trailing missing-newline-at-eof))
+  (setq-default indent-tabs-mode nil)
+  (global-whitespace-mode)
+  (add-hook 'before-save-hook #'whitespace-cleanup))
+
+(put 'narrow-to-region 'disabled nil)
+
 (provide 'alc-editing)

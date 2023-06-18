@@ -66,21 +66,6 @@
   :ensure t
   :bind (("C-x g" . magit-status)))
 
-(define-minor-mode recompile-on-save-mode
-  "When enabled, run `recompile' after the current buffer is saved"
-  :lighter "recompile"
-  (if recompile-on-save-mode
-      (add-hook 'after-save-hook 'recompile nil t)
-    (remove-hook 'after-save-hook 'recompile t)))
-
-(use-package whitespace
-  :init
-  (setq whitespace-style '(face empty tab-mark trailing missing-newline-at-eof))
-  (setq-default indent-tabs-mode nil)
-  (global-whitespace-mode)
-  (add-hook 'before-save-hook #'whitespace-cleanup))
-
-(put 'narrow-to-region 'disabled nil)
 (setq custom-file (locate-user-emacs-file "custom.el"))
 (when (file-exists-p custom-file)
   (load custom-file))

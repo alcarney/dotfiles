@@ -4,6 +4,13 @@
                                       "package.json"
                                       "pyproject.toml"))
 
+(define-minor-mode recompile-on-save-mode
+  "When enabled, run `recompile' after the current buffer is saved"
+  :lighter "recompile"
+  (if recompile-on-save-mode
+      (add-hook 'after-save-hook 'recompile nil t)
+    (remove-hook 'after-save-hook 'recompile t)))
+
 (use-package apheleia
   :ensure t
   :config
