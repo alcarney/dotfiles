@@ -26,6 +26,10 @@
 (unless package-archive-contents
   (package-refresh-contents))
 
+
+(use-package emacs
+  :bind (("C-x C-b" . ibuffer)))
+
 (add-to-list 'load-path (locate-user-emacs-file "lisp"))
 
 (require 'alc-completion)
