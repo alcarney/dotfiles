@@ -1,6 +1,7 @@
 ;;; alc-lang.el --- General programming language config
 
-(setq project-vc-extra-root-markers '("package.json"
+(setq project-vc-extra-root-markers '("Cargo.toml"
+                                      "package.json"
                                       "pyproject.toml"))
 
 (use-package apheleia

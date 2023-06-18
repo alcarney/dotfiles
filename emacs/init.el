@@ -36,6 +36,7 @@
 
 (require 'alc-lang)
 (require 'alc-lang-rst)
+(require 'alc-lang-rust)
 (require 'alc-lang-nix)
 (require 'alc-lang-python)
 
