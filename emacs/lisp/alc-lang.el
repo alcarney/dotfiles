@@ -64,7 +64,22 @@ subproject."
 (use-package eglot
   :ensure t
   :config
-  (setq-default eglot-workspace-configuration #'me/eglot-python-workspace-config))
+  (setq-default eglot-workspace-configuration #'me/eglot-python-workspace-config)
+
+  (defclass eglot-esbonio (eglot-lsp-server) ()
+    :documentation "Esbonio Language Server.")
+
+  (cl-defmethod eglot-initialization-options ((server eglot-esbonio))
+    "Passes the initializationOptions required to run the server."
+    `(:sphinx (:confDir "${workspaceRoot}/docs"
+               :srcDir "${confDir}" )
+      :server (:logLevel "debug")))
+
+  (add-to-list 'eglot-server-programs
+               `(rst-mode . (eglot-esbonio
+                             "/var/home/alex/Projects/esbonio/.env/bin/python"
+                             "-m" "esbonio")))
+  )
 
 (use-package yaml-mode :ensure t)
 
