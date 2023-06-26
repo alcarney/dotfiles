@@ -4,6 +4,27 @@
                                       "package.json"
                                       "pyproject.toml"))
 
+(defun me/project-try-vc-subproject (orig-fun &rest args)
+  "Advice for `project-try-vc'.
+
+When using `project-vc-extra-root-markers' to teach project.el
+about subprojects within a monorepo, `project-try-vc'
+successfully finds the subject's root but fails to detect the
+backend. But by calling `vc-responsible-backend' on the found
+root, we can fill in the blanks.
+
+As a result, commands like `project-find-file' now respect the
+parent repo's .gitignore file even when being run from within a
+subproject."
+  (let* ((res (apply orig-fun args))
+         (dir (nth 2 res))
+         (backend (or (nth 1 res)
+                      (ignore-errors (vc-responsible-backend dir)))))
+    (if dir
+        `(vc ,backend ,dir))))
+
+(advice-add 'project-try-vc :around #'me/project-try-vc-subproject)
+
 (define-minor-mode recompile-on-save-mode
   "When enabled, run `recompile' after the current buffer is saved"
   :lighter "recompile"
