@@ -10,12 +10,6 @@
 
 (setq inhibit-startup-message t)
 
-;; Always use absolute numbers, even when narrowed
-(setq-default display-line-numbers-widen t)
-(add-hook 'prog-mode-hook (lambda () (display-line-numbers-mode t)))
-
-(save-place-mode t) ; Remember last visted location in files.
-
 (package-initialize)
 (add-to-list 'package-archives '("org"   . "https://orgmode.org/elpa/"))
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
@@ -26,15 +20,12 @@
 (unless package-archive-contents
   (package-refresh-contents))
 
-
-(use-package emacs
-  :bind (("C-x C-b" . ibuffer)))
-
 (add-to-list 'load-path (locate-user-emacs-file "lisp"))
 
 (require 'alc-completion)
 (require 'alc-dired)
 (require 'alc-editing)
+(require 'alc-general)
 (require 'alc-minibuffer)
 (require 'alc-modeline)
 (require 'alc-notes)
@@ -44,28 +35,6 @@
 (require 'alc-lang-rust)
 (require 'alc-lang-nix)
 (require 'alc-lang-python)
-
-(use-package solaire-mode
-  :ensure t
-  :init (solaire-global-mode +1))
-
-(use-package modus-themes
-  :bind ("<f5>" . modus-themes-toggle)
-  :init
-  (setq modus-themes-diffs 'desaturated
-        modus-themes-headings           '((t . rainbow-section-no-bold))
-        modus-themes-intense-hl-line    t
-        modus-themes-lang-checkers      'straight-underline
-        modus-themes-links              'faint-neutral-underline
-        modus-themes-mode-line          '(accented borderless)
-        modus-themes-org-blocks         'grayscale
-        modus-themes-paren-match        'intense-bold
-        modus-themes-region             'bg-only-no-extend
-        modus-themes-scale-headings     t
-        modus-themes-slanted-constructs t
-        modus-themes-variable-pitch-ui  t)
-
-  (load-theme 'modus-operandi t))
 
 (use-package magit
   :ensure t
