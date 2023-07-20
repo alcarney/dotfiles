@@ -7,7 +7,12 @@
 (use-package vertico
   :ensure t
   :init
-  (vertico-mode))
+  (vertico-mode 1)
+
+  ;; When calling `find-file' automatically clear the filepath prompt
+  ;; when typing something that "resets" it e.g. '/' or '~/'
+  (file-name-shadow-mode 1)
+  (add-hook 'rfn-eshadow-update-overlay-hook #'vertico-directory-tidy))
 
 (use-package savehist
   ;; Vertico uses this to sort by most recently used.
