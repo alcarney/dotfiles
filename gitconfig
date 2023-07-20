@@ -26,3 +26,6 @@
 [user]
     email = alcarneyme@gmail.com
     name  = Alex Carney
+
+[rerere]
+    enabled = true
