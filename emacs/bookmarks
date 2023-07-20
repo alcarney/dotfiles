@@ -1,0 +1,11 @@
+;;;; Emacs Bookmark Format Version 1;;;; -*- coding: utf-8-emacs; mode: lisp-data -*-
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("LSP Specification"
+ (front-context-string . "Base Protocol \n\n")
+ (rear-context-string . "nitialization.\n\n")
+ (position . 4268)
+ (location . "https://microsoft.github.io/language-server-protocol/specification.html")
+ (handler . eww-bookmark-jump))
+)
