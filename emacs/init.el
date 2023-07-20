@@ -33,6 +33,7 @@
 (add-to-list 'load-path (locate-user-emacs-file "lisp"))
 
 (require 'alc-completion)
+(require 'alc-dired)
 (require 'alc-editing)
 (require 'alc-minibuffer)
 (require 'alc-modeline)
