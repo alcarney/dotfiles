@@ -30,6 +30,13 @@
   :init
   (marginalia-mode))
 
+(use-package consult
+  :ensure t
+  :bind (("C-x b" . consult-buffer)
+         ("C-x 4 b" . consult-buffer-other-window)
+         :map project-prefix-map
+         ("b" . consult-project-buffer)))
+
 (use-package embark
   :ensure t
   :bind (("C-." . embark-act)
@@ -38,5 +45,7 @@
   :init
   (setq prefix-help-command #'embark-prefix-help-command))
 
+
+(use-package embark-consult :ensure t)
 
 (provide 'alc-minibuffer)
