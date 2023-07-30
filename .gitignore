@@ -7,10 +7,16 @@ code/globalStorage/
 code/workspaceStorage/
 code/eq-material-theme-icons.json
 
-emacs/elpa
+emacs/.cache/
 emacs/eln-cache
+emacs/elpa
+emacs/eshell/
 emacs/history
 emacs/places
+emacs/projects
+emacs/recentf
+emacs/tramp
+emacs/transient/
 emacs/url
 
 
@@ -33,8 +39,3 @@ vim/autoload
 vim/plugged
 
 zsh/antigen.zsh
-/emacs/.cache/
-/emacs/eshell/
-/emacs/transient/
-/emacs/tramp
-/emacs/projects
