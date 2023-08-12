@@ -2,6 +2,9 @@
 (set-language-environment "UTF-8")
 (set-default-coding-systems 'utf-8)
 
+(set-face-attribute 'default nil :family "UbuntuMono NF" :height 120)
+(set-face-attribute 'fixed-pitch nil :family "UbuntuMono NF" :height 120)
+(set-face-attribute 'variable-pitch nil :family "Ubuntu NF" :weight 'light :height 115)
 
 (setq custom-file (make-temp-file "emacs-custom-"))
 
