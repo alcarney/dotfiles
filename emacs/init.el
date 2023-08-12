@@ -2,13 +2,7 @@
 (set-language-environment "UTF-8")
 (set-default-coding-systems 'utf-8)
 
-(blink-cursor-mode -1)
-(menu-bar-mode -1)
-(scroll-bar-mode -1)
-(show-paren-mode t)
-(tool-bar-mode -1)
 
-(setq inhibit-startup-message t)
 (setq custom-file (make-temp-file "emacs-custom-"))
 
 (package-initialize)
