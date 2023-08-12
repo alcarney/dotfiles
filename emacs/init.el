@@ -21,6 +21,7 @@
 (require 'alc-minibuffer)
 (require 'alc-modeline)
 (require 'alc-notes)
+(require 'alc-window)
 
 (require 'alc-lang)
 (require 'alc-lang-rst)
