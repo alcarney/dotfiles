@@ -9,6 +9,7 @@
 (tool-bar-mode -1)
 
 (setq inhibit-startup-message t)
+(setq custom-file (make-temp-file "emacs-custom-"))
 
 (package-initialize)
 (add-to-list 'package-archives '("org"   . "https://orgmode.org/elpa/"))
@@ -39,7 +40,3 @@
 (use-package magit
   :ensure t
   :bind (("C-x g" . magit-status)))
-
-(setq custom-file (locate-user-emacs-file "custom.el"))
-(when (file-exists-p custom-file)
-  (load custom-file))
