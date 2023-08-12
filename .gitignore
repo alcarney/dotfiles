@@ -12,13 +12,13 @@ emacs/eln-cache
 emacs/elpa
 emacs/eshell/
 emacs/history
+emacs/multisession/
 emacs/places
 emacs/projects
 emacs/recentf
 emacs/tramp
 emacs/transient/
 emacs/url
-
 
 history.cmdline
 history.search

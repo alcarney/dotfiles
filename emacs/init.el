@@ -15,19 +15,21 @@
 (add-to-list 'load-path (locate-user-emacs-file "lisp"))
 
 (require 'alc-completion)
-(require 'alc-dired)
 (require 'alc-editing)
 (require 'alc-general)
 (require 'alc-minibuffer)
 (require 'alc-modeline)
-(require 'alc-notes)
 (require 'alc-window)
 
+(require 'alc-dired)
+(require 'alc-eww)
+(require 'alc-notes)
+
 (require 'alc-lang)
-(require 'alc-lang-rst)
-(require 'alc-lang-rust)
 (require 'alc-lang-nix)
 (require 'alc-lang-python)
+(require 'alc-lang-rst)
+(require 'alc-lang-rust)
 
 (use-package magit
   :ensure t
