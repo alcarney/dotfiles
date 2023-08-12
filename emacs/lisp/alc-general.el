@@ -39,11 +39,23 @@
   ;; Save the bookmarks file immediately.
   (setq bookmark-save-flag 1))
 
-(use-package ef-themes :ensure t)
+(use-package spacious-padding
+  :ensure t
+  :hook (after-init . spacious-padding-mode))
+
+(use-package ef-themes
+  :ensure t
+  :bind ("<f5>" . ef-themes-toggle)
+  :hook ((after-init . (lambda () (ef-themes-select 'ef-elea-light)))
+         (server-after-make-frame . (lambda () (ef-themes-select 'ef-elea-light))))
+  :init
+  (setq ef-themes-mixed-fonts t
+        ef-themes-variable-pitch-ui t
+        ef-themes-to-toggle '(ef-elea-light ef-elea-dark)))
 
 (use-package modus-themes
-  :bind ("<f5>" . modus-themes-toggle)
-  :init
+  ;;:bind ("<f5>" . modus-themes-toggle)
+  ;;:init
   ;; (setq modus-themes-diffs 'desaturated
   ;;       modus-themes-headings           '((t . rainbow-section-no-bold))
   ;;       modus-themes-intense-hl-line    t
@@ -57,6 +69,8 @@
   ;;       modus-themes-slanted-constructs t
   ;;       modus-themes-variable-pitch-ui  t)
 
-  (load-theme 'modus-operandi t))
+  ;;(load-theme 'modus-operandi t)
+  )
+
 
 (provide 'alc-general)
