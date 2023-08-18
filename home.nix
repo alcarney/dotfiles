@@ -15,11 +15,18 @@
   # release notes.
   home.stateVersion = "23.05"; # Please read the comment before changing.
 
+  home.activation = {
+    symlinkDotEmacs = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+      if [ ! -e $HOME/.emacs.d ]; then
+        $DRY_RUN_CMD ln -s $HOME/.config/home-manager/emacs $HOME/.emacs.d
+      fi
+    '';
+  };
+
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
     # Text editors
-    pkgs.emacs29-pgtk
     pkgs.neovim
 
     # Language Servers
@@ -85,5 +92,28 @@
     sessionVariables = {
       CDPATH = ".:~/Projects";
     };
+  };
+
+  programs.emacs = {
+    enable = true;
+    package = pkgs.emacs29-pgtk;
+    extraPackages = epkgs: with epkgs; [
+      apheleia
+      consult
+      corfu
+      denote
+      ef-themes
+      embark
+      embark-consult
+      kind-icon
+      magit
+      marginalia
+      minions
+      nix-mode
+      orderless
+      rustic
+      vertico
+      yaml-mode
+    ];
   };
 }

@@ -7,7 +7,6 @@
       mode-line-position-column-line-format '(" %l:%c"))
 
 (use-package minions
-  :ensure t
   :config (minions-mode 1))
 
 

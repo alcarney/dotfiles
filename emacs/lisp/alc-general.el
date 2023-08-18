@@ -1,4 +1,4 @@
-;;; alc-general.el --- Catch all for settings that don't belong anywhere else.
+;;; alc-general.el --- Catch all for settings that don't belong anywhere else. -*- lexical-binding: t -*-
 
 ;; Package-Requires: ((emacs "29.1"))
 
@@ -40,11 +40,9 @@
   (setq bookmark-save-flag 1))
 
 (use-package spacious-padding
-  :ensure t
   :hook (after-init . spacious-padding-mode))
 
 (use-package ef-themes
-  :ensure t
   :bind ("<f5>" . ef-themes-toggle)
   :hook ((after-init . (lambda () (ef-themes-select 'ef-elea-light)))
          (server-after-make-frame . (lambda () (ef-themes-select 'ef-elea-light))))
@@ -52,25 +50,5 @@
   (setq ef-themes-mixed-fonts t
         ef-themes-variable-pitch-ui t
         ef-themes-to-toggle '(ef-elea-light ef-elea-dark)))
-
-(use-package modus-themes
-  ;;:bind ("<f5>" . modus-themes-toggle)
-  ;;:init
-  ;; (setq modus-themes-diffs 'desaturated
-  ;;       modus-themes-headings           '((t . rainbow-section-no-bold))
-  ;;       modus-themes-intense-hl-line    t
-  ;;       modus-themes-lang-checkers      'straight-underline
-  ;;       modus-themes-links              'faint-neutral-underline
-  ;;       modus-themes-mode-line          '(accented borderless)
-  ;;       modus-themes-org-blocks         'grayscale
-  ;;       modus-themes-paren-match        'intense-bold
-  ;;       modus-themes-region             'bg-only-no-extend
-  ;;       modus-themes-scale-headings     t
-  ;;       modus-themes-slanted-constructs t
-  ;;       modus-themes-variable-pitch-ui  t)
-
-  ;;(load-theme 'modus-operandi t)
-  )
-
 
 (provide 'alc-general)

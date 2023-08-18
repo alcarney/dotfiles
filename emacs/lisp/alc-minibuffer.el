@@ -5,7 +5,6 @@
       #'command-completion-default-include-p)
 
 (use-package vertico
-  :ensure t
   :init
   (vertico-mode 1)
 
@@ -19,26 +18,22 @@
   :init (savehist-mode))
 
 (use-package orderless
-  :ensure t
   :init
   (setq completion-styles '(orderless basic)
         completion-category-defaults nil
         completion-category-overrides '((file (styles partial-completion)))))
 
 (use-package marginalia
-  :ensure t
   :init
   (marginalia-mode))
 
 (use-package consult
-  :ensure t
   :bind (("C-x b" . consult-buffer)
          ("C-x 4 b" . consult-buffer-other-window)
          :map project-prefix-map
          ("b" . consult-project-buffer)))
 
 (use-package embark
-  :ensure t
   :bind (("C-." . embark-act)
          ("M-." . embark-dwim)
          ("C-h B" . embark-bindings))
@@ -46,6 +41,6 @@
   (setq prefix-help-command #'embark-prefix-help-command))
 
 
-(use-package embark-consult :ensure t)
+(use-package embark-consult)
 
 (provide 'alc-minibuffer)

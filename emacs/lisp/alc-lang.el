@@ -33,7 +33,6 @@ subproject."
     (remove-hook 'after-save-hook 'recompile t)))
 
 (use-package apheleia
-  :ensure t
   :config
   (setf (alist-get 'isort apheleia-formatters)
       '("isort" "--profile=black" "--force-single-line" "-"))
@@ -62,7 +61,6 @@ subproject."
     '()))
 
 (use-package eglot
-  :ensure t
   :config
   (setq-default eglot-workspace-configuration #'me/eglot-python-workspace-config)
 
@@ -81,6 +79,6 @@ subproject."
                              "-m" "esbonio")))
   )
 
-(use-package yaml-mode :ensure t)
+(use-package yaml-mode)
 
 (provide 'alc-lang)

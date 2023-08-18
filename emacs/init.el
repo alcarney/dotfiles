@@ -8,10 +8,6 @@
 
 (setq custom-file (make-temp-file "emacs-custom-"))
 
-(package-initialize)
-(add-to-list 'package-archives '("org"   . "https://orgmode.org/elpa/"))
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
-
 (add-to-list 'load-path (locate-user-emacs-file "lisp"))
 
 (require 'alc-completion)
@@ -32,5 +28,4 @@
 (require 'alc-lang-rust)
 
 (use-package magit
-  :ensure t
   :bind (("C-x g" . magit-status)))

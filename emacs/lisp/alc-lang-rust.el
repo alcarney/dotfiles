@@ -1,9 +1,6 @@
-;;; alc-lang-rust.el --- Settings for rust files
+;;; alc-lang-rust.el --- Settings for rust files -*- lexical-binding: t -*-
 
 (use-package rustic
-  :ensure t
-  :custom
-  (rustic-analyzer-command '("rustup" "run" "stable" "rust-analyzer"))
   :config
   (setq rustic-lsp-client 'eglot))
 

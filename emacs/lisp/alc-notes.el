@@ -1,7 +1,6 @@
 ;;; alc-notes.el --- Note taking.
 
 (use-package denote
-  :ensure t
   :config
 
   (defun alc-denote-format-keywords-for-rst (keywords)
