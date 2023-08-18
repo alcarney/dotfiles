@@ -20,6 +20,7 @@
   home.packages = [
     # Text editors
     pkgs.emacs29-pgtk
+    pkgs.neovim
 
     # Language Servers
     pkgs.nodePackages.pyright
