@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -46,11 +46,6 @@
     # # symlink to the Nix store copy.
     # ".screenrc".source = dotfiles/screenrc;
 
-    # # You can also set the file content immediately.
-    # ".gradle/gradle.properties".text = ''
-    #   org.gradle.console=verbose
-    #   org.gradle.daemon.idletimeout=3600000
-    # '';
   };
 
   # You can also manage environment variables but you will have to manually
@@ -69,4 +64,26 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  programs.bash = {
+    enable = true;
+    historyControl = [ "erasedups" ];
+    historyIgnore = [ "cd" "ls" ];
+    initExtra = builtins.readFile ./bashrc;
+    shellAliases = {
+      "ls" = "ls -CFhX --color=auto --group-directories-first";
+    };
+    shellOptions = [
+      "autocd"       # If the command is not found and matches a directory name, cd into it
+      "checkjobs"    # Check for background jobs before exiting
+      "checkwinsize" # Automatically update COLUMNS and LINES env vars between each command
+      "extglob"      # Enable extended pattern matching features
+      "globstar"     # Enable recursive globbing
+                     # e.g. './**/*.py' matches every python file in current and all subdirs.
+      "histappend"   # On shell exit, append to history file, don't overwrite.
+    ];
+    sessionVariables = {
+      CDPATH = ".:~/Projects";
+    };
+  };
 }
