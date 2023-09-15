@@ -75,6 +75,7 @@
     initExtra = builtins.readFile ./bashrc;
     shellAliases = {
       "ls" = "ls -CFhX --color=auto --group-directories-first";
+      "pypath" = "echo $PYTHONPATH | tr ':' '\\n'";
     };
     shellOptions = [
       "autocd"       # If the command is not found and matches a directory name, cd into it
