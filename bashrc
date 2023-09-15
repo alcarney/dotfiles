@@ -1,5 +1,19 @@
 # vim: ft=bash
 
+# -- path
+#
+# If the following paths actually exist on this machine, add them to PATH
+paths=(
+    "$HOME/bin"
+    "$HOME/.local/bin"
+)
+
+for p in ${paths[@]}
+do
+    [ -d $p ] && export PATH="$p:$PATH"
+done
+
+# -- prompt
 __venv_py_version()
 {
     if [ -z "${VIRTUAL_ENV}" ]; then
