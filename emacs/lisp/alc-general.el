@@ -31,6 +31,16 @@
 ;; Smooth scrolling
 (pixel-scroll-precision-mode t)
 
+;; Backup files
+(defun alc-general-make-backup (fpath)
+  "Transform the given filepath into the path at which to save its backup"
+  (let* ((backup-root (locate-user-emacs-file "backup"))
+         (backup-fpath (concat backup-root fpath "~")))
+    (make-directory (file-name-directory backup-fpath) t)
+    backup-fpath))
+
+(setq make-backup-file-name-function #'alc-general-make-backup)
+
 (use-package emacs
   :bind (("C-x C-b" . ibuffer)))
 

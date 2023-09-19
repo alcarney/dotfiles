@@ -7,6 +7,7 @@ code/globalStorage/
 code/workspaceStorage/
 code/eq-material-theme-icons.json
 
+emacs/backup/
 emacs/.cache/
 emacs/eln-cache
 emacs/elpa
