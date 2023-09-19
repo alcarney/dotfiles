@@ -25,6 +25,9 @@ subproject."
 
 (advice-add 'project-try-vc :around #'me/project-try-vc-subproject)
 
+;; Compilation
+(setq compilation-scroll-output t)
+
 (define-minor-mode recompile-on-save-mode
   "When enabled, run `recompile' after the current buffer is saved"
   :lighter "recompile"

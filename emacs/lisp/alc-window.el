@@ -1,4 +1,7 @@
-;;; alc-window.el --- Settings for windows
+;;; alc-window.el --- Settings for windows -*- lexical-binding: t -*-
+
+;; Move between windows using M-{left,right,up,down}
+(windmove-default-keybindings 'meta)
 
 (use-package tab-bar
   :config

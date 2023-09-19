@@ -2,12 +2,16 @@
 
 ;; Package-Requires: ((emacs "29.1"))
 
-;; Always use absolute numbers, even when narrowed
-(setq-default display-line-numbers-widen t)
+;; Line numbers
+(setq-default display-line-numbers-widen t) ; Always use absolute numbers, even when narrowed
+(setq-default display-line-numbers-width 4)
 (add-hook 'prog-mode-hook (lambda () (display-line-numbers-mode t)))
 
 ;; Enable some commands
 (put 'scroll-left 'disabled nil)
+
+;; Don't try to be clever, TAB should be used for indentation.
+(setq tab-always-indent t)
 
 ;; Remember recently visited files
 (recentf-mode t)
