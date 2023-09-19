@@ -10,7 +10,6 @@
 
 (add-to-list 'load-path (locate-user-emacs-file "lisp"))
 
-(require 'alc-completion)
 (require 'alc-editing)
 (require 'alc-general)
 (require 'alc-minibuffer)
