@@ -113,4 +113,8 @@
       yaml-mode
     ];
   };
+
+  programs.gh = {
+    enable = true;
+  };
 }
