@@ -8,6 +8,7 @@
 
 (setq custom-file (make-temp-file "emacs-custom-"))
 
+(add-to-list 'exec-path (expand-file-name "~/.local/bin"))
 (add-to-list 'load-path (locate-user-emacs-file "lisp"))
 
 (require 'alc-editing)
