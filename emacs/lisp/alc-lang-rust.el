@@ -2,6 +2,7 @@
 
 (use-package rustic
   :config
-  (setq rustic-lsp-client 'eglot))
+  (setq rustic-lsp-client 'eglot
+        rustic-analyzer-command '("nix" "develop" "-c" "rust-analyzer")))
 
 (provide 'alc-lang-rust)
