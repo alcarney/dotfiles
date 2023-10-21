@@ -21,16 +21,19 @@
         $DRY_RUN_CMD ln -s $HOME/.config/home-manager/emacs $HOME/.emacs.d
       fi
     '';
+    symlinkNvimConfig = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+      if [ ! -e $HOME/.config/nvim ]; then
+        $DRY_RUN_CMD ln -s $HOME/.config/home-manager/nvim $HOME/.config/nvim
+      fi
+    '';
   };
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
-    # Text editors
-    pkgs.neovim
-
     # Language Servers
     pkgs.nodePackages.pyright
+
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
@@ -97,13 +100,25 @@
     extraPackages = epkgs: with epkgs; [
       apheleia
       consult
+
+      (consult-gh.overrideAttrs (_: {
+        src = pkgs.fetchFromGitHub {
+          owner = "armindarvish";
+          repo = "consult-gh";
+          rev = "dec9c11104edc4eb6ded8ac956897f0214c22dbd";
+          hash = "sha256-T6bQLcBPSmW/l9mYNhRiAZzdXnuTIK0MNRbiVmtkVcU=";
+        };
+      }))
+
       corfu
       denote
       ef-themes
       embark
       embark-consult
+      hyperbole
       kind-icon
       magit
+      # magit-forge
       marginalia
       minions
       nix-mode
@@ -116,5 +131,17 @@
 
   programs.gh = {
     enable = true;
+  };
+
+  programs.neovim = {
+    enable = true;
+    withRuby = false;
+    plugins = with pkgs.vimPlugins; [
+      cmp-nvim-lsp
+      everforest
+      lualine-nvim
+      nvim-cmp
+      nvim-lspconfig
+    ];
   };
 }

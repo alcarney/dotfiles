@@ -89,8 +89,7 @@ endfunction
 set tabline=%!Tabline()
 
 
-" fallback colorscheme if plugins aren't available
-colorscheme desert
+colorscheme everforest
 
 " -- keymaps
 "
@@ -175,9 +174,3 @@ augroup general
     autocmd!
     autocmd BufWritePre * %s/\s\+$//e
 augroup END
-
-lua << EOF
-require'alc.bootstrap'()
-require'alc.plugins'
-require'alc.lsp'
-EOF
