@@ -144,4 +144,9 @@
       nvim-lspconfig
     ];
   };
+
+  services.syncthing = {
+    enable = true;
+  };
+
 }
