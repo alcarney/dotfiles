@@ -8,7 +8,10 @@
 (add-hook 'prog-mode-hook (lambda () (display-line-numbers-mode t)))
 
 ;; Enable some commands
-(put 'scroll-left 'disabled nil)
+(dolist (command '(dired-find-alternate-file
+                   narrow-to-region
+                   scroll-left))
+  (put command 'disabled nil))
 
 ;; Don't try to be clever, TAB should be used for indentation.
 (setq tab-always-indent t)

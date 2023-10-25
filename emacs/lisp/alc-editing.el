@@ -42,6 +42,4 @@ can easily surround a region with some characters. Uses
   (global-whitespace-mode)
   (add-hook 'before-save-hook #'whitespace-cleanup))
 
-(put 'narrow-to-region 'disabled nil)
-
 (provide 'alc-editing)
