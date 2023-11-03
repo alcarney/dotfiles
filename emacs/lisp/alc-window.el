@@ -8,16 +8,52 @@
   ;; Never show the tab-bar
   (setq tab-bar-show nil))
 
+;; Ensure that buffers like shell/eshell etc open at the bottom.
+;; Needed since the implementation of `shell' calls
+;; '(pop-to-buffer buffer display-comint-buffer-action)' which appears to take precedence over
+;; `display-buffer-alist'
+(setopt display-comint-buffer-action
+        '((display-buffer-reuse-mode-window display-buffer-in-side-window)
+          (side . bottom)
+          (slot . 0)
+          (dedicated . t)))
+
 (setq display-buffer-alist
       `(
-        ;; Put flymake buffers at the bottom - like VSCode's panel.
-        ((or . ((derived-mode . flymake-diagnostics-buffer-mode)
-                (derived-mode . flymake-project-diagnostics-mode)
-                (major-mode . shell-mode)))  ;; TODO: Why does this only work sometimes?
-         (display-buffer-reuse-mode-window display-buffer-at-bottom)
-         (window-height . 0.3)
-         (dedicated . t)
-         (preserve-size . (t . t)))
+        ;; Should apply to shells, eshells, inferior-python-mode and more
+        ((derived-mode . comint-mode)
+         (display-buffer-reuse-mode-window display-buffer-in-side-window)
+         (side . bottom)
+         (slot . 0)
+         (dedicated . t))
+
+        ;; Compilation buffers
+        ((derived-mode . compilation-mode)
+         (display-buffer-reuse-mode-window display-buffer-in-side-window)
+         (side . bottom)
+         (slot . 0)
+         (dedicated . t))
+
+        ;; Flymake buffers
+        ((derived-mode . flymake-diagnostics-buffer-mode)
+         (display-buffer-reuse-mode-window display-buffer-in-side-window)
+         (side . bottom)
+         (slot . 0)
+         (dedicated . t))
+
+        ((derived-mode . flymake-project-diagnostics-mode)
+         (display-buffer-reuse-mode-window display-buffer-in-side-window)
+         (side . bottom)
+         (slot . 0)
+         (dedicated . t))
+
+        ;; magit-process
+        ((derived-mode . magit-process-mode)
+         (display-buffer-reuse-mode-window display-buffer-in-side-window)
+         (side . bottom)
+         (slot . 0)
+         (dedicated . t))
+
         ))
 
 (provide 'alc-window)
