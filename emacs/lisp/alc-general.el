@@ -61,11 +61,10 @@
 
 (use-package ef-themes
   :bind ("<f5>" . ef-themes-toggle)
-  :hook ((after-init . (lambda () (ef-themes-select 'ef-elea-light)))
-         (server-after-make-frame . (lambda () (ef-themes-select 'ef-elea-light))))
   :init
   (setq ef-themes-mixed-fonts t
         ef-themes-variable-pitch-ui t
-        ef-themes-to-toggle '(ef-elea-light ef-elea-dark)))
+        ef-themes-to-toggle '(ef-elea-light ef-elea-dark))
+  (ef-themes-select 'ef-elea-light))
 
 (provide 'alc-general)
