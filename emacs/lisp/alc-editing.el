@@ -35,6 +35,10 @@ can easily surround a region with some characters. Uses
 (define-key global-map (kbd "(") #'my/surround-or-self-insert)
 (define-key global-map (kbd "<") #'my/surround-or-self-insert)
 
+(use-package isearch
+  :config
+  (setq isearch-lazy-count t))
+
 (use-package whitespace
   :init
   (setq whitespace-style '(face empty tab-mark trailing missing-newline-at-eof))
