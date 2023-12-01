@@ -1,6 +1,11 @@
 { config, lib, pkgs, ... }:
 
 {
+
+  imports = [
+    ./services/nix-profile-prune.nix
+  ];
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "alex";
@@ -145,10 +150,6 @@
     ];
   };
 
-  services.syncthing = {
-    enable = true;
-  };
-
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
     "vscode"
   ];
@@ -162,4 +163,11 @@
     # ];
     mutableExtensionsDir = true;
   };
+
+
+  services.syncthing = {
+    enable = true;
+  };
+
+  services.nix-profile-prune.enable = true;
 }
