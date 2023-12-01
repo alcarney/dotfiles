@@ -46,18 +46,16 @@ lspconfig.cmake.setup{
 -- Esbonio
 lspconfig.esbonio.setup{
   capabilities = capabilities,
-  cmd = {
-    "/var/home/alex/Projects/lsp-devtools/.env/bin/lsp-devtools", "agent", "--",
-    "/var/home/alex/Projects/esbonio/.env/bin/python",  "-m", "esbonio"
-  },
+  cmd = {"lsp-devtools", "agent", "--", "esbonio"},
   filetypes = {"rst"},
-  init_options = {
-    server = {
-      logLevel = "debug"
+--  init_options = { },
+  settings = {
+    esbonio = {
+      server = {
+        logLevel = "debug"
+      },
+      sphinx = { },
     },
-    sphinx = {
-      buildDir = "${confDir}/_build"
-    }
   },
   on_attach = on_attach,
 }
