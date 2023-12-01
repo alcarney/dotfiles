@@ -3,6 +3,7 @@
 {
 
   imports = [
+    ./services/nix-garbage-collect.nix
     ./services/nix-profile-prune.nix
   ];
 
@@ -169,5 +170,6 @@
     enable = true;
   };
 
+  services.nix-garbage-collect.enable = true;
   services.nix-profile-prune.enable = true;
 }
