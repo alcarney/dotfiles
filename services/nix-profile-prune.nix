@@ -16,7 +16,18 @@ in {
     };
   };
 
-  config = mkIf cfg.enable {
+  config =
+   let
+     pruneProfiles = pkgs.writeShellScript "nix-prune-profiles.sh" ''
+       set -euo pipefail
+
+       # TODO: Is there a nicer way to reference the nix command?
+       /nix/var/nix/profiles/default/bin/nix profile wipe-history --older-than 30d
+       $HOME/.nix-profile/bin/home-manager expire-generations "-30 days"
+       '';
+   in
+
+  mkIf cfg.enable {
     systemd.user.timers.nix-profile-prune = {
       Unit = {
         Description = "Delete old nix profile generations";
@@ -37,12 +48,13 @@ in {
        Unit = {
          Description = "Delete old nix profile generations";
        };
+
        Install = {
          WantedBy = [ "default.target" ];
        };
+
        Service = {
-         # TODO: Is there a nicer way to reference the nix command?
-         ExecStart = "/nix/var/nix/profiles/default/bin/nix profile wipe-history --older-than 30d";
+         ExecStart = "${pruneProfiles}";
        };
     };
 
