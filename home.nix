@@ -149,4 +149,17 @@
     enable = true;
   };
 
+  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+    "vscode"
+  ];
+
+  programs.vscode = {
+    enable = true;
+    # TODO: Statically declare the extensions to use... maybe?
+    #       Might be too much effort to maintain.
+    # extensions = with pkgs.vscode-extensions; [
+    #    ms-python.python
+    # ];
+    mutableExtensionsDir = true;
+  };
 }
