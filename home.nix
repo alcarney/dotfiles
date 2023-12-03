@@ -106,16 +106,6 @@
     extraPackages = epkgs: with epkgs; [
       apheleia
       consult
-
-      (consult-gh.overrideAttrs (_: {
-        src = pkgs.fetchFromGitHub {
-          owner = "armindarvish";
-          repo = "consult-gh";
-          rev = "dec9c11104edc4eb6ded8ac956897f0214c22dbd";
-          hash = "sha256-T6bQLcBPSmW/l9mYNhRiAZzdXnuTIK0MNRbiVmtkVcU=";
-        };
-      }))
-
       corfu
       denote
       ef-themes
@@ -124,11 +114,19 @@
       hyperbole
       kind-icon
       magit
-      # magit-forge
       marginalia
       minions
       nix-mode
       orderless
+
+      (spacious-padding.overrideAttrs (_: {
+        version = "0.2.2";
+        src = pkgs.fetchurl {
+          url = "https://elpa.gnu.org/packages/spacious-padding-0.2.2.tar";
+          sha256 = "kfOOy8XxB5pKuODLF0EHr76LQI2J7ASN1ANIamix3go=";
+        };
+      }))
+
       rustic
       vertico
       yaml-mode
