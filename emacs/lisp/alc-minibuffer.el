@@ -45,8 +45,9 @@
   ;; Vertico uses this to sort by most recently used.
   :init (savehist-mode))
 
-(use-package marginalia)
-  ;;(marginalia-mode))
+(use-package marginalia
+  :init
+  (marginalia-mode))
 
 (use-package consult
   :bind (("C-x b" . consult-buffer)
