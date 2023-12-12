@@ -168,6 +168,6 @@
     enable = true;
   };
 
-  services.nix-garbage-collect.enable = true;
+  services.nix-garbage-collect.enable = false;
   services.nix-profile-prune.enable = true;
 }
