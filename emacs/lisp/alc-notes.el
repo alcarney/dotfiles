@@ -1,6 +1,7 @@
 ;;; alc-notes.el --- Note taking.
 
 (use-package denote
+  :hook (dired-mode . denote-dired-mode-in-directories)
   :config
 
   (defun alc-denote-format-keywords-for-rst (keywords)
@@ -20,7 +21,8 @@
                                     :link ":note:`%2$s <%1$s>`"
                                     :link-in-context-regexp ,(concat ":note:`.*?<\\(?1:" denote-id-regexp "\\)>`")))
 
-  (setq denote-directory (expand-file-name "~/notes")
+  (setq denote-directory (expand-file-name "~/Notes")
+        denote-dired-directories (list denote-directory)
         denote-file-type 'rst))
 
 (provide 'alc-notes)
