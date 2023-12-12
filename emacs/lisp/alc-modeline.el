@@ -19,6 +19,7 @@ https://git.sr.ht/~protesilaos/dotfiles/tree/8ba474ce7058cb686d9dc9ed6d1abea6d24
   (let ((line-color (face-foreground 'shadow)))
     (custom-set-faces
      `(mode-line ((t :background unspecified :box unspecified :overline ,line-color)))
+     `(mode-line-active ((t :background unspecified :box unspecified :overline ,line-color)))
      `(mode-line-inactive ((t :background unspecified :box unspecified :overline ,line-color))))))
 
 (alc-modeline-theme-tweaks nil)
