@@ -31,7 +31,9 @@
 
 (use-package vertico
   :custom
-  (vertico-multiform-categories '((t unobtrusive)))
+  ;; (vertico-multiform-categories '((t unobtrusive)))
+  (vertico-multiform-categories nil)
+  (vertico-multiform-commands nil)
   :config
   (vertico-mode 1)
   (vertico-multiform-mode 1)
