@@ -107,7 +107,15 @@
       apheleia
       consult
       corfu
-      denote
+
+      (denote.overrideAttrs (_: {
+        version = "2.2.2";
+        src = pkgs.fetchurl {
+          url = "https://elpa.gnu.org/packages/denote-2.2.2.tar";
+          sha256 = "mWaOdfrtPOjbFbe2O7ORSsAiHRmEkE0UbtpCjOg7AwE=";
+        };
+      }))
+
       ef-themes
       embark
       embark-consult
