@@ -116,6 +116,7 @@
         };
       }))
 
+      eat
       ef-themes
       embark
       embark-consult

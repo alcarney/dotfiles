@@ -20,8 +20,15 @@
 
 (setq display-buffer-alist
       `(
-        ;; Should apply to shells, eshells, inferior-python-mode and more
+        ;; Shells, eshells, inferior-python-mode and more
         ((derived-mode . comint-mode)
+         (display-buffer-reuse-mode-window display-buffer-in-side-window)
+         (side . bottom)
+         (slot . 0)
+         (dedicated . t))
+
+        ;; eat terminals
+        ((derived-mode . eat-mode)
          (display-buffer-reuse-mode-window display-buffer-in-side-window)
          (side . bottom)
          (slot . 0)
