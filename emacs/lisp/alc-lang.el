@@ -63,23 +63,36 @@ subproject."
                         (list :logLevel "trace"))))
     '()))
 
+(defun me/eglot-fix-workspace-configuration-scope (orig-fun server &optional path)
+  "Fix the scopeUri of a workspace/configuration request.
+
+When eglot handles a workspace/configuration request with an
+associated scopeUri it uses the `file-name-directory' function to
+determine the directory from which to resolve the configuration
+values.
+
+This causes an issue for servers like esbonio and pyright which
+set the scopeUri to a directory. For `file-name-directory' to
+treat the path as a directory it must include a trailing slash, a
+convention which these servers do not follow.
+
+Therefore `file-name-directory' treats the path as a file and
+removes the final component, causing eglot to resolve the
+configuration relative to the wrong directory.
+
+This function fixes the issue by advising the
+`eglot--workspace-configuration-plist' function, ensuring that
+paths referencing directories include the trailing slash."
+  (if (and path
+           (file-directory-p path)
+           (not (s-ends-with? "/" path)))
+      (funcall orig-fun server (concat path "/"))
+    (funcall orig-fun server path)))
+
 (use-package eglot
   :config
-  (setq-default eglot-workspace-configuration #'me/eglot-python-workspace-config)
-
-  (defclass eglot-esbonio (eglot-lsp-server) ()
-    :documentation "Esbonio Language Server.")
-
-  (cl-defmethod eglot-initialization-options ((server eglot-esbonio))
-    "Passes the initializationOptions required to run the server."
-    `(:sphinx (:confDir "${workspaceRoot}/docs"
-               :srcDir "${confDir}" )
-      :server (:logLevel "debug")))
-
-  (add-to-list 'eglot-server-programs
-               `(rst-mode . (eglot-esbonio
-                             "/var/home/alex/Projects/esbonio/.env/bin/python"
-                             "-m" "esbonio")))
+  (advice-add 'eglot--workspace-configuration-plist
+              :around #'me/eglot-fix-workspace-configuration-scope)
   )
 
 (use-package yaml-mode)
