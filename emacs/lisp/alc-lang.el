@@ -43,25 +43,52 @@ subproject."
       '(isort black))
   (apheleia-global-mode))
 
-(defun me/pyright-find-venv-path (dirname venv)
-  "Search upwards from DIRNAME looking for VENV."
-  (if (file-exists-p (file-name-concat dirname venv))
+(defun me/search-upwards-for-path (dirname path)
+  "Search upwards from DIRNAME looking for PATH."
+  (if (file-exists-p (file-name-concat dirname path))
       dirname
     (let ((parent (file-name-directory (directory-file-name dirname))))
       (if (not (string= "/" parent))
-          (me/pyright-find-venv-path parent venv)))))
+          (me/search-upwards-for-path parent path)))))
 
-(defun me/eglot-python-workspace-config (server)
-  "Configure pyright to use the correct virtual environment."
+
+(defun me/eglot-pyright-workspace-config (server)
+  "Configure pyright to use the correct virtual environment for the given SERVER."
   (if (project-current)
       (let* ((dirname   (expand-file-name (project-root (project-current))))
-             (venv-path (me/pyright-find-venv-path dirname ".env")))
+             (venv-path (me/search-upwards-for-path dirname ".env")))
         (if venv-path
-            (list (cons :python
-                        (list :venvPath venv-path)))
-                  (cons :python.analysis
-                        (list :logLevel "trace"))))
+            `(:python
+              (:venvPath ,venv-path))
+          '(:python.analysis
+            (:logLevel "trace"))))
     '()))
+
+(defun me/eglot-esbonio-workspace-config (server)
+  "Configure esbonio to use the correct python command for the given SERVER"
+  (if (project-current)
+      (let* ((dirname        (expand-file-name (project-root (project-current))))
+             (venv-path      (me/search-upwards-for-path dirname ".env"))
+             (python-command (file-name-concat venv-path ".env/bin/python")))
+        (if venv-path
+            `(:esbonio
+              (:sphinx
+               (:pythonCommand [,python-command]))):
+               '()))
+    '()))
+
+(defun me/eglot-workspace-config (server)
+  "Configure eglot on a per-project basis."
+  (let ((mode (car (eglot--major-modes server))))
+    (cond
+     ;; Esbonio
+     ((eq mode 'rst-mode)
+      (me/eglot-esbonio-workspace-config server))
+     ;; Pyright
+     ((eq mode 'python-mode)
+      (me/eglot-pyright-workspace-config server))
+     ;; Fallback
+     (t '()))))
 
 (defun me/eglot-fix-workspace-configuration-scope (orig-fun server &optional path)
   "Fix the scopeUri of a workspace/configuration request.
@@ -91,6 +118,7 @@ paths referencing directories include the trailing slash."
 
 (use-package eglot
   :config
+  (setq-default eglot-workspace-configuration #'me/eglot-workspace-config)
   (advice-add 'eglot--workspace-configuration-plist
               :around #'me/eglot-fix-workspace-configuration-scope)
   )
