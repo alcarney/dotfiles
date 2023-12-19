@@ -37,10 +37,11 @@ subproject."
 
 (use-package apheleia
   :config
+  ;; TODO: Ensure isort and black use the current project's config...
   (setf (alist-get 'isort apheleia-formatters)
-      '("isort" "--profile=black" "--force-single-line" "-"))
+        '("isort" "--profile=black" "--force-single-line" "-"))
   (setf (alist-get 'python-mode apheleia-mode-alist)
-      '(isort black))
+        '(isort black))
   (apheleia-global-mode))
 
 (defun me/search-upwards-for-path (dirname path)
