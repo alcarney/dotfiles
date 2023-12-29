@@ -56,9 +56,6 @@
   ;; Save the bookmarks file immediately.
   (setq bookmark-save-flag 1))
 
-(use-package spacious-padding
-  :hook (after-init . spacious-padding-mode))
-
 (use-package ef-themes
   :bind ("<f5>" . ef-themes-toggle)
   :init
@@ -66,5 +63,10 @@
         ef-themes-variable-pitch-ui t
         ef-themes-to-toggle '(ef-elea-light ef-elea-dark))
   (ef-themes-select 'ef-elea-light))
+
+(use-package spacious-padding
+  :config
+  (setq spacious-padding-subtle-mode-line t)
+  (spacious-padding-mode 1))
 
 (provide 'alc-general)
