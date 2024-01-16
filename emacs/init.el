@@ -19,6 +19,7 @@
 
 (require 'alc-dired)
 (require 'alc-eww)
+(require 'alc-git)
 (require 'alc-notes)
 
 (require 'alc-lang)
@@ -26,6 +27,3 @@
 (require 'alc-lang-python)
 (require 'alc-lang-rst)
 (require 'alc-lang-rust)
-
-(use-package magit
-  :bind (("C-x g" . magit-status)))
