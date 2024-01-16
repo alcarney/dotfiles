@@ -36,7 +36,16 @@
 (setq tooltip-resize-echo-area t)
 
 ;; Smooth scrolling
-(pixel-scroll-precision-mode t)
+(use-package pixel-scroll
+  :bind
+  ([remap scroll-up-command]   . pixel-scroll-interpolate-down)
+  ([remap scroll-down-command] . pixel-scroll-interpolate-up)
+  :custom
+  (pixel-scroll-precision-interpolate-page t)
+  (pixel-scroll-precision-use-momentum t)
+  (pixel-scroll-precision-interpolation-total-time 0.2)
+  :init
+  (pixel-scroll-precision-mode t))
 
 ;; Backup files
 (defun alc-general-make-backup (fpath)
