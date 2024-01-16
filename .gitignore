@@ -40,3 +40,4 @@ vim/autoload
 vim/plugged
 
 zsh/antigen.zsh
+*.sqlite

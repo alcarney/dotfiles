@@ -33,3 +33,7 @@
 
 [rerere]
     enabled = true
+
+# Used by forge.el
+[github]
+    user = alcarney

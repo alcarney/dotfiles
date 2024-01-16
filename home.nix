@@ -120,6 +120,7 @@
       ef-themes
       embark
       embark-consult
+      forge
       hyperbole
       kind-icon
       magit
