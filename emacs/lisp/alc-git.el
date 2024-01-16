@@ -1,5 +1,10 @@
 ;;; alc-git.el --- Configuration for git and related features -*- lexical-binding: t -*-
 
+(use-package ediff
+  :config
+  (setq ediff-keep-variants nil)
+  (setq ediff-window-setup-function 'ediff-setup-windows-plain))
+
 (use-package magit
   :bind (("C-x g" . magit-status)))
 
