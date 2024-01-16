@@ -8,6 +8,9 @@
   ;; Never show the tab-bar
   (setq tab-bar-show nil))
 
+;; Left/right side windows should occupy the full height of the frame
+(setq window-sides-vertical t)
+
 ;; Ensure that buffers like shell/eshell etc open at the bottom.
 ;; Needed since the implementation of `shell' calls
 ;; '(pop-to-buffer buffer display-comint-buffer-action)' which appears to take precedence over
