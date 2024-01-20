@@ -15,6 +15,7 @@
 (require 'alc-general)
 (require 'alc-minibuffer)
 (require 'alc-modeline)
+(require 'alc-terminals)
 (require 'alc-window)
 
 (require 'alc-dired)
