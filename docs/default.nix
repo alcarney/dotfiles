@@ -14,6 +14,6 @@ stdenv.mkDerivation {
   buildCommand = ''
     mkdir $out
     ${awdur}/bin/awdur bind "$src/index.rst"
-    cp out.html $out
+    cp out.html $out/index.html
   '';
 }
