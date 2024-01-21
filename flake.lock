@@ -8,15 +8,16 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1705775420,
-        "narHash": "sha256-giXv18Q5DmzDjZWQdQ/9ltosLgJaeoWPT3wz265l7Fw=",
+        "lastModified": 1705843229,
+        "narHash": "sha256-rue35OPco30fXznULQzsYycqtT6L1AknZxVf83Q/omQ=",
         "owner": "swyddfa",
         "repo": "awdur",
-        "rev": "904f2e19f87e6993272bfc4a04fb050bffcfb7ae",
+        "rev": "4c7a1fc246de60ff39d2479306cab70fc28c6fb3",
         "type": "github"
       },
       "original": {
         "owner": "swyddfa",
+        "ref": "develop",
         "repo": "awdur",
         "type": "github"
       }

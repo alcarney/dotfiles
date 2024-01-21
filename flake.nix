@@ -6,7 +6,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     awdur = {
-      url = "github:swyddfa/awdur";
+      url = "github:swyddfa/awdur/develop";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
