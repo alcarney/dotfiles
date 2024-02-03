@@ -32,9 +32,56 @@ I stil don't really know what should go here... but I do see some people use it 
          inhibit-x-resources t
          inhibit-startup-message t)
 
+Languages
+^^^^^^^^^
+
+reStructuredText
+""""""""""""""""
+
+:filename: emacs/lisp/alc-lang-rst.el
+
+.. code:: elisp
+
+   ;;; alc-lang-rst.el --- Settings for reStructuredText files -*- lexical-binding: t -*-
+
+   (use-package rst
+     :hook ((rst-mode . eglot-ensure)
+            ;; TODO: Figure out how to prevent flyspell's default keybindings from
+            ;;       conflicting with the `completion-at-point' binding we want.
+            ;; (rst-mode . flyspell-mode)
+            (rst-mode . visual-line-mode))
+     :bind (:map rst-mode-map
+                 ("C-M-i" . completion-at-point))
+     :config
+     (add-to-list 'eglot-server-programs '(rst-mode . ("esbonio"))))
+
+
+The following command implements the ability to preview the current file via ``esbonio``
+
+.. code:: elisp
+
+   (defun esbonio-preview-file ()
+     "Preview the current file."
+     (interactive)
+     (let ((server (eglot-current-server))
+           (uri  (eglot--path-to-uri buffer-file-name)))
+       (if server
+           (let* ((result (eglot-execute-command server "esbonio.server.previewFile"
+                                                 (vector `(:uri ,uri :show :json-false))))
+                  (uri (plist-get result :uri)))
+             (eww uri t)))))
+
+The required ``(provide FEATURE)`` footer.
+
+.. code:: elisp
+
+   (provide 'alc-lang-rst)
+
 
 Packages
 ^^^^^^^^
+
+Configuration for any remaining packages that don't fit into the above categories.
 
 Eat
 """
