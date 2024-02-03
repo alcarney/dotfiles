@@ -3,6 +3,14 @@ local has_telescope, _ = pcall(require, 'telescope')
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
+
+-- UI for $/progress and other notifications
+require('fidget').setup {
+  notification = {
+    override_vim_notify = true,
+  }
+}
+
 -- Global diagnostic config.
 vim.diagnostic.config({
   virtual_text = false,

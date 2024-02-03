@@ -165,6 +165,7 @@
       everforest
       lualine-nvim
       nvim-cmp
+      fidget-nvim  # UI for $/progress
       nvim-lspconfig
     ];
   };
