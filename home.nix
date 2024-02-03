@@ -164,14 +164,27 @@
     enable = true;
     withRuby = false;
     plugins = with pkgs.vimPlugins; [
-      cmp-nvim-lsp
+      # Common dedpendencies
+      plenary-nvim
+
+      # Appearance
       everforest
       lualine-nvim
       neoscroll-nvim     # smooth scrolling
 
+      # Completions
       nvim-cmp
+
+      # LSP
+      cmp-nvim-lsp
       fidget-nvim  # UI for $/progress
       nvim-lspconfig
+
+      # The vertico of the nvim world.
+      telescope-nvim
+
+      # Nice management of terminal windows
+      toggleterm-nvim
     ];
   };
 
