@@ -1,6 +1,5 @@
 local lspconfig = require('lspconfig')
-local has_telescope, _ = pcall(require, 'telescope')
-
+local util = require('lspconfig.util')
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 
@@ -39,6 +38,33 @@ local on_attach = function(client, bufnr)
 end
 
 
+-- Helper functions
+
+--- Attempt to find the relevant virtualenv for the project.
+local function find_venv()
+
+  -- If there is an active virtualenv, use that
+  if vim.env.VIRTUAL_ENV then
+    return vim.env.VIRTUAL_ENV .. "/bin/python"
+  end
+
+  -- Search within the current git repo to see if we can find a virtualenv to
+  -- use.
+  local repo = util.find_git_ancestor(vim.fn.getcwd())
+  if not repo then
+    return nil
+  end
+
+  local candidates = vim.fs.find("pyvenv.cfg", { path = repo })
+  if #candidates == 0 then
+    return nil
+  end
+
+  -- TODO: If more than one found, prompt to see which I want to use?
+  return vim.fn.resolve(candidates[1] .. "./../bin/python")
+end
+
+
 -- C/C++
 lspconfig.clangd.setup{
   capabilities = capabilities,
@@ -62,7 +88,10 @@ lspconfig.esbonio.setup{
       server = {
         logLevel = "debug"
       },
-      sphinx = { },
+      sphinx = {
+        buildCommand = {"sphinx-build", "-M", "dirhtml", "docs", "docs/_build"},
+        pythonCommand = { find_venv() }
+      },
     },
   },
   on_attach = on_attach,
@@ -74,8 +103,7 @@ lspconfig.pyright.setup{
   on_attach = on_attach,
   settings = {
     python = {
-      -- Use whichever python is active in the current environment
-      pythonPath = vim.fn.system("command -v python | tr -d '[:space:]'")
+      pythonPath = find_venv()
     }
   },
 }
