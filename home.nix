@@ -36,9 +36,12 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
+  home.packages = with pkgs; [
+    # CLI tools
+    ripgrep
+
     # Language Servers
-    pkgs.nodePackages.pyright
+    nodePackages.pyright
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
