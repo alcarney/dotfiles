@@ -167,6 +167,8 @@
       cmp-nvim-lsp
       everforest
       lualine-nvim
+      neoscroll-nvim     # smooth scrolling
+
       nvim-cmp
       fidget-nvim  # UI for $/progress
       nvim-lspconfig

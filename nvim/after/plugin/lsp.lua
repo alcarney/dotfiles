@@ -27,7 +27,8 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, keymap_opts)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, keymap_opts)
 vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, keymap_opts)
 
-local on_attach = function(client, bufnr)
+--- Options/keybinds to apply to every LSP enabled buffer
+local common_lsp_setup = function(client, bufnr)
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
   local bufopts = { noremap=true, silent=true, buffer=bufnr }
@@ -66,23 +67,62 @@ end
 
 
 -- C/C++
-lspconfig.clangd.setup{
-  capabilities = capabilities,
-  on_attach = on_attach
-}
+--lspconfig.clangd.setup{
+--  capabilities = capabilities,
+--  on_attach = common_lsp_setup
+--}
 
 -- CMake
-lspconfig.cmake.setup{
-  capabilities = capabilities,
-  on_attach = on_attach
-}
+--lspconfig.cmake.setup{
+--  capabilities = capabilities,
+--  on_attach = common_lsp_setup
+--}
 
 -- Esbonio
+
+-- TODO: Rewrite sync-scrolling to rely on this more.
+require('neoscroll').setup {}
+
+local function scroll_view(ev)
+  local esbonio = vim.lsp.get_active_clients({bufnr = 0, name = "esbonio"})[1]
+  local view = vim.fn.winsaveview()
+
+  local params = { line = view.topline }
+  esbonio.notify("view/scroll", params)
+end
+
+local function esbonio_preview_file()
+  local params = {
+    command = "esbonio.server.previewFile",
+    arguments = {
+      { uri = vim.uri_from_bufnr(0), show = false },
+    }
+  }
+  local result = vim.lsp.buf.execute_command(params)
+  print(vim.inspect(result))
+
+  -- Setup sync scrolling
+  local augroup = vim.api.nvim_create_augroup("EsbonioSyncScroll", { clear = true })
+  vim.api.nvim_create_autocmd({"WinScrolled"}, {
+    callback = scroll_view,
+    group = augroup,
+    buffer = 0,
+  })
+end
+
+
 lspconfig.esbonio.setup{
   capabilities = capabilities,
-  cmd = {"lsp-devtools", "agent", "--", "esbonio"},
+  -- TODO: Make it easy to switch between these?
+  -- cmd = { "esbonio" },
+  cmd = {"/var/home/alex/Projects/lsp-devtools/.env/bin/lsp-devtools", "agent", "--", "esbonio"},
+  --cmd = {
+  --  "python", "-m", "debugpy",
+  --  "--listen", "localhost:5678",
+  --  "--wait-for-client",
+  --  "-m", "esbonio",
+  --},
   filetypes = {"rst"},
---  init_options = { },
   settings = {
     esbonio = {
       server = {
@@ -94,13 +134,25 @@ lspconfig.esbonio.setup{
       },
     },
   },
-  on_attach = on_attach,
+  handlers = {
+    ["editor/scroll"] = function(err, result, ctx, config)
+      -- TODO: This needs improvement...
+      vim.cmd('normal '.. result.line .. 'Gzt')
+    end
+  },
+  on_attach = function (client, bufnr)
+    common_lsp_setup(client, bufnr)
+
+    vim.api.nvim_create_user_command(
+      "EsbonioPreviewFile", esbonio_preview_file, { desc = "Preview file" }
+    )
+  end
 }
 
 -- Pyright
 lspconfig.pyright.setup{
   capabilities = capabilities,
-  on_attach = on_attach,
+  on_attach = common_lsp_setup,
   settings = {
     python = {
       pythonPath = find_venv()
@@ -111,11 +163,11 @@ lspconfig.pyright.setup{
 -- Rust
 lspconfig.rust_analyzer.setup {
   capabilities=capabilities,
-  on_attach = on_attach,
+  on_attach = common_lsp_setup,
 }
 
 -- Tailwind
-lspconfig.tailwindcss.setup{
-  capabilities = capabilities,
-  on_attach = on_attach
-}
+--lspconfig.tailwindcss.setup{
+--  capabilities = capabilities,
+--  on_attach = common_lsp_setup
+--}
