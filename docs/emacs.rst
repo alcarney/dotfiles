@@ -32,6 +32,173 @@ I stil don't really know what should go here... but I do see some people use it 
          inhibit-x-resources t
          inhibit-startup-message t)
 
+
+Appearance
+^^^^^^^^^^
+
+
+Modeline
+""""""""
+
+.. admonition:: References
+
+   - Protesilaos' tutorial on `writing custom mode lines <https://protesilaos.com/codelog/2023-07-29-emacs-custom-modeline-tutorial/>`__
+
+:filename: emacs/lisp/alc-modeline.el
+
+.. code:: elisp
+
+   ;;; alc-modeline.el --- Modeline configuration -*- lexical-binding: t -*-
+   ;;; Code:
+
+   (defgroup alc-modeline nil
+     "My custom modeline"
+     :group 'mode-line)
+
+   (defgroup alc-modeline-faces nil
+     "Faces for my custom modeline"
+     :group 'alc-modeline)
+
+
+**Project Indentification**
+
+If the current buffer is associated with a project, show the name of the project.
+
+.. code:: elisp
+
+   (defface alc-modeline-project-id-face
+     '((default :inherit (bold)))
+     "Face for styling the project indicator"
+     :group 'alc-modeline-faces)
+
+   (defvar-local alc-modeline-project-identification
+    '(:eval
+      (if-let ((pr (project-current))
+               (file (buffer-file-name)))
+          (propertize (format "🖿 %s " (project-name pr))
+                      'face 'alc-modeline-project-id-face))))
+   (put 'alc-modeline-project-identification 'risky-local-variable t)
+
+**Remote Indication**
+
+Replaces the default ``mode-line-remote`` and indicates if the current buffer is visiting a remote file
+
+.. code:: elisp
+
+   (defvar-local alc-modeline-remote-indication
+       '(:eval
+          (when (file-remote-p default-directory)
+            (propertize " ☁ "
+                        'face '(bold)))))
+   (put 'alc-modeline-remote-indication 'risky-local-variable t)
+
+**Buffer Identification**
+
+Intended to replace the default ``mode-line-buffer-identification`` and ``mode-line-modified`` components this displays the name of the buffer and a face depending on if the buffer is unsaved, read only etc.
+
+.. code:: elisp
+
+   (defun alc-modeline-buffer-identification-face ()
+     "Return the face(s) to apply to the buffer name in the modeline."
+     (cond ((and (buffer-file-name)
+                 (buffer-modified-p))
+            'error)
+           (buffer-read-only '(italic mode-line-buffer-id))
+           (t 'mode-line-buffer-id)))
+
+   (defvar-local alc-modeline-buffer-identification
+       '(:eval
+          (propertize "%b"
+                      'face (alc-modeline-buffer-identification-face))))
+   (put 'alc-modeline-buffer-identification 'risky-local-variable t)
+
+**Dedidcated Windows**
+
+Indicates if the current window is dedicated.
+
+.. code:: elisp
+
+   (defface alc-modeline-window-dedicated-face
+     '((default :inherit (bold)))
+     "Face for styling the dedicated window indicator"
+     :group 'alc-modeline-faces)
+
+   (defvar-local alc-modeline-window-dedicated
+       '(:eval
+         (when (window-dedicated-p)
+           (propertize "🖈 "
+                       'face 'alc-modeline-window-dedicated-face))))
+   (put 'alc-modeline-window-dedicated 'risky-local-variable t)
+
+For reference, here are the components that were in the default modeline
+
+- ``mode-line-mule-info``
+- ``mode-line-client``
+- ``mode-line-frame-identification``
+- ``mode-line-position``
+- ``mode-line-misc-info``
+- ``mode-line-end-spaces``
+
+**Default Modeline**
+
+Finally, here is my default modeline definition
+
+.. code:: elisp
+
+   (setq-default mode-line-format
+                 '("%e"
+                   mode-line-front-space
+                   alc-modeline-window-dedicated
+                   alc-modeline-project-identification
+                   "  "
+                   alc-modeline-remote-indication
+                   alc-modeline-buffer-identification
+                   ))
+
+**Modeline Styles**
+
+The following snippet applies styles to the modeline that are derived from colors provided by the ``ef-themes``
+
+.. code:: elisp
+
+   (with-eval-after-load 'ef-themes
+     (defun alc-modeline-apply-ef-colors ()
+       "Style the modeline using colors provided by the `ef-themes'"
+       (if (ef-themes--list-enabled-themes) ; Only if an ef-theme is active.
+           (ef-themes-with-colors
+             (set-face-attribute 'alc-modeline-project-id-face nil :background bg-main :foreground modeline-info))))
+
+     (alc-modeline-apply-ef-colors)
+     (add-hook 'ef-themes-post-load-hook #'alc-modeline-apply-ef-colors))
+
+
+.. code:: elisp
+
+   (provide 'alc-modeline)
+
+
+Applications
+^^^^^^^^^^^^
+
+Configuration for packages that provide an entire application's worth of functionality.
+
+Eat
+"""
+
+:filename: emacs/lisp/alc-terminals.el
+
+.. code:: elisp
+
+   ;;; alc-terminals.el --- (e)Shell, term, eat, oh my! -*- lexical-binding: t -*-
+
+   (use-package eat
+     :config
+     (with-eval-after-load 'project
+       (keymap-set project-prefix-map "t" #'eat-project)))
+
+   (provide 'alc-terminals)
+
+
 Builtins
 ^^^^^^^^
 
@@ -126,25 +293,3 @@ The required ``(provide FEATURE)`` footer.
 .. code:: elisp
 
    (provide 'alc-lang-rst)
-
-
-Packages
-^^^^^^^^
-
-Configuration for any remaining packages that don't fit into the above categories.
-
-Eat
-"""
-
-:filename: emacs/lisp/alc-terminals.el
-
-.. code:: elisp
-
-   ;;; alc-terminals.el --- (e)Shell, term, eat, oh my! -*- lexical-binding: t -*-
-
-   (use-package eat
-     :config
-     (with-eval-after-load 'project
-       (keymap-set project-prefix-map "t" #'eat-project)))
-
-   (provide 'alc-terminals)

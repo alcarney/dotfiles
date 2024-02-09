@@ -10,6 +10,7 @@
               ("C-M-i" . completion-at-point))
   :config
   (add-to-list 'eglot-server-programs '(rst-mode . ("esbonio"))))
+
 (defun esbonio-preview-file ()
   "Preview the current file."
   (interactive)
@@ -20,4 +21,5 @@
                                               (vector `(:uri ,uri :show :json-false))))
                (uri (plist-get result :uri)))
           (eww uri t)))))
+
 (provide 'alc-lang-rst)
