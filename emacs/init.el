@@ -13,6 +13,7 @@
 
 (require 'alc-editing)
 (require 'alc-general)
+(require 'alc-isearch)
 (require 'alc-minibuffer)
 (require 'alc-modeline)
 (require 'alc-terminals)
