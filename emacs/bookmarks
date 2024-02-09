@@ -2,7 +2,14 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("LSP Specification"
+(("Protesilaos' Emacs Config"
+ (front-context-string . "#+title: GNU Ema")
+ (rear-context-string)
+ (position . 1)
+ (last-modified 26054 44554 481377 512000)
+ (location . "https://raw.githubusercontent.com/protesilaos/dotfiles/master/emacs/.emacs.d/prot-emacs.org")
+ (handler . eww-bookmark-jump))
+("LSP Specification"
  (front-context-string . "Base Protocol \n\n")
  (rear-context-string . "nitialization.\n\n")
  (position . 4268)
