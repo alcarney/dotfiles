@@ -27,13 +27,13 @@ can easily surround a region with some characters. Uses
       (insert-pair)
     (self-insert-command (or arg 1))))
 
-(define-key global-map (kbd "'") #'my/surround-or-self-insert)
-(define-key global-map (kbd "\"") #'my/surround-or-self-insert)
-(define-key global-map (kbd "`") #'my/surround-or-self-insert)
-(define-key global-map (kbd "[") #'my/surround-or-self-insert)
-(define-key global-map (kbd "{") #'my/surround-or-self-insert)
-(define-key global-map (kbd "(") #'my/surround-or-self-insert)
-(define-key global-map (kbd "<") #'my/surround-or-self-insert)
+(keymap-set global-map "'" #'my/surround-or-self-insert)
+(keymap-set global-map "\"" #'my/surround-or-self-insert)
+(keymap-set global-map "`" #'my/surround-or-self-insert)
+(keymap-set global-map "[" #'my/surround-or-self-insert)
+(keymap-set global-map "{" #'my/surround-or-self-insert)
+(keymap-set global-map "(" #'my/surround-or-self-insert)
+(keymap-set global-map "<" #'my/surround-or-self-insert)
 
 (use-package whitespace
   :init
