@@ -16,6 +16,7 @@
 (require 'alc-isearch)
 (require 'alc-minibuffer)
 (require 'alc-modeline)
+(require 'alc-tab-bar)
 (require 'alc-terminals)
 (require 'alc-window)
 

@@ -3,11 +3,6 @@
 ;; Move between windows using M-{left,right,up,down}
 (windmove-default-keybindings 'meta)
 
-(use-package tab-bar
-  :config
-  ;; Never show the tab-bar
-  (setq tab-bar-show nil))
-
 ;; Left/right side windows should occupy the full height of the frame
 (setq window-sides-vertical t)
 
