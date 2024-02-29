@@ -18,6 +18,7 @@
 (require 'alc-modeline)
 (require 'alc-tab-bar)
 (require 'alc-terminals)
+(require 'alc-theme)
 (require 'alc-window)
 
 (require 'alc-dired)

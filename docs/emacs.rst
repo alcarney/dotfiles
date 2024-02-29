@@ -219,6 +219,50 @@ Thanks to adding ``tab-bar-format-global`` to ``tab-bar-format``, ``display-time
    (provide 'alc-tab-bar)
 
 
+Theme
+"""""
+
+:filename: emacs/lisp/alc-theme.el
+
+.. code:: elisp
+
+   ;;; alc-theme.el --- Themes and related settings -*- lexical-binding: t -*-
+
+
+**ef-themes**
+
+.. code:: elisp
+
+   (use-package ef-themes
+     :bind ("<f5>" . ef-themes-toggle)
+     :init
+     (setq ef-themes-mixed-fonts t
+           ef-themes-variable-pitch-ui t
+           ef-themes-to-toggle '(ef-elea-light ef-elea-dark))
+     (ef-themes-select 'ef-elea-light))
+
+**Spacious Padding**
+
+Another great package from Protesilaos, gives just a little bit more breathing room to UI elements.
+
+.. code:: elisp
+
+   (use-package spacious-padding
+     :config
+     (setq spacious-padding-subtle-mode-line t
+           spacious-padding-widths '(:internal-border-width 1
+                                     :header-line-width 4
+                                     :mode-line-width 6
+                                     :tab-width 1
+                                     :right-divider-width 30
+                                     :scroll-bar-width 8))
+     (spacious-padding-mode 1))
+
+
+.. code:: elisp
+
+   (provide 'alc-theme)
+
 Applications
 ^^^^^^^^^^^^
 
