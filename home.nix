@@ -123,6 +123,15 @@
       consult
       corfu
 
+      (dape.overrideAttrs (_:
+        let version = "0.9.0"; in {
+          inherit version;
+          src = pkgs.fetchurl {
+            url = "https://elpa.gnu.org/packages/dape-${version}.tar";
+            sha256 = "NHAPR0QaH/rb7IQgkCzsfC/9Wm9hZsSaJSZTRImgu48=";
+          };
+      }))
+
       (denote.overrideAttrs (_: {
         version = "2.2.2";
         src = pkgs.fetchurl {
