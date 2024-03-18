@@ -143,11 +143,11 @@
       eat
 
       (ef-themes.overrideAttrs (_:
-        let version = "1.5.0"; in {
+        let version = "1.6.0"; in {
           inherit version;
           src = pkgs.fetchurl {
             url = "https://elpa.gnu.org/packages/ef-themes-${version}.tar";
-            sha256 = "ivgVr77I9mu7r3sfzb/zE4T1SBDVJ6pcdtPSrH+Ek8k=";
+            sha256 = "qVxKTny/3zVd57n7env6Xt/F6z+OoU9xjBlR5x8ZcX4=";
           };
       }))
 
