@@ -71,7 +71,17 @@
     "Style the modeline using colors provided by the `ef-themes'"
     (if (ef-themes--list-enabled-themes) ; Only if an ef-theme is active.
         (ef-themes-with-colors
-          (set-face-attribute 'alc-modeline-project-id-face nil :background bg-main :foreground modeline-info))))
+          (set-face-attribute 'mode-line nil
+                              :background bg-main
+                              :overline cursor
+                              :box `(:line-width 6 :color ,bg-main :style nil))
+          (set-face-attribute 'mode-line-inactive nil
+                              :background bg-main
+                              :overline border
+                              :box `(:line-width 6 :color ,bg-main :style nil))
+          (set-face-attribute 'alc-modeline-project-id-face nil
+                              :background bg-main
+                              :foreground modeline-info))))
 
   (alc-modeline-apply-ef-colors)
   (add-hook 'ef-themes-post-load-hook #'alc-modeline-apply-ef-colors))

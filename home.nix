@@ -152,16 +152,6 @@
       minions
       nix-mode
       orderless
-
-      (spacious-padding.overrideAttrs (_:
-        let version = "0.3.0"; in {
-          inherit version;
-          src = pkgs.fetchurl {
-            url = "https://elpa.gnu.org/packages/spacious-padding-${version}.tar";
-            sha256 = "Jiwidfb1rl6mIVGlAf3nE2GzX1YWj+85nxBNFOjrKsY=";
-          };
-      }))
-
       rustic
 
       (treesit-grammars.with-grammars (p: [
