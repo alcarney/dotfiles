@@ -154,11 +154,9 @@
       embark
       embark-consult
       forge
-      hyperbole
       kind-icon
       magit
       marginalia
-      minions
       nix-mode
       orderless
       rustic
