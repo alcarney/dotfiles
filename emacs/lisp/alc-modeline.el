@@ -16,7 +16,8 @@
 
 (defvar-local alc-modeline-project-identification
     '(:eval
-      (if-let ((pr (project-current)))
+      (if-let ((pr (project-current))
+               (file (buffer-file-name)))
           (propertize (format "🖿 %s " (project-name pr))
                       'face 'alc-modeline-project-id-face))))
 (put 'alc-modeline-project-identification 'risky-local-variable t)
