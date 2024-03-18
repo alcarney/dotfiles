@@ -4,7 +4,10 @@
   :config
   (setq tab-bar-show 0  ; Always show the tab-bar
         ;; Don't show the tabs themselves, use tab-bar like a panel.
-        tab-bar-format '(tab-bar-format-align-right tab-bar-format-global))
+        tab-bar-format '(tab-bar-format-menu-bar
+                         tab-bar-format-tabs-groups
+                         tab-bar-format-align-right
+                         tab-bar-format-global))
   (tab-bar-mode))
 
 (use-package battery
