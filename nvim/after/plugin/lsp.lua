@@ -125,8 +125,8 @@ lspconfig.esbonio.setup{
   filetypes = {"rst"},
   settings = {
     esbonio = {
-      server = {
-        logLevel = "debug"
+      logging = {
+        level = "debug"
       },
       sphinx = {
         buildCommand = {"sphinx-build", "-M", "dirhtml", "docs", "docs/_build"},
