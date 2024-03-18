@@ -40,7 +40,7 @@ subproject."
   ;; TODO: Ensure isort and black use the current project's config...
   (setf (alist-get 'isort apheleia-formatters)
         '("isort" "--profile=black" "--force-single-line" "-"))
-  (setf (alist-get 'python-mode apheleia-mode-alist)
+  (setf (alist-get 'python-ts-mode apheleia-mode-alist)
         '(isort black))
   (apheleia-global-mode))
 
@@ -86,7 +86,7 @@ subproject."
      ((eq mode 'rst-mode)
       (me/eglot-esbonio-workspace-config server))
      ;; Pyright
-     ((eq mode 'python-mode)
+     ((or (eq mode 'python-ts-mode) (eq mode 'python-mode))
       (me/eglot-pyright-workspace-config server))
      ;; Fallback
      (t '()))))

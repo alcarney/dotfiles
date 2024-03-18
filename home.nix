@@ -108,6 +108,18 @@
     package = pkgs.emacs29-pgtk;
     extraPackages = epkgs: with epkgs; [
       apheleia
+
+      (trivialBuild {
+        pname = "combobulate";
+        version = "unstable-2024-02-29";
+        src = pkgs.fetchFromGitHub {
+          owner = "mickeynp";
+          repo = "combobulate";
+          rev = "f220e87c7bc1792e5fd46efaa86f75a9f5bcc1d0";
+          sha256 = "sha256-jR8XlRAig/lgmaVoM3uPp+Odao0JIGG5x3FTHxnmJRo=";
+        };
+      })
+
       consult
       corfu
 
@@ -151,6 +163,11 @@
       }))
 
       rustic
+
+      (treesit-grammars.with-grammars (p: [
+        p.tree-sitter-python
+      ]))
+
       vertico
       yaml-mode
     ];

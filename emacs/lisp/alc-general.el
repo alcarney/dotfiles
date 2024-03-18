@@ -35,6 +35,10 @@
 (tooltip-mode -1)
 (setq tooltip-resize-echo-area t)
 
+;; Use the treesitter equivalent for the following modes.
+(setq major-mode-remap-alist
+      '((python-mode . python-ts-mode)))
+
 ;; Smooth scrolling
 (use-package pixel-scroll
   :bind

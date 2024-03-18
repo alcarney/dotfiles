@@ -42,4 +42,11 @@ can easily surround a region with some characters. Uses
   (global-whitespace-mode)
   (add-hook 'before-save-hook #'whitespace-cleanup))
 
+(use-package combobulate
+  :preface
+  (setq combobulate-key-prefix "C-c o")
+
+  :hook
+  ((python-ts-mode . combobulate-mode)))
+
 (provide 'alc-editing)
