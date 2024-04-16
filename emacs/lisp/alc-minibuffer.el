@@ -62,7 +62,14 @@
          ("M-." . embark-dwim)
          ("C-h B" . embark-bindings))
   :init
-  (setq prefix-help-command #'embark-prefix-help-command))
+  (setq prefix-help-command #'embark-prefix-help-command)
+  :custom
+  (embark-indicators
+   '(embark-minimal-indicator
+     embark-highlight-indicator
+     embark-isearch-highlight-indicator))
+  :config
+  (add-to-list 'vertico-multiform-categories '(embark-keybinding grid)))
 
 
 (use-package embark-consult)
