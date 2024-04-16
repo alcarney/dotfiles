@@ -39,6 +39,7 @@
   home.packages = with pkgs; [
     # CLI tools
     ripgrep
+    tmux
 
     # Language Servers
     nodePackages.pyright
