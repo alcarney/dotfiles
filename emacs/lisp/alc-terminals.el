@@ -2,7 +2,7 @@
 
 (use-package eat
   :hook ((eshell-load . eat-eshell-mode))
-  :config
+  :init
   (with-eval-after-load 'project
     (keymap-set project-prefix-map "t" #'eat-project)))
 
