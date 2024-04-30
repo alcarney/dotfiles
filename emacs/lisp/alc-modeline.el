@@ -43,6 +43,12 @@
                   'face (alc-modeline-buffer-identification-face))))
 (put 'alc-modeline-buffer-identification 'risky-local-variable t)
 
+(defvar-local alc-modeline-buffer-position
+    '(:eval
+      (propertize "%l:%c"
+                  'face 'mode-line)))
+(put 'alc-modeline-buffer-position 'risky-local-variable t)
+
 (defface alc-modeline-window-dedicated-face
   '((default :inherit (bold)))
   "Face for styling the dedicated window indicator"
@@ -63,8 +69,8 @@
                 "  "
                 alc-modeline-remote-indication
                 alc-modeline-buffer-identification
-                "  "
-                mode-line-process
+                " "
+                alc-modeline-buffer-position
                 ))
 
 (with-eval-after-load 'ef-themes
