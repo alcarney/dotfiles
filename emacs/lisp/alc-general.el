@@ -24,6 +24,9 @@
 ;; Remember last visted location in files.
 (save-place-mode t)
 
+;; Repeat things
+(repeat-mode)
+
 ;; Context menus!
 (context-menu-mode t)
 
