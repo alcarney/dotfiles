@@ -38,6 +38,7 @@
   # environment.
   home.packages = with pkgs; [
     # CLI tools
+    htop
     ripgrep
     tmux
 
