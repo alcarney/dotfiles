@@ -89,7 +89,8 @@ endfunction
 set tabline=%!Tabline()
 
 
-colorscheme everforest
+" colorscheme everforest
+colorscheme elflord
 
 " -- keymaps
 "

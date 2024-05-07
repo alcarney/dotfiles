@@ -1,14 +1,12 @@
-local lspconfig = require('lspconfig')
+local ok, lspconfig = pcall(require, 'lspconfig')
+if not ok then
+  return
+end
+
 local util = require('lspconfig.util')
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 
--- UI for $/progress and other notifications
-require('fidget').setup {
-  notification = {
-    override_vim_notify = true,
-  }
-}
 
 -- Global diagnostic config.
 vim.diagnostic.config({
@@ -81,7 +79,10 @@ end
 -- Esbonio
 
 -- TODO: Rewrite sync-scrolling to rely on this more.
-require('neoscroll').setup {}
+local ok, neoscroll = pcall(require, 'neoscroll')
+if ok then
+  neoscroll.setup {}
+end
 
 local function scroll_view(ev)
   local esbonio = vim.lsp.get_active_clients({bufnr = 0, name = "esbonio"})[1]
