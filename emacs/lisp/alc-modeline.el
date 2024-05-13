@@ -43,10 +43,16 @@
                   'face (alc-modeline-buffer-identification-face))))
 (put 'alc-modeline-buffer-identification 'risky-local-variable t)
 
+(defun alc-modeline-buffer-position-face ()
+  "Return the face(s) to apply to the buffer position in the modeline."
+  (if (mode-line-window-selected-p)
+      'mode-line
+    'mode-line-inactive))
+
 (defvar-local alc-modeline-buffer-position
     '(:eval
       (propertize "%l:%c"
-                  'face 'mode-line)))
+                  'face (alc-modeline-buffer-position-face))))
 (put 'alc-modeline-buffer-position 'risky-local-variable t)
 
 (defface alc-modeline-window-dedicated-face
