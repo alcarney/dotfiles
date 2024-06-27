@@ -1,7 +1,26 @@
-;;; alc-window.el --- Settings for windows -*- lexical-binding: t -*-
+;;; alc-window.el --- Window Management -*- lexical-binding: t -*-
+
+;;; Code:
+(defun alc-select-window ()
+  "Select a window via `completing-read'."
+  (let ((win-alist (mapcar (lambda (w) `(,(buffer-name (window-buffer w)) . ,w)) (window-list))))
+    (alist-get (completing-read "win: " win-alist) win-alist nil nil 'string=)))
+
+
+(defun alc-selected-window-prefix ()
+  "Select a window and run the next command in that window.
+
+*Heavily* inspired by Karthink's window management almanac.
+https://karthinks.com/software/emacs-window-management-almanac/#a-window-prefix-command-for-ace-window"
+  (interactive)
+  (let ((win (alc-select-window)))
+    (display-buffer-override-next-command
+     (lambda (buffer _) (cons win 'reuse)) nil "[select-window]")))
+
+(keymap-global-set "C-x 4 o" 'alc-selected-window-prefix)
 
 ;; Move between windows using M-{left,right,up,down}
-(windmove-default-keybindings 'meta)
+;;(windmove-default-keybindings 'meta)
 
 ;; Left/right side windows should occupy the full height of the frame
 (setq window-sides-vertical t)
