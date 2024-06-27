@@ -117,12 +117,23 @@ paths referencing directories include the trailing slash."
       (funcall orig-fun server (concat path "/"))
     (funcall orig-fun server path)))
 
+(defun alc-lang-show-lsp-logs (server)
+  "Display the eglot events buffer for the current server.
+
+This function also ensures that `so-long-mode' is enabled for the
+buffer to help improve performace."
+  (interactive (list (eglot-current-server)))
+  (if server
+      (with-current-buffer (jsonrpc-events-buffer server)
+        (so-long-mode)
+        (display-buffer (current-buffer)))))
+
 (use-package eglot
   :config
   (setq-default eglot-workspace-configuration #'me/eglot-workspace-config)
   (advice-add 'eglot--workspace-configuration-plist
               :around #'me/eglot-fix-workspace-configuration-scope)
-  )
+  (add-to-list 'auto-mode-alist '("\\*EGLOT .* events\\*" . so-long-mode)))
 
 (use-package dape
   ;; To use window configuration like gud (gdb-mi)

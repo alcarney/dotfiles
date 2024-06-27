@@ -30,6 +30,13 @@
 ;; Context menus!
 (context-menu-mode t)
 
+;; Improve performance of files with long lines
+(use-package so-long
+  :init
+  (global-so-long-mode 1)
+  :config
+  (add-to-list 'so-long-variable-overrides '(truncate-lines . t) t))
+
 ;; Highlight matching parenthesis
 (show-paren-mode t)
 (setq show-paren-context-when-offscreen 'overlay)
