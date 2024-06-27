@@ -37,11 +37,8 @@ subproject."
 
 (use-package apheleia
   :config
-  ;; TODO: Ensure isort and black use the current project's config...
-  (setf (alist-get 'isort apheleia-formatters)
-        '("isort" "--profile=black" "--force-single-line" "-"))
   (setf (alist-get 'python-ts-mode apheleia-mode-alist)
-        '(isort black))
+        '(ruff-isort ruff))
   (apheleia-global-mode))
 
 (defun me/search-upwards-for-path (dirname path)
@@ -73,6 +70,8 @@ subproject."
              (python-command (file-name-concat venv-path ".env/bin/python")))
         (if venv-path
             `(:esbonio
+              (:logging
+               (:level "debug"))
               (:sphinx
                (:pythonCommand [,python-command]))):
                '()))
