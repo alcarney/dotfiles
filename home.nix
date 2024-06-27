@@ -42,6 +42,9 @@
     ripgrep
     tmux
 
+    # Languages
+    rustup
+
     # Language Servers
     nodePackages.pyright
     nodePackages.typescript-language-server

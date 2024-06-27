@@ -3,6 +3,6 @@
 (use-package rustic
   :custom
   (rustic-lsp-client 'eglot)
-  (rustic-analyzer-command '("nix" "develop" "-c" "rust-analyzer")))
+  (rustic-analyzer-command '("rust-analyzer")))
 
 (provide 'alc-lang-rust)
