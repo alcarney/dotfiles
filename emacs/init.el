@@ -31,3 +31,4 @@
 (require 'alc-lang-python)
 (require 'alc-lang-rst)
 (require 'alc-lang-rust)
+(require 'alc-lang-typescript)
