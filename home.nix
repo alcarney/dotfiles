@@ -165,6 +165,8 @@
 
       (treesit-grammars.with-grammars (p: [
         p.tree-sitter-python
+        p.tree-sitter-tsx
+        p.tree-sitter-typescript
       ]))
 
       vertico
